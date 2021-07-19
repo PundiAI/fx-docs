@@ -2,6 +2,10 @@
 
 * [F(x) Developer Documentation](README.md)
 
+## f(x) Core
+
+* [f(x) Core Docs](fxcore-info.md)
+
 ## JSON RPC API
 
 * [Fx JSON RPC](json-rpc-api.md)
