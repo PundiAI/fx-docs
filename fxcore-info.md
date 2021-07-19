@@ -48,7 +48,7 @@
 
 > Conclusion: The transaction fee might be varied due to the different transaction logic (block size and numbers of writing and reading)  even though there are similar or homogenous transaction
 
-##### 普Analysis of the GasLimit of normal transfer
+##### Analysis of the GasLimit of normal transfer
 
 | Balance of the address | Amount of transfer | Is the receipt address a new address? | Fill in the FeePayer’section?  | Fill in the memo?  | Fill in the expire blockheight?  | GasPrice | Size of the transaction (bytes) | Consumption of gas |
 | ---------------- | -------- | -------------------- | ---------------- | ------------ | ------------------------ | -------- | -------------- | ------- |
