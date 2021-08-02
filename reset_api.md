@@ -2,65 +2,65 @@
 
 ### Requesting the details of the address 
 
-#### Parameters
-
-address(string): f(x)Core address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
-
 #### Request
 
-##### HTTP
+##### Query Path `/cosmos/auth/v1beta1/accounts/{address}`
 
-```sh
-curl http://127.0.0.1:1317/cosmos/auth/v1beta1/accounts/{address}
-```
+##### Request Method `GET`
+
+##### Query Parameters
+
+* address(string): f(x)Core address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
 #### Response
 
-```json
-{
-  "account": {
-    "@type": "/cosmos.auth.v1beta1.BaseAccount",
-    "address": "fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2",
-    "pub_key": {
-      "@type": "/cosmos.crypto.secp256k1.PubKey",
-      "key": "A9O/arb3WCKylChhVxfA1IFXBnfi8NtAMdnoR9H5VlAs"
-    },
-    "account_number": "0",
-    "sequence": "1"
-  }
-}
-```
+* 200 Successful
+    
+    ```json
+    {
+      "account": {
+        "@type": "/cosmos.auth.v1beta1.BaseAccount",
+        "address": "fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2",
+        "pub_key": {
+          "@type": "/cosmos.crypto.secp256k1.PubKey",
+          "key": "A9O/arb3WCKylChhVxfA1IFXBnfi8NtAMdnoR9H5VlAs"
+        },
+        "account_number": "0",
+        "sequence": "1"
+      }
+    }
+    ```
 
 ### Requesting the balance of the address
 
-#### Parameters
-
-address(string): f(x)Core address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
-
 #### Request
 
-##### HTTP
+##### Query Path `/cosmos/bank/v1beta1/balances/{address}`
 
-```sh
-curl http://127.0.0.1:1317/cosmos/bank/v1beta1/balances/{address}
-```
+##### Request Method `GET`
+
+##### Query Parameters
+
+* address(string): f(x)Core address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
 #### Response
 
-```json
-{
-  "balances": [
+* 200 Successful
+
+    ```json
     {
-      "denom": "FX",
-      "amount": "2999900000000000000000000"
+      "balances": [
+        {
+          "denom": "FX",
+          "amount": "2999900000000000000000000"
+        }
+      ],
+      "pagination": {
+        "next_key": null,
+        "total": "1"
+      }
     }
-  ],
-  "pagination": {
-    "next_key": null,
-    "total": "1"
-  }
-}
-```
+    ```
 
 ### Requesting the current token supply of $FX token
 
@@ -69,27 +69,27 @@ curl http://127.0.0.1:1317/cosmos/bank/v1beta1/balances/{address}
     * Non-delegated asset $FX = Ethereum cross chain locked fund  + Unclaimed reward of validator (including commission and transaction fee) + Unclaimed reward of delegator + Wallet balance + Pool of ecosystem and community + Locked fund of Governance
     * Ethereum cross chain locked fund = Total $FX (ERC20) on Ethereum
 
-#### Parameters
+#### Request
+
+##### Query Path `/cosmos/bank/v1beta1/supply`
+
+##### Request Method `GET`
+
+##### Query Parameters
 
 None
 
-#### Request
-
-##### HTTP
-
-```sh
-curl http://127.0.0.1:1317/cosmos/bank/v1beta1/supply
-```
-
 #### Response
 
-```json
-{
-  "supply": [
+* 200 Successful
+
+    ```json
     {
-      "denom": "FX",
-      "amount": "438724604960126741923659830"
+      "supply": [
+        {
+          "denom": "FX",
+          "amount": "438724604960126741923659830"
+        }
+      ]
     }
-  ]
-}
-```
+    ````
