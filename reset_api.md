@@ -64,6 +64,10 @@ curl http://127.0.0.1:1317/cosmos/bank/v1beta1/balances/{address}
 
 ### Requesting the current token supply of $FX token
 
+* Total circulating supply of $FX = Delegated asset $FX + Non-delegated asset $FX 
+    * Delegated asset $FX = Total $FX that delegated in f(x)Core validator node
+    * Non-delegated asset $FX = Ethereum cross chain locked fund  + Unclaimed reward of validator (including commission and transaction fee) + Unclaimed reward of delegator + Wallet balance + Pool of ecosystem and community + Locked fund of Governance
+    * Ethereum cross chain locked fund = Total $FX (ERC20) on Ethereum
 
 #### Parameters
 
