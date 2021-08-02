@@ -4,11 +4,11 @@
 
 #### Request
 
-##### Query Path `/cosmos/auth/v1beta1/accounts/{address}`
+##### Path `/cosmos/auth/v1beta1/accounts/{address}`
 
-##### Request Method `GET`
+##### Method `GET`
 
-##### Query Parameters
+##### Path Parameters
 
 * address(string): f(x)Core address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
@@ -35,11 +35,11 @@
 
 #### Request
 
-##### Query Path `/cosmos/bank/v1beta1/balances/{address}`
+##### Path `/cosmos/bank/v1beta1/balances/{address}`
 
-##### Request Method `GET`
+##### Method `GET`
 
-##### Query Parameters
+##### Path Parameters
 
 * address(string): f(x)Core address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
@@ -71,11 +71,11 @@
 
 #### Request
 
-##### Query Path `/cosmos/bank/v1beta1/supply`
+##### Path `/cosmos/bank/v1beta1/supply`
 
-##### Request Method `GET`
+##### Method `GET`
 
-##### Query Parameters
+##### Path Parameters
 
 None
 
