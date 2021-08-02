@@ -1,10 +1,10 @@
-# Fx Chain REST API 
+# f(x)Core REST API 
 
 ### Requesting the details of the address 
 
 #### Parameters
 
-address(string): Fx chain address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
+address(string): f(x)Core address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
 #### Request
 
@@ -35,7 +35,7 @@ curl http://127.0.0.1:1317/cosmos/auth/v1beta1/accounts/{address}
 
 #### Parameters
 
-address(string): Fx chain address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
+address(string): f(x)Core address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
 #### Request
 

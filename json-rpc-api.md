@@ -1,4 +1,4 @@
-# f(x) Core (Function X Chain) JSON RPC
+# f(x)Core JSON RPC
 
 ## Support
 

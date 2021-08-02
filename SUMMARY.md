@@ -1,19 +1,19 @@
 # Table of contents
 
-* [F(x) Developer Documentation](README.md)
+* [f(x)Core Developer Documentation](README.md)
 
-## f(x) Core
+## f(x)Core
 
-* [f(x) Core Docs](fxcore-info.md)
+* [f(x)Core Docs](fxcore-info.md)
 
 ## JSON RPC API
 
-* [Fx JSON RPC](json-rpc-api.md)
-* [Fx JSON RPC ABCI Query](json-rcp-abci-query.md)
+* [f(x)Core JSON RPC](json-rpc-api.md)
+* [f(x)Core JSON RPC ABCI Query](json-rcp-abci-query.md)
 
 ## REST API
 
-* [Fx REST API](reset_api.md)
+* [f(x)Core REST API](reset_api.md)
 
 ---
 

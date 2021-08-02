@@ -1,4 +1,4 @@
-# Fx JSON RPC ABIC Query
+# f(x)Core JSON RPC ABIC Query
 
 ### Requesting the details of the address 
 

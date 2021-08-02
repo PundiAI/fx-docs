@@ -4,9 +4,9 @@
 
 * Each block size is 1048576Byte（1M）
 * There is no gas limit for each block
-* The consensus algorithm of f(x) Core is pBFT 
+* The consensus algorithm of f(x)Core is pBFT 
 * The sequence of processing the validation requests are following the sequential order of receiving the valid requests (by validator nodes)
-* ChainID is fxcore
+* ChainID is `fxcore`
 * The current block time is 5 seconds
 * The currency in f(x)Core is $FX, the initial supply of $FX is 378,604,525.462891.FX has 18 decimal points
 * $FX can be delegated in f(x)Core
