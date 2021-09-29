@@ -5,6 +5,21 @@
 ## f(x)Core
 
 * [f(x)Core Docs](fxcore-info.md)
+* [Installation f(x)Core](tutorials/installation.md)
+* [Setup Node]()
+  * [Full node with Binaries](tutorials/full-node-with-binaries.md)
+  * [Full node with Docker](tutorials/full-node-with-docker.md)
+
+## Validators
+
+* [Setting Up a Validator for f(x)Core Mainnet](validators/validator-setup.md)
+* [Validator FAQ](validators/validator-faq.md)
+
+## Resourcess
+
+- [Ledger Integration for fxcored](resources/ledger.md)
+* [Cloud Setup](resources/cloud-setup.md)
+* [Testnet Bridge f(x)wallet](resources/testnet-bridge-fxwallet.md)
 
 ## JSON RPC API
 
