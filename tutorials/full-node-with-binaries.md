@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml
 ...
 ```
 
-Start Node:
+Start Node (the following command is a linked command so run this and the next command below):
 ```bash
 nohup fxcored start 2>&1 > fxcore.log &
 ```
@@ -33,7 +33,7 @@ View more startup configurations:
 fxcored start -h
 ```
 
-For example, Start and open the 1317 restful service port:
+For example, Start and open the 1317 restful service port (this is a linked command so run this and the command below):
 ```bash
 nohup fxcored start --api.enable true  --address 0.0.0.0:1317  2>&1 > fxcore.log &
 ```

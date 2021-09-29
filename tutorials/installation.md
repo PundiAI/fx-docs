@@ -2,7 +2,7 @@
 
 This guide will explain how to install the `fxcored` entrypoint onto your system. 
 With these installed on a server, you can participate in the
-mainnet as either a [Full Node](./join-mainnet.md) or a [Validator](../validators/validator-setup.md).
+mainnet as either a Full Node or a [Validator](../validators/validator-setup.md).
 
 ## Hardware Requirements
 
@@ -30,7 +30,7 @@ Ps: `sudo apt-get install -y make gcc` may have encountered a problem with locke
 ## Install Go
 
 Install `go` by following the [official docs](https://golang.org/doc/install). There may be `permissions denied` issues with unzipping the go zip file, try using `sudo su` to resolve it.
-If you are remoting into a terminal, you may input this command replacing `go1.17.1` with whatever version you would like that is later than 1.16 then continue with the installation based on the [official docs](https://golang.org/doc/install):
+If you are remoting into a terminal, you may input this command replacing `go1.17.1` with whatever version you would like that is later than 1.16 then CONTINUE with the installation based on the [official docs](https://golang.org/doc/install):
 
 ```bash
 wget https://dl.google.com/go/go1.17.1.linux-amd64.tar.gz 
@@ -50,7 +50,7 @@ source ~/.bash_profile
 
 Next, let's install the latest version of f(x)Core. 
 Make sure you `git checkout` the correct `master` or `testnet`
-Make sure you have git installed if not you will be prompted to install git. Follow the instruction in the terminal.
+Make sure you have git installed if not you will be prompted to `install git`. Follow the instruction in the terminal.
 
 ```bash
 git clone -b <master | testnet> https://github.com/functionx/fx-core.git
