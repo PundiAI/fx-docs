@@ -61,7 +61,7 @@ ps -ef | grep fxcored
 
 Please ensure that your token holding account has enough `FX tokens` before creating a validator.
 For `Testnet version`, you may obtain `FX tokens` via [FX Facucet](https://aabbcc-faucet.functionx.io/).
-For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-bridge-xwallet.md).
+For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-fxwallet.md).
 
 > In the `amount` field, do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
 > The main fields to change are `amount` and `from`
