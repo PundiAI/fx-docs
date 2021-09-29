@@ -19,7 +19,7 @@
 
 - [Ledger Integration for fxcored](resources/ledger.md)
 * [Cloud Setup](resources/cloud-setup.md)
-* [Testnet Bridge f(x)wallet](resources/testnet-bridge-fxwallet.md)
+* [Testnet f(x)wallet](resources/testnet-fxwallet.md)
 
 ## JSON RPC API
 
