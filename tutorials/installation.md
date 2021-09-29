@@ -86,4 +86,3 @@ Build tags indicate special features that have been enabled in the binary.
 | netgo     | Name resolution will use pure Go code           |
 | ledger    | Ledger devices are supported (hardware wallets) |
 
-Now you can [join the mainnet](./join-mainnet.md), [the public testnet](./join-testnet.md) or [create you own testnet](./deploy-testnet.md)

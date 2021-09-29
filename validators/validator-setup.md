@@ -1,27 +1,22 @@
 # Run a Validator on the f(x)Core Mainnet
 
-> Information on how to join the mainnet (`genesis.json` file and seeds) is held [in our `fxcore` repo](https://github.com/functionx/fx-core/public). 
+> Information on how to join the mainnet (`genesis.json` file and seeds) is held in our `fxcore` repo. 
 
-Before setting up your validator node, make sure you've already gone through the [Full Node Setup](../tutorials/join-mainnet.md) guide.
+Before setting up your validator node, make sure you've already gone through the `Full Node Setup` guide.
 
 If you plan to use a KMS (key management system), you should go through these steps first.
 
 ## What is a Validator?
 
-[Validators](./overview.md) are responsible for committing new blocks to the blockchain through voting. A validator's stake is slashed if they become unavailable or sign blocks at the same height. Please read about [Sentry Node Architecture](./validator-faq.md#how-can-validators-protect-themselves-from-denial-of-service-attacks) to protect your node from DDOS attacks and to ensure high-availability.
+Validators are responsible for committing new blocks to the blockchain through voting. A validator's stake is slashed if they become unavailable or sign blocks at the same height.
 
-> If you want to become a validator for the Hub's `mainnet`, you should [research security](./security.md).
+> If you want to become a validator for the Hub's `mainnet`, you should research more on the security aspects of becoming a validator.
 
-You may want to skip the next section if you have already [set up a full-node](../tutorials/join-mainnet.md).
-
-## Install f(x)Core
-
-> **You need to [install f(x)Core](../tutorials/installation.md) before you go further**
+Before you proceed to the next section, ensure that you have already `set up a full-node`.
 
 ## Create Your Validator
 
 > ⚠️ We support ledger for sending transactions, we recommend using ledger as it is more secure, note that such transactions require fxcore to be [installed](../tutorials/installation.md) on both the remote vm and the host vm, which is a bit of a pain but worth doing.
-> Before start you should have a look at [Ledger Integration for fxcored](../resources/ledger.md)
 
 * Create validator (this will be your validator's token holding account)
 
@@ -65,7 +60,7 @@ ps -ef | grep fxcored
 > ⚠️ ⚠️ ⚠️ Be sure to check that the entire node has been synchronized to the latest block height before sending the create verifier transaction, using `fxCored status` to check  `"catching_up": false`, otherwise you risk being jailed
 
 Please ensure that your token holding account has enough `FX tokens` before creating a validator.
-For `Testnet version`, you may obtain `FX tokens` via [FX Facucet](https://kovan.etherscan.io/address/0x5551cB92ceA594DE5561bF3a7dBE19E822a35948).
+For `Testnet version`, you may obtain `FX tokens` via [FX Facucet](https://aabbcc-faucet.functionx.io/).
 For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-bridge-xwallet.md).
 
 > In the `amount` field, do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
@@ -110,7 +105,7 @@ After "send create-validator" you will get an object data from the terminal with
 # delegator_address from Send create-validator return result
 fxcored query staking validator <validator_address> 
 ```
-You can confirm that you are in the validator set by using a third party [explorer](https://aabbcc-explorer.functionx.io/validator).
+You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io/).
 
 ## Edit Validator Description
 
