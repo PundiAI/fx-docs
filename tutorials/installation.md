@@ -52,7 +52,7 @@ Next, let's install the latest version of f(x)Core.
 Make sure you have git installed if not you will be prompted to `install git`. Follow the instruction in the terminal.
 
 ```bash
-git clone https://github.com/functionx/fx-core.git
+git clone -b testnet https://github.com/functionx/fx-core.git
 cd fx-core
 make go.sum
 make install
