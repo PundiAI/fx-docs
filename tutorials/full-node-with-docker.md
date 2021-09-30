@@ -9,6 +9,7 @@ With these installed on a server, you can participate in the mainnet or testnet 
 ## Use Docker
 
 * pull docker images
+> if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 ```bash
 # For testnet：
@@ -50,6 +51,7 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app
 To check if fxcore is synced
 On the remote machine/VM, run `curl localhost:26657/status`
 In the output, catching_up value should be false
+This may take a few hours and your node has to be fully synced up before proceeding to the next step.
 
 ## Upgrading Your Node
 

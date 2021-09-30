@@ -109,6 +109,7 @@ Return:
 ```
 To ensure that the blocks are synced up with the node, under "sync_info", "catching_up value" should be false
 `"catching_up value": false`
+This may take a few hours and your node has to be fully synced up before proceeding to the next step.
 
 Stop Node (will be running in the background if not stopped):
 ```bash

@@ -10,8 +10,6 @@ If you plan to use a KMS (key management system), you should go through these st
 
 Validators are responsible for committing new blocks to the blockchain through voting. A validator's stake is slashed if they become unavailable or sign blocks at the same height.
 
-> If you want to become a validator for the Hub's `mainnet`, you should research more on the security aspects of becoming a validator.
-
 Before you proceed to the next section, ensure that you have already `set up a full-node`.
 
 ## Create Your Validator
@@ -60,7 +58,7 @@ ps -ef | grep fxcored
 > ⚠️ ⚠️ ⚠️ Be sure to check that the entire node has been synchronized to the latest block height before sending the create verifier transaction, using `fxCored status` to check  `"catching_up": false`, otherwise you risk being jailed
 
 Please ensure that your token holding account has enough `FX tokens` before creating a validator.
-For `Testnet version`, you may obtain `FX tokens` via [FX Facucet](https://aabbcc-faucet.functionx.io/).
+For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io/).
 For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-fxwallet.md).
 
 > In the `amount` field, do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
