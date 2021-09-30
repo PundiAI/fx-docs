@@ -12,7 +12,7 @@
 
 ## Validators
 
-* [Setting Up a Validator for f(x)Core Mainnet](validators/validator-setup.md)
+* [Setting Up a Validator for f(x)Core Testnet](validators/validator-setup.md)
 
 ## Resourcess
 
