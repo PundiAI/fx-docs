@@ -2,7 +2,7 @@
 
 > Information on how to join the mainnet (`genesis.json` file and seeds) is held in our `fxcore` repo. 
 
-Before setting up your validator node, make sure you've already gone through the `Full Node Setup` guide.
+Before setting up your validator node, make sure you've already gone through the `Full Node Setup` guide either with [Binaries](../tutorials/full-node-with-binaries.md) or with [Docker](../tutorials/full-node-with-docker.md).
 
 If you plan to use a KMS (key management system), you should go through these steps first.
 

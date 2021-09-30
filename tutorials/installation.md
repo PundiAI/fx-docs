@@ -30,6 +30,7 @@ Ps: `sudo apt-get install -y make gcc` may have encountered a problem with locke
 ## Install Go
 
 Install `go` by following the [official docs](https://golang.org/doc/install). There may be `permissions denied` issues with unzipping the go zip file, try using `sudo su` to resolve it.
+> **Go 1.16+** or later is required for the f(x)Core.
 > If you are remoting into a terminal, you may input the following command:
 
 ```bash
@@ -45,16 +46,13 @@ echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
 source ~/.bash_profile
 ```
 
-> **Go 1.16+** or later is required for the f(x)Core.
-
 ## Install the binaries
 
 Next, let's install the latest version of f(x)Core. 
-Make sure you `git checkout` the correct `master` or `testnet`
 Make sure you have git installed if not you will be prompted to `install git`. Follow the instruction in the terminal.
 
 ```bash
-git clone -b <master | testnet> https://github.com/functionx/fx-core.git
+git clone https://github.com/functionx/fx-core.git
 cd fx-core
 make go.sum
 make install
