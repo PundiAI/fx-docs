@@ -19,7 +19,7 @@ To see a [quick cloud setup](../resources/cloud-setup.md) on how to setup and de
 
 Install `make` and `gcc`.
 
-On Ubuntu this can be done with the following:
+On Ubuntu this can be done with the following commands:
 ```bash
 sudo apt-get update
 
@@ -30,11 +30,12 @@ Ps: `sudo apt-get install -y make gcc` may have encountered a problem with locke
 ## Install Go
 
 Install `go` by following the [official docs](https://golang.org/doc/install). There may be `permissions denied` issues with unzipping the go zip file, try using `sudo su` to resolve it.
-If you are remoting into a terminal, you may input this command replacing `go1.17.1` with whatever version you would like that is later than 1.16 then CONTINUE with the installation based on the [official docs](https://golang.org/doc/install):
+> If you are remoting into a terminal, you may input this command replacing `go1.17.1` with whatever version you would like that is later than 1.16.
 
 ```bash
 wget https://dl.google.com/go/go1.17.1.linux-amd64.tar.gz 
 ```
+Now you have downloaded the package and you may proceed to step 2. of the [official docs](https://golang.org/doc/install).
 
 Setting environment variable:
 ```bash
