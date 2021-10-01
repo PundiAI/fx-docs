@@ -1,5 +1,4 @@
 # This will serve as an overall summary of the Function X Docs
-# Enabling users and developers to access on chain data of f(x)Core and developing upon f(x)Core
 
 The overall flow for setting up the Testnet validator is: 
 * [Installing f(x)Core](./tutorials/installation.md)
