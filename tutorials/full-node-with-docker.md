@@ -96,9 +96,10 @@ Return:
     }
   }
 ```
-In the output, catching_up value should be false
+To ensure that the blocks are synced up with your node, under "sync_info", "catching_up value" should be false
+`"catching_up value": false`.
 This may take a few hours and your node has to be fully synced up before proceeding to the next step.
-You may cross reference the latest block you are synced to "sync_info": "latest_block_height" to check which block you are synced to and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/tx/0x86E91A7274BF7B09D8D13EB29FC89313695C897CD5EFB1A7C10E8447DD4E0093).
+You may cross reference the latest block you are synced to "sync_info": "latest_block_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/blocks).
 
 ## Upgrading Your Node
 
