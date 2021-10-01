@@ -22,6 +22,7 @@ Before you proceed to the next section, ensure that you have already `set up a f
 # For ledger
 fxcored keys add <_name> --ledger --account 0
 or
+# Without ledger
 fxcored keys add <_name>
 ```
 

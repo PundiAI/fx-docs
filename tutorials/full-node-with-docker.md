@@ -47,9 +47,55 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app
   ... 
 ```
 
-* Check the status of nodes：
-To check if fxcore is synced
-On the remote machine/VM, run `curl localhost:26657/status`
+To check if fxcore is synced:
+
+```bash
+curl localhost:26657/status
+```
+Return:
+```bash
+{
+  "jsonrpc": "2.0",
+  "id": -1,
+  "result": {
+    "node_info": {
+      "protocol_version": {
+        "p2p": "8",
+        "block": "11",
+        "app": "0"
+      },
+      "id": "123868554adafd679f5dc6367bddea39aa5adb94",
+      "listen_addr": "tcp://0.0.0.0:26656",
+      "network": "fxcore",
+      "version": "v0.34.9",
+      "channels": "40202122233038606100",
+      "moniker": "moniker",
+      "other": {
+        "tx_index": "on",
+        "rpc_address": "tcp://0.0.0.0:26657"
+      }
+    },
+    "sync_info": {
+      "latest_block_hash": "239609FE5FD475389C1ACFCEF46DCF6B0343F0C04E43A7968677809C2D489F3F",
+      "latest_app_hash": "0D2F1299950E0DE86BFF1CDEEEDE3BA57F7899EF1492A6E6809DF3060164046D",
+      "latest_block_height": "810805",
+      "latest_block_time": "2021-09-01T07:56:29.166926257Z",
+      "earliest_block_hash": "12B0FB286BD34C077CACF97D3D2757B27C49E63FB81E6262399FF11A3C3C002E",
+      "earliest_app_hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "earliest_block_height": "1",
+      "earliest_block_time": "2021-07-12T07:42:23.292429Z",
+      "catching_up": false
+    },
+    "validator_info": {
+      "address": "214999E9412502DE8DE13F626F9D32D41C1B5015",
+      "pub_key": {
+        "type": "tendermint/PubKeyEd25519",
+        "value": "fUlPjsYSLi04vwzeNiFObBVabV6TKhB6WB3c65iEayU="
+      },
+      "voting_power": "0"
+    }
+  }
+```
 In the output, catching_up value should be false
 This may take a few hours and your node has to be fully synced up before proceeding to the next step.
 You may cross reference the latest block you are synced to "sync_info": "latest_block_height" to check which block you are synced to and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/tx/0x86E91A7274BF7B09D8D13EB29FC89313695C897CD5EFB1A7C10E8447DD4E0093).

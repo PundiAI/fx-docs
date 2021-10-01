@@ -36,7 +36,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). T
 ```bash
 wget https://dl.google.com/go/go1.17.1.linux-amd64.tar.gz 
 ```
-Now you have downloaded the package and you may proceed to step 2. of the [official docs](https://golang.org/doc/install). Choose your system OS and follow the instructions stated.
+After you have downloaded the package and you may proceed to step 2. of the [official docs](https://golang.org/doc/install). Choose your system OS and follow the instructions stated.
 
 Setting environment variable:
 ```bash
