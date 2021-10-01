@@ -27,7 +27,7 @@ With these installed on a server, you can participate in the mainnet or testnet 
   ...  
 ```
 
-* download genesis
+* download genesis (copy and run each line, line by line)
 
 ```bash
 # For testnet：

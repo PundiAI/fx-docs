@@ -23,22 +23,22 @@ wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml
 ...
 ```
 
-Start Node (the following command is a linked command so run this and the next command below):
+Start Node:
 ```bash
-nohup fxcored start 2>&1 > fxcore.log &
+nohup fxcored start 2>&1 > fxcore.log
 ```
 
 View more startup configurations:
 ```bash
-fxcored start -h
+nohup fxcored start 2>&1 > fxcore.log & fxcored start -h
 ```
 
-For example, Start and open the 1317 restful service port (this is a linked command so run this and the command below):
+For example, Start and open the 1317 restful service port:
 ```bash
-nohup fxcored start --api.enable true  --address 0.0.0.0:1317  2>&1 > fxcore.log &
+nohup fxcored start --api.enable true  --address 0.0.0.0:1317  2>&1 > fxcore.log & tail -f fxcore.log
 ```
 
-The previous command and the execution of the next will return something like this:
+The execution of the previous command will return something like this:
 
 ```bash
 2 height=12893 module=state num_txs=0
@@ -55,7 +55,7 @@ The previous command and the execution of the next will return something like th
 
 Check the status of nodes：
 ```bash
-tail -f fxcore.log
+
 ```
 To check if fxcore is synced: 
 ```bash
