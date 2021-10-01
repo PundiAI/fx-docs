@@ -38,7 +38,7 @@ For example, Start and open the 1317 restful service port:
 nohup fxcored start --api.enable true  --address 0.0.0.0:1317  2>&1 > fxcore.log & tail -f fxcore.log
 ```
 
-The execution of the previous command will return something like this:
+The execution of the previous command will return something like this (this is to check the status of nodes and which blocks are being synced/are syncing):
 
 ```bash
 2 height=12893 module=state num_txs=0
@@ -53,10 +53,6 @@ The execution of the previous command will return something like this:
 5:05PM INF commit synced commit=436F6D6D697449447B5B32343320323039203634203234332031393220343120313238203138302034352031363720313038203135382031363520313430203338203233302032203136372032303720333320313535203138322031373020313738203234322035392031333220362031323720393920313132203132305D3A333235467D
 ```
 
-Check the status of nodes：
-```bash
-
-```
 To check if fxcore is synced: 
 ```bash
 curl localhost:26657/status
