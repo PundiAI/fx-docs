@@ -8,7 +8,7 @@ If you plan to use a KMS (key management system), you should go through these st
 
 ## What is a Validator?
 
-Validators are responsible for committing new blocks to the blockchain through voting. A validator's stake is slashed if they become unavailable or sign blocks at the same height.
+The role of a validator is to run a full-node and participate in consensus by broadcasting votes. Validators commit new blocks in the blockchain and receive rewards in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 Before you proceed to the next section, ensure that you have already `set up a full-node`.
 
@@ -16,7 +16,7 @@ Before you proceed to the next section, ensure that you have already `set up a f
 
 > ⚠️ We support ledger for sending transactions, we recommend using ledger as it is more secure, note that such transactions require fxcore to be [installed](../tutorials/installation.md) on both the remote vm and the host vm, which is a bit of a pain but worth doing.
 
-* Create validator (this will be your validator's token holding account)
+* Create validator's token holding account
 
 ```bash
 # For ledger
@@ -29,7 +29,11 @@ fxcored keys add <_name>
 For example:
 
 ```bash
+# For ledger
 fxcored keys add test --ledger --account 0
+or
+# Without ledger
+fxcored keys add test
 
 return
   name: test
