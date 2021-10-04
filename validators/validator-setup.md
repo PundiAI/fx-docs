@@ -129,7 +129,7 @@ fxcored tx staking edit-validator
   --gas="auto" \
   --gas-adjustment=1.2 \
   --gas-prices="6000000000000FX" \
-  --from=<key_name> \
+  --from=<_name> \
 ```
 
 __Note__: The `commission-rate` value must adhere to the following invariants:
