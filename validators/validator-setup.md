@@ -115,13 +115,7 @@ Output:
 
 > `Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated voting power your validator must always have. A `min-self-delegation` of `100000000000000000000` means your validator will never have a self-delegation lower than `100` $FX
 
-* Check Validator
 
-
-```bash
-# delegator_address from Send create-validator return result
-fxcored query staking validator <validator_address> 
-```
 You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io/).
 
 * Get validator pubkey
@@ -214,7 +208,11 @@ the block.
 
 ## Common Problems
 
-### Problem #1: My validator has `voting_power: 0`
+### Problem #1: Copy pasting the entire `fxcored tx staking create-validator` command does not work for me
+
+what's up noob
+
+### Problem #2: My validator has `voting_power: 0`
 
 Your validator has become jailed. Validators get jailed, i.e. get removed from the active validator set, if they do not vote on `500` of the last `10000` blocks, or if they double sign. 
 
@@ -234,7 +232,7 @@ fxcored status
 
 You may notice that your voting power is less than it used to be. That's because you got slashed for downtime!
 
-### Problem #2: My `fxcored` crashes because of `too many open files`
+### Problem #3: My `fxcored` crashes because of `too many open files`
 
 The default number of files Linux can open (per-process) is `1024`. `fxcored` is known to open more than `1024` files. This causes the process to crash. A quick fix is to run `ulimit -n 4096` (increase the number of open files allowed) and then restart the process with `fxcored start`. If you are using `systemd` or another process manager to launch `fxcored` this may require some configuration at that level. A sample `systemd` file to fix this issue is below:
 
