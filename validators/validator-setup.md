@@ -25,6 +25,7 @@ or
 # Without ledger
 fxcored keys add <_name>
 ```
+> This creates a new wallet for you, do record the mnemonic phrase in a safe place. 
 
 For example:
 
