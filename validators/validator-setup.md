@@ -210,9 +210,28 @@ the block.
 
 ### Problem #1: Copy pasting the entire `fxcored tx staking create-validator` command does not work for me
 
-what's up noob
+Get your _pubkey using `fxcored tendermint show-validator`.
 
-### Problem #2: My validator has `voting_power: 0`
+You will have to type out the command as follows:
+```bash
+fxcored tx staking create-validator --chain-id fxcore --gas auto --gas-adjustment 1.2 --gas-prices 6000000000000FX --from <_name> --amount 100000000000000000000000FX pubkey <_pubkey> --moniker "choose a moniker" --commission-rate 0.01 --commission-max-rate 0.20 --commission-max-change-rate 0.01 --min-self-delegation 1000000000000000000 --moniker "choose a moniker" --website "https://functionx.io" --details "To infinity and beyond!"
+```
+
+### Problem #2: My transaction keeps failing with `insufficient fees`
+
+Example of the error as shown:
+```bash
+{"height":"0","txhash":"1BF7A7126EF2650AE66DA211D1EE0C41AF0FCA0EEB0F14503A2371A6541F698C","codespace":"sdk","code":13,"data":"","raw_log":"insufficient fees; got:  required: 1200000000000000000FX: insufficient fee","logs":[],"info":"","gas_wanted":"200000","gas_used":"0","tx":null,"timestamp":""}
+```
+
+You will have to add `--fees` to your command, to find out how much fees to input you can copy paste from the `required` that is given to you.
+
+Example of input:
+```bash
+fxcored tx staking edit-validator --from <_name> --fees 1200000000000000000FX --moniker "test test"
+```
+
+### Problem #3: My validator has `voting_power: 0`
 
 Your validator has become jailed. Validators get jailed, i.e. get removed from the active validator set, if they do not vote on `500` of the last `10000` blocks, or if they double sign. 
 
@@ -232,7 +251,7 @@ fxcored status
 
 You may notice that your voting power is less than it used to be. That's because you got slashed for downtime!
 
-### Problem #3: My `fxcored` crashes because of `too many open files`
+### Problem #4: My `fxcored` crashes because of `too many open files`
 
 The default number of files Linux can open (per-process) is `1024`. `fxcored` is known to open more than `1024` files. This causes the process to crash. A quick fix is to run `ulimit -n 4096` (increase the number of open files allowed) and then restart the process with `fxcored start`. If you are using `systemd` or another process manager to launch `fxcored` this may require some configuration at that level. A sample `systemd` file to fix this issue is below:
 
