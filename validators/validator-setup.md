@@ -25,7 +25,7 @@ or
 # Without ledger
 fxcored keys add <_name>
 ```
-> This creates a new wallet for you, do record the mnemonic phrase in a safe place. 
+> This creates a new token holding account for you, do record the mnemonic phrase in a safe place. Take note of the address so that you can fund the account. The `_name` will be used again later.
 
 For example:
 
