@@ -16,7 +16,9 @@ Before you proceed to the next section, ensure that you have already `set up a f
 
 > ⚠️ We support ledger for sending transactions, we recommend using ledger as it is more secure, note that such transactions require fxcore to be [installed](../tutorials/installation.md) on both the remote vm and the host vm, which is a bit of a pain but worth doing.
 
-* Create validator's token holding account
+1. Create validator's token holding account
+
+Here we will create a new token holding account for the validator which we will bind later to the node consensus.
 
 ```bash
 # For ledger
@@ -25,6 +27,7 @@ or
 # Without ledger
 fxcored keys add <_name>
 ```
+> Note: This creates a new token holding account for you, do record the mnemonic phrase in a safe place. Take note of the address so that you can fund the account. The `_name` will be used again later.
 
 For example:
 
@@ -34,41 +37,44 @@ fxcored keys add test --ledger --account 0
 or
 # Without ledger
 fxcored keys add test
-
-return
-  name: test
-  type: ledger
-  address: "..." 
-  pubkey: "..."
-  mnemonic: ""
-  threshold: 0
-  pubkeys: []
-  
 ```
-
-* Get validator pubkey
-
-Your `fxvalconspub` can be used to create a new validator by staking tokens (this is the account used by the node consensus). You can find your validator pubkey by running:
-
+Output:
 ```bash
-fxcored tendermint show-validator
+name: test
+type: ledger/local
+address: "..." 
+pubkey: "..."
+mnemonic: ""
+threshold: 0
+pubkeys: []
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+word word word word...
 ```
-* To check if node is running
-```bash
-ps -ef | grep fxcored
-```
 
-* Create-validator (this is to bind the node consensus and token holding accounts)
+2. Bind the node consensus and validator's token holding account
 
-> ⚠️ ⚠️ ⚠️ Be sure to check that the entire node has been synchronized to the latest block height before sending the create verifier transaction, using `fxCored status` to check  `"catching_up": false`, otherwise you risk being jailed
+Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator!
 
-Please ensure that your token holding account has enough `FX tokens` before creating a validator.
+⚠️ ⚠️ ⚠️ Couple of items to ensure before continuing
+* Ensure that entire node has synchonized to the latest block height, to prevent risk of being jailed
+> Using curl localhost:26657/status or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to 12 hours depending on internet speeds.
+
+* Ensure that your token holding account has enough `FX tokens` before creating a validator.
 For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io/).
 For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-fxwallet.md).
+> We recommend at least and `100 FX` for testnet if you want your validator to be active. This means your wallet needs more than `100 FX` testnet.
 
-> In the `amount` field, do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
-> The main fields to change are `amount` and `from`
+Great! You can now bind the node consensus and validator's token holding account.
 
+The command to run will be `fxcored tx staking create-validator`, the main fields to change are `amount` and `from`. Do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
+
+
+> Note: FX has 18 decimal points.
+
+Copy the entire command below, after changing the `from` and `amount`. Currently, it is set as `100 000 FX`. If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io/).
 ```bash
 fxcored tx staking create-validator \
   --chain-id=fxcore \
@@ -88,11 +94,20 @@ fxcored tx staking create-validator \
   --details="To infinity and beyond!" 
 ```
 
-Return：
+Output 
 
 ```bash
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"choose a moniker","identity":"","website":"","security_contact":"","details":""},"commission":{"rate":"0.010000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1000000000000000000","delegator_address":"fx1egmy0ncxzuur504qlz9z0ykfa5cqdk0ap5tgxz","validator_address":"fxvaloper1egmy0ncxzuur504qlz9z0ykfa5cqdk0af9khcz","pubkey":{"@type":"/cosmos.crypto.ed25519.PubKey","key":"JWar8+3FHVppCQWH7S4w27eMhjkyxXqUYmnbo185B3g="},"value":{"denom":"FX","amount":"500000000000000000000"}}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"FX","amount":"1020264000000000000"}],"gas_limit":"170044","payer":"","granter":""}},"signatures":[]}
 
+confirm transaction before signing and broadcasting [y/N]: 
+```
+> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io/) to obtain the `validator_address`. The explorer option can only be done if the binding is succesful.
+
+Hit `y` and enter!
+If succesful, You will get an object data from the terminal with code = 0 similar to what is shown below.
+
+Output:
+```bash
 {"height":"729953","txhash":"8FB0EDE90AE37D6603D7FD3278018A7897E243F2DEF69F0592FF71BC58B40AE2","codespace":"","code":0,"data":"0A120A106372656174655F76616C696461746F72","raw_log":"[{\"events\":[{\"type\":\"create_validator\",\"attributes\":[{\"key\":\"validator\",\"value\":\"fxvaloper1egmy0ncxzuur504qlz9z0ykfa5cqdk0af9khcz\"},{\"key\":\"amount\",\"value\":\"500000000000000000000\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"create_validator\"},{\"key\":\"module\",\"value\":\"staking\"},{\"key\":\"sender\",\"value\":\"fx1egmy0ncxzuur504qlz9z0ykfa5cqdk0ap5tgxz\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"create_validator","attributes":[{"key":"validator","value":"fxvaloper1egmy0ncxzuur504qlz9z0ykfa5cqdk0af9khcz"},{"key":"amount","value":"500000000000000000000"}]},{"type":"message","attributes":[{"key":"action","value":"create_validator"},{"key":"module","value":"staking"},{"key":"sender","value":"fx1egmy0ncxzuur504qlz9z0ykfa5cqdk0ap5tgxz"}]}]}],"info":"","gas_wanted":"170044","gas_used":"155067","tx":null,"timestamp":""}
 ```
 
@@ -100,15 +115,20 @@ Return：
 
 > `Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated voting power your validator must always have. A `min-self-delegation` of `100000000000000000000` means your validator will never have a self-delegation lower than `100` $FX
 
-* Check Validator
 
-After "send create-validator" you will get an object data from the terminal with code = 0 indicating successful creation.
+You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io/).
+
+## Get validator pubkey
+
+Your `fxvalconspub`  is used to create a new validator by staking tokens (this is the account used by the node consensus). You can find your validator pubkey by running:
 
 ```bash
-# delegator_address from Send create-validator return result
-fxcored query staking validator <validator_address> 
+fxcored tendermint show-validator
 ```
-You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io/).
+## To check if node is running
+```bash
+ps -ef | grep fxcored
+```
 
 ## Edit Validator Description
 
@@ -188,7 +208,30 @@ the block.
 
 ## Common Problems
 
-### Problem #1: My validator has `voting_power: 0`
+### Problem #1: Copy pasting the entire `fxcored tx staking create-validator` command does not work for me
+
+Get your _pubkey using `fxcored tendermint show-validator`.
+
+You will have to type out the command as follows:
+```bash
+fxcored tx staking create-validator --chain-id fxcore --gas auto --gas-adjustment 1.2 --gas-prices 6000000000000FX --from <_name> --amount 100000000000000000000000FX pubkey <_pubkey> --moniker "choose a moniker" --commission-rate 0.01 --commission-max-rate 0.20 --commission-max-change-rate 0.01 --min-self-delegation 1000000000000000000 --moniker "choose a moniker" --website "https://functionx.io" --details "To infinity and beyond!"
+```
+
+### Problem #2: My transaction keeps failing with `insufficient fees`
+
+Example of the error as shown:
+```bash
+{"height":"0","txhash":"1BF7A7126EF2650AE66DA211D1EE0C41AF0FCA0EEB0F14503A2371A6541F698C","codespace":"sdk","code":13,"data":"","raw_log":"insufficient fees; got:  required: 1200000000000000000FX: insufficient fee","logs":[],"info":"","gas_wanted":"200000","gas_used":"0","tx":null,"timestamp":""}
+```
+
+You will have to add `--fees` to your command, to find out how much fees to input you can copy paste from the `required` that is given to you.
+
+Example of input:
+```bash
+fxcored tx staking edit-validator --from <_name> --fees 1200000000000000000FX --moniker "test test"
+```
+
+### Problem #3: My validator has `voting_power: 0`
 
 Your validator has become jailed. Validators get jailed, i.e. get removed from the active validator set, if they do not vote on `500` of the last `10000` blocks, or if they double sign. 
 
@@ -208,7 +251,7 @@ fxcored status
 
 You may notice that your voting power is less than it used to be. That's because you got slashed for downtime!
 
-### Problem #2: My `fxcored` crashes because of `too many open files`
+### Problem #4: My `fxcored` crashes because of `too many open files`
 
 The default number of files Linux can open (per-process) is `1024`. `fxcored` is known to open more than `1024` files. This causes the process to crash. A quick fix is to run `ulimit -n 4096` (increase the number of open files allowed) and then restart the process with `fxcored start`. If you are using `systemd` or another process manager to launch `fxcored` this may require some configuration at that level. A sample `systemd` file to fix this issue is below:
 
