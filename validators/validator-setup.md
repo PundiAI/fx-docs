@@ -118,14 +118,14 @@ Output:
 
 You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io/).
 
-* Get validator pubkey
+## Get validator pubkey
 
-Your `fxvalconspub` will be used to create a new validator by staking tokens (this is the account used by the node consensus). You can find your validator pubkey by running:
+Your `fxvalconspub`  is used to create a new validator by staking tokens (this is the account used by the node consensus). You can find your validator pubkey by running:
 
 ```bash
 fxcored tendermint show-validator
 ```
-* To check if node is running
+## To check if node is running
 ```bash
 ps -ef | grep fxcored
 ```
