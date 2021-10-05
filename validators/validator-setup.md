@@ -56,16 +56,16 @@ word word word word...
 
 2. Bind the node consensus and validator's token holding account
 
-Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator! Awesome!
+Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator!
 
 ⚠️ ⚠️ ⚠️ Couple of items to ensure before continuing
 * Ensure that entire node has synchonized to the latest block height, to prevent risk of being jailed
-> Using `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to 12 hours depending on internet speeds.
+> Using curl localhost:26657/status or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to 12 hours depending on internet speeds.
 
 * Ensure that your token holding account has enough `FX tokens` before creating a validator.
 For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io/).
 For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-fxwallet.md).
-> We recommend at least `100 000 FX` for mainnet and `100 FX` for testnet if you want your validator to be active. This means your wallet needs more than `100 000 FX` and `100 FX` for mainnet and testnet respectively.
+> We recommend at least and `100 FX` for testnet if you want your validator to be active. This means your wallet needs more than `100 FX` testnet.
 
 Great! You can now bind the node consensus and validator's token holding account.
 
@@ -74,7 +74,7 @@ The command to run will be `fxcored tx staking create-validator`, the main field
 
 > Note: FX has 18 decimal points.
 
-You can copy the below and run it directly, after changing the `from` and `amount`. Currently, it is set as `100 000 FX`. If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io/).
+Copy the entire command below, after changing the `from` and `amount`. Currently, it is set as `100 000 FX`. If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io/).
 ```bash
 fxcored tx staking create-validator \
   --chain-id=fxcore \
