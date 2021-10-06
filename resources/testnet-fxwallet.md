@@ -7,7 +7,7 @@
 * Once downloaded, enter into the settings configuration, (the button is on the top right, there is a settings icon)
     * Under general/Network Configuration, ensure your f(x)Core is toggled to `Testnet`
 * You may view your FX balance from the f(x) Wallet or the [Function X Explorer](https://aabbcc-explorer.functionx.io/)
-* To `query` your validator account balance (token holding account):
+* Alternatively, to `query` your validator account balance (token holding account):
 ```bash
 fxcored q bank balances <token holding account public address>
 ```
