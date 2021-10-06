@@ -16,7 +16,7 @@ Before you proceed to the next section, ensure that you have already `set up a f
 
 > ⚠️ We support ledger for sending transactions, we recommend using ledger as it is more secure, note that such transactions require fxcore to be [installed](../tutorials/installation.md) on both the remote vm and the host vm, which is a bit of a pain but worth doing.
 
-1. Create validator's token holding account
+1) Create validator's token holding account
 
 Here we will create a new token holding account for the validator which we will bind later to the node consensus.
 
@@ -54,27 +54,27 @@ It is the only way to recover your account if you ever forget your password.
 word word word word...
 ```
 
-2. Bind the node consensus and validator's token holding account
+2) Bind the node consensus and validator's token holding account
 
 Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator!
 
 ⚠️ ⚠️ ⚠️ Couple of items to ensure before continuing
 * Ensure that entire node has synchonized to the latest block height, to prevent risk of being jailed
-> Using curl localhost:26657/status or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to 12 hours depending on internet speeds.
+> Using `curl localhost:26657/status` or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to a day depending on network usage.
 
 * Ensure that your token holding account has enough `FX tokens` before creating a validator.
 For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io/).
 For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-fxwallet.md).
-> We recommend at least and `100 FX` for testnet if you want your validator to be active. This means your wallet needs more than `100 FX` testnet.
+> A minimum of `100 FX` is needed to create an active validator. You will need more than `100 testnet FX` in your account because some is needed to pay for the creation of your validator.
 
 Great! You can now bind the node consensus and validator's token holding account.
 
-The command to run will be `fxcored tx staking create-validator`, the main fields to change are `amount` and `from`. Do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
+The command to run will be `fxcored tx staking create-validator`, the main fields to change are `amount`, `from` and both the `monikers`. Do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
 
 
 > Note: FX has 18 decimal points.
 
-Copy the entire command below, after changing the `from` and `amount`. Currently, it is set as `100 000 FX`. If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io/).
+Copy the entire command below, after changing the `amount`, `from` and both the `monikers`. Currently, it is set as `100 000 FX`. If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io/).
 ```bash
 fxcored tx staking create-validator \
   --chain-id=fxcore \
