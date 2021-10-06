@@ -9,4 +9,7 @@ Remoting into the cloud server
 * For Mac and linux users, you can connect via the terminal
     More instructions below:
     https://kinsta.com/blog/how-to-use-ssh/
-* Once setup, ssh into the cloud instance ssh `<ssh_id>@<IP address>` eg. `root@47.211.41.82`
+* Once setup, ssh into the cloud instance ssh `<ssh_id>@<IP address>` eg.
+```bash
+ssh root@47.211.41.82
+```
