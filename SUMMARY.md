@@ -6,7 +6,7 @@
 
 * [f(x)Core Docs](fxcore-info.md)
 * [Installation f(x)Core](tutorials/installation.md)
-* [Setup Node]()
+* [Setup Node](<README (1).md>)
   * [Full node with Binaries](tutorials/full-node-with-binaries.md)
   * [Full node with Docker](tutorials/full-node-with-docker.md)
 
@@ -28,8 +28,6 @@
 
 * [f(x)Core REST API](reset_api.md)
 
----
-
+***
 
 * [Go to FunctionX](https://functionx.io)
-
