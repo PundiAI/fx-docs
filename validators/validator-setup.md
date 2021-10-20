@@ -84,7 +84,6 @@ fxcored tx staking create-validator \
   --from=<_name> \
   --amount=100000000000000000000000FX \
   --pubkey=$(fxcored tendermint show-validator) \
-  --moniker="choose a moniker" \
   --commission-rate="0.01" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
