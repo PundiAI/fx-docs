@@ -6,7 +6,7 @@
 
 * [f(x)Core Docs](fxcore-info.md)
 * [Installation f(x)Core](tutorials/installation.md)
-* [Setup Node](<README (1).md>)
+* [Setup Node](f-x-core/setup-node/README.md)
   * [Full node with Binaries](tutorials/full-node-with-binaries.md)
   * [Full node with Docker](tutorials/full-node-with-docker.md)
   * [Snapshot Guide](tutorials/use-snapshot.md)
@@ -27,7 +27,7 @@
 
 ## REST API
 
-* [f(x)Core REST API](reset_api.md)
+* [f(x)Core REST API](reset\_api.md)
 
 ***
 

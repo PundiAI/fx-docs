@@ -1,18 +1,21 @@
-This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system.
-With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../validators/validator-setup.md).
+# Full node with Binaries
 
-# Install f(x)Core
+This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../validators/validator-setup.md).
 
-> **You need to [install f(x)Core](./installation.md) before you go further**
+## Install f(x)Core
 
-### Setup f(x)Core
+> **You need to **[**install f(x)Core**](installation.md)** before you go further**
+
+#### Setup f(x)Core
 
 Initializing fxcore：
+
 ```bash
 fxcored init fx-zakir
 ```
 
 Fetching config file (copy this entire line of code):
+
 ```bash
 # testnet
 wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/genesis.json -O ~/.fxcore/config/genesis.json && \
@@ -23,17 +26,24 @@ wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml
 ...
 ```
 
+{% hint style="info" %}
+At this stage **BEFORE **starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
+{% endhint %}
+
 Start Node:
+
 ```bash
 nohup fxcored start 2>&1 > fxcore.log
 ```
 
 View more startup configurations:
+
 ```bash
 nohup fxcored start 2>&1 > fxcore.log & fxcored start -h
 ```
 
 For example, Start and open the 1317 restful service port:
+
 ```bash
 nohup fxcored start --api.enable true  --address 0.0.0.0:1317  2>&1 > fxcore.log & tail -f fxcore.log
 ```
@@ -53,13 +63,16 @@ The execution of the previous command will return something like this (this is t
 5:05PM INF commit synced commit=436F6D6D697449447B5B32343320323039203634203234332031393220343120313238203138302034352031363720313038203135382031363520313430203338203233302032203136372032303720333320313535203138322031373020313738203234322035392031333220362031323720393920313132203132305D3A333235467D
 ```
 
-To check if fxcore is synced: 
+To check if fxcore is synced:
+
 ```bash
 curl localhost:26657/status
 or
 fxcored status
 ```
+
 Return:
+
 ```bash
 {
   "jsonrpc": "2.0",
@@ -103,12 +116,11 @@ Return:
     }
   }
 ```
-To ensure that the blocks are synced up with your node, under "sync_info", "catching_up value" should be false
-`"catching_up value": false`.
-This may take a few hours and your node has to be fully synced up before proceeding to the next step.
-You may cross reference the latest block you are synced to "sync_info": "latest_block_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/blocks).
+
+To ensure that the blocks are synced up with your node, under "sync\_info", "catching\_up value" should be false `"catching_up value": false`. This may take a few hours and your node has to be fully synced up before proceeding to the next step. You may cross reference the latest block you are synced to "sync\_info": "latest\_block\_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/blocks).
 
 Stop Node (will be running in the background if not stopped):
+
 ```bash
 ps -ef | grep fxcored
 kill -9 <PID>
