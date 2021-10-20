@@ -64,7 +64,7 @@ Now we will bind the node consensus and validator's token holding account, once 
 
 * Ensure that your token holding account has enough `FX tokens` before creating a validator.
 For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io/).
-For more information on how to obtain `FX tokens` on [Testnet](../resources/testnet-fxwallet.md).
+For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
 > A minimum of `100 FX` is needed to create an active validator. You will need more than `100 testnet FX` in your account because some is needed to pay for the creation of your validator.
 
 Great! You can now bind the node consensus and validator's token holding account.

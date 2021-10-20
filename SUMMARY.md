@@ -18,7 +18,7 @@
 ## Resourcess
 
 * [Cloud Setup](resources/cloud-setup.md)
-* [f(x)wallet](resources/fxwallet.md)
+* [Testnet faucet](resources/fxtestnetfaucet.md)
 
 ## JSON RPC API
 
