@@ -18,7 +18,9 @@ https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-10-18.tar.gz
 
 ## Using Snapshots
 
-First, you need to set your node up with the pre-requisites as per the node [setup guide](use-snapshot.md). Before you `start node` for fxcore to sync, follow the below steps to use snapshot:
+First, you need to set your node up with the pre-requisites as per the node [setup guide](use-snapshot.md). Before you `start node` for fxcore to sync, follow the below steps to use snapshot.
+
+> The greater the blockchain data, the more evident the reduction is syncing time will be. If the current state of the blockchain will take about 2 days to sync, this method of syncing will reduce the time to sync by at least 12 hours.
 
 Download the Snapshot to your VM. To download the Snapshot Tar file to your VM you can run the following command:
 
