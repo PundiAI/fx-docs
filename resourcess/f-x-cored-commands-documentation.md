@@ -2,7 +2,59 @@
 
 ## f(x)Core Daemon
 
-`fxcored` is the tool that enables you to interact with the node that runs on the f(x)Core network, whether you run it yourself or not. Let us set it up properly. In order to install it, follow the [installation procedure](broken-reference).
+`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](broken-reference).
+
+### Main structure of running fxcored commands
+
+The very first command to generate a list of available commands:
+
+```
+fxcored
+```
+
+Return:
+
+```
+FunctionX Core Chain App
+
+Usage:the 
+  fxcored [command]
+
+Available Commands:
+  add-genesis-account Add a genesis account to genesis.json
+  collect-gentxs      Collect genesis txs and output a genesis.json file
+  config              Update or query an application configuration file
+  debug               Tool for helping with debugging your application
+  export              Export state to JSON
+  gentx               Generate a genesis tx carrying a self delegation
+  help                Help about any command
+  init                Initialize private validator, p2p, genesis, and application configuration files
+  keys                Manage your application's keys
+  migrate             Migrate genesis to a specified target version
+  query               Querying subcommands
+  start               Run the full node
+  status              Query remote node for status
+  tendermint          Tendermint subcommands
+  testnet             Initialize files for a fxchain testnet
+  tx                  Transactions subcommands
+  unsafe-reset-all    Resets the blockchain database, removes address book files, and resets data/priv_validator_state.json to the genesis state
+  validate-genesis    validates the genesis file at the default location or at the location passed as an arg
+  version             Print the application binary version information
+
+Flags:
+  -h, --help                 help for fxcored
+      --home string          directory for config and data (default "/root/.fxcore")
+      --log_filter strings   The logging filter can discard custom log type (ABCIQuery) (default "")
+      --log_format string    The logging format (json|plain) (default "plain")
+      --log_level string     The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
+      --trace                print out full stack trace on errors
+```
+
+The return value will include&#x20;
+
+*
+
+a header which explains what the command is, for example `FunctionX Core Chain App`. Running the command `fxc`
 
 ### Setting up fxcored
 
@@ -19,7 +71,7 @@ First, set up the address of the full-node you want to connect to:
 ```bash
 fxcored config node <host>:<port>
 
-# example: fxcored config node https://77.87.106.33:26657
+# example: fxcored config config.toml rpc.laddr https://77.87.106.33:26657
 ```
 
 If you run your own full-node, just use `tcp://localhost:26657` as the address.
