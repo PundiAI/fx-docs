@@ -50,11 +50,14 @@ Flags:
       --trace                print out full stack trace on errors
 ```
 
-The return value will include&#x20;
+The return value will include:
 
-*
+* a header which explains what the command is, for example `FunctionX Core Chain App`
+* the usage for example `fxcored [command]` where you will need to input fxcored and a follow up command like `fxcored tx`
+* all available commands
+* and all flags which might be needed for commands
 
-a header which explains what the command is, for example `FunctionX Core Chain App`. Running the command `fxc`
+We will be going through a common command and the various sub commands and flags.
 
 ### Setting up fxcored
 
