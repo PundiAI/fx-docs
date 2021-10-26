@@ -19,6 +19,7 @@
 
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
+* [f(x)cored Commands Documentation](resourcess/f-x-cored-commands-documentation.md)
 
 ## JSON RPC API
 
