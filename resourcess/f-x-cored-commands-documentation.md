@@ -87,7 +87,94 @@ or
 
 fxcored tx gov
 ```
-the latter will return 
+the latter will return:
+```
+Governance transactions subcommands
+
+Usage:
+  fxcored tx gov [flags]
+  fxcored tx gov [command]
+
+Available Commands:
+  deposit         Deposit tokens for an active proposal
+  submit-proposal Submit a proposal along with an initial deposit
+  vote            Vote for an active proposal, options: yes/no/no_with_veto/abstain
+
+...
+Use "fxcored tx gov [command] --help" for more information about a command.
+
+```
+continuing:
+```
+fxcored tx gov submit-proposal
+```
+return:
+```
+Error: invalid message: can't proto marshal <nil>
+Usage:
+  fxcored tx gov submit-proposal [flags]
+  fxcored tx gov submit-proposal [command]
+
+Available Commands:
+  cancel-software-upgrade Cancel the current software upgrade proposal
+  community-pool-spend    Submit a community pool spend proposal
+  param-change            Submit a parameter change proposal
+  software-upgrade        Submit a software upgrade proposal
+...
+
+Use "fxcored tx gov submit-proposal [command] --help" for more information about a command.
+```
+now if you use the `--help` flag:
+```
+fxcored tx gov submit-proposal --help
+```
+return:
+```
+Submit a proposal along with an initial deposit.
+Proposal title, description, type and deposit can be given directly or through a proposal JSON file.
+
+Example:
+$ fxcored tx gov submit-proposal --proposal="path/to/proposal.json" --from mykey
+
+Where proposal.json contains:
+
+{
+  "title": "Test Proposal",
+  "description": "My awesome proposal",
+  "type": "Text",
+  "deposit": "10test"
+}
+
+Which is equivalent to:
+
+$ fxcored tx gov submit-proposal --title="Test Proposal" --description="My awesome proposal" --type="Text" --deposit="10test" --from mykey
+
+Usage:
+  fxcored tx gov submit-proposal [flags]
+  fxcored tx gov submit-proposal [command]
+
+Available Commands:
+  cancel-software-upgrade Cancel the current software upgrade proposal
+  community-pool-spend    Submit a community pool spend proposal
+  param-change            Submit a parameter change proposal
+  software-upgrade        Submit a software upgrade proposal
+
+...
+```
+following the prompt:
+```
+fxcored tx gov submit-proposal --title="BLINDGOTCHI" --description="CLAUDIOXBARROS’s pet" --type="Text" --deposit="200000000000000000000FX" --fees 1200000000000000000FX --from richard
+```
+return:
+```
+{"body":{"messages":[{"@type":"/cosmos.gov.v1beta1.MsgSubmitProposal","content":{"@type":"/cosmos.gov.v1beta1.TextProposal","title":"BLINDGOTCHI","description":"CLAUDIOXBARROS’s pet"},"initial_deposit":[{"denom":"FX","amount":"200000000000000000000"}],"proposer":"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd"}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"FX","amount":"1200000000000000000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+
+confirm transaction before signing and broadcasting [y/N]:
+```
+after inputting y:
+```
+{"height":"1632790","txhash":"C25C5A00D7EEEE5E3B7B0557320AE7F1D33992C8ADBFB2539C1F369F2B494725","codespace":"","code":0,"data":"0A160A0F7375626D69745F70726F706F73616C120308A001","raw_log":"[{\"events\":[{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"submit_proposal\"},{\"key\":\"sender\",\"value\":\"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd\"},{\"key\":\"module\",\"value\":\"governance\"},{\"key\":\"sender\",\"value\":\"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd\"}]},{\"type\":\"proposal_deposit\",\"attributes\":[{\"key\":\"amount\",\"value\":\"200000000000000000000FX\"},{\"key\":\"proposal_id\",\"value\":\"160\"}]},{\"type\":\"submit_proposal\",\"attributes\":[{\"key\":\"proposal_id\",\"value\":\"160\"},{\"key\":\"proposal_type\",\"value\":\"Text\"}]},{\"type\":\"transfer\",\"attributes\":[{\"key\":\"recipient\",\"value\":\"fx10d07y265gmmuvt4z0w9aw880jnsr700jqjzsmz\"},{\"key\":\"sender\",\"value\":\"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd\"},{\"key\":\"amount\",\"value\":\"200000000000000000000FX\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"message","attributes":[{"key":"action","value":"submit_proposal"},{"key":"sender","value":"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd"},{"key":"module","value":"governance"},{"key":"sender","value":"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd"}]},{"type":"proposal_deposit","attributes":[{"key":"amount","value":"200000000000000000000FX"},{"key":"proposal_id","value":"160"}]},{"type":"submit_proposal","attributes":[{"key":"proposal_id","value":"160"},{"key":"proposal_type","value":"Text"}]},{"type":"transfer","attributes":[{"key":"recipient","value":"fx10d07y265gmmuvt4z0w9aw880jnsr700jqjzsmz"},{"key":"sender","value":"fx124n6hpxkkn3r9j3tzwzhax2rd5s3crwq7p94fd"},{"key":"amount","value":"200000000000000000000FX"}]}]}],"info":"","gas_wanted":"200000","gas_used":"91282","tx":null,"timestamp":""}
+```
 
 ### Setting up fxcored
 
