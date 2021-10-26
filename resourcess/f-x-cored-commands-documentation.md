@@ -57,7 +57,37 @@ The return value will include:
 * all available commands
 * and all flags which might be needed for commands
 
-We will be going through a common command and the various sub commands and flags.
+We will be going through a common command along with the various sub commands and flags. Selecting the `fxcored tx`:
+```
+fxcored tx
+```
+Return:
+```
+Transactions subcommands
+
+Usage:
+  fxcored tx [flags]
+  fxcored tx [command]
+
+Available Commands:
+  bank                Bank transaction subcommands
+  broadcast           Broadcast transactions generated offline
+
+...
+
+Additional help topics:
+  fxcored tx upgrade     Upgrade transaction subcommands
+```
+You may either choose to insert a `flag` or a `command` after `fxcored tx`:
+
+```
+fxcored tx --help
+
+or
+
+fxcored tx gov
+```
+the latter will return 
 
 ### Setting up fxcored
 
