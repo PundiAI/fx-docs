@@ -304,10 +304,10 @@ View the validator pubkey for your node by typing:
 ```bash
 fxcored tendermint show-validator
 ```
-
+{% hint style="info" %}
 Note that this is the Tendermint signing key, _not_ the operator key you will use in delegation transactions.
-
-::: danger Warning We strongly recommend _NOT_ using the same passphrase for multiple keys. The Tendermint team and the Interchain Foundation will not be responsible for the loss of funds. :::
+Warning: We strongly recommend _NOT_ using the same passphrase for multiple keys. The Function X team will not be responsible for the loss of funds. 
+{% endhint %}
 
 #### Generate Multisig Public Keys
 
@@ -344,7 +344,7 @@ It is important to note that the `block` mode should **not** be used in most cir
 
 Each transaction may either supply fees or gas prices, but not both.
 
-Validator's have a minimum gas price (multi-denom) configuration and they use this value when when determining if they should include the transaction in a block during `CheckTx`, where `gasPrices >= minGasPrices`. Note, your transaction must supply fees that are greater than or equal to **any** of the denominations the validator requires.
+Validator's have a minimum gas price (multi-denom) configuration and they use this value when determining if they should include the transaction in a block during `CheckTx`, where `gasPrices >= minGasPrices`. Note, your transaction must supply fees that are greater than or equal to **any** of the denominations the validator requires.
 
 **Note**: With such a mechanism in place, validators may start to prioritize txs by `gasPrice` in the mempool, so providing higher fees or gas prices may yield higher tx priority.
 
@@ -371,7 +371,7 @@ On a testnet, getting tokens is usually done via a faucet.
 After receiving tokens to your address, you can view your account's balance by typing:
 
 ```bash
-fxcored query account <account_fx>
+fxcored q bank balances <account_fx>
 ```
 
 ::: warning Note When you query an account balance with zero tokens, you will get this error: `No account with address <account_fx> was found in the state.` This can also happen if you fund the account before your node has fully synced with the chain. These are both normal.
@@ -383,11 +383,10 @@ fxcored query account <account_fx>
 The following command could be used to send coins from one account to another:
 
 ```bash
-fxcored tx send <sender_key_name_or_address> <recipient_address> 10faucetToken \
-  --chain-id=<chain_id>
+ fxcored tx bank send <from_key_or_address> <to_address> <amount>
 ```
 
-::: warning Note The `amount` argument accepts the format `<value|coin_name>`. :::
+::: warning Note The `amount` argument accepts the format `<value|coin_name>`. For example, 10000000000000000000FX which is equivalent to `10FX`:::
 
 ::: tip Note You may want to cap the maximum gas that can be consumed by the transaction via the `--gas` flag. If you pass `--gas=auto`, the gas supply will be automatically estimated before executing the transaction. Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully. The adjustment can be controlled via the `--gas-adjustment` flag, whose default value is 1.0. :::
 
@@ -407,9 +406,7 @@ fxcored query account <account_fx> --block=<block_height>
 You can simulate a transaction without actually broadcasting it by appending the `--dry-run` flag to the command line:
 
 ```bash
-fxcored tx send <sender_key_name_or_address> <destination_fxaccaddr> 10faucetToken \
-  --chain-id=<chain_id> \
-  --dry-run
+ fxcored tx bank send <from_key_or_address> <to_address> <amount>
 ```
 
 Furthermore, you can build a transaction and print its JSON format to STDOUT by appending `--generate-only` to the list of the command line arguments:
