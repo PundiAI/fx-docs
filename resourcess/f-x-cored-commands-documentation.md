@@ -394,7 +394,9 @@ The following command could be used to send coins from one account to another:
  fxcored tx bank send <from_key_or_address> <to_address> <amount>
 ```
 
-::: warning Note The `amount` argument accepts the format `<value|coin_name>`. For example, 10000000000000000000FX which is equivalent to `10FX`:::
+{% hint style="info" %}
+Note: The `amount` argument accepts the format `<value|coin_name>.` For example, 10000000000000000000FX which is equivalent to `10FX`
+{% endhint %}
 
 ::: tip Note You may want to cap the maximum gas that can be consumed by the transaction via the `--gas` flag. If you pass `--gas=auto`, the gas supply will be automatically estimated before executing the transaction. Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully. The adjustment can be controlled via the `--gas-adjustment` flag, whose default value is 1.0. :::
 
