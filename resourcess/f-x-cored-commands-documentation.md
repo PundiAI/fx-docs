@@ -178,11 +178,15 @@ Available Commands:
 following the prompt:
 
 {% hint style="info" %}
-With all transactions, a transaction fee must be paid! So do remember to add --fees 1200000000000000000FX in your command. The minimum fee is 1.2FX which after multiplying by 10^18 is 1200000000000000000FX
+In this case, a transaction fee must be paid! So do remember to add --fees XXXXXFX in your command. If you did not input the --fees flag, you will be prompted to add --fees 1200000000000000000FX in your command.
+
+The minimum fee for this transaction is 1.2FX which after multiplying by 10^18 is 1200000000000000000FX.
+
+Alternatively, a more universal command is --gas=auto --gas-adjustment=1.25 --gas-prices=4000000000000FX. This is to set the gas price as 4000000000000FX and make an adjustment of 125% for buffer and set
 {% endhint %}
 
 ```
-fxcored tx gov submit-proposal --title="BLINDGOTCHI" --description="CLAUDIOXBARROS’s pet" --type="Text" --deposit="200000000000000000000FX" --fees 1200000000000000000FX --from richard
+fxcored tx gov submit-proposal --title="BLINDGOTCHI" --description="CLAUDIOXBARROS’s pet" --type="Text" --deposit=" 200000000000000000000FX"  --gas=auto --gas-adjustment=1.25 --gas-prices=4000000000000FX --from richard
 ```
 
 return:
@@ -264,14 +268,14 @@ There are three types of key representations that are used:
 Older versions of `fxcored` used store keys in the user's home directory. If you are migrating from an old version of `fxcored` you will need to migrate your old keys into your operating system's credentials storage by running the following command:
 
 ```bash
-fxcored keys migrate
+fxcored keys migrate <old_home_dir> [flags]
 ```
 
-The command will prompt for every passphrase. If a passphrase is incorrect, it will skip the respective key.
+The command will prompt for each passphrase. If a passphrase is incorrect, it will skip the respective key.
 
 #### Generate Keys
 
-You'll need an account private and public key pair (a.k.a. `sk, pk` respectively) to be able to receive funds, send txs, bond tx, etc.
+You'll need an account with a private and public key pair (a.k.a. `sk, pk` respectively) to be able to receive funds, send txs, bond tx, etc.
 
 To generate a new _secp256k1_ key:
 
@@ -282,7 +286,7 @@ fxcored keys add <account_name>
 The output of the above command will contain a _seed phrase_. It is recommended to save the _seed phrase_ in a safe place so that in case you forget the password of the operating system's credentials store, you could eventually regenerate the key from the seed phrase with the following command:
 
 ```bash
-fxcored keys add --recover
+fxcored keys add <account_name> --recover
 ```
 
 If you check your private keys, you'll now see `<account_name>`:
@@ -355,13 +359,13 @@ Validator's have a minimum gas price (multi-denom) configuration and they use th
 e.g.
 
 ```bash
-fxcored tx send ... --fees=6000000000000FX
+fxcored tx send ... --fees=4000000000000FX
 ```
 
 or
 
 ```bash
-fxcored tx send ... --gas-prices=6000000000000FX
+fxcored tx send ... --gas-prices=4000000000000FX
 ```
 
 ### Account
