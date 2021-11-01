@@ -308,9 +308,9 @@ View the validator pubkey for your node by typing:
 ```bash
 fxcored tendermint show-validator
 ```
+
 {% hint style="info" %}
-Note that this is the Tendermint signing key, _not_ the operator key you will use in delegation transactions.
-Warning: We strongly recommend _NOT_ using the same passphrase for multiple keys. The Function X team will not be responsible for the loss of funds. 
+Note that this is the Tendermint signing key, _not_ the operator key you will use in delegation transactions. Warning: We strongly recommend _NOT_ using the same passphrase for multiple keys. The Function X team will not be responsible for the loss of funds.
 {% endhint %}
 
 #### Generate Multisig Public Keys
@@ -368,7 +368,7 @@ fxcored tx send ... --gas-prices=6000000000000FX
 
 #### Get Tokens
 
-On a testnet, getting tokens is usually done via a faucet.
+On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](../resources/fxtestnetfaucet.md).
 
 #### Query Account Balance
 
