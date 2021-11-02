@@ -787,19 +787,13 @@ Where `proposal.json` contains the following:
 }
 ```
 
-::: danger Warning
-
+{% hint style="info" %}
 Currently parameter changes are _evaluated_ but not _validated_, so it is very important that any `value` change is valid (ie. correct type and within bounds) for its respective parameter, eg. `MaxValidators` should be an integer and not a decimal.
 
 Proper vetting of a parameter change proposal should prevent this from happening (no deposits should occur during the governance process), but it should be noted regardless.
+{% endhint %}
 
-:::
-
-::: tip Note
-
-The `SoftwareUpgrade` is currently not supported as it's not implemented and currently does not differ from the semantics of a `Text` proposal.
-
-:::
+> The `SoftwareUpgrade` is currently not supported as it's not implemented and currently does not differ from the semantics of a `Text` proposal.
 
 **Query Proposals**
 
