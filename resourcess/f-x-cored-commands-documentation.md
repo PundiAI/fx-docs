@@ -616,6 +616,12 @@ Or if you want to check all your current delegations with disctinct validators:
 fxcored query staking delegations <delegator_addr>
 ```
 
+You can also query all of the delegations to a particular validator:
+
+```bash
+fxcored query delegations-to <account_fxval>
+```
+
 #### Unbond Tokens
 
 If for any reason the validator misbehaves, or you just want to unbond a certain amount of tokens, use this following command.
@@ -669,7 +675,7 @@ The redelegation will be automatically completed when the unbonding period has p
 
 **Query Redelegations**
 
-Once you begin an redelegation, you can see it's information by using the following command:
+Once you begin a redelegation, you can see it's information by using the following command:
 
 ```bash
 fxcored query staking redelegation <delegator_addr> <src_val_addr> <dst_val_addr>
@@ -684,7 +690,7 @@ fxcored query staking redelegations <account_fx>
 Additionally, as you can get all the outgoing redelegations from a particular validator:
 
 ```bash
-  fxcored query staking redelegations-from <account_fxval>
+fxcored query staking redelegations-from <account_fxval>
 ```
 
 #### Query Parameters
@@ -701,7 +707,7 @@ With the above command you will get the values for:
 * Maximum numbers of validators
 * Coin denomination for staking
 
-All these values will be subject to updates though a `governance` process by `ParameterChange` proposals.
+All these values will be subject to updates through a `governance` process by `ParameterChange` proposals.
 
 #### Query Pool
 
@@ -713,18 +719,8 @@ fxcored query staking pool
 
 With the `pool` command you will get the values for:
 
-* Not-bonded and bonded tokens
-* Token supply
-* Current annual inflation and the block in which the last inflation was processed
-* Last recorded bonded shares
-
-**Query Delegations To Validator**
-
-You can also query all of the delegations to a particular validator:
-
-```bash
-  fxcored query delegations-to <account_fxval>
-```
+* Bonded tokens
+* Not-bonded tokens
 
 ### Governance
 
@@ -732,11 +728,11 @@ Governance is the process from which users in the f(x)Core can come to consensus
 
 Some considerations about the voting process:
 
-* Voting is done by bonded `FX` holders on a 1 bonded `FX` 1 vote basis
-* Delegators inherit the vote of their validator if they don't vote
-* Votes are tallied at the end of the voting period (2 weeks on mainnet) where each address can vote multiple times to update its `Option` value (paying the transaction fee each time), only the most recently cast vote will count as valid
+* Voting is done by bonded `FX` holders on a 100 bonded `FX` 1 vote basis
+* Delegators who do not vote will inherit the vote of their validator
+* Votes are tallied at the end of the voting period (2 weeks on mainnet). Addresses can vote multiple times before the end of the voting period to update their `Option` value (incurring transaction fees each time), only the most recently casted vote will count as valid
 * Voters can choose between options `Yes`, `No`, `NoWithVeto` and `Abstain`
-* At the end of the voting period, a proposal is accepted iff:
+* By the end of the voting period, a proposal is accepted if:
   * `(YesVotes / (YesVotes+NoVotes+NoWithVetoVotes)) > 1/2`
   * `(NoWithVetoVotes / (YesVotes+NoVotes+NoWithVetoVotes)) < 1/3`
   * `((YesVotes+NoVotes+NoWithVetoVotes) / totalBondedStake) >= quorum`
@@ -747,7 +743,7 @@ For more information about the governance process and how it works, please check
 
 In order to create a governance proposal, you must submit an initial deposit along with a title and description. Various modules outside of governance may implement their own proposal types and handlers (eg. parameter changes), where the governance module itself supports `Text` proposals. Any module outside of governance has it's command mounted on top of `submit-proposal`.
 
-To submit a `Text` proposal:
+To submit a `Text` proposal (the title and description fields will be string input so enclose the input in ""):
 
 ```bash
 fxcored tx gov submit-proposal \
