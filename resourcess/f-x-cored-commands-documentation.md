@@ -537,19 +537,19 @@ fxcored query slashing params
 You can query for the minting/inflation parameters via:
 
 ```bash
-fxcored query minting params
+fxcored query mint params
 ```
 
 To query for the current inflation value:
 
 ```bash
-fxcored query minting inflation
+fxcored query mint inflation
 ```
 
 To query for the current annual provisions value:
 
 ```bash
-fxcored query minting annual-provisions
+fxcored query mint annual-provisions
 ```
 
 ### Staking
