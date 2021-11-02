@@ -600,6 +600,10 @@ While tokens are bonded, they are pooled with all the other bonded tokens in the
 
 **Query Delegations**
 
+{% hint style="info" %}
+In this section and the next, do make sure you check if the command has a plural form or not. Adding an (s) behind delegation to delegations results in a different command.
+{% endhint %}
+
 Once submitted a delegation to a validator, you can see it's information by using the following command:
 
 ```bash
