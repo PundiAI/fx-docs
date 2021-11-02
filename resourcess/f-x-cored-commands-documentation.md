@@ -502,6 +502,10 @@ You can also query a single transaction by its hash using the following command:
 fxcored query tx [hash]
 ```
 
+{% hint style="info" %}
+tx hash on the block explorer are preceded with 0x. please omit the 0x from the tx hash
+{% endhint %}
+
 ### Slashing
 
 #### Unjailing
