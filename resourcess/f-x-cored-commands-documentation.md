@@ -442,7 +442,7 @@ fxcored tx sign \
   unsignedSendTx.json > signedSendTx.json
 ```
 
-::: tip Note The `--generate-only` flag prevents `fxcored` from accessing the local keybase. Thus when such flag is supplied `<sender_key_name_or_address>` must be an address. :::
+> The `--generate-only` flag prevents `fxcored` from accessing the local keybase. Thus when such flag is supplied `<sender_key_name_or_address>` must be an address.
 
 You can validate the transaction's signatures by typing the following:
 
