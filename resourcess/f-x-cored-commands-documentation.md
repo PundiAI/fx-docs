@@ -350,9 +350,9 @@ It is important to note that the `block` mode should **not** be used in most cir
 
 ### Fees & Gas
 
-Each transaction may either supply fees or gas prices, but not both.
+Each transaction may either use the --fees or --gas flags, but not both.
 
-Validator's have a minimum gas price (multi-denom) configuration and they use this value when determining if they should include the transaction in a block during `CheckTx`, where `gasPrices >= minGasPrices`. Note, your transaction must supply fees that are greater than or equal to **any** of the denominations the validator requires.
+Validator's have a minimum gas price (multi-denom) configuration and they use this value when determining if they should include the transaction in a block during `CheckTx`, where `gasPrices >= minGasPrices`. Note, your transaction must use fees that are greater than or equal to **any** of the denominations the validator requires.
 
 **Note**: With such a mechanism in place, validators may start to prioritize txs by `gasPrice` in the mempool, so providing higher fees or gas prices may yield higher tx priority.
 
@@ -369,6 +369,10 @@ To query the gas price of your current node:
 ```
 fxcored query other gasPrice
 ```
+
+{% hint style="info" %}
+Note: You may want to cap the maximum gas that can be consumed by the transaction via the `--gas` flag. If you pass `--gas=auto`, the gas supply will be automatically estimated before executing the transaction. Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully. The adjustment can be controlled via the `--gas-adjustment` flag, whose default value is 1.0.
+{% endhint %}
 
 ### Account
 
@@ -398,10 +402,6 @@ The following command could be used to send coins from one account to another:
 
 {% hint style="info" %}
 Note: The `amount` argument accepts the format `<value|coin_name>.` For example, 10000000000000000000FX which is equivalent to `10FX`
-{% endhint %}
-
-{% hint style="info" %}
-Note: You may want to cap the maximum gas that can be consumed by the transaction via the `--gas` flag. If you pass `--gas=auto`, the gas supply will be automatically estimated before executing the transaction. Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully. The adjustment can be controlled via the `--gas-adjustment` flag, whose default value is 1.0.
 {% endhint %}
 
 Now, view the updated balances of the origin and destination accounts:
