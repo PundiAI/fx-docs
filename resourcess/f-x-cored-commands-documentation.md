@@ -556,7 +556,7 @@ fxcored query mint annual-provisions
 
 #### Set up a Validator
 
-Please refer to the [Validator Setup](../validators/validator-setup.md) section for a more complete guide on how to set up a validator-candidate.
+Please refer to the [Validator Setup](../validators/validator-setup.md) section for a more complete guide on how to set up a validator.
 
 #### Delegate to a Validator
 
@@ -582,10 +582,10 @@ On the f(x)Core mainnet, we delegate `FX`. Here's how you can bond tokens to a t
 
 ```bash
 fxcored tx staking delegate \
-  --amount=10000000FX \
-  --validator=<validator> \
-  --from=<key_name> \
-  --chain-id=<chain_id>
+  <validator> \
+  <amount> \
+  --from=<key_name>
+  --fees=<fees>
 ```
 
 `<validator>` is the operator address of the validator to which you intend to delegate. If you are running a local testnet, you can find this with:
