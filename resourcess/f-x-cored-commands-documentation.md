@@ -453,7 +453,9 @@ fxcored tx sign --validate-signatures signedSendTx.json
 You can broadcast the signed transaction to a node by providing the JSON file to the following command:
 
 ```bash
-fxcored tx broadcast --node=<node> signedSendTx.json
+fxcored tx broadcast <file_path>
+eg.
+fxcored tx broadcast signedSendTx.json
 ```
 
 ### Query Transactions
