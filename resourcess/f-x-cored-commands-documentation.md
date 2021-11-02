@@ -357,15 +357,19 @@ Validator's have a minimum gas price (multi-denom) configuration and they use th
 **Note**: With such a mechanism in place, validators may start to prioritize txs by `gasPrice` in the mempool, so providing higher fees or gas prices may yield higher tx priority.
 
 e.g.
+
 ```bash
 fxcored tx send ... --fees=4000000000000FX
 ```
+
 or
+
 ```bash
 fxcored tx send ... --gas-prices=4000000000000FX
 ```
 
 To query the gas price of your current node:
+
 ```
 fxcored query other gasPrice
 ```
@@ -384,9 +388,9 @@ After receiving tokens to your address, you can view your account's balance by t
 fxcored q bank balances <account_fx>
 ```
 
-::: warning Note When you query an account balance with zero tokens, you will get this error: `No account with address <account_fx> was found in the state.` This can also happen if you fund the account before your node has fully synced with the chain. These are both normal.
-
-:::
+{% hint style="info" %}
+Note When you query an account balance with zero tokens, you will get this error: `No account with address <account_fx> was found in the state.` This can also happen if you fund the account before your node has fully synced with the chain. These are both normal.
+{% endhint %}
 
 ### Send Tokens
 
