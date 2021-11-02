@@ -182,7 +182,7 @@ In this case, a transaction fee must be paid! So do remember to add --fees XXXXX
 
 The minimum fee for this transaction is 1.2FX which after multiplying by 10^18 is 1200000000000000000FX.
 
-Alternatively, a more universal command is --gas=auto --gas-adjustment=1.25 --gas-prices=4000000000000FX. This is to set the gas price as 4000000000000FX and make an adjustment of 125% for buffer and set
+Alternatively, a more universal command is --gas=auto --gas-adjustment=1.25 --gas-prices=4000000000000FX. --gas=auto automatically assesses the gas used for that transaction. This depends on the transaction itself and also the state of the blockchain. --gas-adjustment=1.25 means that there will be a 25% buffer added to the automatically assessed gas amount. --gas-prices=4000000000000FX is the gas price you will be paying for. For more details on gas, kindly refer to the section on gas below.
 {% endhint %}
 
 ```
@@ -357,15 +357,17 @@ Validator's have a minimum gas price (multi-denom) configuration and they use th
 **Note**: With such a mechanism in place, validators may start to prioritize txs by `gasPrice` in the mempool, so providing higher fees or gas prices may yield higher tx priority.
 
 e.g.
-
 ```bash
 fxcored tx send ... --fees=4000000000000FX
 ```
-
 or
-
 ```bash
 fxcored tx send ... --gas-prices=4000000000000FX
+```
+
+To query the gas price of your current node:
+```
+fxcored query other gasPrice
 ```
 
 ### Account
