@@ -484,17 +484,15 @@ The pagination is supported as well via `page` and `limit`:
 fxcored query txs --events='message.sender=fx1...' --page=1 --limit=20
 ```
 
-::: tip Note
-
-The action tag always equals the message type returned by the `Type()` function of the relevant message.
-
-You can find a list of available `events` on each of the SDK modules:
-
-* [Staking events](https://github.com/cosmos/cosmos-sdk/blob/master/x/staking/spec/07\_events.md)
-* [Governance events](https://github.com/cosmos/cosmos-sdk/blob/master/x/gov/spec/04\_events.md)
-* [Slashing events](https://github.com/cosmos/cosmos-sdk/blob/master/x/slashing/spec/06\_events.md)
-* [Distribution events](https://github.com/cosmos/cosmos-sdk/blob/master/x/distribution/spec/06\_events.md)
-* [Bank events](https://github.com/cosmos/cosmos-sdk/blob/master/x/bank/spec/04\_events.md) :::
+> The action tag always equals the message type returned by the `Type()` function of the relevant message.
+>
+> You can find a list of available `events` on each of the SDK modules:
+>
+> * [Staking events](https://github.com/cosmos/cosmos-sdk/blob/master/x/staking/spec/07\_events.md)
+> * [Governance events](https://github.com/cosmos/cosmos-sdk/blob/master/x/gov/spec/04\_events.md)
+> * [Slashing events](https://github.com/cosmos/cosmos-sdk/blob/master/x/slashing/spec/06\_events.md)
+> * [Distribution events](https://github.com/cosmos/cosmos-sdk/blob/master/x/distribution/spec/06\_events.md)
+> * [Bank events](https://github.com/cosmos/cosmos-sdk/blob/master/x/bank/spec/04\_events.md)
 
 #### Matching a Transaction's Hash
 
