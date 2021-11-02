@@ -359,13 +359,13 @@ Validator's have a minimum gas price (multi-denom) configuration and they use th
 e.g.
 
 ```bash
-fxcored tx send ... --fees=4000000000000FX
+fxcored tx bank send ... --fees=4000000000000FX
 ```
 
 or
 
 ```bash
-fxcored tx send ... --gas-prices=4000000000000FX
+fxcored tx bank send ... --gas-prices=4000000000000FX
 ```
 
 To query the gas price of your current node:
@@ -375,7 +375,7 @@ fxcored query other gasPrice
 ```
 
 {% hint style="info" %}
-Note: You may want to cap the maximum gas that can be consumed by the transaction via the `--gas` flag. If you pass `--gas=auto`, the gas supply will be automatically estimated before executing the transaction. Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully. The adjustment can be controlled via the `--gas-adjustment` flag, whose default value is 1.0.
+Note: You may want to cap the maximum gas that can be consumed by the transaction via the `--gas` flag. If you pass `--gas=auto`, the gas supply will be automatically estimated before executing the transaction. Gas estimate might be inaccurate as state changes could occur in between the end of the simulation and the actual execution of a transaction, thus an adjustment is applied on top of the original estimate in order to ensure the transaction is broadcasted successfully. The adjustment can be controlled via the `--gas-adjustment` flag. The default value is 1.0.
 {% endhint %}
 
 ### Account
@@ -415,22 +415,22 @@ fxcored query account <account_fx>
 fxcored query account <destination_fx>
 ```
 
-You can also check your balance at a given block by using the `--block` flag:
+You can also check your balance at a given block by using the `--height` flag:
 
 ```bash
-fxcored query account <account_fx> --block=<block_height>
+fxcored query account <account_fx> --height <int>
 ```
 
-You can simulate a transaction without actually broadcasting it by appending the `--dry-run` flag to the command line:
+You can simulate a transaction without actually broadcasting it by appending the `--dry-run` flag to the command line (this is to return a gas estimate):
 
 ```bash
- fxcored tx bank send <from_key_or_address> <to_address> <amount> --dry-run
+fxcored tx bank send <from_key_or_address> <to_address> <amount> --dry-run
 ```
 
-Furthermore, you can build a transaction and print its JSON format to STDOUT by appending `--generate-only` to the list of the command line arguments:
+Furthermore, you can build a transaction and print its JSON format to STDOUT by appending `--generate-only` to the list of the command line arguments. Running the following command will store build the transaction and store it in a file named "unsignedSendTx.json":
 
 ```bash
-fxcored tx send <sender_address> <recipient_address> 10faucetToken \
+fxcored tx send <sender_address> <recipient_address> 10000000000000000000FX \
   --chain-id=<chain_id> \
   --generate-only > unsignedSendTx.json
 ```
