@@ -2,7 +2,7 @@
 
 ## f(x)Core Daemon
 
-`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](broken-reference/).
+`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../tutorials/installation.md).
 
 ### Main structure of running fxcored commands
 
@@ -382,7 +382,7 @@ Note: You may want to cap the maximum gas that can be consumed by the transactio
 
 #### Get Tokens
 
-On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](../resources/fxtestnetfaucet.md).
+On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](fxtestnetfaucet.md).
 
 #### Query Account Balance
 
@@ -560,7 +560,7 @@ Please refer to the [Validator Setup](../validators/validator-setup.md) section 
 
 #### Delegate to a Validator
 
-On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](broken-reference/) can receive part of the validator's fee revenue. Read more about the [Cosmos Token Model](https://github.com/cosmos/cosmos/raw/master/Cosmos\_Token\_Model.pdf).
+On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](../resourcess/broken-reference/) can receive part of the validator's fee revenue. Read more about the [Cosmos Token Model](https://github.com/cosmos/cosmos/raw/master/Cosmos\_Token\_Model.pdf).
 
 **Query Validators**
 
