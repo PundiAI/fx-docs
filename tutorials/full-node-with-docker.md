@@ -42,7 +42,7 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app
 
 ```bash
 # For testnet：
-  docker run --name fxcore -d -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:testnet start
+  docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:testnet start
 # For mainnet：
   ... 
 ```
