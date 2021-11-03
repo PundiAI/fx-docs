@@ -1049,11 +1049,11 @@ fxcored completion --zsh > fxcored_completion
 fxcored completion --zsh > fxcorecli_completion
 ```
 
-::: tip Note On most UNIX systems, such scripts may be loaded in `.bashrc` or `.bash_profile` to enable Bash autocompletion:
+> Note: On most UNIX systems, such scripts may be loaded in `.bashrc` or `.bash_profile` to enable Bash autocompletion:
 
 ```bash
 echo '. fxcored_completion' >> ~/.bashrc
 echo '. fxcorecli_completion' >> ~/.bashrc
 ```
 
-Refer to the user's manual of your interpreter provided by your operating system for information on how to enable shell autocompletion. :::
+> Refer to the user's manual of your interpreter provided by your operating system for information on how to enable shell autocompletion.
