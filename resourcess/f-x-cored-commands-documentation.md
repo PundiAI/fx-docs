@@ -1056,4 +1056,4 @@ echo '. fxcored_completion' >> ~/.bashrc
 echo '. fxcorecli_completion' >> ~/.bashrc
 ```
 
-Refer to the user's manual of your interpreter provided by your operating system for information on how to enable shell autocompletion. :::
+> Refer to the user's manual of your interpreter provided by your operating system for information on how to enable shell autocompletion.
