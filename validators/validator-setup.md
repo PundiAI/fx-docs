@@ -80,7 +80,7 @@ fxcored tx staking create-validator \
   --chain-id=fxcore \
   --gas="auto" \
   --gas-adjustment=1.2 \
-  --gas-prices="6000000000000FX" \
+  --gas-prices="4000000000000FX" \
   --from=<_name> \
   --amount=100000000000000000000000FX \
   --pubkey=$(fxcored tendermint show-validator) \
