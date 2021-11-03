@@ -739,6 +739,10 @@ Some considerations about the voting process:
 
 For more information about the governance process and how it works, please check out the Governance module [specification](https://github.com/cosmos/cosmos-sdk/tree/master/x/gov/spec).
 
+{% hint style="info" %}
+The minimum deposit for a governance proposal is 10,000FX (through the command line, this amounts to 10000000000000000000000FX after multiplying by 10^18).
+{% endhint %}
+
 #### Create a Governance Proposal
 
 In order to create a governance proposal, you must submit an initial deposit along with a title and description. Various modules outside of governance may implement their own proposal types and handlers (eg. parameter changes), where the governance module itself supports `Text` proposals. Any module outside of governance has it's command mounted on top of `submit-proposal`.
@@ -793,7 +797,7 @@ Currently parameter changes are _evaluated_ but not _validated_, so it is very i
 Proper vetting of a parameter change proposal should prevent this from happening (no deposits should occur during the governance process), but it should be noted regardless.
 {% endhint %}
 
-> The `SoftwareUpgrade` is currently not supported as it's not implemented and currently does not differ from the semantics of a `Text` proposal.
+> The `SoftwareUpgrade` command is currently not supported as it's not implemented and currently does not differ from the semantics of a `Text` proposal.
 
 **Query Proposals**
 
