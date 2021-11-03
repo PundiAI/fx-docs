@@ -823,10 +823,10 @@ fxcored query gov proposer <proposal_id>
 
 #### Increase Deposit
 
-In order for a proposal to be broadcasted to the network, the amount deposited must be above a `minDeposit` value (initial value: `512000000FX`). If the proposal you previously created didn't meet this requirement, you can still increase the total amount deposited to activate it. Once the minimum deposit is reached, the proposal enters voting period:
+In order for a proposal to be broadcasted to the network, the amount deposited must be above a `minDeposit` value (initial value: `10000000000000000000000FX`). If the proposal you previously created didn't meet this requirement, you can still increase the total amount deposited to activate it. Once the minimum deposit is reached, the proposal enters voting period:
 
 ```bash
-fxcored tx gov deposit <proposal_id> "10000000FX" \
+fxcored tx gov deposit <proposal_id> "10000000000000000000000FX" \
   --from=<name> \
   --chain-id=<chain_id>
 ```
@@ -918,7 +918,7 @@ fxcored query distribution community-pool
 To check the current outstanding (un-withdrawn) rewards, run:
 
 ```bash
-fxcored query distribution outstanding-rewards
+fxcored query distribution validator-outstanding-rewards <validator-addr>
 ```
 
 #### Query Validator Commission
