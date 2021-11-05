@@ -67,7 +67,7 @@ Remarks:
 
 * New address refers to the address that exists / appears on the chain first time
 * FeePayer: Inputting the wallet address to pay the transaction fee, blank means sender pays the transaction fee
-* memo: transaction remarks, maximum 256 bytes, normally it leaves blank.
+* Memo: transaction remarks, maximum 256 bytes, normally it is left blank.
 
 > Estimation: The current network GasLimit setting can process up to 80,000 normal transfer transactions
 
@@ -120,7 +120,7 @@ Remarks:
     Assume the variables as follows：
     
     - Total circulating supply： 378,604,525.462891
-    - The number of valid of delegated token：20,000,000
+    - The number of valid delegated token：20,000,000
     - Block time: 5 sec / block
     - Initial annual inflation rate： 0.35
     - Annual InflationRateChange ： 0.3
