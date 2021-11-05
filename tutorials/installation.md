@@ -53,10 +53,10 @@ source ~/.bash_profile
 Next, let's install the latest version of f(x)Core. Make sure you have git installed if not you will be prompted to `install git`. Follow the instruction in the terminal.
 
 ```bash
-git clone -b testnet https://github.com/functionx/fx-core.git
+git clone https://github.com/functionx/fx-core.git
 cd fx-core
 make go.sum
-make install
+make install-testnet
 ```
 
 That will install the `fxcored` binary. Verify that everything is OK:
