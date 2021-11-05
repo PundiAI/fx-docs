@@ -2,36 +2,38 @@
 
 ## Support
 
-  |              | [Tendermint-Go](https://github.com/tendermint/tendermint/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
-  |--------------|:----------------------------------------------------------:|:----------------------------------------------------------------:|
-  | JSON-RPC 2.0 |                             ✅                              |                                ✅                                 |
-  | HTTP         |                             ✅                              |                                ✅                                 |
-  | HTTPS        |                             ✅                              |                                ❌                                 |
-  | WS           |                             ✅                              |                                ✅                                 |
-  
-  | Routes                                  | [Tendermint-Go](https://github.com/tendermint/tendermint/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
-  |-----------------------------------------|:----------------------------------------------------------:|:-----------------------------------------------------------------:|
-  | [Health](#health)                       |                             ✅                              |                                 ✅                                 |
-  | [Status](#status)                       |                             ✅                              |                                 ✅                                 |
-  | [NetInfo](#netinfo)                     |                             ✅                              |                                 ✅                                 |
-  | [Blockchain](#blockchain)               |                             ✅                              |                                 ✅                                 |
-  | [Block](#block)                         |                             ✅                              |                                 ✅                                 |
-  | [BlockByHash](#blockbyhash)             |                             ✅                              |                                 ❌                                 |
-  | [BlockResults](#blockresults)           |                             ✅                              |                                 ✅                                 |
-  | [Commit](#commit)                       |                             ✅                              |                                 ✅                                 |
-  | [Validators](#validators)               |                             ✅                              |                                 ✅                                 |
-  | [Genesis](#genesis)                     |                             ✅                              |                                 ✅                                 |
-  | [GenesisChunked](#genesischunked)       |                             ✅                              |                                 ❌                                 |
-  | [ConsensusParams](#consensusparams)     |                             ✅                              |                                 ❌                                 |
-  | [UnconfirmedTxs](#unconfirmedtxs)       |                             ✅                              |                                 ❌                                 |
-  | [NumUnconfirmedTxs](#numunconfirmedtxs) |                             ✅                              |                                 ❌                                 |
-  | [Tx](#tx)                               |                             ✅                              |                                 ❌                                 |
-  | [BroadCastTxSync](#broadcasttxsync)     |                             ✅                              |                                 ✅                                 |
-  | [BroadCastTxAsync](#broadcasttxasync)   |                             ✅                              |                                 ✅                                 |
-  | [ABCIInfo](#abciinfo)                   |                             ✅                              |                                 ✅                                 |
-  | [ABCIQuery](#abciquery)                 |                             ✅                              |                                 ✅                                 |
-  | [BroadcastTxAsync](#broadcasttxasync)   |                             ✅                              |                                 ✅                                 |
-  | [BroadcastEvidence](#broadcastevidence) |                             ✅                              |                                 ✅                                 |
+|              |                                                            |                                                                   |
+| ------------ | :--------------------------------------------------------: | :---------------------------------------------------------------: |
+|              | [Tendermint-Go](https://github.com/tendermint/tendermint/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
+| JSON-RPC 2.0 |                              ✅                             |                                 ✅                                 |
+| HTTP         |                              ✅                             |                                 ✅                                 |
+| HTTPS        |                              ✅                             |                                 ❌                                 |
+| WS           |                              ✅                             |                                 ✅                                 |
+
+|                                                        |                                                            |                                                                   |
+| ------------------------------------------------------ | :--------------------------------------------------------: | :---------------------------------------------------------------: |
+| Routes                                                 | [Tendermint-Go](https://github.com/tendermint/tendermint/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
+| [Health](json-rpc-api.md#health)                       |                              ✅                             |                                 ✅                                 |
+| [Status](json-rpc-api.md#status)                       |                              ✅                             |                                 ✅                                 |
+| [NetInfo](json-rpc-api.md#netinfo)                     |                              ✅                             |                                 ✅                                 |
+| [Blockchain](json-rpc-api.md#blockchain)               |                              ✅                             |                                 ✅                                 |
+| [Block](json-rpc-api.md#block)                         |                              ✅                             |                                 ✅                                 |
+| [BlockByHash](json-rpc-api.md#blockbyhash)             |                              ✅                             |                                 ❌                                 |
+| [BlockResults](json-rpc-api.md#blockresults)           |                              ✅                             |                                 ✅                                 |
+| [Commit](json-rpc-api.md#commit)                       |                              ✅                             |                                 ✅                                 |
+| [Validators](json-rpc-api.md#validators)               |                              ✅                             |                                 ✅                                 |
+| [Genesis](json-rpc-api.md#genesis)                     |                              ✅                             |                                 ✅                                 |
+| [GenesisChunked](json-rpc-api.md#genesischunked)       |                              ✅                             |                                 ❌                                 |
+| [ConsensusParams](json-rpc-api.md#consensusparams)     |                              ✅                             |                                 ❌                                 |
+| [UnconfirmedTxs](json-rpc-api.md#unconfirmedtxs)       |                              ✅                             |                                 ❌                                 |
+| [NumUnconfirmedTxs](json-rpc-api.md#numunconfirmedtxs) |                              ✅                             |                                 ❌                                 |
+| [Tx](json-rpc-api.md#tx)                               |                              ✅                             |                                 ❌                                 |
+| [BroadCastTxSync](json-rpc-api.md#broadcasttxsync)     |                              ✅                             |                                 ✅                                 |
+| [BroadCastTxAsync](json-rpc-api.md#broadcasttxasync)   |                              ✅                             |                                 ✅                                 |
+| [ABCIInfo](json-rpc-api.md#abciinfo)                   |                              ✅                             |                                 ✅                                 |
+| [ABCIQuery](json-rpc-api.md#abciquery)                 |                              ✅                             |                                 ✅                                 |
+| [BroadcastTxAsync](json-rpc-api.md#broadcasttxasync)   |                              ✅                             |                                 ✅                                 |
+| [BroadcastEvidence](json-rpc-api.md#broadcastevidence) |                              ✅                             |                                 ✅                                 |
 
 ## Info Routes
 
@@ -45,15 +47,15 @@ None
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://127.0.0.1:26657/health
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"health\"}"
 ```
 
@@ -77,15 +79,15 @@ None
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://127.0.0.1:26657/status
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"status\"}"
 ```
 
@@ -146,15 +148,15 @@ None
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://127.0.0.1:26657/net_info
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"net_info\"}"
 ```
 
@@ -245,22 +247,22 @@ Get block headers. Returned in descending order. May be limited in quantity.
 
 #### Parameters
 
-- `minHeight (integer)`: The lowest block to be returned in the response
-- `maxHeight (integer)`: The highest block to be returned in the response
+* `minHeight (integer)`: The lowest block to be returned in the response
+* `maxHeight (integer)`: The highest block to be returned in the response
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://127.0.0.1:26657/blockchain
 
 curl http://127.0.0.1:26657/blockchain?minHeight=1&maxHeight=2
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"blockchain\",\"params\":{\"minHeight\":\"1\", \"maxHeight\":\"2\"}}"
 ```
 
@@ -320,21 +322,21 @@ Get block at a specified height.
 
 #### Parameters
 
-- `height (integer)`: height of the requested block. If no height is specified the latest block will be used.
+* `height (integer)`: height of the requested block. If no height is specified the latest block will be used.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://127.0.0.1:26657/block
 
 curl http://127.0.0.1:26657/block?height=1
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"block\",\"params\":{\"height\":\"1\"}}"
 ```
 
@@ -435,19 +437,19 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 #### Parameters
 
-- `hash (string)`: Hash of the block to query for.
+* `hash (string)`: Hash of the block to query for.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://127.0.0.1:26657/block_by_hash?hash=0xD70952032620CC4E2737EB8AC379806359D8E0B17B0488F627997A0B043ABDED
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"block_by_hash\",\"params\":{\"hash\":\"0xD70952032620CC4E2737EB8AC379806359D8E0B17B0488F627997A0B043ABDED\"}}"
 ```
 
@@ -548,22 +550,22 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 ### Parameters
 
-- `height (integer)`: Height of the block which contains the results. If no height is specified, the latest block height will be used
+* `height (integer)`: Height of the block which contains the results. If no height is specified, the latest block height will be used
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/block_results
 
 
 curl  http://127.0.0.1:26657/block_results?height=1
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"block_results\",\"params\":{\"height\":\"1\"}}"
 ```
 
@@ -655,22 +657,22 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 #### Parameters
 
-- `height (integer)`: Height of the block the requested commit pertains to. If no height is set the latest commit will be returned.
+* `height (integer)`: Height of the block the requested commit pertains to. If no height is set the latest commit will be returned.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/commit
 
 
 curl  http://127.0.0.1:26657/commit?height=1
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"commit\",\"params\":{\"height\":\"1\"}}"
 ```
 
@@ -736,21 +738,21 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 #### Parameters
 
-- `height (integer)`: Block height at which the validators were present on. If no height is set the latest commit will be returned.
-- `page (integer)`:
-- `per_page (integer)`:
+* `height (integer)`: Block height at which the validators were present on. If no height is set the latest commit will be returned.
+* `page (integer)`:
+* `per_page (integer)`:
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/validators
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"validators\",\"params\":{\"height\":\"1\", \"page\":\"1\", \"per_page\":\"20\"}}"
 ```
 
@@ -781,20 +783,19 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 ### Genesis
 
-Get Genesis of the chain. If the response is large, this operation
-will return an error: use `genesis_chunked` instead.
+Get Genesis of the chain. If the response is large, this operation will return an error: use `genesis_chunked` instead.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/genesis
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"genesis\"}"
 ```
 
@@ -848,20 +849,19 @@ Get the genesis document in a chunks to support easily transfering larger docume
 
 #### Parameters
 
-- `chunk` (integer): the index number of the chunk that you wish to
-  fetch. These IDs are 0 indexed.
+* `chunk` (integer): the index number of the chunk that you wish to fetch. These IDs are 0 indexed.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/genesis_chunked?chunk=0
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"genesis_chunked\",\"params\":{\"chunk\":0}}"
 ```
 
@@ -885,19 +885,19 @@ Get the consensus parameters.
 
 #### Parameters
 
-- `height (integer)`: Block height at which the consensus params would like to be fetched for.
+* `height (integer)`: Block height at which the consensus params would like to be fetched for.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/consensus_params
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"consensus_params\"}"
 ```
 
@@ -934,19 +934,19 @@ Get a list of unconfirmed transactions.
 
 #### Parameters
 
-- `limit (integer)` The amount of txs to respond with.
+* `limit (integer)` The amount of txs to respond with.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/unconfirmed_txs
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"unconfirmed_txs\, \"params\":{\"limit\":\"20\"}}"
 ```
 
@@ -977,15 +977,15 @@ None
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/num_unconfirmed_txs
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"num_unconfirmed_txs\"}"
 ```
 
@@ -1007,20 +1007,20 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 #### Parameters
 
-- `hash (string)`: The hash of the transaction
-- `prove (bool)`: If the response should include proof the transaction was included in a block.
+* `hash (string)`: The hash of the transaction
+* `prove (bool)`: If the response should include proof the transaction was included in a block.
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/num_unconfirmed_txs
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"num_unconfirmed_txs\"}"
 ```
 
@@ -1059,19 +1059,19 @@ Returns with the response from CheckTx. Does not wait for DeliverTx result.
 
 #### Parameters
 
-- `tx (string)`: The transaction encoded
+* `tx (string)`: The transaction encoded
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/broadcast_tx_sync?tx=encoded_tx
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"broadcast_tx_sync\",\"params\":{\"tx\":\"a/encoded_tx/c\"}}"
 ```
 
@@ -1098,19 +1098,19 @@ Returns right away, with no response. Does not wait for CheckTx nor DeliverTx re
 
 #### Parameters
 
-- `tx (string)`: The transaction encoded
+* `tx (string)`: The transaction encoded
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/broadcast_tx_async?tx=encoded_tx
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"broadcast_tx_async\",\"params\":{\"tx\":\"a/encoded_tx/c\"}}"
 ```
 
@@ -1137,19 +1137,19 @@ Checks the transaction without executing it.
 
 #### Parameters
 
-- `tx (string)`: String of the encoded transaction
+* `tx (string)`: String of the encoded transaction
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/check_tx?tx=encoded_tx
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"check_tx\",\"params\":{\"tx\":\"a/encoded_tx/c\"}}"
 ```
 
@@ -1196,15 +1196,15 @@ None
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/abci_info
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"abci_info\"}"
 ```
 
@@ -1228,26 +1228,26 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 Query the application for some information.
 
-> [About ABCI Query More](./json-rcp-abci-query.md)
+> [About ABCI Query More](json-rcp-abci-query.md)
 
 #### Parameters
 
-- `path (string)`: Path to the data. This is defined by the application.
-- `data (string)`: The data requested
-- `height (integer)`: Height at which the data is being requested for.
-- `prove (bool)`: Include proofs of the transactions inclusion in the block
+* `path (string)`: Path to the data. This is defined by the application.
+* `data (string)`: The data requested
+* `height (integer)`: Height at which the data is being requested for.
+* `prove (bool)`: Include proofs of the transactions inclusion in the block
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl  http://127.0.0.1:26657/abci_query?path="a/b/c"=IHAVENOIDEA&height=1&prove=true
 ```
 
-##### JSONRPC
+**JSONRPC**
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"abci_query\",\"params\":{\"path\":\"a/b/c\", \"height\":\"1\", \"bool\":\"true\"}}"
 ```
 
@@ -1280,19 +1280,19 @@ Broadcast evidence of the misbehavior.
 
 #### Parameters
 
-- `evidence (string)`:
+* `evidence (string)`:
 
 #### Request
 
-##### HTTP
+**HTTP**
 
-```sh
+```
 curl http://localhost:26657/broadcast_evidence?evidence=JSON_EVIDENCE_encoded
 ```
 
 #### JSONRPC
 
-```sh
+```
 curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"broadcast_evidence\",\"params\":{\"evidence\":\"JSON_EVIDENCE_encoded\"}}"
 ```
 
@@ -1307,50 +1307,49 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 }
 ```
 
-
 ## Error code schedule
 
-| Error code | Illustration                     | Remarks |
-| ------ | ------------------------------------ | --- |
-| 0      | success                              |  |
-| 1      | internal                             |  |
-| 2      | tx parse error                       |  |
-| 3      | invalid sequence                     |  |
-| 4      | unauthorized                         |  |
-| 5      | insufficient funds                   |  |
-| 6      | unknown request                      |  |
-| 7      | invalid address                      |  |
-| 8      | invalid pubkey                       |  |
-| 9      | unknown address                      |  |
-| 10     | invalid coins                        |  |
-| 11     | out of gas                           |  |
-| 12     | memo too large                       |  |
-| 13     | insufficient fee                     |  |
-| 14     | maximum numer of signatures exceeded |  |
-| 15     | no signatures supplied               |  |
-| 16     | tx in mempool                        |  |
-| 17     | failed to unmarshal JSON bytes       |  |
-| 18     | invalid request                      |  |
-| 19     | tx already in mempool                |  |
-| 20     | mempool is full                      |  |
-| 21     | tx too large                         |  |
-| 22     | key not found                        |  |
-| 23     | invalid account password             |  |
-| 24     | tx intended signer does not match the given signer  |  |
-| 25     | invalid gas adjustment               |  |
-| 26     | invalid height                       |  |
-| 27     | invalid version                      |  |
-| 28     | invalid chain-id                     |  |
-| 29     | invalid type                         |  |
-| 30     | tx timeout height                    |  |
-| 31     | unknown extension options            |  |
-| 32     | incorrect account sequence           |  |
-| 33     | failed packing protobuf message to Any         |  |
-| 34     | failed unpacking protobuf message from Any     |  |
-| 35     | internal logic error                 |  |
-| 36     | conflict                             |  |
-| 37     | feature not supported                |  |
-| 38     | not found                            |  |
-| 39     | Internal IO error                    |  |
-| 40     | error in app.toml                    |  |
-| 111222 | panic                                |  |
+| Error code | Illustration                                       | Remarks |
+| ---------- | -------------------------------------------------- | ------- |
+| 0          | success                                            |         |
+| 1          | internal                                           |         |
+| 2          | tx parse error                                     |         |
+| 3          | invalid sequence                                   |         |
+| 4          | unauthorized                                       |         |
+| 5          | insufficient funds                                 |         |
+| 6          | unknown request                                    |         |
+| 7          | invalid address                                    |         |
+| 8          | invalid pubkey                                     |         |
+| 9          | unknown address                                    |         |
+| 10         | invalid coins                                      |         |
+| 11         | out of gas                                         |         |
+| 12         | memo too large                                     |         |
+| 13         | insufficient fee                                   |         |
+| 14         | maximum numer of signatures exceeded               |         |
+| 15         | no signatures supplied                             |         |
+| 16         | tx in mempool                                      |         |
+| 17         | failed to unmarshal JSON bytes                     |         |
+| 18         | invalid request                                    |         |
+| 19         | tx already in mempool                              |         |
+| 20         | mempool is full                                    |         |
+| 21         | tx too large                                       |         |
+| 22         | key not found                                      |         |
+| 23         | invalid account password                           |         |
+| 24         | tx intended signer does not match the given signer |         |
+| 25         | invalid gas adjustment                             |         |
+| 26         | invalid height                                     |         |
+| 27         | invalid version                                    |         |
+| 28         | invalid chain-id                                   |         |
+| 29         | invalid type                                       |         |
+| 30         | tx timeout height                                  |         |
+| 31         | unknown extension options                          |         |
+| 32         | incorrect account sequence                         |         |
+| 33         | failed packing protobuf message to Any             |         |
+| 34         | failed unpacking protobuf message from Any         |         |
+| 35         | internal logic error                               |         |
+| 36         | conflict                                           |         |
+| 37         | feature not supported                              |         |
+| 38         | not found                                          |         |
+| 39         | Internal IO error                                  |         |
+| 40         | error in app.toml                                  |         |
+| 111222     | panic                                              |         |
