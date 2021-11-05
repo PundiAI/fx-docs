@@ -18,13 +18,13 @@
 
 ## The calculation of transaction fee
 
-* GasPrice: Every validator node can set up their GasPrice limit, now the setting of GasPrice limit of every validator node is the same
+* GasPrice: Every validator node can set their GasPrice limit, now the setting of GasPrice limit of every validator node is the same
 
-* The computation of GasLimit is related to the size of transaction(s), number of reading of the transaction, number of writing of the transaction and transaction signing. The signing of the transaction is fixed at the moment.
+* The computation of GasLimit is related to the size of transaction(s), number of transaction readings, number of transaction writings and transaction signing. The signing of the transaction is fixed at the moment.
 
     * Size of transaction GasLimit: Transaction bytes * 10
 
-    * The computation of GasLimit of reading data: number of reading * cost of reading
+    * The computation of GasLimit of reading data: number of readings * cost of reading
 
       * ```
         HasCost:          1000 // to verify if cost needed
