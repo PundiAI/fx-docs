@@ -1,10 +1,9 @@
 # Table of contents
 
-* [f(x)Core Developer Documentation](README.md)
+* [FunctionX Documentation](README.md)
 
 ## f(x)Core
 
-* [f(x)Core Docs](fxcore-info.md)
 * [Installation f(x)Core](tutorials/installation.md)
 * [Setup Node](f-x-core/setup-node/README.md)
   * [Full node with Binaries](tutorials/full-node-with-binaries.md)
@@ -21,6 +20,10 @@
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [f(x)cored Commands Documentation](resources/f-x-cored-commands-documentation.md)
+
+## Developers
+
+* [f(x)Core Info](developers/fxcore-info.md)
 
 ## JSON RPC API
 
