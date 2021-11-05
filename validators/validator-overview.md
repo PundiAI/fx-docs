@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[f(x)Core](broken-reference) is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key.
+[f(x)Core](../tutorials/installation.md) is based on [Tendermint](https://github.com/tendermint/tendermint/tree/master/docs/introduction), which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key.
 
 Validator candidates can bond their own FX and have FX ["delegated"](broken-reference), or staked, to them by token holders. The f(x)Core will have 50 validators, but over time this will increase to 100 validators according to a predefined schedule. The validators are determined by who has the most stake delegated to them — the top 50 validator candidates with the most stake will become f(x)Core validators.
 
