@@ -39,14 +39,14 @@
         WriteCostFlat:    2000 // cost of writing
         WriteCostPerByte: 30 // cost of writing per byte
         ```
-    * Computation of GasLimit  of transaction signing:：
+    * Computation of GasLimit  of transaction signing:
 
         * Fixed cost of ED25519: 590
         * Fixed cost of Secp256k1: 1000
 
 * Transaction fee = GasPrice * GasLimit
 
-> Conclusion: The transaction fee might be varied due to the different transaction logic (block size and numbers of writing and reading)  even though there are similar or homogenous transaction
+> Conclusion: The transaction fee may vary due to different transaction logic (block size and numbers of readings and writings)  even though the transactions are similar or homogenous
 
 ##### Analysis of the GasLimit of normal transfer
 
