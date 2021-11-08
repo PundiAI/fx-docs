@@ -34,7 +34,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). T
 > **Go 1.16+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
 
 ```bash
-wget https://dl.google.com/go/go1.17.2.linux-amd64.tar.gz 
+wget https://dl.google.com/go/go1.17.3.linux-amd64.tar.gz 
 ```
 
 After you have downloaded the package and you may proceed to step 2 of the [official docs](https://golang.org/doc/install). Choose your system OS and follow the instructions stated.
