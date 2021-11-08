@@ -30,4 +30,4 @@ Seek legal advice if you intend to run a Validator.
 
 Discuss more details on being a validator on our forum:
 
-
+* [Validator Forum](https://forum.functionx.io/t/f-x-core-validator-node-setup-on-f-x-core-testnet/1785/189)
