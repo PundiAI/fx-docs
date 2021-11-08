@@ -10,6 +10,7 @@
   * [Full node with Binaries](tutorials/full-node-with-binaries.md)
   * [Full node with Docker](tutorials/full-node-with-docker.md)
   * [Snapshot Guide](tutorials/use-snapshot.md)
+  * [Validator Recovery](f-x-core/setup-node/validator-recovery.md)
 
 ## Validators
 

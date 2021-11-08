@@ -1,14 +1,15 @@
-This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system.
-With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../validators/validator-setup.md).
+# Full node with Docker
 
+This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../validators/validator-setup.md).
 
-# Install f(x)Core
+## Install f(x)Core
 
-> **You need to [install f(x)Core](./installation.md) before you go further**
+> **You need to **[**install f(x)Core**](installation.md)** before you go further**
 
-## Use Docker
+### Use Docker
 
 * pull docker images
+
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 ```bash
@@ -38,6 +39,12 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app
   ...
 ```
 
+{% hint style="info" %}
+At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
+
+And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../f-x-core/setup-node/validator-recovery.md) how to access the files.
+{% endhint %}
+
 * run docker
 
 ```bash
@@ -52,7 +59,9 @@ To check if fxcore is synced:
 ```bash
 curl localhost:26657/status
 ```
+
 Return:
+
 ```bash
 {
   "jsonrpc": "2.0",
@@ -96,16 +105,14 @@ Return:
     }
   }
 ```
-To ensure that the blocks are synced up with your node, under "sync_info", "catching_up value" should be false
-`"catching_up value": false`.
-This may take a few hours and your node has to be fully synced up before proceeding to the next step.
-You may cross reference the latest block you are synced to "sync_info": "latest_block_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/blocks).
 
-## Upgrading Your Node
+To ensure that the blocks are synced up with your node, under "sync\_info", "catching\_up value" should be false `"catching_up value": false`. This may take a few hours and your node has to be fully synced up before proceeding to the next step. You may cross reference the latest block you are synced to "sync\_info": "latest\_block\_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/blocks).
+
+### Upgrading Your Node
 
 These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest testnet.
 
-### Reset Data
+#### Reset Data
 
 First, remove the outdated files and reset the data.
 
@@ -114,11 +121,6 @@ rm $HOME/.fxcore/config/addrbook.json $HOME/.fxcore/config/genesis.json
 fxcored unsafe-reset-all
 ```
 
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`.
-If you had any sentry nodes or full nodes setup before,
-your node will still try to connect to them, but may fail if they haven't also been upgraded.
+Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.
 
-
-> Make sure that every node has a unique `priv_validator.json`.
-Do not copy the `priv_validator.json` from an old node to multiple new nodes.
-Running two nodes with the same `priv_validator.json` will cause you to double sign.
+> Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.

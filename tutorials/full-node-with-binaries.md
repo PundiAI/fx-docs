@@ -14,6 +14,8 @@ Initializing fxcore：
 fxcored init fx-zakir
 ```
 
+Initializing fxcored will result in the creation of a few directories and most importantly the .fxcore directory. This will be where your validator keys are stored and this is important for recovery of your validator.
+
 Fetching config file (copy this entire line of code):
 
 ```bash
@@ -27,7 +29,9 @@ wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml
 ```
 
 {% hint style="info" %}
-At this stage **BEFORE **starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
+At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
+
+And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../f-x-core/setup-node/validator-recovery.md) how to access the files.
 {% endhint %}
 
 Start Node:
