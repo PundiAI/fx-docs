@@ -4,6 +4,7 @@
 
 ## f(x)Core
 
+* [What is f(x)Core](f-x-core/what-is-f-x-core.md)
 * [Installation f(x)Core](tutorials/installation.md)
 * [Setup Node](f-x-core/setup-node/README.md)
   * [Full node with Binaries](tutorials/full-node-with-binaries.md)
