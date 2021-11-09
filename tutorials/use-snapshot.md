@@ -49,7 +49,7 @@ tar -xzvf <snapshot file> -C <FXCORE_DATA_DIRECTORY>
 For example:
 
 ```bash
-tar -xzvf fxcore-snapshot-2021-11-18.tar.gz -C ~/.fxcore/data/
+tar -xzvf fxcore-snapshot-2021-11-08.tar.gz -C ~/.fxcore/data/
 ```
 
 Note that if your fxcore data directory is named differently then please rename that directory.

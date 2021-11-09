@@ -12,9 +12,9 @@ description: This is work in progress. Mechanisms and values are susceptible to 
 
 ### What is 'staking'?
 
-The f(x)Core is a delgated Proof-Of-Stake (DPoS) blockchain, meaning that the weight of validators is determined by the amount of staking tokens (FX) bonded as collateral. These FX can be self-delegated directly by the validator or delegated to them by other FX holders.
+The f(x)Core is a delgated Proof-Of-Stake (DPoS) blockchain, meaning that the weight of validators is determined by the total amount of staking tokens (FX) bonded as collateral. These FX can be self-delegated directly by the validator or delegated to them by other FX holders.
 
-Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction. From there, they become validator candidates.
+Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction, provided they meet the miniminum self-delegated amount of 100FX. From there, they become validator candidates.
 
 The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Initially, only the top 125 validators with the most voting power will be active validators.
 
