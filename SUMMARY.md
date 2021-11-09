@@ -30,9 +30,8 @@
 
 ## JSON RPC API
 
-* [f(x)Core JSON RPC](json-rpc-api.md)
-* [f(x)Core JSON RPC ABCI Query](json-rcp-abci-query.md)
-* [delete](json-rpc-api/delete.md)
+* [f(x)Core JSON RPC](json-rpc-api/json-rpc-api.md)
+* [f(x)Core JSON RPC ABCI Query](json-rpc-api/json-rcp-abci-query.md)
 
 ## REST API
 
