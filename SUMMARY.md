@@ -23,14 +23,14 @@
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [f(x)cored Commands Documentation](resources/f-x-cored-commands-documentation.md)
+* [Ledger Integration for fxcored](resourcess/ledger-integration-for-fxcored.md)
 
 ## Developers
 
 * [f(x)Core Info](developers/fxcore-info.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
-* [f(x)Core REST API](developers/rest_api.md)
-
+* [f(x)Core REST API](developers/rest\_api.md)
 
 ***
 
