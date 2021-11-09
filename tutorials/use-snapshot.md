@@ -31,7 +31,7 @@ wget -c <Snapshot URL>
 For example:
 
 ```bash
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-10-18.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-11-08.tar.gz
 ```
 
 This will download the Snapshot of fxcore
