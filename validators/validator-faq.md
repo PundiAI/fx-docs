@@ -16,17 +16,17 @@ The f(x)Core is a delgated Proof-Of-Stake (DPoS) blockchain, meaning that the we
 
 Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction, provided they meet the miniminum self-delegated amount of 100FX. From there, they become validator candidates.
 
-The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Initially, only the top 125 validators with the most voting power will be active validators.
+The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Initially, only the top 50 validators with the most voting power will be active validators.
 
 ### What is a full-node?
 
-A full-node is a program that fully validates transactions and blocks of a blockchain. It is distinct from a light-node that only processes block headers and a small subset of transactions. Running a full-node requires more resources than a light-node but is necessary in order to be a validator. In practice, running a full-node only implies running a non-compromised and up-to-date version of the software with low network latency and without downtime.
+A full-node is a program that fully validates transactions and blocks of a blockchain. It is distinct from a light-node that only processes block headers and a small subset of transactions. Running a full-node requires more resources than a light-node but is necessary in order to be a validator. In practice, running a full-node only implies running a non-compromised and up-to-date version of the software with low network latency and no downtime.
 
-Of course, it is possible and encouraged for users to run full-nodes even if they do not plan to be validators.
+Of course, we encourage users to run full-nodes even if they do not plan to become validators.
 
 ### What is a delegator?
 
-Delegators are FX holders who cannot, or do not want to run a validator themselves. FX holders can delegate FX to a validator and obtain a part of their revenue in exchange (for more detail on how revenue is distributed, see [**What is the incentive to stake?**](validator-faq.md#what-is-the-incentive-to-stake?) and [**What are validators commission?**](validator-faq.md#what-are-validators-commission?) sections below).
+Delegators are FX holders who want to participate in protocol governance, but don’t want to carry the burden of becoming a validator. In which case they can delegate FX to a validator and obtain a slice of their revenue (as well as risks). (for more detail on how revenue is distributed, see [**What is the incentive to stake?**](validator-faq.md#what-is-the-incentive-to-stake?) and [**What are validators commission?**](validator-faq.md#what-are-validators-commission?) sections below).
 
 Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
