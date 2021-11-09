@@ -28,9 +28,9 @@ Of course, we encourage users to run full-nodes even if they do not plan to beco
 
 Delegators are FX holders who want to participate in protocol governance, but don’t want to carry the burden of becoming a validator. In which case they can delegate FX to a validator and obtain a slice of their revenue (as well as risks). (for more detail on how revenue is distributed, see [**What is the incentive to stake?**](validator-faq.md#what-is-the-incentive-to-stake) and [**What are validators commission?**](validator-faq.md#what-are-validators-commission) sections below).
 
-Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform due diligence on validators before delegating, as well as spreading their stake over multiple validators.
+Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform their due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
-Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [delegator's faq](https://hub.cosmos.network/main/delegators/delegator-faq.html).
+Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [delegator's faq](broken-link).
 
 ## Becoming a Validator
 
