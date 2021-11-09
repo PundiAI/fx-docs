@@ -1,10 +1,10 @@
 # Full node with Binaries
 
-This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../validators/validator-setup.md).
+This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
 
 ## Install f(x)Core
 
-> **You need to **[**install f(x)Core**](installation.md)** before you go further**
+> **You need to **[**install f(x)Core**](broken-reference)** before you go further**
 
 #### Setup f(x)Core
 
@@ -31,7 +31,11 @@ wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
-And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../f-x-core/setup-node/validator-recovery.md) how to access the files.
+And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](broken-reference) how to access the files.
+{% endhint %}
+
+{% hint style="info" %}
+For a more stable way of setting up via running a daemon
 {% endhint %}
 
 Start Node:
@@ -135,3 +139,96 @@ Stop Node (will be running in the background if not stopped):
 ps -ef | grep fxcored
 kill -9 <PID>
 ```
+
+## Running Server as a Daemon
+
+It is important to keep `fxcored` running at all times. There are several ways to achieve this, and the simplest solution we recommend is to register `fxcored` as a `systemd` service so that it will automatically get started upon system reboots and other events.
+
+### Register `fxcored` as a service
+
+First, create a service definition file in `/etc/systemd/system` with the follow specifications:
+
+#### Sample file: `/etc/systemd/system/fxcored.service`
+
+```
+[Unit]
+Description=f(x)Core Node
+After=network.target
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/root/go/bin/fxcored start --home /root/.fxcore
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+[Install]
+WantedBy=multi-user.target
+```
+
+{% hint style="info" %}
+Ensure your **User **and **WorkingDirectory** are configured correctly. Run the following command to see your **WorkingDirectory:**
+{% endhint %}
+
+```
+pwd
+```
+
+Run this command to create the sample file above in the file path`/etc/systemd/system/fxcored.service` (if you are in the home folder):
+
+```
+cat > /etc/systemd/system/fxcored.service
+```
+
+hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and copy and paste the contents of the file above into the command line, it should look like this:
+
+```
+root@XXXXXXXXXXXXXXX:~# cat > /etc/systemd/system/fxcored.service
+[Unit]
+Description=f(x)Core Node
+After=network.target
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/root/go/bin/fxcored start --home /root/.fxcore
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=4096
+[Install]
+WantedBy=multi-user.target
+```
+
+then use <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created.
+
+Modify the `Service` section from the given sample above to suit your settings. Note that even if we raised the number of open files for a process, we still need to include `LimitNOFILE`.
+
+After creating a service definition file, you should execute `systemctl daemon-reload` and `systemctl enable fxcored`
+
+### Controlling the service
+
+Use `systemctl` to control (start, stop, restart)
+
+```bash
+# Start
+sudo systemctl start fxcored
+# Status
+sudo systemctl status fxcored
+# Stop
+sudo systemctl stop fxcored
+# Restart
+sudo systemctl restart fxcored
+```
+
+### Accessing logs
+
+```bash
+# Entire log
+journalctl -t fxcored
+# Entire log reversed
+journalctl -t fxcored -r
+# Latest and continuous
+journalctl -t fxcored -f
+```
+
+> Concluding tips: It is always better to sync f(x)Core using the Daemon method because this ensures stability and that your syncing is continuously running in the background.
