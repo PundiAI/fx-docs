@@ -32,6 +32,7 @@
 
 * [f(x)Core JSON RPC](json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](json-rcp-abci-query.md)
+* [delete](json-rpc-api/delete.md)
 
 ## REST API
 
@@ -40,3 +41,4 @@
 ***
 
 * [Go to FunctionX](https://functionx.io)
+* [delete](delete.md)
