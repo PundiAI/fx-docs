@@ -49,7 +49,14 @@ tar -xzvf <snapshot file> -C <FXCORE_DATA_DIRECTORY>
 For example:
 
 ```bash
-tar -xzvf fxcore-snapshot-2021-11-08.tar.gz -C ~/.fxcore/data/
+tar -xzvf fxcore-snapshot-2021-11-08.tar.gz -C ~/.fxcore/
 ```
 
+{% hint style="info" %}
 Note that if your fxcore data directory is named differently then please rename that directory.
+
+When you are unpacking the snapshot, it is already contained in a data folder, you will be replacing the data folder below. Be sure to maintain the integrity of this directory tree structure.
+{% endhint %}
+
+![](<../../.gitbook/assets/Fxcore Private KEy.jpg>)
+
