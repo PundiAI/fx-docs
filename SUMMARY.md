@@ -35,4 +35,3 @@
 ***
 
 * [Go to FunctionX](https://functionx.io)
-* [delete](delete.md)
