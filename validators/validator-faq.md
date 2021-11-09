@@ -26,7 +26,7 @@ Of course, we encourage users to run full-nodes even if they do not plan to beco
 
 ### What is a delegator?
 
-Delegators are FX holders who want to participate in protocol governance, but don’t want to carry the burden of becoming a validator. In which case they can delegate FX to a validator and obtain a slice of their revenue (as well as risks). (for more detail on how revenue is distributed, see [**What is the incentive to stake?**](validator-faq.md#what-is-the-incentive-to-stake?) and [**What are validators commission?**](validator-faq.md#what-are-validators-commission?) sections below).
+Delegators are FX holders who want to participate in protocol governance, but don’t want to carry the burden of becoming a validator. In which case they can delegate FX to a validator and obtain a slice of their revenue (as well as risks). (for more detail on how revenue is distributed, see [**What is the incentive to stake?**](validator-faq.md#what-is-the-incentive-to-stake) and [**What are validators commission?**](validator-faq.md#what-are-validators-commission) sections below).
 
 Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
@@ -58,7 +58,7 @@ Out of all validator candidates that signaled themselves, the 125 with the most 
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](broken-reference).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](broken-reference/).
 
 ### What are the different types of keys?
 
