@@ -5,7 +5,7 @@
 ### Testnet
 
 ```
-https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-10-18.tar.gz
+https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-11-08.tar.gz
 ```
 
 ### Mainnet
