@@ -27,15 +27,10 @@
 ## Developers
 
 * [f(x)Core Info](developers/fxcore-info.md)
+* [f(x)Core JSON RPC](developers/json-rpc-api.md)
+* [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
+* [f(x)Core REST API](developers\_api.md)
 
-## JSON RPC API
-
-* [f(x)Core JSON RPC](json-rpc-api/json-rpc-api.md)
-* [f(x)Core JSON RPC ABCI Query](json-rpc-api/json-rcp-abci-query.md)
-
-## REST API
-
-* [f(x)Core REST API](reset\_api.md)
 
 ***
 
