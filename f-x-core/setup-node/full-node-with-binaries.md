@@ -180,7 +180,7 @@ Run this command to create the sample file above in the file path`/etc/systemd/s
 cat > /etc/systemd/system/fxcored.service
 ```
 
-hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and copy and paste the contents of the file above into the command line, it should look like this:
+hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and `copy` and `paste` the contents of the file above into the command line, it should look like this:
 
 ```
 root@XXXXXXXXXXXXXXX:~# cat > /etc/systemd/system/fxcored.service

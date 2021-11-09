@@ -14,18 +14,23 @@ Run the following command:
 
 ```
 #if you are in fx-core dir
-cd ..
-cd .fxcore
+cd ../.fxcore
 
 # if you are in the root dir
 cd .fxcore
 ```
 
-&#x20;You will see a .fxcore directory in your root folder with the following directory tree:
+Running the command:
+
+```
+ls
+```
+
+You will see a .fxcore directory in your root folder with the following directory tree:
 
 ![](<../../.gitbook/assets/Fxcore Private KEy.jpg>)
 
-To open the priv\_validator\_key.json file and store it somewhere for safe keeping:
+To open the `priv_validator_key.json` file and store it somewhere for safe keeping:
 
 ```
 cd config
@@ -46,11 +51,18 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/con
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml -O ~/.fxcore/config/app.toml
 ```
 
-The key file here is priv\_validator_\__key.json. After initializing and overriding those files, override the priv\_validator_\__key.json with your original priv\_validator_\__key.json of the validator you want to recover.
-
-Your priv\_validator_\__key.json file should look something like this:
+The key file here is `priv_validator_key.json`_. _After initializing and overriding those files, override the `priv_validator_key.json`_ _with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):
 
 ```
+cat > priv_validator_key.json
+```
+
+Hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and `copy` and `paste` the contents of your `priv_validator_key.json` file from your original validator into the command line
+
+Your command line should look something like this:
+
+```
+root@XXXXXXXXXXXXXXX:~# cat > priv_validator_key.json
 {
   "address": "XXXXXXXXXXXXXXXXXXxxxxxxxXXXXXX",
   "pub_key": {
@@ -62,6 +74,8 @@ Your priv\_validator_\__key.json file should look something like this:
     "value": "XXXXXXXXXXXXXXXXXXxxxxxxxXXXXXX"
   }}
 ```
+
+Then use <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created.
 
 Run the following command and compare if the public key you generate now matches the old public key. If it does, then you have successfully recovered your original validator.
 
