@@ -17,7 +17,6 @@
 * [Validator Overview](validators/validator-overview.md)
 * [Setting Up a Validator for f(x)Core Testnet](validators/validator-setup.md)
 * [Validator FAQ](validators/validator-faq.md)
-* [Validator Recovery](validators/validator-recovery.md)
 
 ## Resourcess
 
