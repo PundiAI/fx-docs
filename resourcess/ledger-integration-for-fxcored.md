@@ -19,42 +19,17 @@ Installing the `Cosmos` application on your ledger device is required before you
 5. On the Ledger Live application, Search for `Cosmos`.
 6. Install the Cosmos application by clicking on `Install`.
 
-::: tip To see the `Cosmos` application when you search for it, you might need to activate the `Developer Mode`, located in the Experimental features tab of the Ledger Live application. :::
-
-## Lunie.io + Ledger Nano
-
-**Note: You need to **[**install the Cosmos app**](ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application)** on your Ledger Nano before using following this section**
-
-1. Connect your Ledger device to your computer, unlock it with the PIN and open the Cosmos app.
-2. Open [https://app.lunie.io](https://app.lunie.io/existing) in your web browser (latest version of [Brave](https://brave.com) preferred).
-3. Choose `Sign in with Ledger Nano S`.
-4. Make sure your Ledger device is unlocked and with the Cosmos app open and then click on the`Sign in` button.
-
-That's it! You can now use Lunie with your Ledger Nano S. You will find your Cosmos address here:
-
-**Note: Each time you will send a transaction, you will need to confirm it on your Ledger device. Indication will be prompted from the Lunie interface**
-
-### (Optional) Confirm your address
-
-You can double check that Lunie is displaying the correct address directly on your Ledger Nano device. To do so:
-
-1. Connect your Ledger to your computer and open the Cosmos application on the device.
-2. Once the Cosmos app is open, click on the right button to access the `Show Address` option.
-3. Click on both button, then select `Account 0` and `Index 0`.
-
-You should now see the same address that is displayed on the Lunie application.
-
-To learn more about using Lunie, [here is a tutorial](https://medium.com/easy2stake/how-to-delegate-re-delegate-un-delegate-cosmos-atoms-with-the-lunie-web-wallet-eb72369e52db) on staking and delegating ATOMs using the Lunie web wallet.
+> To see the `Cosmos` application when you search for it, you might need to activate the `Developer Mode`, located in the Experimental features tab of the Ledger Live application.
 
 ## f(x)Core CLI + Ledger Nano
 
-**Note: You need to **[**install the Cosmos app**](ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application)** on your Ledger Nano before using following this section**
+**Note: You need to **[**install the Cosmos app**](ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application)** on your Ledger Nano before moving on to this section**
 
-The tool used to generate addresses and transactions on the f(x)Core network is `fxcored`. Here is how to get started. If using a CLI tool is unfamiliar to you, scroll down and follow instructions for using the Lunie.io web wallet instead.
+The tool used to generate addresses and transactions on the f(x)Core network is `fxcored`. Here is how to get started.
 
 ### Install f(x)Core
 
-> **You need to **[**install f(x)Core**](https://github.com/falcons-x/fx-docs/blob/master/resources/installation.md)** before you go further**
+> **You need to **[**install f(x)Core**](ledger-integration-for-fxcored.md#install-f-x-core)** before you go further**
 
 ### Add your Ledger key
 
@@ -62,16 +37,13 @@ The tool used to generate addresses and transactions on the f(x)Core network is 
 * Open the Cosmos app on your Ledger.
 * Create an account in fxcored from your ledger key.
 
-::: tip Be sure to change the _keyName_ parameter to be a meaningful name. The `ledger` flag tells `fxcored` to use your Ledger to seed the account. :::
+> Be sure to change the `_name` parameter to be a meaningful name. The `--ledger` flag tells `fxcored` to use your Ledger to seed the account.
 
 ```bash
-fxcored keys add <keyName> --ledger
-
-➜ NAME: TYPE: ADDRESS:     PUBKEY:
-<keyName> ledger cosmos1... cosmospub1...
+fxcored keys add <_name> --ledger
 ```
 
-Cosmos uses [HD Wallets](broken-reference). This means you can setup many accounts using the same Ledger seed. To create another account from your Ledger device, run (change the integer i to some value >= 0 to choose the account for HD derivation):
+Cosmos uses [HD Wallets](broken-reference). This means you can setup many accounts using the same Ledger seed. To create another account from your Ledger device, run (change the integer \<i> to some value >= 0 to choose the account for HD derivation):
 
 ```bash
 fxcored keys add <secondKeyName> --ledger --account <i>
@@ -79,13 +51,13 @@ fxcored keys add <secondKeyName> --ledger --account <i>
 
 ### Confirm your address
 
-Run this command to display your address on the device. Use the `keyName` you gave your ledger key. The `-d` flag is supported in version `1.5.0` and higher.
+Run this command to display your address on the device. Use the `_name` you gave your ledger key. The `-d` flag is supported in version `1.5.0` and higher.
 
 ```bash
-fxcored keys show <keyName> -d
+fxcored keys show <_name> -d
 ```
 
-Confirm that the address displayed on the device matches that displayed when you added the key.
+Confirm that the address displayed on the device matches the address displayed when you first added the key above.
 
 ### Connect to a full node
 
