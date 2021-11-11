@@ -48,7 +48,7 @@ Any participant in the network can signal that they want to become a validator b
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.
 * **Minimum self-delegation:** Minimum amount of FX the validator needs to have bonded at all time. If the validator's self-delegated stake falls below this limit, their entire staking pool will unbond.
 
-Once a validator is created, FX holders can delegate FX to them, effectively adding stake to their pool. The total stake of an address is the combination of FX bonded by delegators and FX self-bonded by the entity which designated themselves.
+Once a validator is created, FX holders can delegate FX to them, effectively adding stake to their pool. The total stake of an address is the combination of FX bonded by delegators and FX self-bonded by the validator.
 
 Out of all validator candidates that signaled themselves, the 125 with the most total stake are the ones who are designated as validators. They become **validators** If a validator's total stake falls below the top 125 then that validator loses their validator privileges: they don't participate in consensus and generate rewards any more. Over time, the maximum number of validators may be increased via on-chain governance proposal.
 

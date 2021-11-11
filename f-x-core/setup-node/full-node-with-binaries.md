@@ -14,7 +14,7 @@ Initializing fxcore：
 fxcored init fx-zakir
 ```
 
-Initializing fxcored will result in the creation of a few directories and most importantly the .fxcore directory. This will be where your validator keys are stored and this is important for recovery of your validator.
+Initializing fxcored will result in the creation of a few directories and most importantly the .fxcore directory (for more information on the directory tree, refer to the validator-recovery section). This will be where your validator keys are stored and this is important for recovery of your validator.
 
 Fetching config file (copy this entire line of code):
 
