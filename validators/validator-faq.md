@@ -38,12 +38,12 @@ Delegators play a critical role in the system, as they are responsible for choos
 
 Any participant in the network can signal that they want to become a validator by sending a `create-validator` transaction, where they must fill out the following parameters:
 
-* **Validator's `PubKey`:** The private key associated with this Tendermint `PubKey` is used to sign _prevotes_ and _precommits_.
+* **Validator's `PubKey`:** The validator's public key is your public key for your `validator's address`. The private key associated with this Tendermint `PubKey` is used to sign _prevotes_ and _precommits_.
 * **Validator's Address:** Application level address. This is the address used to identify your validator publicly. The private key associated with this address is used to delegate, unbond, claim rewards, and participate in governance.
-* **Validator's name (moniker)**
-* **Validator's website (Optional)**
-* **Validator's description (Optional)**
-* **Initial commission rate**: The commission rate on block rewards and fees charged to delegators.
+* **Validator's name (moniker):** This is the name of your validator that will be displayed on the interfaces.
+* **Validator's website (Optional):** This is where delegators can find more information about this particular validator.
+* **Validator's description (Optional):** Along with the name (moniker), this will be an easier form of identification for delegators. 
+* **Initial commission rate**: The commission rate on block rewards and fees that will be charged by validators and charged to delegators (more information can be found below).
 * **Maximum commission:** The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed.
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.
 * **Minimum self-delegation:** Minimum amount of FX the validator needs to have bonded at all time. If the validator's self-delegated stake falls below this limit, their entire staking pool will unbond.
