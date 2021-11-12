@@ -56,8 +56,10 @@ Next, let's install the latest version of f(x)Core. Make sure you have git insta
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
 make go.sum
+
 #testnet
 make install-testnet
+
 #mainnet
 make install
 ```
