@@ -77,13 +77,13 @@ In short, there are two types of keys ([for more information on keys](../resourc
 
 After a validator is created with a `create-validator` transaction, they can be in three states:
 
-* `in validator set`: Validator is in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehaviour.
-* `jailed`: Validator misbehaved and is in jail, i.e. outisde of the validator set. If the jailing is due to being offline for too long, the validator can send an `unjail` transaction in order to re-enter the validator set. If the jailing is due to double signing, the validator cannot unjail.
-* `unbonded`: Validator is not in the active set, and therefore not signing blocs. Validator cannot be slashed, and does not earn any reward. It is still possible to delegate FX to this validator. Un-delegating from an `unbonded` validator is immediate.
+* `Active validator set`: Validator in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehaviour.
+* `Jailed`: Validator misbehaved and is in jail, i.e. has been kicked out off the validator set. If the reason for being jailed is due to being offline for too long, the validator can send an `unjail` transaction in order to re-enter the active validator set. If the jailing is due to double signing, the validator cannot unjail.
+* `Inactive`: Validator is not in the active set, and therefore not signing any blocks. Validator cannot be slashed, and does not earn any reward. It is still possible to delegate FX to this validator. Un-delegating from an `unbonded` validator is immediate and does not require a 21 day lockout period.
 
 ### What is 'self-delegation'? How can I increase my 'self-delegation'?
 
-Self-delegation is delegation from a validator to themselves. This amount can be increases by sending a `delegate` transaction from your validator's `application` application key.
+Self-delegation is delegation of FX of a validator from his own account. This amount can be increases by sending a `delegate` transaction from your validator's account.
 
 ### Is there a minimum amount of FX that must be delegated to be an active (=bonded) validator?
 
@@ -91,47 +91,47 @@ The minimum is `100FX`.
 
 ### How will delegators choose their validators?
 
-Delegators are free to choose validators according to their own subjective criteria. This said, criteria anticipated to be important include:
+Delegators are free to delegate to any validators according to their own criteria. Bottom line is that they must **DO YOUR OWN RESEARCH** and carry out their own due diligence on their chosen validator(s). That being said, the criterion we deem to be important include:
 
-* **Amount of self-delegated FX:** Number of FX a validator self-delegated to themselves. A validator with a higher amount of self-delegated FX has more skin in the game, making them more liable for their actions.
-* **Amount of delegated FX:** Total number of FX delegated to a validator. A high voting power shows that the community trusts this validator, but it also means that this validator is a bigger target for hackers. Bigger validators also decrease the decentralisation of the network.
-* **Commission rate:** Commission applied on revenue by validators before it is distributed to their delegators.
-* **Track record:** Delegators will likely look at the track record of the validators they plan to delegate to. This includes seniority, past votes on proposals, historical average uptime and how often the node was compromised.
+* **Amount of self-delegated FX:** Amount of self-delegated FX a validator has. A validator with a higher amount of self-delegated FX has more skin in the game, making them more accountable for their actions.
+* **Total amount of delegated FX:** Total amount of FX delegated to a validator. The higher the amount of FX delegated to a validator, the higher the voting power of the validator. A higher voting power shows that the community trusts this validator, but it also means that this validator is a bigger target for hackers. Higher weighted validators also decrease the decentralisation of the network.
+* **Commission rate:** Commission applied to the revenue of validators before it is distributed to their delegators.
+* **Track record:** Points to note on the track record of a validator inlcudes seniority, past votes on proposals, historical average uptime and how often the node was compromised.
 
-Apart from these criteria, there will be a possibility for validators to signal a website address to complete their resume. Validators will need to build reputation one way or another to attract delegators. For example, it would be a good practice for validators to have their setup audited by third parties. Note though, that the Tendermint team will not approve or conduct any audit themselves. For more on due diligence.
+Apart from these criterion, validators can add a weblink to their validator account as a form of resume. Validators will need to build rapport within the community to attract delegators. For example, it would be a good practice for validators to have their setup audited by third parties. Note that the FunctionX team will not approve or conduct any audit themselves.
 
 ## Responsibilities
 
 ### Do validators need to be publicly identified?
 
-No, they do not. Each delegator will value validators based on their own criteria. Validators will be able to register a website address when they nominate themselves so that they can advertise their operation as they see fit. Some delegators may prefer a website that clearly displays the team operating the validator and their resume, while others might prefer anonymous validators with positive track records.
+No, they do not. Each delegator will assess validators based on their own criterion. Validators will be able to register a website address when they nominate themselves so that they can advertise their operation as they see fit. Some delegators may prefer a website that clearly displays the team operating the validator and their resume, while others might prefer anonymous validators with positive track records.
 
 ### What are the responsibilities of a validator?
 
 Validators have two main responsibilities:
 
-* \*\*Be able to constantly run a correct version of the software:\*\*Validators need to make sure that their servers are always online and their private keys are not compromised.
+* **Be able to constantly run a correct version of the software:**Validators need to ensure that they are running an uncompromised and updated version of the software continuously.
 * **Actively participate in governance:** Validators are required to vote on every proposal.
 
-Additionally, validators are expected to be active members of the community. They should always be up-to-date with the current state of the ecosystem so that they can easily adapt to any change.
+Additionally, validators are expected to be active members of the community. They should always be up-to-date with the current state of the ecosystem and staying abreast of any information on FunctionX so that they can make necessary upgrades, and be quick to respond to any changes.
 
-### What does 'participate in governance' entail?
+### What does 'participating in governance' entail?
 
 Validators and delegators on the f(x)Core can vote on proposals to change operational parameters (such as the block gas limit), coordinate upgrades, or make a decision on any given matter.
 
-Validators play a special role in the governance system. Being the pillars of the system, they are required to vote on every proposal. It is especially important since delegators who do not vote will inherit the vote of their validator.
+Validators play a special role in the governance system. Being the pillars of the system, they are required to vote on every proposal. It is especially important since validators will vote on behalf of the delegators if the delegators do not vote.
 
 ### What does staking imply?
 
-Staking FX can be thought of as a safety deposit on validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they send an `unbonding` transaction. Then, FX undergo a **3 weeks unbonding period** during which they are liable to being slashed for potential misbehaviors committed by the validator before the unbonding process started.
+Staking FX can be thought of as a safety deposit for validation activities. When a validator or a delegator wants to retrieve part or all of their deposit, they can send an `unbonding` transaction. Delegators to this validator who unbond their delegation must wait the duration of the UnbondingTime, a **3 weeks unbonding period**, during which time they are liable to being slashed for potential misbehaviors committed by the validator before the unbonding process started.
 
-Validators, and by association delegators, receive block rewards, fees, and have the right to participate in governance. If a validator misbehaves, a certain portion of their total stake is slashed. This means that every delegator that bonded FX to this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators that they anticipate will function safely.
+Validators, and their delegators, receive block rewards, fees, and have the right to participate in governance. If a validator misbehaves, a certain portion of their total stake is slashed. This means that every delegator that bonded their FX with this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators they believe are trustworthy.
 
 ### Can a validator run away with their delegators' FX?
 
-By delegating to a validator, a user delegates voting power. The more voting power a validator have, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' FX. **By no means can a validator run away with its delegator's funds**.
+In a DPoS blockchain, voting power is associated with the amount of FX one has. By delegating FX to a validator, a user delegates voting power. The more voting power a validator has, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' FX. **By no means can a validator run away with its delegator's funds**.
 
-Even though delegated funds cannot be stolen by their validators, delegators are still liable if their validators misbehave.
+Even though delegated funds cannot be stolen by their validators, delegators are still liable for their validators' misbehaviour.
 
 ### How often will a validator be chosen to propose the next block? Does it go up with the quantity of bonded FX?
 
