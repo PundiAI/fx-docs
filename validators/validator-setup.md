@@ -56,7 +56,10 @@ It is the only way to recover your account if you ever forget your password.
 
 word word word word...
 ```
-
+if you already have an existing fx wallet and would like to import it you may run the following command and follow the prompts:
+```
+fxcored keys add <account_name> --recover
+```
 1. Bind the node consensus and validator's token holding account
 
 Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator!
@@ -77,7 +80,23 @@ The command to run will be `fxcored tx staking create-validator`, the main field
 
 > Note: FX has 18 decimal points.
 
-Copy the entire command below, after changing the `amount`, `from` and both the `monikers`. Currently, it is set as `100 000 FX`. If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io).
+Copy the entire command below, after editing the required fields:
+`chain-id=fxcore` is set as our fxcore chain (don't change this)
+`gas="auto"` automatically assesses the gas used for this `create-validator` transaction
+`gas-adjustment=1.2` there will be a 20% buffer added to the automatically assessed gas amount
+`gas-prices="4000000000000FX"` this will be the gas price you will be paying for
+`from=<_name>` this is the token holding account created above that you will be binding your consensus account to to create a validator
+`amount=100000000000000000000000FX` this is the amount you will be self-delegating for your validator (currently it is set as `100 000 FX`)
+`pubkey=$(fxcored tendermint show-validator)` this is your pubkey of your validator 
+`commission-rate="0.01"` this is the commission you will be charging as a validator
+`commission-max-rate="0.20"` The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed
+`commission-max-change-rate="0.01"` The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed
+`min-self-delegation="1000000000000000000"` Minimum amount of FX the validator needs to have bonded at all time. If the validator's self-delegated stake falls below this limit, their entire staking pool will unbond
+`moniker="choose a moniker"` This will be the name of your validator for easier identification
+`website="https://functionx.io"` This will be the website for delegators or the public to read more about your validator
+`details="To infinity and beyond!"` You can add some additional details about your validator
+
+If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io).
 
 ```bash
 fxcored tx staking create-validator \

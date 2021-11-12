@@ -135,13 +135,13 @@ Even though delegated funds cannot be stolen by their validators, delegators are
 
 ### How often will a validator be chosen to propose the next block? Does it go up with the quantity of bonded FX?
 
-The validator that is selected to propose the next block is called proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded FX) of the validator. For example, if the total bonded stake across all validators is 100 FX and a validator's total stake is 10 FX, then this validator will proposer `~10% `of the blocks.
+The validator that is selected to propose the next block is called a proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded FX) of the validator. For example, if the total bonded stake across all validators is 100 FX and a validator's total stake is 10 FX, then this validator will proposer `~10% `of the blocks.
 
 ## Incentives
 
 ### What is the incentive to stake?
 
-Each member of a validator's staking pool earns different types of revenue:
+There are essentailly 2 different types of revenue:
 
 * **Block rewards:** Native tokens of applications run by validators (e.g. FX on the f(x)Core) are inflated to produce block provisions. These provisions exist to incentivize FX holders to bond their stake, as non-bonded FX will be diluted over time.
 * **Transaction fees:** The f(x)Core maintains a whitelist of token that are accepted as fee payment. The initial fee token is the `FX`.
