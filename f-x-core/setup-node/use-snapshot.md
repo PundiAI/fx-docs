@@ -11,7 +11,7 @@ https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-11-08.tar.gz
 ### Mainnet
 
 ```
-...
+https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-08.tar.gz
 ```
 
 > Snapshots are performed every Monday morning at 2:00 am UTC, keeping a record of that snapshot for three weeks. If the date on the file above is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date (to the latest Monday's date) in the file name to get the latest snapshot. If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number.

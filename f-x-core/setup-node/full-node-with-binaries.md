@@ -1,10 +1,10 @@
 # Full node with Binaries
 
-This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
+This guide will explain how to install the `fxcored testnet` or `fxcored mainnet` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
 
 ## Install f(x)Core
 
-> **You need to **[**install f(x)Core**](broken-reference)** before you go further**
+> **You need to **[**install f(x)Core**](../installation.md)** before you go further**
 
 #### Setup f(x)Core
 
@@ -20,12 +20,14 @@ Fetching config file (copy this entire line of code):
 
 ```bash
 # testnet
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/genesis.json -O ~/.fxcore/config/genesis.json && \
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/config.toml -O ~/.fxcore/config/config.toml && \
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 
 # mainnet
-...
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 
 {% hint style="info" %}

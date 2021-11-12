@@ -7,7 +7,7 @@ After initializing fxcore:
 fxcored init fx-zakir
 
 # Docker
-docker run --rm -v ~:/root functionx/fx-core:testnet init fx-zakir
+docker run --rm -v ~:/root functionx/fx-core:testnet-1.0 init fx-zakir
 ```
 
 Run the following command:
@@ -28,7 +28,19 @@ ls
 
 You will see a .fxcore directory in your root folder with the following directory tree:
 
-![](<../../.gitbook/assets/Fxcore Private KEy.jpg>)
+```
+ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
+/home/ubuntu/.fxcore
+├── config
+│   ├── app.toml
+│   ├── config.toml
+│   ├── genesis.json
+│   ├── node_key.json
+│   └── priv_validator_key.json
+└── data
+    └── priv_validator_state.json
+2 directories, 6 files
+```
 
 To open the `priv_validator_key.json` file and store it somewhere for safe keeping:
 
@@ -41,14 +53,14 @@ The command after is to override the various files that were initialized earlier
 
 ```
 # Binaries:
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/genesis.json -O ~/.fxcore/config/genesis.json && \
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/config.toml -O ~/.fxcore/config/config.toml && \
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 
 # Docker:
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/genesis.json -O ~/.fxcore/config/genesis.json
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/config.toml -O ~/.fxcore/config/config.toml
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml -O ~/.fxcore/config/app.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 
 The key file here is `priv_validator_key.json`_. _After initializing and overriding those files, override the `priv_validator_key.json`_ _with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):

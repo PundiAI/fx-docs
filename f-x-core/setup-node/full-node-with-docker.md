@@ -1,10 +1,10 @@
 # Full node with Docker
 
-This guide will explain how to install the `fxcored testnet` or `fxcored master` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../validators/validator-setup.md).
+This guide will explain how to install the `fxcored testnet` or `fxcored mainnet` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
 
 ## Install f(x)Core
 
-> **You need to **[**install f(x)Core**](installation.md)** before you go further**
+> **You need to **[**install f(x)Core**](../installation.md)** before you go further**
 
 ### Use Docker
 
@@ -14,44 +14,46 @@ This guide will explain how to install the `fxcored testnet` or `fxcored master`
 
 ```bash
 # For testnet：
-  docker pull functionx/fx-core:testnet
+docker pull functionx/fx-core:testnet-1.0
 # For mainnet：
-  ...  
+docker pull functionx/fx-core:mainnet-1.0
 ```
 
 * init config
 
 ```bash
 # For testnet：
-  docker run --rm -v ~:/root functionx/fx-core:testnet init fx-zakir
+  docker run --rm -v ~:/root functionx/fx-core:testnet-1.0 init fx-zakir
 # For mainnet：
-  ...  
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 init fx-zakir
 ```
 
 * download genesis (copy and run each line, line by line)
 
 ```bash
 # For testnet：
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/genesis.json -O ~/.fxcore/config/genesis.json
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/config.toml -O ~/.fxcore/config/config.toml
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/public/app.toml -O ~/.fxcore/config/app.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 # For mainnet：  
-  ...
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
-And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../f-x-core/setup-node/validator-recovery.md) how to access the files.
+And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](./validator-recovery.md) how to access the files.
 {% endhint %}
 
 * run docker
 
 ```bash
 # For testnet：
-  docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:testnet start
+  docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:testnet-1.0 start
 # For mainnet：
-  ... 
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 start 
 ```
 
 To check if fxcore is synced:
@@ -106,7 +108,7 @@ Return:
   }
 ```
 
-To ensure that the blocks are synced up with your node, under "sync\_info", "catching\_up value" should be false `"catching_up value": false`. This may take a few hours and your node has to be fully synced up before proceeding to the next step. You may cross reference the latest block you are synced to "sync\_info": "latest\_block\_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://aabbcc-explorer.functionx.io/fxcore/blocks).
+To ensure that the blocks are synced up with your node, under "sync\_info", "catching\_up value" should be false `"catching_up value": false`. This may take a few hours and your node has to be fully synced up before proceeding to the next step. You may cross reference the latest block you are synced to "sync\_info": "latest\_block\_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://testnet-explorer.functionx.io/fxcore/blocks).
 
 ### Upgrading Your Node
 

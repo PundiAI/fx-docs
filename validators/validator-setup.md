@@ -72,21 +72,17 @@ Now we will bind the node consensus and validator's token holding account, once 
 
 * Ensure that your token holding account has enough `FX tokens` before creating a validator. For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io). For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
 
-> A minimum of `100 FX` is needed to create an active validator. You will need more than `100 testnet FX` in your account because some is needed to pay for the creation of your validator.
+> A minimum of `100 FX` is needed to create an active validator. You will need more than `100 testnet FX` in your account because some is needed to pay for the creation of your validator. Note: FX has 18 decimal points.
 
 Great! You can now bind the node consensus and validator's token holding account.
 
-The command to run will be `fxcored tx staking create-validator`, the main fields to change are `amount`, `from` and both the `monikers`. Do not use more `FX` than you have! Some `FX` is needed to `create the validator`.
-
-> Note: FX has 18 decimal points.
-
-Copy the entire command below, after editing the required fields:
+The command to run will be `fxcored tx staking create-validator`, copy the entire command below, after editing the required fields:
 * `chain-id=fxcore` is set as our fxcore chain (don't change this)
 * `gas="auto"` automatically assesses the gas used for this `create-validator` transaction
 * `gas-adjustment=1.2` there will be a 20% buffer added to the automatically assessed gas amount
-* `gas-prices="4000000000000FX"` this will be the gas price you will be paying for
+* `gas-prices="4000000000000FX"` this will be the gas price you will be paying for (you may check the gas price you will need to pay for your node)
 * `from=<_name>` this is the token holding account created above that you will be binding your consensus account to to create a validator
-* `amount=100000000000000000000000FX` this is the amount you will be self-delegating for your validator (currently it is set as `100 000 FX`)
+* `amount=100000000000000000000000FX` this is the amount you will be self-delegating for your validator (currently it is set as `100,000 FX`)
 * `pubkey=$(fxcored tendermint show-validator)` this is your pubkey of your validator 
 * `commission-rate="0.01"` this is the commission you will be charging as a validator
 * `commission-max-rate="0.20"` The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed
