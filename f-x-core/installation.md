@@ -57,10 +57,10 @@ git clone https://github.com/functionx/fx-core.git
 cd fx-core
 make go.sum
 
-#testnet
+# testnet
 make install-testnet
 
-#mainnet
+# mainnet
 make install
 ```
 
