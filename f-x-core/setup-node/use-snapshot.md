@@ -58,5 +58,17 @@ Note that if your fxcore data directory is named differently then please rename 
 When you are unpacking the snapshot, it is already contained in a data folder, you will be replacing the data folder below. Be sure to maintain the integrity of this directory tree structure.
 {% endhint %}
 
-![](<../../.gitbook/assets/Fxcore Private KEy.jpg>)
+```
+ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
+/home/ubuntu/.fxcore
+├── config
+│   ├── app.toml
+│   ├── config.toml
+│   ├── genesis.json
+│   ├── node_key.json
+│   └── priv_validator_key.json
+└── data
+    └── priv_validator_state.json
+2 directories, 6 files
+```
 
