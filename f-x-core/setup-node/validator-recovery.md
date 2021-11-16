@@ -1,32 +1,28 @@
 # Validator Recovery
 
-After initializing fxcore:
+Run the following command to open the `priv_validator_key.json` file and store it somewhere for safe keeping:
 
 ```
-# Binaries
-fxcored init fx-zakir
-
-# Docker
-docker run --rm -v ~:/root functionx/fx-core:testnet-1.0 init fx-zakir
+# if you are in fx-core dir
+cat ../.fxcore/config/priv_validator_key.json
 ```
 
-Run the following command:
+return (this will be your private key to recovery your validator):
 
 ```
-#if you are in fx-core dir
-cd ../.fxcore
-
-# if you are in the root dir
-cd .fxcore
+{
+  "address": "XXXXXXXXXXXXXXXXXXxxxxxxxXXXXXX",
+  "pub_key": {
+    "type": "tendermint/PubKeyEd25519",
+    "value": "XXXXXXXXXXXXXXXXXXxxxxxxxXXXXXX"
+  },
+  "priv_key": {
+    "type": "tendermint/PrivKeyEd25519",
+    "value": "XXXXXXXXXXXXXXXXXXxxxxxxxXXXXXX"
+  }}
 ```
 
-Running the command:
-
-```
-ls
-```
-
-You will see a .fxcore directory in your root folder with the following directory tree:
+The directory tree of the .fxcore directory should look like this:
 
 ```
 ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
@@ -42,14 +38,7 @@ ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
 2 directories, 6 files
 ```
 
-To open the `priv_validator_key.json` file and store it somewhere for safe keeping:
-
-```
-cd config
-cat priv_validator_key.json
-```
-
-The command after is to override the various files that were initialized earlier:
+The command after `Initializing fxcore` from setting up node with [Full node with Binaries](full-node-with-binaries.md) or [Full node with Docker ](full-node-with-docker.md)is to override the various files that were initialized earlier:
 
 ```
 # Binaries:
@@ -63,7 +52,7 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/test
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 
-The key file here is `priv_validator_key.json`_. _After initializing and overriding those files, override the `priv_validator_key.json`_ _with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):
+The key file here is `priv_validator_key.json`. After initializing and overriding those files, override the_ _`priv_validator_key.json` with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):
 
 ```
 cat > priv_validator_key.json

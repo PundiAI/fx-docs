@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/a
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
-And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](validator-recovery.md) how to access the files.
+Additionally, what is important is that your validator keys that is stored in a .json file for you to do a recovery in the future. For more [information](validator-recovery.md) how to access the files.
 {% endhint %}
 
 {% hint style="info" %}
@@ -168,18 +168,10 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 ```
 
-{% hint style="info" %}
-Ensure your **User **and **WorkingDirectory** are configured correctly. Run the following command to see your **WorkingDirectory:**
-{% endhint %}
+Run this command to create the sample file above in the file path`/etc/systemd/system/fxcored.service` (if you are in the fx-core directory):
 
 ```
-pwd
-```
-
-Run this command to create the sample file above in the file path`/etc/systemd/system/fxcored.service` (if you are in the home folder):
-
-```
-cat > /etc/systemd/system/fxcored.service
+cat > ../../etc/systemd/system/fxcored.service
 ```
 
 hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and `copy` and `paste` the contents of the file above into the command line, it should look like this:
@@ -221,6 +213,8 @@ sudo systemctl stop fxcored
 # Restart
 sudo systemctl restart fxcored
 ```
+
+To start the node, run `sudo systemctl start fxcored`, and thereafter run `journalctl -t fxcored -f` to see the latest and continuous logs.
 
 ### Accessing logs
 
