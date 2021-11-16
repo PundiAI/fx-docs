@@ -162,6 +162,19 @@ The \<key\_name> specifies which validator you are editing. If you choose to not
 
 The `--identity` can be used as to verify identity with systems like Keybase or UPort. When using with Keybase `--identity` should be populated with a 16-digit string that is generated with a [keybase.io](https://keybase.io) account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
 
+There are only a few parameters that can be edited they are listed below:
+* `commission-rate string`: The new commission rate percentage
+* `details string`: The validator's (optional) details (default "[do-not-modify]")
+* `identity string`: The (optional) identity signature (ex. UPort or Keybase) (default "[do-not-modify]")
+* `moniker string`: The validator's name (default "[do-not-modify]")
+* `security-contract string`: The validator's (optional) security contact email (default "[do-not-modify]")
+* `website string`: The validator's (optional) website (default "[do-not-modify]")
+
+**Note**: The `commission-rate` value must adhere to the following invariants:
+
+* Must be between 0 and the validator's `commission-max-rate`
+* Must not exceed the validator's `commission-max-change-rate` which is maximum % point change rate **per day**. In other words, a validator can only change its commission once per day and within `commission-max-change-rate` bounds.
+
 ```bash
 fxcored tx staking edit-validator
   --moniker="choose a moniker" \
@@ -175,11 +188,6 @@ fxcored tx staking edit-validator
   --gas-prices="6000000000000FX" \
   --from=<_name> \
 ```
-
-**Note**: The `commission-rate` value must adhere to the following invariants:
-
-* Must be between 0 and the validator's `commission-max-rate`
-* Must not exceed the validator's `commission-max-change-rate` which is maximum % point change rate **per day**. In other words, a validator can only change its commission once per day and within `commission-max-change-rate` bounds.
 
 ## View Validator Description
 
