@@ -2,7 +2,7 @@
 
 ## f(x)Core Daemon
 
-`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../tutorials/installation.md).
+`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](broken-reference).
 
 ### Main structure of running fxcored commands
 
@@ -969,9 +969,9 @@ fxcored keys add \
   --pubkey=fxpub1addwnpepqgj04jpm9wrdml5qnss9kjxkmxzywuklnkj0g3a3f8l5wx9z4ennz84ym5t
 
 fxcored keys add \
-  p1p2p3 \
+  --multisig=p1,p2,p3[...] \
   --multisig-threshold=2 \
-  --multisig=p1,p2,p3
+  new_key_name
 ```
 
 A new multisig public key `p1p2p3` has been stored, and its address will be used as signer of multisig transactions:
@@ -991,8 +991,10 @@ fxcored keys show p1p2p3 --show-multisig
 The first step to create a multisig transaction is to initiate it on behalf of the multisig address created above:
 
 ```bash
-fxcored tx send fx1570v2fq3twt0f0x02vhxpuzc9jc4yl30q2qned 1000000FX \
-  --from=<multisig_address> \
+fxcored tx bank send fx1570v2fq3twt0f0x02vhxpuzc9jc4yl30q2qned fx12u8ekfqdd75r4apyqv2xst6qw0n3wvr2asncf5 1000000000000000000FX \
+  --gas="auto" \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --generate-only > unsignedTx.json
 ```
 
@@ -1003,7 +1005,8 @@ fxcored tx sign \
   unsignedTx.json \
   --multisig=<multisig_address> \
   --from=p1 \
-  --output-document=p1signature.json
+  --output-document=p1signature.json \
+  --chain-id=fxcore
 ```
 
 Once the signature is generated, `p1` transmits both `unsignedTx.json` and `p1signature.json` to `p2` or `p3`, which in turn will generate their respective signature:
@@ -1013,7 +1016,8 @@ fxcored tx sign \
   unsignedTx.json \
   --multisig=<multisig_address> \
   --from=p2 \
-  --output-document=p2signature.json
+  --output-document=p2signature.json \
+  --chain-id=fxcore
 ```
 
 `p1p2p3` is a 2-of-3 multisig key, therefore one additional signature is sufficient. Any the key holders can now generate the multisig transaction by combining the required signature files:
