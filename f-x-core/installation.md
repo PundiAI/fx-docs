@@ -43,9 +43,9 @@ Setting environment variable:
 
 ```bash
 mkdir -p $HOME/go/bin
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bash_profile
-echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.bash_profile
-source ~/.bash_profile
+echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.profile
+source ~/.profile
 ```
 
 ## Install the binaries

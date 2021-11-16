@@ -143,8 +143,8 @@ The validator that is selected to propose the next block is called a proposer. E
 
 There are essentailly 2 different types of revenue:
 
-* **Block rewards:** Native tokens of applications run by validators (e.g. FX on the f(x)Core) are inflated to produce block provisions. These provisions exist to incentivize FX holders to bond their stake, as non-bonded FX will be diluted over time.
-* **Transaction fees:** The f(x)Core maintains a whitelist of token that are accepted as fee payment. The initial fee token is the `FX`.
+* **Block rewards:** Native tokens of applications run by validators (e.g. FX on f(x)Core) are inflated to produce block provisions. These provisions exist to incentivize FX holders to bond their stake, as non-bonded FX will be diluted over time.
+* **Transaction fees:** f(x)Core maintains a whitelist of token that are accepted as fee payment. The initial fee token is the `FX`.
 
 This total revenue is divided among validators' staking pools according to each validator's weight. Then, within each validator's staking pool the revenue is divided among delegators in proportion to each delegator's stake. A commission on delegators' revenue is applied by the validator before it is distributed.
 
@@ -162,31 +162,31 @@ Revenue received by a validator's pool is split between the validator and their 
 
 Block rewards are distributed proportionally to all validators relative to their voting power. This means that even though each validator gains FX with each reward, all validators will maintain equal weight over time.
 
-Let us take an example where we have 10 validators with equal voting power and a commission rate of 1%. Let us also assume that the reward for a block is 1000 FX and that each validator has 20% of self-bonded FX. These tokens do not go directly to the proposer. Instead, they are evenly spread among validators. So now each validator's pool has 100 FX. These 100 FX will be distributed according to each participant's stake:
+Let us take an example where we have 10 validators with equal voting power and a commission rate of 1%. Let us also assume that the reward for a block is 1000 FX and that each validator has 20% of self-bonded FX. These tokens do not go directly to the proposer. Instead, they are evenly distributed among validators based on their total weight. So now each validator's pool has 100 FX. These 100 FX will be distributed according to each participant's stake:
 
 * Commission: `100*80%*1% = 0.8 FX`
-* Validator gets: `100\*20% + Commission = 20.8 FX`
-* All delegators get: `100\*80% - Commission = 79.2 FX`
+* Validator gets: `100*20% + Commission = 20.8 FX`
+* All delegators get: `100*80% - Commission = 79.2 FX`
 
 Then, each delegator can claim their part of the 79.2 FX in proportion to their stake in the validator's staking pool.
 
 ### How are fees distributed?
 
-Fees are similarly distributed with the exception that the block proposer can get a bonus on the fees of the block they propose if they include more than the strict minimum of required precommits.
+Fees are similarly distributed with the exception that the block proposer can get a bonus on the fees of the block they propose if they include more than the minimum number of required precommits.
 
-When a validator is selected to propose the next block, they must include at least 2/3 precommits of the previous block. However, there is an incentive to include more than 2/3 precommits in the form of a bonus. The bonus is linear: it ranges from 1% if the proposer includes 2/3rd precommits (minimum for the block to be valid) to 5% if the proposer includes 100% precommits. Of course the proposer should not wait too long or other validators may timeout and move on to the next proposer. As such, validators have to find a balance between wait-time to get the most signatures and risk of losing out on proposing the next block. This mechanism aims to incentivize non-empty block proposals, better networking between validators as well as to mitigate censorship.
+When a validator is selected to propose the next block, they must include at least 2/3 precommits of the previous block. However, there is an incentive to include more than 2/3 precommits in the form of a bonus. The bonus is linear: it ranges from 1% if the proposer includes 2/3rd precommits (minimum for the block to be valid) to 5% if the proposer includes 100% precommits. Of course the proposer should not wait too long or other validators may timeout and move on to the next proposer. As such, validators have to find a balance between the waiting time to get the most signatures and the risk of losing out on proposing the next block. This mechanism aims to incentivize non-empty block proposals, better networking between validators as well as to mitigate censorship.
 
-Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stake. Each of them applies a 1% commission rate and has 20% of self-delegated FX. Now comes a successful block that collects a total of 4020 FX in fees.
+Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stake. Each of them applies a 1% commission rate and has 20% of self-delegated FX. Now comes a successful block that collects a total of 1340 FX in fees.
 
-First, a 25% tax is applied. The corresponding FX go to the reserve pool. Reserve pool's funds can be allocated through governance to fund bounties and upgrades.
+First, a 25% tax is applied. The corresponding FX goes to the reserve pool. Reserve pool's funds can be allocated through governance to fund bounties and upgrades.
 
-* `25% * 4020 = 1005` FX go to the reserve pool.
+* `25% * 1340 = 335` FX goes to the reserve pool.
 
 1005 FX now remain. Let's assume that the proposer included 100% of the signatures in its block. It thus obtains the full bonus of 5%.
 
 We have to solve this simple equation to find the reward R for each validator:
 
-`9*R + R + R*5% = 1005 ⇔ R = 1005/10.05 = 100`
+`9*R + (R + R*5%) = 1005 ⇔ R = 1005/10.05 = 100`
 
 * For the proposer validator:
   * The pool obtains `R + R * 5%`: 105 FX
@@ -203,8 +203,8 @@ We have to solve this simple equation to find the reward R for each validator:
 
 If a validator misbehaves, their delegated stake will be partially slashed. There are currently two faults that can result in slashing of funds for a validator and their delegators:
 
-* **Double signing:** If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A.
-* **Downtime:** If a validator misses more than 95% of the last 20000 blocks, they will get slashed by 0.1%.
+* **Double signing:** If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A. Validators who double sign will be jailed and CANNOT be unjailed thereafter.
+* **Downtime:** If a validator misses more than 95% of the last 20000 blocks (~27.7hours), they will get slashed by 0.1%. Validators may `unjail` their validators after a 600s (10minute) window.
 
 ### Do validators need to self-delegate FX?
 
@@ -214,7 +214,7 @@ In order for delegators to have some guarantee about how much skin-in-the-game t
 
 ### How to prevent concentration of stake in the hands of a few top validators?
 
-For now the community is expected to behave in a smart and self-preserving way. When a mining pool in Bitcoin gets too much mining power the community usually stops contributing to that pool. The f(x)Core will rely on the same effect initially. Other mechanisms are in place to smoothen this process as much as possible:
+For now the community is expected to behave in a smart and self-preserving way. For example, when a mining pool in Bitcoin gets too much mining power, the community usually stops contributing to that pool. The f(x)Core will rely on the same effect initially. Other mechanisms are in place to smoothen this process as much as possible:
 
 * **Penalty-free re-delegation:** This is to allow delegators to easily switch from one validator to another, in order to reduce validator stickiness.
 * **UI warning:** Wallets can implement warnings that will be displayed to users if they want to delegate to a validator that already has a significant amount of staking power.
@@ -237,11 +237,11 @@ The Cosmos network has the capacity for very high throughput relative to chains 
 
 We recommend that the data center nodes only connect to trusted full-nodes in the cloud or other validators that know each other socially. This relieves the data center node from the burden of mitigating denial-of-service attacks.
 
-Ultimately, as the network becomes more heavily used, multigigabyte per day bandwidth is very realistic.
+Eventually, as the network becomes more heavily used, multigigabyte per day bandwidth is very realistic.
 
 ### What does running a validator imply in terms of logistics?
 
-A successful validator operation will require the efforts of multiple highly skilled individuals and continuous operational attention. This will be considerably more involved than running a bitcoin miner for instance.
+A successful validator operation will require the efforts of multiple highly skilled individuals and continuous operational attention. This will require considerably more involvement than running a bitcoin miner for instance.
 
 ### How to handle key management?
 
@@ -252,11 +252,11 @@ Validators should expect to run an HSM that supports ed25519 keys. Here are pote
 * Ledger BOLOS SGX enclave
 * Thales nShield support
 
-The Tendermint team does not recommend one solution above the other. The community is encouraged to bolster the effort to improve HSMs and the security of key management.
+The FunctionX team does not recommend one solution over another. The community is encouraged to bolster the efforts to improve HSMs and the security of key management.
 
 ### What can validators expect in terms of operations?
 
-Running effective operation is the key to avoiding unexpectedly unbonding or being slashed. This includes being able to respond to attacks, outages, as well as to maintain security and isolation in your data center.
+Running an effective operation is key to avoiding unexpected unbonding or being slashed. This includes being able to respond to attacks, outages, as well as to maintain security and isolation in your data center.
 
 ### What are the maintenance requirements?
 
