@@ -36,7 +36,7 @@ wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-11-15.tar.gz
 wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-15.tar.gz
 ```
 
-This will download the Snapshot of fxcore
+This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time.
 
 {% hint style="info" %}
 You need to ensure that you’re running this command before you `Start` your node. If your fxcore node has already started, please stop it and then run the command below. Once unpacking is complete you can start the fxcore service again.
