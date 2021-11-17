@@ -19,6 +19,10 @@
 * [Validator FAQ](validators/validator-faq.md)
 * [Validator Security Notice](validators/validator-security-notice.md)
 
+## Delegators
+
+* [Delegators FAQ](delegators/delegators-faq.md)
+
 ## Resourcess
 
 * [Cloud Setup](resources/cloud-setup.md)
