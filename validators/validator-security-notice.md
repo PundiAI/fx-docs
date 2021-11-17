@@ -22,7 +22,14 @@ Sentry nodes can be spun up quickly or have their IP addresses changed. Because 
 
 To setup your sentry node architecture you can follow the instructions below:
 
-Validators nodes should edit their config.toml. The config.toml file should be stored in .fxcore/config/config.toml file path:
+The config.toml file should be stored in .fxcore/config/config.toml file path. You may run the `vi` command line editor to edit the config.toml file. If you were in your root directory where .fxcore is situated, you may run the following command to edit:
+
+```
+vi .fxcore/config/config.toml
+```
+
+
+Validators nodes should edit their config.toml:
 
 ```bash
 # Comma separated list of nodes to keep persistent connections to
@@ -42,6 +49,8 @@ Sentry Nodes should edit their config.toml:
 
 private_peer_ids = "node_ids_of_private_peers"
 ```
+
+Once you have made changes and want to save the file, press `:x` (you must not be in Insert mode. If you are, press ESC to leave it).
 
 ## Environment Variables
 
