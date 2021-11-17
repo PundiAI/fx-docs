@@ -176,12 +176,12 @@ There are only a few parameters that can be edited they are listed below:
 * Must not exceed the validator's `commission-max-change-rate` which is maximum % point change rate **per day**. In other words, a validator can only change its commission once per day and within `commission-max-change-rate` bounds.
 
 ```bash
-fxcored tx staking edit-validator
+fxcored tx staking edit-validator \
   --moniker="choose a moniker" \
   --website="https://functionx.io" \
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
-  --commission-rate="0.10"
+  --commission-rate="0.10" \
   --chain-id=fxcore \
   --gas="auto" \
   --gas-adjustment=1.2 \
