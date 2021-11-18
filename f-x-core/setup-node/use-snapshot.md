@@ -52,7 +52,7 @@ For example:
 
 ```bash
 # testnet
-tar -xzvf fxcore-snapshot-2021-11-08.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-2021-11-15.tar.gz -C ~/.fxcore/
 
 # mainnet
 tar -xzvf fxcore-snapshot-mainnet-2021-11-15.tar.gz -C ~/.fxcore/
