@@ -25,12 +25,12 @@
 * [Delegator CLI Guide](delegators/delegator-cli-guide.md)
 * [Delegator Security Notice](delegators/delegator-security-notice.md)
 
-## Resourcess
+## Resources
 
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [f(x)cored Commands Documentation](resources/f-x-cored-commands-documentation.md)
-* [Ledger Integration for fxcored](resourcess/ledger-integration-for-fxcored.md)
+* [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 
 ## Developers
 
