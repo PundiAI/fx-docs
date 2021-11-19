@@ -8,15 +8,15 @@ The launch of any public blockchain is an exciting event and it's definitely one
 
 * **Be skeptical of unexpected attachments, or emails that asks you to visit a suspicious or unfamiliar website in the context of blockchains or cryptocurrency.** An attacker may attempt to lure you to a [compromised site](https://blog.malwarebytes.com/cybercrime/2013/02/tools-of-the-trade-exploit-kits/) designed to steal sensitive information from your computer. If you're a Gmail user, test your resilience against the latest email-based phishing tactics [here](https://phishingquiz.withgoogle.com).
 * **Do your due diligence before purchasing FX. The FunctionX team will not be selling FX at launch**, so if you see social media posts or emails advertising a token sale from us, they are not real and should be dismissed immediately. If you are looking to purchase FX, make sure that you've researched the seller or exchange to confirm that the tokens are coming from a trustworthy source.
-* **No one from the FunctionX team will ever send an email asking for you to share any kind of account credentials or your 24-word mnemonic with us**, and we will always use our official [Website](https://functionx.io/), [Twitter](https://twitter.com/functionx_io), [Medium](https://medium.com/functionx), Forum and Github accounts to relay any important news and updates directly to the FunctionX community.
+* **No one from the FunctionX team will ever send an email asking for you to share any kind of account credentials or your 24-word mnemonic with us**, and we will always use our official [Website](https://functionx.io/), [Twitter](https://twitter.com/functionx_io), [Medium](https://medium.com/functionx), [Forum](https://forum.functionx.io/), [telegram](https://t.me/functionx) and [Github](https://github.com/functionx) accounts to relay any important news and updates directly to the FunctionX community.
 
-If you receive an email or tweet that sounds too good to be true, is likely to be a scam.
+Bottom line is this, if you receive an email or tweet that sounds too good to be true, is likely to be a scam.
 
 ## Key Management
 
-The best way to minimize the risk of theft or loss of FX is to have a strong storage and backup strategy for your private keys. The safest way to store your keys is offline, either in a cryptocurrency wallet or on a device that you never connect to the internet. The best backup strategy for your k yes is to ensure that you have multiple copies of them stored in safe places, and to take specific measures to protect at least one copy of your keys from any kind of natural disaster that is a likely possibility in your part of the world.
+The best way to minimize the risk of theft or loss of FX is to have a secure storage and backup strategy for your private keys. The safest way to store your keys is offline, either in a hardware wallet or on a device that you will never connect to the internet. The best backup strategy for your keys is to ensure that you have multiple copies of them stored in safe places. Your backup strategy should also account for the possibility that you may lose your keys in a disaster.
 
-**To protect your FX, do not share your 12 words with anyone.** The only person who should ever need to know them is you. You do not need to share your private keys if you're delegating FX to a validator on the network or to use custodial services. If anyone asks for your key material,
+**To protect your FX, do not share your 24 words with anyone.** The only person who should ever need to know them is you. You do not need to share your private keys if you're delegating FX to a validator on the network or to use custodial services. If anyone asks for your keys, you should dismiss them immediately. The FunctionX team would never require you to provide us with your private keys under any circumstances.
 
 ## Software Vulnerabilities
 
