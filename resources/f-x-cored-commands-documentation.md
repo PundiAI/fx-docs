@@ -234,8 +234,7 @@ fxcored config config.toml trust-node true
 Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
-fxcored config config.toml chain-id fxcore
-```
+fxcored config config.toml chain-id dhobyghaut
 
 ### Keys
 
@@ -1006,8 +1005,7 @@ fxcored tx sign \
   --multisig=<multisig_address> \
   --from=p1 \
   --output-document=p1signature.json \
-  --chain-id=fxcore
-```
+  --chain-id=dhobyghaut
 
 Once the signature is generated, `p1` transmits both `unsignedTx.json` and `p1signature.json` to `p2` or `p3`, which in turn will generate their respective signature:
 
@@ -1017,7 +1015,7 @@ fxcored tx sign \
   --multisig=<multisig_address> \
   --from=p2 \
   --output-document=p2signature.json \
-  --chain-id=fxcore
+  --chain-id=dhobyghaut
 ```
 
 `p1p2p3` is a 2-of-3 multisig key, therefore one additional signature is sufficient. Any the key holders can now generate the multisig transaction by combining the required signature files:

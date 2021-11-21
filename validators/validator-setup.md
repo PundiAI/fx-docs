@@ -77,7 +77,7 @@ Now we will bind the node consensus and validator's token holding account, once 
 Great! You can now bind the node consensus and validator's token holding account.
 
 The command to run will be `fxcored tx staking create-validator`, copy the entire command below, after editing the required fields:
-* `chain-id=fxcore` is set as our fxcore chain (don't change this)
+* `chain-id=dhobyghaut` is set as our fxcore testnet chain (don't change this)
 * `gas="auto"` automatically assesses the gas used for this `create-validator` transaction
 * `gas-adjustment=1.2` there will be a 20% buffer added to the automatically assessed gas amount
 * `gas-prices="4000000000000FX"` this will be the gas price you will be paying for (you may check the gas price you will need to pay for your node)
@@ -96,7 +96,7 @@ If this does not work for you, please check the Common Problem section or get he
 
 ```bash
 fxcored tx staking create-validator \
-  --chain-id=fxcore \
+  --chain-id=dhobyghaut \
   --gas="auto" \
   --gas-adjustment=1.2 \
   --gas-prices="4000000000000FX" \
@@ -182,7 +182,7 @@ fxcored tx staking edit-validator \
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
   --commission-rate="0.10" \
-  --chain-id=fxcore \
+  --chain-id=dhobyghaut \
   --gas="auto" \
   --gas-adjustment=1.2 \
   --gas-prices="6000000000000FX" \
