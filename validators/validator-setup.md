@@ -70,7 +70,7 @@ Now we will bind the node consensus and validator's token holding account, once 
 
 > Using `curl localhost:26657/status` or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to a day depending on network usage.
 
-* Ensure that your token holding account has enough `FX tokens` before creating a validator. For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://aabbcc-faucet.functionx.io). For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
+* Ensure that your token holding account has enough `FX tokens` before creating a validator. For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://dhobyghaut-faucet.functionx.io/). For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
 
 > A minimum of `100 FX` is needed to create an active validator. You will need more than `100 testnet FX` in your account because some is needed to pay for the creation of your validator. Note: FX has 18 decimal points.
 
@@ -120,7 +120,7 @@ Output
 confirm transaction before signing and broadcasting [y/N]: 
 ```
 
-> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io) to obtain the `validator_address`. The explorer option can only be done if the binding is succesful.
+> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://dhobyghaut-explorer.functionx.io/)/[Mainnet](https://explorer.functionx.io) to obtain the `validator_address`. The explorer option can only be done if the binding is succesful.
 
 Hit `y` and enter! If succesful, You will get an object data from the terminal with code = 0 similar to what is shown below.
 
@@ -134,7 +134,7 @@ Output:
 
 > `Min-self-delegation` is a stritly positive integer that represents the minimum amount of self-delegated voting power your validator must always have. A `min-self-delegation` of `100000000000000000000` means your validator will never have a self-delegation lower than `100` $FX
 
-You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://aabbcc-explorer.functionx.io/validator)/[Mainnet](https://explorer.functionx.io).
+You can confirm that you are in the validator set by using a third party explorer for [Testnet](https://dhobyghaut-explorer.functionx.io/fxcore/validators)/[Mainnet](https://explorer.functionx.io).
 
 ## Get validator pubkey
 

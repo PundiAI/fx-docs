@@ -8,13 +8,13 @@ People who cannot or do not want to operate [validator nodes](../validators/vali
 
 In terms of risks, delegators' FX will be slashed if their validator misbehaves. For more, see [Risks](delegators-faq.md#risks) section.
 
-To become delegators, FX holders need to send a ["Delegate transaction"](broken-reference) where they specify the amount of FX they want to stake and with which validator. A list of validators will be displayed in f(x)Core explorers ([mainnet](https://explorer.functionx.io/fxcore/validators)/[testnet](https://testnet-explorer.functionx.io/fxcore/validators)). Subsequently, if a delegator wants to unbond part or all of their stake, they will need to send an "Unbond transaction". Delegators will have to wait for 3 weeks to retrieve their FX after sending an "Unbond Transaction". Delegators can also send a "Redelegate Transaction" to switch from one validator to another, without having to go through the 3 weeks waiting period.
+To become delegators, FX holders need to send a ["Delegate transaction"](broken-reference) where they specify the amount of FX they want to stake and with which validator. A list of validators will be displayed in f(x)Core explorers ([mainnet](https://explorer.functionx.io/fxcore/validators)/[testnet](https://dhobyghaut-explorer.functionx.io/)). Subsequently, if a delegator wants to unbond part or all of their stake, they will need to send an "Unbond transaction". Delegators will have to wait for 3 weeks to retrieve their FX after sending an "Unbond Transaction". Delegators can also send a "Redelegate Transaction" to switch from one validator to another, without having to go through the 3 weeks waiting period.
 
 For a practical guide on how to become a delegator, click [here](broken-reference).
 
 ## Choosing a validator
 
-In order to choose their validators, delegators have access to a range of information directly in f(x)Core block explorers ([mainnet](https://explorer.functionx.io/fxcore/validators)/[testnet](https://testnet-explorer.functionx.io/fxcore/validators)).
+In order to choose their validators, delegators have access to a range of information directly in f(x)Core block explorers ([mainnet](https://explorer.functionx.io/fxcore/validators)/[testnet](https://dhobyghaut-explorer.functionx.io/)).
 
 * **Validator's moniker**: Name of the validator.
 * **Validator's description**: Description provided by the validator's operator.
