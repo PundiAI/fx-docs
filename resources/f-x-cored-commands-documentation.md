@@ -237,7 +237,7 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 
 ```bash
 fxcored config config.toml chain-id dhobyghaut
-
+```
 ### Keys
 
 #### Key Types
