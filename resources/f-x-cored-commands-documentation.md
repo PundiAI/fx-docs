@@ -6,6 +6,8 @@
 
 ### Main structure of running fxcored commands
 
+> The `fxcored` help commands are nested. So `$ fxcored` will output docs for the top level commands (status, config, query, and tx). You can access documentation for sub commands with further help commands.
+
 The very first command to generate a list of available commands:
 
 ```
@@ -294,6 +296,34 @@ If you check your private keys, you'll now see `<account_name>`:
 ```bash
 fxcored keys show <account_name>
 ```
+
+Additionally and ⚠⚠ importantly, if you wish to have an added layer of protection on your keys, you may add the `--keyring-backend` flag and specify the file name. Setting your key up this way will ensure another layer of protection for signing any transactions.
+
+> \--keyring-backend string Select keyring's backend (os|file|test) (default "test")
+
+```
+fxcored keys add <secondKeyName> \
+  --ledger \
+  --account <i> \
+  --keyring-backend <file_name>
+```
+
+for example:
+
+```
+fxcored keys add shangqi \
+  --ledger \
+  --account 3 \
+  --keyring-backend file
+```
+
+you will be prompted for a keyring passphrase (password must be at least 8 characters) :
+
+```
+Enter keyring passphrase:
+```
+
+In the future, whenever you use this account to sign off on a transaction, you will have to add the `--keyring-backend <file_name>` flag and enter the keyring passphrase.
 
 View the validator operator's address via:
 
