@@ -11,6 +11,7 @@
   * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md)
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
   * [Validator Recovery](f-x-core/setup-node/validator-recovery.md)
+  * [Node Metrics](f-x-core/setup-node/node-metrics.md)
 
 ## Validators
 
