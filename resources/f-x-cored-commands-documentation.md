@@ -185,6 +185,8 @@ In this case, a transaction fee must be paid! So do remember to add --fees XXXXX
 The minimum fee for this transaction is 1.2FX which after multiplying by 10^18 is 1200000000000000000FX.
 
 Alternatively, a more universal command is --gas=auto --gas-adjustment=1.25 --gas-prices=4000000000000FX. --gas=auto automatically assesses the gas used for that transaction. This depends on the transaction itself and also the state of the blockchain. --gas-adjustment=1.25 means that there will be a 25% buffer added to the automatically assessed gas amount. --gas-prices=4000000000000FX is the gas price you will be paying for. For more details on gas, kindly refer to the section on gas below.
+
+The **gas-prices** flag will default to the gas price value of your current node if it is not specified.
 {% endhint %}
 
 ```
@@ -353,6 +355,7 @@ You can generate and print a multisig public key by typing:
 ```bash
 fxcored keys add --multisig=name1,name2,name3[...] --multisig-threshold=K new_key_name
 ```
+> Be sure to note that for multisig accounts, if you were to create any transaction, for example `--from=<multisig_account>` your `<multisig_account>` needs to be the wallet address ie `fx123l3kjltjwlfgjslfg....`. Only for those non-multisig accounts can you use the name of the account ie `--from=sheldoncooper`.
 
 `K` is the minimum number of private keys that must have signed the transactions that carry the public key's address as signer.
 
@@ -1018,6 +1021,8 @@ fxcored keys show p1p2p3 --show-multisig
 ```
 
 The first step to create a multisig transaction is to initiate it on behalf of the multisig address created above:
+
+> Be sure to note that for multisig accounts, if you were to create any transaction, for example `--from=<multisig_account>` your `<multisig_account>` needs to be the wallet address ie `fx123l3kjltjwlfgjslfg....`. Only for those non-multisig accounts can you use the name of the account ie `--from=heimendinger`.
 
 ```bash
 fxcored tx bank send fx1570v2fq3twt0f0x02vhxpuzc9jc4yl30q2qned fx12u8ekfqdd75r4apyqv2xst6qw0n3wvr2asncf5 1000000000000000000FX \

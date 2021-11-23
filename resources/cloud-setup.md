@@ -18,8 +18,14 @@ ssh root@47.211.41.82
 
 ### Connecting your localhost to the cloud instance for a specific port
 
-Running the command `ssh -L 127.0.0.1:26657:127.0.0.1:26657<ssh_id>@<IP address>` connects your local port 26657 with your cloud's port 26657. This will be needed for those who want to connect their HD wallets. The command should look something like:
+Running the command `ssh -L 127.0.0.1:26657:127.0.0.1:26657<ssh_id>@<IP address>` connects your local port 26657 with your cloud's port 26657. This is just one of the way you can connect your local machine with your cloud instance to connect your HD wallets. The command should look something like:
 
 ```
 ssh -L 127.0.0.1:26657:127.0.0.1:26657 root@47.211.41.82
 ```
+
+{% hint style="info" %}
+You must ensure you have fxcored installed in your local machine.
+{% endhint %}
+
+> Alternatively, you can add the `--node flag` and ensure that your IP address has either been whitelisted or your port is open.
