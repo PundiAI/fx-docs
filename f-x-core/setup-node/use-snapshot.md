@@ -6,10 +6,10 @@
 
 ```
 # testnet
-https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-11-15.tar.gz
+https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2021-11-22.tar.gz
 
 # mainnet
-https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-15.tar.gz
+https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-22.tar.gz
 ```
 
 > Snapshots are performed every Monday morning at 2:00 am UTC, keeping a record of that snapshot for three weeks. If the date on the file above is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date (to the latest Monday's date) in the file name to get the latest snapshot. If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number.
@@ -30,10 +30,10 @@ For example:
 
 ```bash
 # testnet
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-2021-11-15.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2021-11-22.tar.gz
 
 # mainnet
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-15.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-22.tar.gz
 ```
 
 This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time.
@@ -52,10 +52,10 @@ For example:
 
 ```bash
 # testnet
-tar -xzvf fxcore-snapshot-2021-11-15.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-testnet-2021-11-22.tar.gz -C ~/.fxcore/
 
 # mainnet
-tar -xzvf fxcore-snapshot-mainnet-2021-11-15.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2021-11-22.tar.gz -C ~/.fxcore/
 ```
 
 {% hint style="info" %}

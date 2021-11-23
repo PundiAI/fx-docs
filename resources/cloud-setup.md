@@ -29,3 +29,4 @@ You must ensure you have fxcored installed in your local machine.
 {% endhint %}
 
 > Alternatively, you can add the `--node flag` and ensure that your IP address has either been whitelisted or your port is open.
+> Also you can consider configuring your config.toml file to set your node up.
