@@ -77,7 +77,7 @@ Now we will bind the node consensus and validator's token holding account, once 
 Great! You can now bind the node consensus and validator's token holding account.
 
 The command to run will be `fxcored tx staking create-validator`, copy the entire command below, after editing the required fields:
-* `chain-id=dhobyghaut` is set as our fxcore testnet chain (don't change this)
+* `chain-id=dhobyghaut` is set as our fxcore testnet chain ie dhobyghaut. for mainnet, set the `chain-id=fxcore`
 * `gas="auto"` automatically assesses the gas used for this `create-validator` transaction
 * `gas-adjustment=1.2` there will be a 20% buffer added to the automatically assessed gas amount
 * `gas-prices="4000000000000FX"` this will be the gas price you will be paying for (you may check the gas price you will need to pay for your node)
@@ -92,7 +92,21 @@ The command to run will be `fxcored tx staking create-validator`, copy the entir
 * `website="https://functionx.io"` This will be the website for delegators or the public to read more about your validator
 * `details="To infinity and beyond!"` You can add some additional details about your validator
 
-If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io).
+If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io).Be
+Before you proceed and set your validator up, make sure you do some final checks (ensure your .fxcore path is set correctly):
+
+```bash
+# if you are in the root directory
+curl -s 127.0.0.1:26657/status | jq '.result.validator_info.pub_key'
+cat .fxcore/config/priv_validator_key.json| jq .pub_key
+```
+Ensure both these outputs are the same.
+
+```bash
+fxcored keys parse $(cat .fxcore/config/priv_validator_key.json| jq -r '.address')
+fxcored tendermint show-address
+```
+ensure the second to the last value from the first command has the same output as the second command.
 
 ```bash
 fxcored tx staking create-validator \

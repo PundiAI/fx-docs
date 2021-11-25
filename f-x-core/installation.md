@@ -66,21 +66,41 @@ make install-testnet
 make install
 ```
 
-That will install the `fxcored` binary. Verify that everything is OK:
+That will install the `fxcored` binary. Verfiy network:
+
+```bash
+fxcored network
+```
+The output should look something similar to this:
+```
+ChainId: dhobyghaut
+CrossChainSupportBscBlock: "1"
+CrossChainSupportPolygonBlock: "1"
+CrossChainSupportTronBlock: "1"
+GravityPruneValsetsAndAttestationBlock: "1"
+GravityValsetSlashBlock: "1"
+Network: testnet
+```
+
+Verify version:
 
 ```bash
 fxcored version --long
+
+#or
+fxcored version
+
 ```
 
-`fxcored` for instance should output something similar to:
+`fxcored version --long` should output something similar to:
 
 ```bash
 name: fxcore
 server_name: fxcored
-version: github-b0b51a2312903309336826c73c8fd3b5fc81cdbb
-commit: b0b51a2312903309336826c73c8fd3b5fc81cdbb
+version: master-9b5596f54b9cadc001725a431fdfe22768c6e4c9
+commit: 9b5596f54b9cadc001725a431fdfe22768c6e4c9
 build_tags: netgo,ledger
-go: go version go1.16.2 darwin/amd64
+go: go version go1.17.3 darwin/amd64
 ...
 ```
 

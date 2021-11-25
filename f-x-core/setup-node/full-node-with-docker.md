@@ -14,7 +14,7 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 
 ```bash
 # For testnet：
-docker pull functionx/fx-core:testnet-1.0
+docker pull functionx/fx-core:dhobyghaut-1.0
 # For mainnet：
 docker pull functionx/fx-core:mainnet-1.0
 ```
@@ -23,7 +23,7 @@ docker pull functionx/fx-core:mainnet-1.0
 
 ```bash
 # For testnet：
-  docker run --rm -v ~:/root functionx/fx-core:testnet-1.0 init fx-zakir
+  docker run --rm -v ~:/root functionx/fx-core:dhobyghaut-1.0 init fx-zakir
 # For mainnet：
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 init fx-zakir
 ```
@@ -51,7 +51,7 @@ And at this stage, what is important is your validator keys that is stored in a 
 
 ```bash
 # For testnet：
-  docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:testnet-1.0 start
+  docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:dhobyghaut-1.0 start
 # For mainnet：
 docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 start 
 ```

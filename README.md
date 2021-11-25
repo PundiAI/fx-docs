@@ -1,5 +1,7 @@
 # f(x)Core Developer Documentation
 
+
+
 The overall flow for setting up the Testnet validator is:
 
 * [Installing f(x)Core](tutorials/installation.md)

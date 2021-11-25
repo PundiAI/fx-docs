@@ -1,4 +1,4 @@
-# Node Metrics
+# Node Monitor
 
 ## Prometheus metrics
 
