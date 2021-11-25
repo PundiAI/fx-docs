@@ -12,6 +12,7 @@
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
   * [Validator Recovery](f-x-core/setup-node/validator-recovery.md)
   * [Node Metrics](f-x-core/setup-node/node-metrics.md)
+  * [Node Peers](f-x-core/setup-node/node-peers.md)
 
 ## Validators
 
