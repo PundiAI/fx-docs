@@ -2,7 +2,7 @@
 
 > Information on how to join the mainnet (`genesis.json` file and seeds) is held in our `fxcore` repo.
 
-Before setting up your validator node, make sure you've already gone through the `Full Node Setup` guide either with [Binaries](../tutorials/full-node-with-binaries.md) or with [Docker](../tutorials/full-node-with-docker.md).
+Before setting up your validator node, make sure you've already gone through the `Full Node Setup` guide either with [Binaries](../f-x-core/setup-node/full-node-with-binaries.md) or with [Docker](../f-x-core/setup-node/full-node-with-docker.md).
 
 If you plan to use a KMS (key management system), you should go through these steps first.
 
@@ -14,7 +14,7 @@ Before you proceed to the next section, ensure that you have already `set up a f
 
 ## Create Your Validator
 
-> ⚠️ We support ledger for sending transactions, we recommend using ledger as it is more secure, note that such transactions require fxcore to be [installed](../tutorials/installation.md) on both the remote vm and the host vm, which is a bit of a pain but worth doing.
+> ⚠️ We support ledger for sending transactions, we recommend using ledger as it is more secure, note that such transactions require fxcore to be [installed](../f-x-core/installation.md) on both the remote vm and the host vm, which is a bit of a pain but worth doing.
 
 1. Create validator's token holding account
 
@@ -92,8 +92,7 @@ The command to run will be `fxcored tx staking create-validator`, copy the entir
 * `website="https://functionx.io"` This will be the website for delegators or the public to read more about your validator
 * `details="To infinity and beyond!"` You can add some additional details about your validator
 
-If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io).Be
-Before you proceed and set your validator up, make sure you do some final checks (ensure your .fxcore path is set correctly):
+If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io). Before you proceed and set your validator up, make sure you do some final checks (ensure your .fxcore path is set correctly):
 
 ```bash
 # if you are in the root directory
@@ -106,7 +105,7 @@ Ensure both these outputs are the same.
 fxcored keys parse $(cat .fxcore/config/priv_validator_key.json| jq -r '.address')
 fxcored tendermint show-address
 ```
-ensure the second to the last value from the first command has the same output as the second command.
+ensure the second to the last value from the first command has the same output as the second command before running the following:
 
 ```bash
 fxcored tx staking create-validator \

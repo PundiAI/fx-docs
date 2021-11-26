@@ -39,7 +39,7 @@
 * [f(x)Core Info](developers/fxcore-info.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
-* [f(x)Core REST API](developers/rest\_api.md)
+* [f(x)Core REST API](developers/rest_api.md)
 
 ***
 

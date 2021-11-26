@@ -4,9 +4,9 @@ This document contains all the necessary information for delegators to interact 
 
 It also contains instructions on how to manage accounts, restore accounts from the fundraiser and use a ledger nano device.
 
-> **Very Important**: Please assure that you follow the steps described hereinafter carefully, as negligence in this significant process could lead to an indefinite loss of your FX. Therefore, read through the following instructions in their entirety prior to proceeding and reach out to us in case you need support.
+> **Very Important**: Please ensure that you follow the steps hereinafter carefully, as negligence in this process could result in a loss of your FX. Therefore, do read through the following instructions in their entirety before proceeding and reach out to us in case you need  any support.
 
-> Please also note that you are about to interact with the f(x)Core, a blockchain technology containing highly experimental software. While the blockchain has been developed in accordance to the state of the art and audited with utmost care, we can nevertheless expect to have issues, updates and bugs. Furthermore, interaction with blockchain technology requires advanced technical skills and always entails risks that are outside our control. By using the software, you confirm that you understand the inherent risks associated with cryptographic software (see also risk section of the [Interchain Contribution terms](broken-reference)) and that the Interchain Foundation and/or the Tendermint Team may not be held liable for potential damages arising out of the use of the software. Any use of this open source software released under the Apache 2.0 license is done at your own risk and on a "AS IS" basis, without warranties or conditions of any kind.
+> Please also note that you are about to interact with the f(x)Core, a blockchain technology containing highly experimental software. While the blockchain has been developed with state of the art technology and audited with utmost care, we may still expect to have issues, updates and bugs. Furthermore, interaction with blockchain technology requires advanced technical skills and always involves risks that are outside our control. By using the software, you confirm that you understand the inherent risks associated with cryptographic software and that the FunctionX team will not be held liable for potential damages arising out of the use of the software. Any use of this open source software released under the Apache 2.0 license is done at your own risk and on an "AS IS" basis, without warranties or conditions of any kind.
 
 Please exercise extreme caution!
 
@@ -29,15 +29,15 @@ Please exercise extreme caution!
 
 ## Installing `fxcored`
 
-`fxcored`: This is the command-line interface to interact with a `fxcored` full-node.
+`fxcored`: This is the command-line interface (CLI) to interact with a `fxcored` full-node.
 
-> **Please check that you download the latest stable release of `fxcored` that is available**
+> **Please check that you have downloaded the latest stable release of `fxcored`**
 
-\[**Download the binaries**] Not available yet.
+\[**Download the binaries**]
 
-[**Install from source**](https://github.com/falcons-x/fx-docs/blob/master/tutorials/installation.md)
+[**Install from source**](https://github.com/FunctionX/fx-core)
 
-> `fxcored` is used from a terminal. To open the terminal, follow these steps:
+> `fxcored` can be interacted with via a terminal. To open the terminal, follow these steps:
 
 * **Windows**: `Start` > `All Programs` > `Accessories` > `Command Prompt`
 * **MacOS**: `Finder` > `Applications` > `Utilities` > `Terminal`
@@ -45,7 +45,7 @@ Please exercise extreme caution!
 
 ## f(x)Core Accounts
 
-At the core of every f(x)Core account, there is a seed, which takes the form of a 12 or 24-words mnemonic. From this mnemonic, it is possible to create any number of f(x)Core accounts, i.e. pairs of private key/public key. This is called an HD wallet (see [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) for more information on the HD wallet specification).
+At the core of every f(x)Core account, there is a seed, which takes the form of a 12 or 24-words mnemonic. From this mnemonic, it is possible to create multiple f(x)Core accounts, i.e. pairs of private key/public key. This is called an HD wallet (see [BIP32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) for more information on the HD wallet specification).
 
 ```
      Account 0                         Account 1                         Account 2
@@ -80,17 +80,11 @@ At the core of every f(x)Core account, there is a seed, which takes the form of 
                                  +-------------------+
 ```
 
-The funds stored in an account are controlled by the private key. This private key is generated using a one-way function from the mnemonic. If you lose the private key, you can retrieve it using the mnemonic. However, if you lose the mnemonic, you will lose access to all the derived private keys. Likewise, if someone gains access to your mnemonic, they gain access to all the associated accounts.
+The funds stored in an account are controlled by the private key. This private key is generated from the mnemonic using a one-way function. If you lose the private key, you can retrieve it using the mnemonic. However, if you lose the mnemonic, you will lose access to all the derived private keys. Likewise, if someone gains access to your mnemonic, they gain access to all the associated accounts.
 
-> **Do not lose or share your 12 words with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place and that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
+> **Do not lose or share your 24-word mnemonic with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a safe, secure place that only you have access to. If someone has your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
 
-The address is a public string with a human-readable prefix (e.g. `fx1hs3tfedle32zzr5dh38gzzfn9ak2f4a9je4pf6`) that identifies your account. When someone wants to send you funds, they send it to your address. I t is computationally infeasible to find the private key associated with a given address.
-
-### Restoring an Account from the Fundraiser
-
-> _NOTE: This section only concerns fundraiser participants_
-
-If you participated in the fundraiser, you should be in possession of a 12-words mnemonic. Newly generated mnemonics use 24 words, but 12-word mnemonics are also compatible with all the f(x)Core tools.
+The address is a public string with a human-readable prefix (e.g. `fx1hs3tfedle32zzr5dh38gzzfn9ak2f4a9je4pf6`) that identifies your account. When someone wants to send you funds, they send it to your address. It is virtually computationally impossible to derive the private key from a public address.
 
 #### On a Ledger Device
 

@@ -2,7 +2,7 @@
 
 ## f(x)Core Daemon
 
-`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](broken-reference).
+`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../f-x-core/installation.md).
 
 ### Main structure of running fxcored commands
 
@@ -1041,7 +1041,7 @@ fxcored tx sign \
   --from=p1 \
   --output-document=p1signature.json \
   --chain-id=dhobyghaut
-
+```
 Once the signature is generated, `p1` transmits both `unsignedTx.json` and `p1signature.json` to `p2` or `p3`, which in turn will generate their respective signature:
 
 ```bash
