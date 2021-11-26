@@ -1,15 +1,5 @@
-# f(x)Core Developer Documentation
+# FunctionX Technical Document
 
+FunctionX Technical Document will cover the areas of f(x)Core command line interface, information on validators and delegators; technical set up, consensus, governance, security management etc. Also there are additional resources for users and general best practices within the document.
 
-
-The overall flow for setting up the Testnet validator is:
-
-* [Installing f(x)Core](tutorials/installation.md)
-
-> fxcored similar to Ethereum geth, is a command-line interface for implementing an f(x)Core node.
-
-* Setup a full-node. You may choose to either set it up with [Docker](tutorials/full-node-with-docker.md) or with [Binaries](tutorials/full-node-with-binaries.md), [Docker](tutorials/full-node-with-docker.md) is preferred.
-
-> fxcored is a daemon, after running a full-node, it will be running in the background.
-
-* Only after you have set up a full-node, can you move on to setting up a [Setting Up a Validator for f(x)Core Testnet](validators/validator-setup.md).
+Additionally, there are developer commands and documents for querying the f(x)Core blockchain.
