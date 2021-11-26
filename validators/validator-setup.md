@@ -1,4 +1,4 @@
-# Setting Up a Validator for f(x)Core Testnet
+# Setting Up a Validator for f(x)Core
 
 > Information on how to join the mainnet (`genesis.json` file and seeds) is held in our `fxcore` repo.
 
@@ -56,10 +56,13 @@ It is the only way to recover your account if you ever forget your password.
 
 word word word word...
 ```
+
 if you already have an existing fx wallet and would like to import it you may run the following command and follow the prompts:
+
 ```
 fxcored keys add <account_name> --recover
 ```
+
 1. Bind the node consensus and validator's token holding account
 
 Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator!
@@ -70,20 +73,21 @@ Now we will bind the node consensus and validator's token holding account, once 
 
 > Using `curl localhost:26657/status` or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to a day depending on network usage.
 
-* Ensure that your token holding account has enough `FX tokens` before creating a validator. For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://dhobyghaut-faucet.functionx.io/). For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
+* Ensure that your token holding account has enough `FX tokens` before creating a validator. For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://dhobyghaut-faucet.functionx.io). For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
 
 > A minimum of `100 FX` is needed to create an active validator. You will need more than `100 testnet FX` in your account because some is needed to pay for the creation of your validator. Note: FX has 18 decimal points.
 
 Great! You can now bind the node consensus and validator's token holding account.
 
 The command to run will be `fxcored tx staking create-validator`, copy the entire command below, after editing the required fields:
+
 * `chain-id=dhobyghaut` is set as our fxcore testnet chain ie dhobyghaut. for mainnet, set the `chain-id=fxcore`
 * `gas="auto"` automatically assesses the gas used for this `create-validator` transaction
 * `gas-adjustment=1.2` there will be a 20% buffer added to the automatically assessed gas amount
 * `gas-prices="4000000000000FX"` this will be the gas price you will be paying for (you may check the gas price you will need to pay for your node)
 * `from=<_name>` this is the token holding account created above that you will be binding your consensus account to to create a validator
 * `amount=100000000000000000000000FX` this is the amount you will be self-delegating for your validator (currently it is set as `100,000 FX`)
-* `pubkey=$(fxcored tendermint show-validator)` this is your pubkey of your validator 
+* `pubkey=$(fxcored tendermint show-validator)` this is your pubkey of your validator
 * `commission-rate="0.01"` this is the commission you will be charging as a validator
 * `commission-max-rate="0.20"` The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed
 * `commission-max-change-rate="0.01"` The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed
@@ -99,12 +103,14 @@ If this does not work for you, please check the Common Problem section or get he
 curl -s 127.0.0.1:26657/status | jq '.result.validator_info.pub_key'
 cat .fxcore/config/priv_validator_key.json| jq .pub_key
 ```
+
 Ensure both these outputs are the same.
 
 ```bash
 fxcored keys parse $(cat .fxcore/config/priv_validator_key.json| jq -r '.address')
 fxcored tendermint show-address
 ```
+
 ensure the second to the last value from the first command has the same output as the second command before running the following:
 
 ```bash
@@ -133,7 +139,7 @@ Output
 confirm transaction before signing and broadcasting [y/N]: 
 ```
 
-> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://dhobyghaut-explorer.functionx.io/)/[Mainnet](https://explorer.functionx.io) to obtain the `validator_address`. The explorer option can only be done if the binding is succesful.
+> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://dhobyghaut-explorer.functionx.io)/[Mainnet](https://explorer.functionx.io) to obtain the `validator_address`. The explorer option can only be done if the binding is succesful.
 
 Hit `y` and enter! If succesful, You will get an object data from the terminal with code = 0 similar to what is shown below.
 
@@ -158,7 +164,7 @@ fxcored tendermint show-validator
 ```
 
 {% hint style="info" %}
-This command is very important for [recovery of your validator](../f-x-core/setup-node/validator-recovery.md) in the future.
+This command is very important for [recovery of your validator](validator-recovery.md) in the future.
 {% endhint %}
 
 ## To check if node is running
@@ -176,12 +182,13 @@ The \<key\_name> specifies which validator you are editing. If you choose to not
 The `--identity` can be used as to verify identity with systems like Keybase or UPort. When using with Keybase `--identity` should be populated with a 16-digit string that is generated with a [keybase.io](https://keybase.io) account. It's a cryptographically secure method of verifying your identity across multiple online networks. The Keybase API allows us to retrieve your Keybase avatar. This is how you can add a logo to your validator profile.
 
 There are only a few parameters that can be edited they are listed below:
+
 * `commission-rate string`: The new commission rate percentage
-* `details string`: The validator's (optional) details (default "[do-not-modify]")
-* `identity string`: The (optional) identity signature (ex. UPort or Keybase) (default "[do-not-modify]")
-* `moniker string`: The validator's name (default "[do-not-modify]")
-* `security-contract string`: The validator's (optional) security contact email (default "[do-not-modify]")
-* `website string`: The validator's (optional) website (default "[do-not-modify]")
+* `details string`: The validator's (optional) details (default "\[do-not-modify]")
+* `identity string`: The (optional) identity signature (ex. UPort or Keybase) (default "\[do-not-modify]")
+* `moniker string`: The validator's name (default "\[do-not-modify]")
+* `security-contract string`: The validator's (optional) security contact email (default "\[do-not-modify]")
+* `website string`: The validator's (optional) website (default "\[do-not-modify]")
 
 **Note**: The `commission-rate` value must adhere to the following invariants:
 

@@ -2,6 +2,10 @@
 
 Run the following command to open the `priv_validator_key.json` file and store it somewhere for safe keeping:
 
+{% hint style="info" %}
+❗❗❗❗❗❗THIS IS ESPECIALLY IMPORTANT!❗❗❗❗❗❗ Do ensure that you have a back-up `priv_validator_key.json` file and that it is stored safely! Overriding this `priv_validator_key.json`file and you would have lost your consensus private key and your validator if you have one set up. DO NOT OVERRIDE THIS FILE.
+{% endhint %}
+
 ```
 # if you are in fx-core dir
 cat ../.fxcore/config/priv_validator_key.json
@@ -38,7 +42,7 @@ ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
 2 directories, 6 files
 ```
 
-The command after `Initializing fxcore` from setting up node with [Full node with Binaries](full-node-with-binaries.md) or [Full node with Docker ](full-node-with-docker.md)is to override the various files that were initialized earlier:
+The command after `Initializing fxcore` from setting up node with [Full node with Binaries](../f-x-core/setup-node/full-node-with-binaries.md) or [Full node with Docker ](../f-x-core/setup-node/full-node-with-docker.md)is to override the various files that were initialized earlier:
 
 ```
 # Binaries:

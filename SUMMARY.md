@@ -1,6 +1,7 @@
 # Table of contents
 
 * [FunctionX Documentation](README.md)
+* [How To Use This Documentation?](how-to-use-this-documentation.md)
 
 ## f(x)Core
 
@@ -10,14 +11,14 @@
   * [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md)
   * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md)
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
-  * [Validator Recovery](f-x-core/setup-node/validator-recovery.md)
-  * [Node Metrics](f-x-core/setup-node/node-monitor.md)
+  * [Node Monitoring Device](f-x-core/setup-node/node-monitor.md)
   * [Node Peers](f-x-core/setup-node/node-peers.md)
 
 ## Validators
 
 * [Validator Overview](validators/validator-overview.md)
-* [Setting Up a Validator for f(x)Core Testnet](validators/validator-setup.md)
+* [Setting Up a Validator for f(x)Core](validators/validator-setup.md)
+* [Validator Recovery](validators/validator-recovery.md)
 * [Validator FAQ](validators/validator-faq.md)
 * [Validator Security Notice](validators/validator-security-notice.md)
 
@@ -39,7 +40,7 @@
 * [f(x)Core Info](developers/fxcore-info.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
-* [f(x)Core REST API](developers/rest_api.md)
+* [f(x)Core REST API](developers/rest\_api.md)
 
 ***
 

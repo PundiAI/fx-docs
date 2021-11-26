@@ -18,5 +18,4 @@ About the FunctionX Core: The FunctionX Core also known as a Hub is the first Co
 * `ibc-go/modules`: Inter-blockchain communication. Hosted in the `cosmos/ibc-go` repository.
 * `x/params`: Handles app-level parameters.
 
-
-Next, learn how to [install f(x)Core](../tutorials/installation.md).
+Next, learn how to [install f(x)Core](broken-reference).

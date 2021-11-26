@@ -33,7 +33,7 @@ wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/a
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
-Additionally, what is important is that your validator keys that is stored in a .json file for you to do a recovery in the future. For more [information](validator-recovery.md) how to access the files.
+Additionally, what is important is that your validator keys that is stored in a .json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
 {% endhint %}
 
 {% hint style="info" %}

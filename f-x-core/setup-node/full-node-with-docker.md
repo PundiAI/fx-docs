@@ -44,7 +44,7 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/main
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
-And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](./validator-recovery.md) how to access the files.
+And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
 {% endhint %}
 
 * run docker
