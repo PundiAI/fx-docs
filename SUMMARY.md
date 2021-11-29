@@ -1,6 +1,6 @@
 # Table of contents
 
-* [FunctionX Documentation](README.md)
+* [FunctionX Technical Document](README.md)
 * [How To Use This Documentation?](how-to-use-this-documentation.md)
 
 ## f(x)Core
@@ -30,9 +30,9 @@
 
 ## Resources
 
+* [f(x)cored Commands Documentation](resources/f-x-cored-commands-documentation.md)
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
-* [f(x)cored Commands Documentation](resources/f-x-cored-commands-documentation.md)
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 
 ## Developers
