@@ -30,7 +30,7 @@ Delegators are FX holders who want to participate in protocol governance, but do
 
 Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform their due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
-Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [delegator's faq](broken-link/).
+Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [delegator's faq](../delegators/delegators-faq.md).
 
 ## Becoming a Validator
 
@@ -58,7 +58,7 @@ The active validator set is determined solely by the ranking of the total amount
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](broken-reference/).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](broken-reference).
 
 ### What are the different types of keys?
 

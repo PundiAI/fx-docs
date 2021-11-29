@@ -2,7 +2,7 @@
 
 ### Simple SSH
 
-* Choose a cloud instance based on the requirements specified in [Hardware Requirements](broken-reference)
+* Choose a cloud instance based on the requirements specified in [Hardware Requirements](../f-x-core/installation.md#Hardware Requirements)
 * The estimated cost is about 80-100 USD per month
 * f(x)Core is system agnostic but Ubuntu is preferred
 

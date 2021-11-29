@@ -38,17 +38,17 @@
 | ------------------------ | ------------------------------------------------------------ | -------------------- |
 | Minter inflation variables |                                                              |                      |
 | Inflation                | Initial annual inflation rate (computation on block basis, the inflation rate of each block are different)                | 0.35                 |
-| AnnualProvisions         | Annual provision（computation on block basis,, the inflation rate of each block are different）                       | 0                    |
+| AnnualProvisions         | Annual provision (computation on block basis,, the inflation rate of each block are different)                       | 0                    |
 |                          |                                                              |                      |
 | Params chain variables         |                                                              |                      |
-| MintDenom                | Name of the newly minted token（changable）                           | FX                   |
+| MintDenom                | Name of the newly minted token (changable)                           | FX                   |
 | InflationRateChange      | Annual inflation change rate                                    | 0.3 (30%)            |
 | InflationMax             | The maximum annual inflation rate                                              | 0.416762 (41.6762%)  |
 | InflationMin             | The minimum annual inflation rate                                            | 0.17 (17%)           |
-| GoalBonded               | Increment or decrement of the annual inflation rate  rule：staking ratio（ delegated Token / Total circulating token supply, if current bonded ratio less than GoalBonded, annual inflation rate will increase, until InflationMax; if current bonded ratio = GoalBonded, the inflation rate shall remain; if current bonded ratio higher than GoalBonded, the annual inflation rate will decrease, until InflationMin | 0.51 (51%)           |
-| BlocksPerYear            | Estimated annual newly created block number formula：60 * 60 * 8766 / 5(average per block in 5 sec) | 6,311,520 (5 sec/block) |
+| GoalBonded               | Increment or decrement of the annual inflation rate  rule: staking ratio (delegated Token / Total circulating token supply, if current bonded ratio less than GoalBonded, annual inflation rate will increase, until InflationMax; if current bonded ratio = GoalBonded, the inflation rate shall remain; if current bonded ratio higher than GoalBonded, the annual inflation rate will decrease, until InflationMin | 0.51 (51%)           |
+| BlocksPerYear            | Estimated annual newly created block number formula: 60 * 60 * 8766 / 5(average per block in 5 sec) | 6,311,520 (5 sec/block) |
 
-* Inflation rate will be computed before each block is being created, formula as follows：
+* Inflation rate will be computed before each block is being created, formula as follows:
 
     1. Request (call) for Minter value & Params variables
     2. Request total bonded token in delegation
@@ -57,48 +57,48 @@
 
     This will require Params variable and BondedRatio
 
-    Formula：Latest inflation rate = Current inflation rate + ( (1 - Delegated ratio/ GoalBonded) * InflationRateChange ) / BlocksPerYear
+    Formula: Latest inflation rate = Current inflation rate + ( (1 - Delegated ratio/ GoalBonded) * InflationRateChange ) / BlocksPerYear
 
-    minter.Inflation cannot exceed maximum value（Params.InflationMax）and minimum value （Params.InflationMin）
+    minter.Inflation cannot exceed maximum value (Params.InflationMax) and minimum value (Params.InflationMin)
 
     * Computing the next annual inflation provision 
 
-    Variables needed：Latest inflation rate and Total circulation token supply
+    Variables needed: Latest inflation rate and Total circulation token supply
 
-    Formula：minter.AnnualProvisions = Latest inflation rate * Total circulation token supply
+    Formula: minter.AnnualProvisions = Latest inflation rate * Total circulation token supply
 
 * Computing the number of newly generated/minted token on the next block
 
-    Variables required：Latest inflation provision and estimated annual number of newly minted block 
+    Variables required: Latest inflation provision and estimated annual number of newly minted block 
     
     Number of newly minted token =  Latest inflation provision   / Estimated annual number of newly minted block
     
     1. Sending the number of token that required to be minted to Mint module address
     2. Sending transaction fee from Fee module address to Mint module address (transaction fee)
 
-    Example：
+    Example:
     
-    Assume the variables as follows：
+    Assume the variables as follows:
     
-    - Total circulating supply： 378,604,525.462891
-    - The number of valid delegated token：20,000,000
+    - Total circulating supply: 378,604,525.462891
+    - The number of valid delegated token: 20,000,000
     - Block time: 5 sec / block
-    - Initial annual inflation rate： 0.35
-    - Annual InflationRateChange ： 0.3
+    - Initial annual inflation rate: 0.35
+    - Annual InflationRateChange: 0.3
     
     Valid BondedRatio = 20,000,000/378,604,525.462891 = 0.05282557036
     
     Latest inflation rate minter. Inflation = minter.Inflation + ( (1 - valid delagation rate / GoalBonded) *  InflationRateChange)
     
-    The inflation rate of next block：
+    The inflation rate of next block:
     
     0.35 + ( (1 - 0.05282557036/0.51) * 0.3) / 6,311,520 = 0.3500000426
     
-    The provision of inflation rate：
+    The provision of inflation rate:
     
     0.3500000426 * 378,604,525.462891 = 132,511,600.04056464
     
-    The number of newly Mint Token on next block：
+    The number of newly Mint Token on next block:
     
     132,511,600.04056464 / 6,311,520  = 20.9951960923
 
@@ -137,15 +137,15 @@ Jail / discharge: The validator node that offline or failure to sign <5% of the 
   
     Assume the following: Voting rate is 100% (all valid validator node participates the block verification voting); Total block verification reward per block is 20 FX; and the block reward can be further divided into 3 parts:
     
-    * Part 1： The proposal block reward for block proposer：
+    * Part 1: The proposal block reward for block proposer:
     
         Formula: Total block verification reward * ( base proposal block reward + current block proposer reward * (current voting power of the proposing validator node / total validator voting power) 
         
-        The proposal block reward::  20 * (0.01 + 0.04 ) * 1 = 1FX  
+        The proposal block reward: 20 * (0.01 + 0.04 ) * 1 = 1FX  
         
-        The remaining balance of block verification reward per block： 20 - 1 = 19FX
+        The remaining balance of block verification reward per block: 20 - 1 = 19FX
     
-    * Part 2：Block verification reward of all valid validator node
+    * Part 2: Block verification reward of all valid validator node
     
         The verification block reward that belongs to all validator nodes:
         
@@ -187,7 +187,7 @@ Jail / discharge: The validator node that offline or failure to sign <5% of the 
     
         Formula: The remaining balance of block reward available to validator and delegator - Commission collected
         
-        Block reward after commission：2 - 0.02 = 1.98
+        Block reward after commission: 2 - 0.02 = 1.98
     
 * APY computation of delegator
 

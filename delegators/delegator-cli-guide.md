@@ -192,7 +192,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements. In order to run your own full-node, you need good bandwidth and at least 1TB of disk space.
 
-You will find the tutorial on how to install `fxcored` [here](https://github.com/falcons-x/fx-docs/blob/master/tutorials/installation.md), and the guide to run a full-node [here](broken-reference).
+You will find the tutorial on how to install `fxcored` [here](../f-x-core/installation.md), and the guide to run a full-node [here](../f-x-core/setup-node/full-node-with-binaries.md).
 
 ### Connecting to a Remote Full-Node
 
@@ -319,7 +319,7 @@ fxcored tx send <to_address> <amount> --from <yourKeyName> --gas auto --gas-adju
 
 > **Before you can bond FX and withdraw rewards, you need to **[**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored)** and **[**create an account**](delegator-cli-guide.md#creating-an-account)
 
-> **Before bonding FX, please read the **[**delegator faq**](broken-reference)** to understand the risk and responsibilities involved with delegating**
+> **Before bonding FX, please read the **[**delegator faq**](delegators-faq.md)** to understand the risk and responsibilities involved with delegating**
 
 > **Note: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 

@@ -4,7 +4,7 @@
 
 [f(x)Core](../f-x-core/what-is-f-x-core.md) is built on Tendermint, which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key.
 
-Validators can bond their own FX and have FX ["delegated"](broken-reference/), or staked, with them by token holders. The f(x)Core will have 50 validators, but over time this will increase to 100 validators according to a predefined schedule. Validators are ranked according to the amount of FX staked with them — the top 50 validator candidates with the most stake will become active f(x)Core validators.
+Validators can bond their own FX and have FX ["delegated"](../delegators), or staked, with them by token holders. The f(x)Core will have 50 validators, but over time this will increase to 100 validators according to a predefined schedule. Validators are ranked according to the amount of FX staked with them — the top 50 validator candidates with the most stake will become active f(x)Core validators.
 
 Validators and their delegators will earn FX as block rewards and transaction fees through execution of the Tendermint consensus protocol. Initially, transaction fees will be paid in FX but in the future, any token in the Cosmos ecosystem will be valid as a fee tender if it is whitelisted by governance. Note that validators can set the commission on the fees their delegators receive as an additional incentive.
 

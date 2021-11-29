@@ -116,7 +116,7 @@ Test your connection with a query such as:
 fxcored query staking validators
 ```
 
-> **To run your own full node locally read more **[**here**](../f-x-core/setup-node/)**.**
+> **To run your own full node locally read more **[**here**](../f-x-core/setup-node)**.**
 
 ### Sign a transaction
 

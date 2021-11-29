@@ -8,7 +8,7 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 
 #### Setup f(x)Core
 
-Initializing fxcore：
+Initializing fxcore:
 
 ```bash
 fxcored init fx-zakir
@@ -171,7 +171,7 @@ WantedBy=multi-user.target
 Run this command to create the sample file above in the file path`/etc/systemd/system/fxcored.service` (if you are in the fx-core directory):
 
 ```
-cat > ../../etc/systemd/system/fxcored.service
+cat > /etc/systemd/system/fxcored.service
 ```
 
 hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and `copy` and `paste` the contents of the file above into the command line, it should look like this:
