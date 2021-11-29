@@ -4,7 +4,7 @@
 
 [f(x)Core](../f-x-core/what-is-f-x-core.md) is built on Tendermint, which relies on a set of validators that are responsible for committing new blocks in the blockchain. These validators participate in the consensus protocol by broadcasting votes which contain cryptographic signatures signed by each validator's private key.
 
-Validators can bond their own FX and have FX ["delegated"](broken-reference/), or staked, with them by token holders. The f(x)Core will have 50 validators, but over time this will increase to 100 validators according to a predefined schedule. Validators are ranked according to the amount of FX staked with them — the top 50 validator candidates with the most stake will become active f(x)Core validators.
+Validators can bond their own FX and have FX "delegated", or staked, with them by token holders. The f(x)Core will have 50 validators, but over time this will increase to 100 validators according to a predefined schedule. Validators are ranked according to the amount of FX staked with them — the top 50 validator candidates with the most stake will become active f(x)Core validators.
 
 Validators and their delegators will earn FX as block rewards and transaction fees through execution of the Tendermint consensus protocol. Initially, transaction fees will be paid in FX but in the future, any token in the Cosmos ecosystem will be valid as a fee tender if it is whitelisted by governance. Note that validators can set the commission on the fees their delegators receive as an additional incentive.
 
@@ -16,7 +16,7 @@ There are currently no existing appropriate cloud solution for validator key man
 
 Validators should expect to equip their datacenter location with excess power, connectivity, and storage backups. Expect to have several excess networking boxes for fiber, firewall, switching and small servers with excess hard drives. Hardware can be on the low end of datacenter gear to start out with.
 
-We expect network requirements to be low initially. The current testnet requires minimal resources. Then bandwidth, CPU and memory requirements will rise as the network grows. Large hard drives are recommendeded for storing years of blockchain history.
+We expect network requirements to be low initially. The current testnet requires minimal resources. Then bandwidth, CPU and memory requirements will rise as the network grows. Large hard drives are recommended for storing years of blockchain history.
 
 ## Set Up a Website
 
@@ -28,6 +28,10 @@ Seek legal advice if you intend to run a Validator.
 
 ## Community
 
-Discuss more details on being a validator on our forum:
+Discuss more details on being a validator on our social media platforms:
 
 * [Validator Forum](https://forum.functionx.io/t/f-x-core-validator-node-setup-on-f-x-core-testnet/1785/189)
+* [Telegram](https://t.me/functionx)
+* [Twitter](https://twitter.com/functionx\_io)
+* [Discord](https://discord.com/invite/J6k8arnyEQ)
+* [Gitbook](https://github.com/functionx)

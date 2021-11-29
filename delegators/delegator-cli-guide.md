@@ -4,7 +4,7 @@ This document contains all the necessary information for delegators to interact 
 
 It also contains instructions on how to manage accounts, restore accounts from the fundraiser and use a ledger nano device.
 
-> **Very Important**: Please ensure that you follow the steps hereinafter carefully, as negligence in this process could result in a loss of your FX. Therefore, do read through the following instructions in their entirety before proceeding and reach out to us in case you need  any support.
+> **Very Important**: Please ensure that you follow the steps hereinafter carefully, as negligence in this process could result in a loss of your FX. Therefore, do read through the following instructions in their entirety before proceeding and reach out to us in case you need any support.
 
 > Please also note that you are about to interact with the f(x)Core, a blockchain technology containing highly experimental software. While the blockchain has been developed with state of the art technology and audited with utmost care, we may still expect to have issues, updates and bugs. Furthermore, interaction with blockchain technology requires advanced technical skills and always involves risks that are outside our control. By using the software, you confirm that you understand the inherent risks associated with cryptographic software and that the FunctionX team will not be held liable for potential damages arising out of the use of the software. Any use of this open source software released under the Apache 2.0 license is done at your own risk and on an "AS IS" basis, without warranties or conditions of any kind.
 
@@ -88,8 +88,7 @@ The address is a public string with a human-readable prefix (e.g. `fx1hs3tfedle3
 
 #### On a Ledger Device
 
-At the core of a ledger device, there is a mnemonic used to generate accounts on multiple blockchains (including the f(x)Core). When you first initialize your ledger device, you will create a new mnemonic.
-It is possible to import an existing mnemonic into a ledger device instead.  Let us go ahead and see how you can import a mnemonic into your ledger device. For more on how to restore from a recovery phrase, refer [here](https://support.ledger.com/hc/en-us/articles/4404382560913-Restore-from-recovery-phrase?support=true).
+At the core of a ledger device, there is a mnemonic used to generate accounts on multiple blockchains (including the f(x)Core). When you first initialize your ledger device, you will create a new mnemonic. It is possible to import an existing mnemonic into a ledger device instead. Let us go ahead and see how you can import a mnemonic into your ledger device. For more on how to restore from a recovery phrase, refer [here](https://support.ledger.com/hc/en-us/articles/4404382560913-Restore-from-recovery-phrase?support=true).
 
 > NOTE: To import a mnemonic into a ledger, **it is preferable to use a brand new ledger device.** There can only be one mnemonic per ledger device. If you want to use a ledger that is already initialized with a seed, you can reset it by going into `Control Center`>`Settings`>`Security`>`Reset Device`. More on how to reset your ledger device can be found [here](https://support.ledger.com/hc/en-us/articles/360017582434-Reset-to-factory-settings-?docs=true). **Please note that this will wipe out the seed currently stored on the device. If you have not properly secured the associated mnemonic, you could lose your funds!!!**
 
@@ -156,6 +155,7 @@ You can generate more accounts from the same mnemonic using the following comman
 ```bash
 fxcored keys add <yourKeyName> --recover --index 1
 ```
+
 This command will prompt you to input a passphrase as well as your mnemonic. Change the account number to generate an account with a different index.
 
 > **Do not lose or share your 24 word mnemonics with anyone. To prevent theft or loss of funds, it is best to ensure that you keep multiple copies of your mnemonic, and store it in a secure place that only you know how to access. If someone is able to gain access to your mnemonic, they will be able to gain access to your private keys and control the accounts associated with them.**
@@ -177,7 +177,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements and costs. In order to run your own full-node, you need good bandwidth and at least 500GB of disk space.
 
-You will find the tutorial on how to install `fxcored` [here](https://github.com/falcons-x/fx-docs/blob/master/tutorials/installation.md), and the guide to run a full-node [here](broken-reference).
+You will find the tutorial on how to install `fxcored` [here](../f-x-core/installation.md), and the guide to run a full-node [here](../f-x-core/setup-node/).
 
 ### Connecting to a Remote Full-Node
 
@@ -187,7 +187,7 @@ In order to connect to a full-node, you will need an address in the form of: `ht
 
 ## Setting Up `fxcored`
 
-> Before setting up `fxcored`, ensure that you have found a way to [**access the f(x)Core network**](delegator-cli-guide.md#accessing-the-f\(x\)Core-Network)
+> Before setting up `fxcored`, ensure that you have found a way to [**access the f(x)Core network**](delegator-cli-guide.md#accessing-the-f-x-core-network)****
 
 > **Please check that you are always using the latest stable release of `fxcored`**
 
@@ -287,9 +287,9 @@ Transaction `fees` is the product of `gas` and `gasPrice`. As a user, you can ei
 
 ### Sending Tokens
 
-> Before you can bond FX and withdraw rewards, you need to **[**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored)** and [**create an account**](delegator-cli-guide.md#creating-an-account)
+> Before you can bond FX and withdraw rewards, you need to [**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored) and [**create an account**](delegator-cli-guide.md#creating-an-account)
 
-> **Note: These commands need to run on an online computer. It is more secure to perform these commands using a Ledger device. For the offline procedure, click [**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer).**
+> **Note: These commands need to run on an online computer. It is more secure to perform these commands using a Ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 
 ```bash
 // Send a certain amount of tokens to an address
@@ -301,9 +301,9 @@ fxcored tx bank send <from_key_or_address> <to_address> <amount> --gas auto --ga
 
 ### Bonding FX and Withdrawing Rewards
 
-> Before you can bond FX and withdraw rewards, you need to **[**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored)** and[**create an account**](delegator-cli-guide.md#creating-an-account)
+> Before you can bond FX and withdraw rewards, you need to [**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored) and [**create an account**](delegator-cli-guide.md#creating-an-account)
 
-> **Before bonding FX, please read the **[**delegator faq**](broken-reference)** to understand the risk and responsibilities involved with delegating**
+> **Before bonding FX, please read the **[**delegator faq**](delegators-faq.md)** to understand the risk and responsibilities involved with delegating**
 
 > **Note: These commands need to run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 
@@ -367,7 +367,6 @@ Once the `deposit` reaches `minDeposit`, the proposal enters the `voting_period`
 
 At the end of the voting period, the proposal is accepted if there are more than 50% `Yes` votes (excluding `Abstain `votes) and less than 33.33% of `NoWithVeto` votes (excluding `Abstain` votes).
 
-
 > **Note: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 
 ```bash
@@ -407,7 +406,7 @@ Get the chain-id from the genesis file, and the two other fields using the accou
 fxcored query account <yourAddress> --chain-id dhobyghaut
 ```
 
-Then, copy `unsignedTx.json` and transfer it (e.g. via USB) to the offline computer. If it is not done already, [create an account on the offline computer](delegator-cli-guide.md#using-a-computer). For additional security, you can double check the parameters of your transaction before signing it using the following command:
+Then, copy `unsignedTx.json` and transfer it (e.g. via USB) to the offline computer. If it is not done already, create an account on the offline computer. For additional security, you can double check the parameters of your transaction before signing it using the following command:
 
 ```bash
 cat unsignedTx.json

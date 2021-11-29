@@ -240,6 +240,7 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 ```bash
 fxcored config config.toml chain-id dhobyghaut
 ```
+
 ### Keys
 
 #### Key Types
@@ -355,6 +356,7 @@ You can generate and print a multisig public key by typing:
 ```bash
 fxcored keys add --multisig=name1,name2,name3[...] --multisig-threshold=K new_key_name
 ```
+
 > Be sure to note that for multisig accounts, if you were to create any transaction, for example `--from=<multisig_account>` your `<multisig_account>` needs to be the wallet address ie `fx123l3kjltjwlfgjslfg....`. Only for those non-multisig accounts can you use the name of the account ie `--from=sheldoncooper`.
 
 `K` is the minimum number of private keys that must have signed the transactions that carry the public key's address as signer.
@@ -592,7 +594,7 @@ Please refer to the [Validator Setup](../validators/validator-setup.md) section 
 
 #### Delegate to a Validator
 
-On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](../resourcess/broken-reference/) can receive part of the validator's fee revenue. Read more about the [Cosmos Token Model](https://github.com/cosmos/cosmos/raw/master/Cosmos\_Token\_Model.pdf).
+On the upcoming mainnet, you can delegate `FX` to a validator. These delegators can receive part of the validator's fee revenue. Read more about the [incentives](../delegators/delegators-faq.md#revenue).
 
 **Query Validators**
 
@@ -1042,6 +1044,7 @@ fxcored tx sign \
   --output-document=p1signature.json \
   --chain-id=dhobyghaut
 ```
+
 Once the signature is generated, `p1` transmits both `unsignedTx.json` and `p1signature.json` to `p2` or `p3`, which in turn will generate their respective signature:
 
 ```bash
