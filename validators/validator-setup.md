@@ -111,7 +111,7 @@ fxcored keys parse $(cat .fxcore/config/priv_validator_key.json| jq -r '.address
 fxcored tendermint show-address
 ```
 
-ensure the second to the last value from the first command has the same output as the second command before running the following:
+Ensure the second to the last value from the first command has the same output as the second command before running the following:
 
 ```bash
 fxcored tx staking create-validator \
@@ -131,7 +131,7 @@ fxcored tx staking create-validator \
   --details="To infinity and beyond!" 
 ```
 
-Output
+Output:
 
 ```bash
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"choose a moniker","identity":"","website":"","security_contact":"","details":""},"commission":{"rate":"0.010000000000000000","max_rate":"0.200000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1000000000000000000","delegator_address":"fx1egmy0ncxzuur504qlz9z0ykfa5cqdk0ap5tgxz","validator_address":"fxvaloper1egmy0ncxzuur504qlz9z0ykfa5cqdk0af9khcz","pubkey":{"@type":"/cosmos.crypto.ed25519.PubKey","key":"JWar8+3FHVppCQWH7S4w27eMhjkyxXqUYmnbo185B3g="},"value":{"denom":"FX","amount":"500000000000000000000"}}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"FX","amount":"1020264000000000000"}],"gas_limit":"170044","payer":"","granter":""}},"signatures":[]}
@@ -139,9 +139,9 @@ Output
 confirm transaction before signing and broadcasting [y/N]: 
 ```
 
-> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://dhobyghaut-explorer.functionx.io)/[Mainnet](https://explorer.functionx.io) to obtain the `validator_address`. The explorer option can only be done if the binding is succesful.
+> Note: Do record the `validator_address` as this is the only time you can see it on the terminal, or else you will have to use the explorer [Testnet](https://dhobyghaut-explorer.functionx.io)/[Mainnet](https://explorer.functionx.io) to obtain the `validator_address`. The explorer option can only be done if the binding is successful.
 
-Hit `y` and enter! If succesful, You will get an object data from the terminal with code = 0 similar to what is shown below.
+Hit `y` and enter! If successful, You will get an object data from the terminal with code = 0 similar to what is shown below.
 
 Output:
 

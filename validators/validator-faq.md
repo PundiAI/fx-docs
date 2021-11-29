@@ -8,13 +8,13 @@ description: This is work in progress. Mechanisms and values are susceptible to 
 
 ### What is a validator?
 
-[f(x)Core](../f-x-core/what-is-f-x-core.md) is based on [Tendermint](https://tendermint.com/docs/introduction/what-is-tendermint.html), which relies on a set of validators to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+[f(x)Core](../f-x-core/what-is-f-x-core.md) is built on Tendermint, which relies on a set of validators to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
 The f(x)Core is a delgated Proof-Of-Stake (DPoS) blockchain, meaning that the weight of validators is determined by the total amount of staking tokens (FX) bonded as collateral. These FX can be self-delegated directly by the validator or delegated to them by other FX holders.
 
-Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction, provided they meet the miniminum self-delegated amount of 100FX. From there, they become validator candidates.
+Any user in the system can declare their intention to become a validator by sending a `create-validator` transaction, provided they meet the minimum self-delegated amount of 100FX. From there, they become validator candidates.
 
 The weight (i.e. voting power) of a validator determines whether or not they are an active validator. Initially, only the top 50 validators with the most voting power will be active validators.
 
@@ -30,7 +30,7 @@ Delegators are FX holders who want to participate in protocol governance, but do
 
 Because they share revenue with their validators, delegators also share risks. Should a validator misbehave, each of their delegators will be partially slashed in proportion to their delegated stake. This is why delegators should perform their due diligence on validators before delegating, as well as spreading their stake over multiple validators.
 
-Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [delegator's faq](broken-link/).
+Delegators play a critical role in the system, as they are responsible for choosing validators. Being a delegator is not a passive role: Delegators should actively monitor the actions of their validators and participate in governance. For more, read the [delegator's faq](../delegators/delegators-faq.md).
 
 ## Becoming a Validator
 
@@ -58,7 +58,7 @@ The active validator set is determined solely by the ranking of the total amount
 
 The Testnet is a great environment to test your validator setup before launch.
 
-We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. You can find all relevant information about the testnet [here](broken-reference/).
+We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. The setup of a testnet is the same as the mainnet with a few minor differences. You can create a testnet validator [here](validator-setup.md#create-your-validator).
 
 ### What are the different types of keys?
 
@@ -110,7 +110,7 @@ No, they do not. Each delegator will assess validators based on their own criter
 
 Validators have two main responsibilities:
 
-* **Be able to constantly run a correct version of the software:**Validators need to ensure that they are running an uncompromised and updated version of the software continuously.
+* \*\*Be able to constantly run a correct version of the software:\*\*Validators need to ensure that they are running an uncompromised and updated version of the software continuously.
 * **Actively participate in governance:** Validators are required to vote on every proposal.
 
 Additionally, validators are expected to be active members of the community. They should always be up-to-date with the current state of the ecosystem and staying abreast of any information on FunctionX so that they can make necessary upgrades, and be quick to respond to any changes.
@@ -204,7 +204,7 @@ We have to solve this simple equation to find the reward R for each validator:
 If a validator misbehaves, their delegated stake will be partially slashed. There are currently two faults that can result in slashing of funds for a validator and their delegators:
 
 * **Double signing:** If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A. Validators who double sign will be jailed and CANNOT be unjailed thereafter.
-* **Downtime:** If a validator misses more than 95% of the last 20000 blocks (~27.7hours), they will get slashed by 0.1%. Validators may `unjail` their validators after a 600s (10minute) window.
+* **Downtime:** If a validator misses more than 95% of the last 20000 blocks (\~27.7hours), they will get slashed by 0.1%. Validators may `unjail` their validators after a 600s (10minute) window.
 
 ### Do validators need to self-delegate FX?
 

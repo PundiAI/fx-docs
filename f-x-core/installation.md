@@ -1,6 +1,6 @@
 # Installation f(x)Core
 
-This guide will explain how to install the `fxcored` entrypoint onto your system. With these installed on a server, you can participate in the mainnet as either a Full Node or a [Validator](../validators/validator-setup.md).
+This guide will explain how to install the `fxcored` entrypoint onto your system. With these installed on a server, you can participate in the mainnet as either a [Full Node](setup-node/) or a [Validator](../validators/validator-setup.md).
 
 ## Hardware Requirements
 
@@ -71,7 +71,9 @@ That will install the `fxcored` binary. Verfiy network:
 ```bash
 fxcored network
 ```
+
 The output should look something similar to this:
+
 ```
 ChainId: dhobyghaut
 CrossChainSupportBscBlock: "1"
@@ -89,7 +91,6 @@ fxcored version --long
 
 #or
 fxcored version
-
 ```
 
 `fxcored version --long` should output something similar to:
