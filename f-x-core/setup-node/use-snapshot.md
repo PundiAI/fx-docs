@@ -6,17 +6,17 @@
 
 ```
 # testnet
-https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2021-11-22.tar.gz
+https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2021-11-29.tar.gz
 
 # mainnet
-https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-22.tar.gz
+https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-29.tar.gz
 ```
 
 > Snapshots are performed every Monday morning at 2:00 am UTC, keeping a record of that snapshot for three weeks. If the date on the file above is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date (to the latest Monday's date) in the file name to get the latest snapshot. If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number.
 
 ## Using Snapshots
 
-First, you need to set your node up with the pre-requisites as per the node [setup guide](use-snapshot.md). Before you `start node` for fxcore to sync, follow the below steps to use snapshot.
+First, you need to set your node up with the pre-requisites as per the node **setup guide**. Before you `start node` for fxcore to sync, follow the steps below to use snapshot.
 
 > The greater the blockchain data, the more evident the reduction is syncing time will be. If the current state of the blockchain will take about 2 days to sync, this method of syncing will reduce the time to sync by at least 12 hours.
 
