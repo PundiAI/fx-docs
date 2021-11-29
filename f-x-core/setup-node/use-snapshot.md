@@ -30,10 +30,10 @@ For example:
 
 ```bash
 # testnet
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2021-11-22.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2021-11-29.tar.gz
 
 # mainnet
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-22.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-11-29.tar.gz
 ```
 
 This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time.
@@ -52,10 +52,10 @@ For example:
 
 ```bash
 # testnet
-tar -xzvf fxcore-snapshot-testnet-2021-11-22.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-testnet-2021-11-29.tar.gz -C ~/.fxcore/
 
 # mainnet
-tar -xzvf fxcore-snapshot-mainnet-2021-11-22.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2021-11-29.tar.gz -C ~/.fxcore/
 ```
 
 {% hint style="info" %}

@@ -84,6 +84,10 @@ GravityValsetSlashBlock: "1"
 Network: testnet
 ```
 
+{% hint style="info" %}
+for Mainnet the ChainId should be **fxcore**
+{% endhint %}
+
 Verify version:
 
 ```bash
