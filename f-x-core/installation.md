@@ -19,13 +19,81 @@ Install `make` and `gcc`.
 
 On Ubuntu this can be done with the following commands:
 
-```bash
+{% tabs %}
+{% tab title="Ubuntu" %}
+```
 sudo apt-get update
 
 sudo apt-get install -y make gcc
 ```
 
-Ps: `sudo apt-get install -y make gcc` may have encountered a problem with locked files, just try `sudo apt-get install -y make gcc` again.
+> Ps: `sudo apt-get install -y make gcc` may have encountered a problem with locked files, just try `sudo apt-get install -y make gcc` again.
+{% endtab %}
+
+{% tab title="Mac" %}
+Ensure you have [Homebrew](https://brew.sh) installed.
+
+Once you have Homebrew installed, you may run the following commands to install `make` and `gcc`:
+
+```
+brew install make
+brew install gcc
+```
+
+We'll  be needing these commands later so let's install the necessary packages:
+
+```
+brew install git
+brew install wget
+```
+{% endtab %}
+
+{% tab title="Windows" %}
+Ensure you have `make` and `gcc` installed and that the paths are set correctly for git bash.
+
+One option for installing `gcc` can be found [here](https://jmeubank.github.io/tdm-gcc/articles/2021-05/10.3.0-release).
+
+One option for installing `make` is using `chocolate` , more information can be found [here](https://chocolatey.org/install).
+
+Once you have chocolate installed, run this command:
+
+```
+choco install make
+```
+
+Ensure you have all the necessary dependencies and compilers.
+
+```
+gcc --version
+```
+
+will return:
+
+```
+gcc.exe (tdm64-1) 10.3.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE
+```
+
+and for make:
+
+```
+make --version
+```
+
+will return:
+
+```
+GNU Make 4.3
+Built for Windows32
+Copyright (C) 1988-2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+```
+{% endtab %}
+{% endtabs %}
 
 ## Install Go
 
