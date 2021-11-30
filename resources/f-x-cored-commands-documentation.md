@@ -306,7 +306,7 @@ Additionally and ⚠⚠ importantly, if you wish to have an added layer of prote
 ```
 fxcored keys add <secondKeyName> \
   --ledger \
-  --account <i> \
+  --index <i> \
   --keyring-backend <file_name>
 ```
 
@@ -315,7 +315,7 @@ for example:
 ```
 fxcored keys add shangqi \
   --ledger \
-  --account 3 \
+  --index 3 \
   --keyring-backend file
 ```
 
@@ -326,6 +326,12 @@ Enter keyring passphrase:
 ```
 
 In the future, whenever you use this account to sign off on a transaction, you will have to add the `--keyring-backend <file_name>` flag and enter the keyring passphrase.
+
+{% hint style="info" %}
+Save a backup of your keyring passphrase in a secure place. Losing your keyring passphrase will result in the lost of all your funds created using the keyring passphrase❗
+
+Also to access your keys in the keyring file do not forget to add the --keyring flag
+{% endhint %}
 
 View the validator operator's address via:
 

@@ -19,11 +19,11 @@ Installing the `Cosmos` application on your ledger device is required before you
 
 ### Install the Cosmos (ATOM) app on your Ledger device
 
-1. Open **Ledger Live** and navigate to the **Manager **tab.
+1. Open **Ledger Live** and navigate to the **Manager** tab.
 2. Connect and unlock your Ledger **device**.
 3. If asked, allow the manager on your device.
-4. Search for the **Cosmos (ATOM) **app in the app catalog.
-5. Click the **Install **button to install the app on your Ledger device.
+4. Search for the **Cosmos (ATOM)** app in the app catalog.
+5. Click the **Install** button to install the app on your Ledger device.
    * Your Ledger device displays **Processing.**
    * Ledger Live displays **Installed.**
 6. More information on how to set up your Ledger device can be found [here](https://support.ledger.com/hc/en-us/articles/360013713840-Cosmos-ATOM-?docs=true).
@@ -32,13 +32,13 @@ Installing the `Cosmos` application on your ledger device is required before you
 
 ## f(x)Core CLI + Ledger Nano
 
-**Note: You need to **[**install the Cosmos app**](ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application)** on your Ledger Nano before moving on to this section**
+**Note: You need to** [**install the Cosmos app**](ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application) **on your Ledger Nano before moving on to this section**
 
 The tool used to generate addresses and transactions on the f(x)Core network is `fxcored`. You will be using fxcored CLI commands for creating transactions and then using your Ledger to sign off before broadcasting the transaction to a specified node using the fxcored CLI.
 
 ### Install f(x)Core
 
-> **You need to **[**install f(x)Core**](../f-x-core/installation.md)** before you proceed further**
+> **You need to** [**install f(x)Core**](../f-x-core/installation.md) **before you proceed further**
 
 ### Add your Ledger key
 
@@ -65,7 +65,7 @@ Additionally and ⚠⚠ importantly, if you wish to have an added layer of prote
 ```
 fxcored keys add <secondKeyName> \
   --ledger \
-  --account <i> \
+  --index <i> \
   --keyring-backend <file_name>
 ```
 
@@ -74,7 +74,7 @@ for example:
 ```
 fxcored keys add heizenberg \
   --ledger \
-  --account 3 \
+  --index 3 \
   --keyring-backend file
 ```
 
@@ -85,6 +85,12 @@ Enter keyring passphrase:
 ```
 
 In the future, whenever you use this account to sign off on a transaction, you will have to add the `--keyring-backend <file_name>` flag and enter the keyring passphrase.
+
+{% hint style="info" %}
+Save a backup of your keyring passphrase in a secure place. Losing your keyring passphrase will result in the lost of all your funds created using the keyring passphrase❗
+
+Also to access your keys in the keyring file do not forget to add the --keyring flag
+{% endhint %}
 
 ### Confirm your address
 
@@ -116,7 +122,7 @@ Test your connection with a query such as:
 fxcored query staking validators
 ```
 
-> **To run your own full node locally read more **[**here**](../f-x-core/setup-node/)**.**
+> **To run your own full node locally read more** [**here**](../f-x-core/setup-node/)**.**
 
 ### Sign a transaction
 
