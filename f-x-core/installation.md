@@ -97,16 +97,28 @@ There is NO WARRANTY, to the extent permitted by law.
 
 ## Install Go
 
-Install `go` by following the [official docs](https://golang.org/doc/install). There may be `permissions denied` issues with unzipping the go zip file, try using `sudo su` to resolve it.
+{% tabs %}
+{% tab title="All other environments" %}
+Install `go` by following the [official docs](https://golang.org/doc/install). Please select your respective environment❗
 
-> **Go 1.16+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
+> For Ubuntu environment, there may be `permissions denied` issues with unzipping the go zip file, try using `sudo su` to resolve it.
+{% endtab %}
 
-```bash
+{% tab title="If you are remoting into a terminal" %}
+Especially if you are remoting into a Ubuntu terminal, run this command to download the `go` installer:
+
+```
 wget https://dl.google.com/go/go1.17.3.linux-amd64.tar.gz 
 ```
 
 {% hint style="info" %}
 After you have downloaded the package and you may proceed to step 2 of the [official docs](https://golang.org/doc/install). Choose your system OS and follow the instructions stated.
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+**Go 1.16+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
 {% endhint %}
 
 Setting environment variable:
