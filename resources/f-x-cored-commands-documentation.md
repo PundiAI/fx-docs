@@ -732,6 +732,9 @@ Additionally, as you can get all the outgoing redelegations from a particular va
 ```bash
 fxcored query staking redelegations-from <account_fxval>
 ```
+{% hint style="info" %}
+However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+{% endhint %}
 
 #### Query Parameters
 

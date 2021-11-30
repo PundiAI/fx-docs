@@ -330,6 +330,9 @@ fxcored tx distribution withdraw-all-rewards --from <delegatorKeyName> --gas aut
 
 fxcored tx staking unbond <validatorAddress> <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
+{% hint style="info" %}
+However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+{% endhint %}
 
 > **If you are using a Ledger, you will be asked to confirm the transaction on the device before it is signed and broadcast to the network. Note that the command will only work while the Ledger is plugged in and unlocked.**
 

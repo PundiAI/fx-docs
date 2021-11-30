@@ -55,7 +55,7 @@ fxcored keys add <_name> --ledger
 Cosmos uses [HD Wallets](https://www.ledger.com/academy/crypto/what-are-hierarchical-deterministic-hd-wallets). This means you can setup multiple accounts using the same Ledger seed. To create another account from your Ledger device, run the following, (changing the integer \<i> to some value >= 0 to choose the account for HD derivation):
 
 ```bash
-fxcored keys add <secondKeyName> --ledger --account <i>
+fxcored keys add <secondKeyName> --ledger --index <i>
 ```
 
 Additionally and ⚠⚠ importantly, if you wish to have an added layer of protection on your keys, you may add the `--keyring-backend` flag and specify the file name. Setting your key up this way will ensure another layer of protection for signing any transactions.

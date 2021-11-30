@@ -34,7 +34,7 @@ For example:
 
 ```bash
 # For ledger
-fxcored keys add test --ledger --account 0
+fxcored keys add test --ledger --index 0
 or
 # Without ledger
 fxcored keys add test
