@@ -240,6 +240,9 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 ```bash
 fxcored config config.toml chain-id dhobyghaut
 ```
+{% hint style="info" %}
+for Mainnet the ChainId should be **fxcore**
+{% endhint %}
 
 ### Keys
 
@@ -1064,6 +1067,9 @@ fxcored tx sign \
   --output-document=p2signature.json \
   --chain-id=dhobyghaut
 ```
+{% hint style="info" %}
+for Mainnet the ChainId should be **fxcore**
+{% endhint %}
 
 `p1p2p3` is a 2-of-3 multisig key, therefore one additional signature is sufficient. Any the key holders can now generate the multisig transaction by combining the required signature files:
 
