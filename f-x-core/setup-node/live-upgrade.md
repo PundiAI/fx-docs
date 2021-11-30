@@ -2,7 +2,7 @@
 
 This document demonstrates how a live upgrade can be performed on-chain through a governance process.
 
-1.  Start the network and trigger upgrade
+1.  Start the network and set in motion an upgrade proposal
 
     ```bash
     # start a f(x)Core application full-node
@@ -22,9 +22,9 @@ This document demonstrates how a live upgrade can be performed on-chain through 
     ```
 2.  Performing an upgrade
 
-    Assuming the proposal passes the chain will stop at given upgrade height.
+    Assuming the proposal passes, the chain will stop at the given upgrade height.
 
-    You can stop and start the original binary all you want, but **it will refuse to run after the upgrade height**.
+    You can stop and start the original binary if you want, but **it will refuse to run after the upgrade height**.
 
     We need a new binary with the upgrade handler installed. The logs should look something like:
 
@@ -33,8 +33,10 @@ This document demonstrates how a live upgrade can be performed on-chain through 
     E[2019-11-05|12:44:18.914] CONSENSUS FAILURE!!!
     ...
     ```
+{% hint style="info" %}
 
     Note that the process will hang indefinitely (doesn't exit to avoid restart loops). So, you must manually kill the process and replace it with a new binary. Do so now with `Ctrl+C` or `killall fxcored`.
+{% endhint %}
 
     In `fxcore/app/app.go`, after `upgrade.Keeper` is initialized and set in the app, set the corresponding upgrade `Handler` with the correct `<plan-name>`:
 
@@ -43,8 +45,9 @@ This document demonstrates how a live upgrade can be performed on-chain through 
             // custom logic after the network upgrade has been executed
         })
     ```
-
-    Note that we panic on any error - this would cause the upgrade to fail if the migration could not be run, and no node would advance - allowing a manual recovery. If we ignored the errors, then we would proceed with an incomplete upgrade and have a very difficult time every recovering the proper state.
+{% hint style="info" %}
+    Note that we need not panic at the first sign of any error - an upgrade would fail if the migration did not follow through, and no node would advance - resulting in a manual recovery. If we ignored the errors, we would proceed with an incomplete upgrade and have a very difficult time trying to recover the proper state.
+{% endhint %}
 
     Now, compile the new binary and run the upgraded code to complete the upgrade:
 
@@ -63,3 +66,15 @@ This document demonstrates how a live upgrade can be performed on-chain through 
     # verify you can query the block header of the completed upgrade
     $ fxcored query upgrade applied <plan-name>
     ```
+
+    For other software upgrades (make sure you are in the `fx-core` directory) run these commands:
+```bash
+# this will ensure you have the latest code stack
+git pull
+
+#the following commands will upgrade your binaries
+make go.sum
+
+make install
+
+```
