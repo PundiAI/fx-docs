@@ -134,7 +134,9 @@ source ~/.profile
 
 Next, let's install the latest version of f(x)Core. Make sure you have git installed if not you will be prompted to `install git`. Follow the instruction in the terminal.
 
-```bash
+{% tabs %}
+{% tab title="All Other Environments" %}
+```
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
 make go.sum
@@ -145,6 +147,32 @@ make install-testnet
 # mainnet
 make install
 ```
+{% endtab %}
+
+{% tab title="Windows" %}
+```
+git clone https://github.com/functionx/fx-core.git
+cd fx-core
+
+make go.sum
+
+# mainnet
+make build-win
+
+#testnet
+make build-win network=testnet
+
+#use cmd prompt to open the fxcored.exe file
+#in the path ./build/bin/fxcored.exe
+
+#run the following commands to see if everything is ok:
+./build/bin/fxcored.exe network
+./build/bin/fxcored.exe version
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 That will install the `fxcored` binary. Verfiy network:
 
