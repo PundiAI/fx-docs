@@ -13,6 +13,7 @@
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
   * [Node Monitoring Device](f-x-core/setup-node/node-monitor.md)
   * [Node Peers](f-x-core/setup-node/node-peers.md)
+  * [Live Upgrade](f-x-core/setup-node/live-upgrade.md)
 
 ## Validators
 

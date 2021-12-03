@@ -240,6 +240,10 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 ```bash
 fxcored config config.toml chain-id dhobyghaut
 ```
+{% hint style="info" %}
+for Mainnet the ChainId should be **fxcore**
+{% endhint %}
+
 ### Keys
 
 #### Key Types
@@ -305,7 +309,7 @@ Additionally and ⚠⚠ importantly, if you wish to have an added layer of prote
 ```
 fxcored keys add <secondKeyName> \
   --ledger \
-  --account <i> \
+  --index <i> \
   --keyring-backend <file_name>
 ```
 
@@ -314,7 +318,7 @@ for example:
 ```
 fxcored keys add shangqi \
   --ledger \
-  --account 3 \
+  --index 3 \
   --keyring-backend file
 ```
 
@@ -325,6 +329,12 @@ Enter keyring passphrase:
 ```
 
 In the future, whenever you use this account to sign off on a transaction, you will have to add the `--keyring-backend <file_name>` flag and enter the keyring passphrase.
+
+{% hint style="info" %}
+Save a backup of your keyring passphrase in a secure place. Losing your keyring passphrase will result in the lost of all your funds created using the keyring passphrase❗
+
+Also to access your keys in the keyring file do not forget to add the --keyring flag
+{% endhint %}
 
 View the validator operator's address via:
 
@@ -355,6 +365,7 @@ You can generate and print a multisig public key by typing:
 ```bash
 fxcored keys add --multisig=name1,name2,name3[...] --multisig-threshold=K new_key_name
 ```
+
 > Be sure to note that for multisig accounts, if you were to create any transaction, for example `--from=<multisig_account>` your `<multisig_account>` needs to be the wallet address ie `fx123l3kjltjwlfgjslfg....`. Only for those non-multisig accounts can you use the name of the account ie `--from=sheldoncooper`.
 
 `K` is the minimum number of private keys that must have signed the transactions that carry the public key's address as signer.
@@ -592,7 +603,9 @@ Please refer to the [Validator Setup](../validators/validator-setup.md) section 
 
 #### Delegate to a Validator
 
-On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](../delegators/delegators-faq.md) can receive part of the validator's fee revenue. Read more about the [Cosmos Token Model](https://github.com/cosmos/cosmos/raw/master/Cosmos\_Token\_Model.pdf).
+
+On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](../delegators/delegators-faq.md) can receive part of the validator's fee revenue. Read more about the [incentives](../delegators/delegators-faq.md#revenue).
+
 
 **Query Validators**
 
@@ -724,6 +737,9 @@ Additionally, as you can get all the outgoing redelegations from a particular va
 ```bash
 fxcored query staking redelegations-from <account_fxval>
 ```
+{% hint style="info" %}
+However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+{% endhint %}
 
 #### Query Parameters
 
@@ -1042,6 +1058,7 @@ fxcored tx sign \
   --output-document=p1signature.json \
   --chain-id=dhobyghaut
 ```
+
 Once the signature is generated, `p1` transmits both `unsignedTx.json` and `p1signature.json` to `p2` or `p3`, which in turn will generate their respective signature:
 
 ```bash
@@ -1052,6 +1069,9 @@ fxcored tx sign \
   --output-document=p2signature.json \
   --chain-id=dhobyghaut
 ```
+{% hint style="info" %}
+for Mainnet the ChainId should be **fxcore**
+{% endhint %}
 
 `p1p2p3` is a 2-of-3 multisig key, therefore one additional signature is sufficient. Any the key holders can now generate the multisig transaction by combining the required signature files:
 

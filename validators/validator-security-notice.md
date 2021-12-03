@@ -52,6 +52,9 @@ private_peer_ids = "node_ids_of_private_peers"
 
 Once you have made changes and want to save the file, press `:x` (you must not be in Insert mode. If you are, press ESC to leave it).
 
+## Ports
+On the note DDOS, remember to ensure you have closed off the ports that should not be made public. You may consider whitelisting the addresses that need access to certain ports that need to be open but not made public.
+
 ## Environment Variables
 
 Note that while explicit command-line flags will take precedence over environment variables, environment variables will take precedence over any of your configuration files. For this reason, it's imperative that you lock down your environment such that any critical parameters are defined as flags on the CLI or prevent modification of any environment variables.
