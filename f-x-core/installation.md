@@ -150,6 +150,10 @@ make install
 {% endtab %}
 
 {% tab title="Windows" %}
+{% hint style="info" %}
+You should run your commands in gitbash. But open fxcored.exe file using cmd prompt
+{% endhint %}
+
 ```
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
