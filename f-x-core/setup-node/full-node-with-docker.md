@@ -13,29 +13,29 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 ```bash
-# For testnet：
+# For testnet:
 docker pull functionx/fx-core:dhobyghaut-1.0
-# For mainnet：
+# For mainnet:
 docker pull functionx/fx-core:mainnet-1.0
 ```
 
 * init config
 
 ```bash
-# For testnet：
-  docker run --rm -v ~:/root functionx/fx-core:dhobyghaut-1.0 init fx-zakir
-# For mainnet：
+# For testnet:
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 init fx-zakir
+# For mainnet:
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 init fx-zakir
 ```
 
 * download genesis (copy and run each line, line by line)
 
 ```bash
-# For testnet：
+# For testnet:
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
-# For mainnet：  
+# For mainnet:
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
@@ -50,9 +50,9 @@ And at this stage, what is important is your validator keys that is stored in a 
 * run docker
 
 ```bash
-# For testnet：
-  docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v ~:/root functionx/fx-core:dhobyghaut-1.0 start
-# For mainnet：
+# For testnet:
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 start
+# For mainnet:
 docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 start 
 ```
 

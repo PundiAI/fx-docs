@@ -124,6 +124,7 @@ fxcored query staking validators
 
 > **To run your own full node locally read more** [**here**](../f-x-core/setup-node/)**.**
 
+
 ### Sign a transaction
 
 You are now ready to start signing and sending transactions. Send a transaction with fxcored using the `tx bank send` command.

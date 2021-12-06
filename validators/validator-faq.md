@@ -58,6 +58,7 @@ The active validator set is determined solely by the ranking of the total amount
 
 The Testnet is a great environment to test your validator setup before launch.
 
+
 We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. The setup of a testnet is the same as the mainnet with a few minor differences. You can create a testnet validator [here](validator-setup.md#create-your-validator).
 
 ### What are the different types of keys?

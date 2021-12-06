@@ -2,7 +2,8 @@
 
 ### Simple SSH
 
-* Choose a cloud instance based on the requirements specified in [Hardware Requirements](../f-x-core/installation.md#hardware-requirements)
+
+* Choose a cloud instance based on the requirements specified in [Hardware Requirements](../f-x-core/installation.md#Hardware Requirements)
 * The estimated cost is about 80-100 USD per month
 * f(x)Core is system agnostic but Ubuntu is preferred
 
@@ -28,4 +29,6 @@ ssh -L 127.0.0.1:26657:127.0.0.1:26657 root@47.211.41.82
 You must ensure you have fxcored installed in your local machine.
 {% endhint %}
 
-> Alternatively, you can add the `--node flag` and ensure that your IP address has either been whitelisted or your port is open. Also you can consider configuring your config.toml file to set your node up.
+
+> Alternatively, you can add the `--node flag` and ensure that your IP address has either been whitelisted or your port is open.
+> Also you can consider configuring your config.toml file to set your node up.

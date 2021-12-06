@@ -603,7 +603,9 @@ Please refer to the [Validator Setup](../validators/validator-setup.md) section 
 
 #### Delegate to a Validator
 
-On the upcoming mainnet, you can delegate `FX` to a validator. These delegators can receive part of the validator's fee revenue. Read more about the [incentives](../delegators/delegators-faq.md#revenue).
+
+On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](../delegators/delegators-faq.md) can receive part of the validator's fee revenue. Read more about the [incentives](../delegators/delegators-faq.md#revenue).
+
 
 **Query Validators**
 

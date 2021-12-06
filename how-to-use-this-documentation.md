@@ -10,7 +10,7 @@ description: Overview of the structure of this documentation and important tips
 
 ****[**Installation f(x)Core**](f-x-core/installation.md)** (technical): **The hardware requirements and the technical setup for the f(x)Core command line interface (CLI).
 
-****[**Setup Node**](f-x-core/setup-node/)** (technical)**
+****[**Setup Node**](f-x-core/setup-node)** (technical)**
 
 * [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md): Initializing the core (where your consensus keys are generated), configuring the necessary files, running the node with [Daemon](f-x-core/setup-node/full-node-with-binaries.md#running-server-as-a-daemon).
 * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md): Similar to setting it up using binaries, but using the docker container.
