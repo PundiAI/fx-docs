@@ -35,6 +35,7 @@
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
+* [Sentry Nodes](resources/sentry-nodes.md)
 
 ## Developers
 

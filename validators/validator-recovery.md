@@ -56,7 +56,7 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/test
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 
-The key file here is `priv_validator_key.json`. After initializing and overriding those files, override the_ _`priv_validator_key.json` with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):
+The key file here is `priv_validator_key.json`. After initializing and overriding those files, override the __ `priv_validator_key.json` with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):
 
 ```
 cat > priv_validator_key.json
