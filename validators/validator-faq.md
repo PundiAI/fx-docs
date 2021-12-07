@@ -58,7 +58,6 @@ The active validator set is determined solely by the ranking of the total amount
 
 The Testnet is a great environment to test your validator setup before launch.
 
-
 We view testnet participation as a great way to signal to the community that you are ready and able to operate a validator. The setup of a testnet is the same as the mainnet with a few minor differences. You can create a testnet validator [here](validator-setup.md#create-your-validator).
 
 ### What are the different types of keys?
@@ -111,7 +110,7 @@ No, they do not. Each delegator will assess validators based on their own criter
 
 Validators have two main responsibilities:
 
-* \*\*Be able to constantly run a correct version of the software:\*\*Validators need to ensure that they are running an uncompromised and updated version of the software continuously.
+* **Be able to constantly run a correct version of the software:** Validators need to ensure that they are running an uncompromised and updated version of the software continuously.
 * **Actively participate in governance:** Validators are required to vote on every proposal.
 
 Additionally, validators are expected to be active members of the community. They should always be up-to-date with the current state of the ecosystem and staying abreast of any information on FunctionX so that they can make necessary upgrades, and be quick to respond to any changes.
@@ -128,6 +127,49 @@ Staking FX can be thought of as a safety deposit for validation activities. When
 
 Validators, and their delegators, receive block rewards, fees, and have the right to participate in governance. If a validator misbehaves, a certain portion of their total stake is slashed. This means that every delegator that bonded their FX with this validator gets penalized in proportion to their bonded stake. Delegators are therefore incentivized to delegate to validators they believe are trustworthy.
 
+### Redelegation
+
+You can easily re-allocate your stake from one validator to another without having to wait 21 days to unbond. However, there's a limit or catch to this relegation feature.
+
+**21 Day Cooldown: Remember this recurring number**
+
+When a user requests **** to `undelegate` from a validator, the amount of `FX` that was requested for undelegation will be locked in **unbonding** state for 21 days. For simplicity, we call this the **21 day cooldown**. After the 21 day cooldown passes, a user will be able to make transactions with the `FX` that was previously in **unbonding** state. This cooldown also applies to certain scenarios in redelegation. In order to **redelegate a portion of delegated FX from Validator A → Validator B,** there are two options a user could choose from.
+
+#### Option #1 <a href="#9704" id="9704"></a>
+
+Undelegate from **Validator A** and wait for the 21 day unbonding period (cooldown) to pass. Then, delegate the ATOM to **Validator B**.
+
+* Taking this path may seem un-wise because you’ll have to wait 21 days to delegate that stake with another validator. This is where the **redelegation** feature comes in handy.
+
+#### Option #2 <a href="#5320" id="5320"></a>
+
+Use the redelegation feature to immediately redelegate the ATOM from **Validator A → Validator B.**
+
+* This **redelegation** feature seems wonderful. You no longer have to wait 21 days to unbond and then delegate that stake to another validator. **But there’s a catch.**
+
+#### The 7 Stacks Rule <a href="#39ce" id="39ce"></a>
+
+Redelegating from **Validator A → Validator B** using the **same wallet.**
+
+Let’s say you want to **redelegate** your ATOM from Validator A → Validator B using Wallet #1. With the same wallet address, you are only able to **redelegate from Validator A → Validator B up to 7 times in a 21 day period.**
+
+#### Serial Redelegation (Validator Hopping) <a href="#cc75" id="cc75"></a>
+
+Redelegating from **Validator A → Validator B**, then redelegating from **Validator B → Validator C** consecutively.
+
+**Serial redelegation** is a rule that most delegators would be baffled by when they first try redelegating without looking into the rules. Here’s why.
+
+* Redelegating from **Validator A → Validator B**, then consecutively redelegating from **Validator B → Validator C** does not work.
+* **The 21 day cooldown applies to serial redelegation.**
+
+Once you redelegate from Validator A → Validator B, **you will not be able to redelegate from Validator B to another validator for the next 21 days.**
+
+In other words, **the validator on the receiving end of redelegation will be on a 21-day redelegation lock** (You will still be able to undelegate from or make some additional delegations to this validator. You just won’t be able to redelegate from the validator.).
+
+_**You can’t consecutively do validator-hopping!**_&#x20;
+
+Find more information on redelegation [here](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+
 ### Can a validator run away with their delegators' FX?
 
 In a DPoS blockchain, voting power is associated with the amount of FX one has. By delegating FX to a validator, a user delegates voting power. The more voting power a validator has, the more weight they have in the consensus and governance processes. This does not mean that the validator has custody of their delegators' FX. **By no means can a validator run away with its delegator's funds**.
@@ -136,7 +178,7 @@ Even though delegated funds cannot be stolen by their validators, delegators are
 
 ### How often will a validator be chosen to propose the next block? Does it go up with the quantity of bonded FX?
 
-The validator that is selected to propose the next block is called a proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded FX) of the validator. For example, if the total bonded stake across all validators is 100 FX and a validator's total stake is 10 FX, then this validator will proposer `~10% `of the blocks.
+The validator that is selected to propose the next block is called a proposer. Each proposer is selected deterministically, and the frequency of being chosen is proportional to the voting power (i.e. amount of bonded FX) of the validator. For example, if the total bonded stake across all validators is 100 FX and a validator's total stake is 10 FX, then this validator will proposer `~10%` of the blocks.
 
 ## Incentives
 

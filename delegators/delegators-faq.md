@@ -14,7 +14,6 @@ To become delegators, FX holders need to send a "Delegate transaction" where the
 However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
 {% endhint %}
 
-
 For a technical guide on how to become a delegator, click [here](delegator-cli-guide.md).
 
 ## Choosing a validator
@@ -72,3 +71,46 @@ There is one main slashing condition:
 * **Double signing:** If someone reports that a validator signed two different blocks with the same chain ID at the same height, this validator will get slashed.
 
 This is why FX holders should perform their due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator. **Delegators can also mitigate risk by distributing their stake across multiple validators.**
+
+### Redelegation
+
+You can easily re-allocate your stake from one validator to another without having to wait 21 days to unbond. However, there's a limit or catch to this relegation feature.
+
+**21 Day Cooldown: Remember this recurring number**
+
+When a user requests **** to `undelegate` from a validator, the amount of `FX` that was requested for undelegation will be locked in **unbonding** state for 21 days. For simplicity, we call this the **21 day cooldown**. After the 21 day cooldown passes, a user will be able to make transactions with the `FX` that was previously in **unbonding** state. This cooldown also applies to certain scenarios in redelegation. In order to **redelegate a portion of delegated FX from Validator A → Validator B,** there are two options a user could choose from.
+
+#### Option #1 <a href="#9704" id="9704"></a>
+
+Undelegate from **Validator A** and wait for the 21 day unbonding period (cooldown) to pass. Then, delegate the ATOM to **Validator B**.
+
+* Taking this path may seem un-wise because you’ll have to wait 21 days to delegate that stake with another validator. This is where the **redelegation** feature comes in handy.
+
+#### Option #2 <a href="#5320" id="5320"></a>
+
+Use the redelegation feature to immediately redelegate the ATOM from **Validator A → Validator B.**
+
+* This **redelegation** feature seems wonderful. You no longer have to wait 21 days to unbond and then delegate that stake to another validator. **But there’s a catch.**
+
+#### The 7 Stacks Rule <a href="#39ce" id="39ce"></a>
+
+Redelegating from **Validator A → Validator B** using the **same wallet.**
+
+Let’s say you want to **redelegate** your ATOM from Validator A → Validator B using Wallet #1. With the same wallet address, you are only able to **redelegate from Validator A → Validator B up to 7 times in a 21 day period.**
+
+#### Serial Redelegation (Validator Hopping) <a href="#cc75" id="cc75"></a>
+
+Redelegating from **Validator A → Validator B**, then redelegating from **Validator B → Validator C** consecutively.
+
+**Serial redelegation** is a rule that most delegators would be baffled by when they first try redelegating without looking into the rules. Here’s why.
+
+* Redelegating from **Validator A → Validator B**, then consecutively redelegating from **Validator B → Validator C** does not work.
+* **The 21 day cooldown applies to serial redelegation.**
+
+Once you redelegate from Validator A → Validator B, **you will not be able to redelegate from Validator B to another validator for the next 21 days.**
+
+In other words, **the validator on the receiving end of redelegation will be on a 21-day redelegation lock** (You will still be able to undelegate from or make some additional delegations to this validator. You just won’t be able to redelegate from the validator.).
+
+_**You can’t consecutively do validator-hopping!**_&#x20;
+
+Find more information on redelegation [here](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
