@@ -53,9 +53,19 @@ Ensure you have `make` and `gcc` installed and that the paths are set correctly 
 
 One option for installing `gcc` can be found [here](https://jmeubank.github.io/tdm-gcc/articles/2021-05/10.3.0-release).
 
+{% hint style="info" %}
+You may select tdm64-gcc-10.3.0-2
+
+Restart gitbash after installing
+{% endhint %}
+
 One option for installing `make` is using `chocolate` , more information can be found [here](https://chocolatey.org/install).
 
 Once you have chocolate installed, run this command:
+
+{% hint style="info" %}
+make sure to run gitbash as administrator mode if the following commands do not work
+{% endhint %}
 
 ```
 choco install make
@@ -152,6 +162,8 @@ make install
 {% tab title="Windows" %}
 {% hint style="info" %}
 You should run your commands in gitbash. But open fxcored.exe file using cmd prompt
+
+Make sure the name of your folder does not have whitespaces!
 {% endhint %}
 
 ```
