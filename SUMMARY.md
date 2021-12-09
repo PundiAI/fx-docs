@@ -8,12 +8,12 @@
 * [What is f(x)Core](f-x-core/what-is-f-x-core.md)
 * [Installation f(x)Core](f-x-core/installation.md)
 * [Setup Node](f-x-core/setup-node/README.md)
+  * [EVM Upgrade Tutorial](f-x-core/setup-node/evm-upgrade-tutorial.md)
   * [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md)
   * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md)
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
   * [Node Monitoring Device](f-x-core/setup-node/node-monitor.md)
   * [Node Peers](f-x-core/setup-node/node-peers.md)
-  * [Live Upgrade](f-x-core/setup-node/live-upgrade.md)
 
 ## Validators
 

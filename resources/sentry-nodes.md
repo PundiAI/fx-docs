@@ -34,3 +34,13 @@ The main aim of a sentry node is to protect our validator nodes from a huge numb
 * It has to be on a different server from the one you have your validator node on
 * It does not have to be in the same locale as your validator node
 * Having multiple sentry nodes would have even greater protection against
+
+**How you should configure your config.toml file for your VALIDATOR NODE**
+
+{% hint style="info" %}
+you may access your config.toml file in .fxcore/config/config.toml
+{% endhint %}
+
+* `pex:` boolean. This turns the peer exchange reactor on or off for a node. When `pex=false`, only the `persistent-peers` list is available for connection. **This should be set to `pex=false`**.
+* `seed_mode`: boolean. The main function of the seed\_mode is to provide more node addresses to the network. It will record all the node addresses that have been connected to it, and as long as you connect to it, it will tell you all the node information it records. This way you can connect to a node quickly. The seed node will disconnect from you immediately after giving you all the node information, so it is not recommended that the validator node enable the seed mode.  **This should be set to `seed_mode=false`**.
+* `addr_book_strict:` boolean. By default nodes with a routable address will be considered for connection. If this setting is turned off (false), non-routable IP addresses, like addresses in a private network can be added to the address book. **This should be set to `addr_book_strict=false`**.

@@ -17,7 +17,7 @@ description: Overview of the structure of this documentation and important tips
 * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md): Downloading a snapshot of the blockchain data to enable a faster sync.
 * [Node Metrics](f-x-core/setup-node/node-monitor.md): Setting up of [Prometheus monitoring services](f-x-core/setup-node/node-monitor.md#prometheus-metrics) and also [creating alerts for telegram](f-x-core/setup-node/node-monitor.md#telegram-administrator-and-bot-configuration).
 * [Node Peers](f-x-core/setup-node/node-peers.md): Trustable nodes.
-* ****[Live Upgrade](f-x-core/setup-node/live-upgrade.md): How to upgrade your node's code base on the fly.
+* ****[Live Upgrade](broken-reference): How to upgrade your node's code base on the fly.
 
 ### VALIDATORS
 
