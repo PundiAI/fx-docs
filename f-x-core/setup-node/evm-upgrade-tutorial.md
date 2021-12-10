@@ -6,7 +6,18 @@
 
 ### Upgrade steps
 
-1. Pulling the latest fx-core code base (ensure that you are in the fx-core folder) and be sure to checkout the `evm` branch:
+1. Ensure you have stopped the node❗
+
+```
+# with Daemon
+sudo systemctl stop fxcored
+
+# with PID
+ps -ef | grep fxcored
+kill -9 <PID>
+```
+
+&#x20;2\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder) and be sure to checkout the `evm` branch:
 
 ```
 git pull
@@ -17,7 +28,7 @@ git pull
 git checkout testnet-evm
 ```
 
-&#x20;2\. Update fxcored (ensure that you are in the fx-core folder):
+&#x20;3\. Update fxcored (ensure that you are in the fx-core folder):
 
 ```
 make go.sum
@@ -29,7 +40,7 @@ make install-testnet
 make install
 ```
 
-&#x20;3\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
+&#x20;4\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
 
 ```
 cat >> ~/.fxcore/config/app.toml <<EOF
@@ -94,7 +105,7 @@ key-path = ""
 EOF
 ```
 
-&#x20;4\. Check fxcored environment & version
+&#x20;5\. Check fxcored environment & version
 
 ```
 fxcored network
@@ -155,7 +166,7 @@ JSONRPC:
 ...
 ```
 
-&#x20;5\. Features of client.toml
+&#x20;6\. Features of client.toml
 
 > Users can specify the configuration of certain commands in the configuration file `client.toml`
 >
@@ -185,13 +196,13 @@ fxcored config node "tcp://127.0.0.1:26657"
 fxcored config broadcast-mode block
 ```
 
-&#x20;6\. Restart the node:
+&#x20;7\. Restart the node:
 
 ```
 sudo systemctl restart fxcored
 ```
 
-&#x20;7\. Check whether the node is participating in consensus:
+&#x20;8\. Check whether the node is participating in consensus:
 
 ```
 cat $HOME/.fxcore/data/priv_validator_state.json
