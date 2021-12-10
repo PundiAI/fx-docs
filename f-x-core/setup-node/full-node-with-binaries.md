@@ -4,7 +4,7 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 
 ## Install f(x)Core
 
-> **You need to **[**install f(x)Core**](../installation.md)** before you go further**
+> **You need to** [**install f(x)Core**](../installation.md) **before you go further**
 
 #### Setup f(x)Core
 
@@ -34,6 +34,8 @@ wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/a
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
 Additionally, what is important is that your validator keys that is stored in a .json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
+
+Also, you can consider generating a new consensus key and [backing it up using a pin](full-node-with-binaries.md#secret-and-updating-consensus-key)
 {% endhint %}
 
 {% hint style="info" %}
@@ -228,3 +230,55 @@ journalctl -t fxcored -f
 ```
 
 > Concluding tips: It is always better to sync f(x)Core using the Daemon method because this ensures stability and that your syncing is continuously running in the background.
+
+## Secret and updating consensus key
+
+Use this at your own risk❗ I suggest trying it out on testnet first and also backing up your `priv_validator_key.json` if you already have this set up for a validator. The file can be found in this file path `/.fxcore/config/priv_validator_key.json`.
+
+### Updating your consensus key and tagging it to a pin
+
+Before setting up your validator if you would like to have a backup of your keys with a pin. You may run the following command:
+
+```
+fxcored tendermint update-validator <secret>
+```
+
+{% hint style="info" %}
+the \<secret> key here must be longer than 32 characters
+{% endhint %}
+
+Running the above command will return:
+
+```
+WARNING: The consensus private key of the node will be replaced.
+Ensure that the backup is complete.
+USE AT YOUR OWN RISK. Continue? [y/N]
+```
+
+After inputting `y`, your `priv_validator_key.json` will be replaced with a new file. This means you will have a new consensus private key and it will be tagged to your `<secret>` pin.
+
+### Checking to see if the pin works
+
+If your .fxcore folder is in the root directory
+
+```
+cat ~/.fxcore/config/priv_validator_key.json
+```
+
+Record the previous output before running the next command to remove this file:
+
+```
+rm ~/.fxcore/config/priv_validator_key.json
+```
+
+The following command will recover your original consensus key:
+
+```
+fxcored tendermint update-validator <secret>
+```
+
+Match this output with the previous output above:
+
+```
+cat ~/.fxcore/config/priv_validator_key.json
+```

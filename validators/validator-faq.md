@@ -221,7 +221,7 @@ When a validator is selected to propose the next block, they must include at lea
 
 Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stake. Each of them applies a 1% commission rate and has 20% of self-delegated FX. Now comes a successful block that collects a total of 1340 FX in fees.
 
-First, a 25% tax is applied. The corresponding FX goes to the reserve pool. Reserve pool's funds can be allocated through governance to fund bounties and upgrades.
+First, a 40% tax is applied. The corresponding FX goes to the reserve pool. Reserve pool's funds can be allocated through governance to fund bounties and upgrades.
 
 * `25% * 1340 = 335` FX goes to the reserve pool.
 
