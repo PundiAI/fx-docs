@@ -130,6 +130,7 @@ fxcored tx staking create-validator \
   --website="https://functionx.io" \
   --details="To infinity and beyond!" 
 ```
+
 {% hint style="info" %}
 for Mainnet the ChainId should be **fxcore**
 {% endhint %}
@@ -209,11 +210,13 @@ fxcored tx staking edit-validator \
   --gas="auto" \
   --gas-adjustment=1.2 \
   --gas-prices="6000000000000FX" \
-  --from=<_name> \
+  --from=<_name>
 ```
+
 {% hint style="info" %}
 for Mainnet the ChainId should be **fxcore**
 {% endhint %}
+
 ## View Validator Description
 
 View the validator's information with this command:
@@ -265,6 +268,7 @@ You will have to type out the command as follows:
 ```bash
 fxcored tx staking create-validator --chain-id dhobyghaut --gas auto --gas-adjustment 1.2 --gas-prices 6000000000000FX --from <_name> --amount 100000000000000000000000FX pubkey <_pubkey> --moniker "choose a moniker" --commission-rate 0.01 --commission-max-rate 0.20 --commission-max-change-rate 0.01 --min-self-delegation 1000000000000000000 --moniker "choose a moniker" --website "https://functionx.io" --details "To infinity and beyond!"
 ```
+
 {% hint style="info" %}
 for Mainnet the ChainId should be **fxcore**
 {% endhint %}
