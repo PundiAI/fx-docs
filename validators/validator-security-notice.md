@@ -28,7 +28,6 @@ The config.toml file should be stored in .fxcore/config/config.toml file path. Y
 vi .fxcore/config/config.toml
 ```
 
-
 Validators nodes should edit their config.toml:
 
 ```bash
@@ -53,7 +52,18 @@ private_peer_ids = "node_ids_of_private_peers"
 Once you have made changes and want to save the file, press `:x` (you must not be in Insert mode. If you are, press ESC to leave it).
 
 ## Ports
-On the note DDOS, remember to ensure you have closed off the ports that should not be made public. You may consider whitelisting the addresses that need access to certain ports that need to be open but not made public.
+
+On the note DDOS, remember to ensure you have closed off the ports that should not be made public. You may consider whitelisting the addresses that need access to certain ports that need to be open but not made public. Here are some ports and what they are used for:
+
+`26656`: If you turn this off, no one else will be able to connect to your node and you will not be contributing to the network, but you can still connect with others and also synchronize your data.
+
+`26657`: This is a json-rpc port used by commands interacting with the node.
+
+`26660`: This port is used for your node monitoring device queries.
+
+`6060`: Analysis `Golang` program (for debugging use)
+
+`22`: ssh port
 
 ## Environment Variables
 
