@@ -1,4 +1,4 @@
-# Node Monitor
+# Node Monitoring Device
 
 ## Prometheus metrics
 
@@ -19,7 +19,7 @@ To enable the Prometheus metrics, set `prometheus=true` in your config file i.e.
 In the file `./fx-core/develop/prometheus/prometheus.yml` you can configure the target node(s) IP address, multiple nodes can be added in the following format.
 
 {% hint style="info" %}
-note the config file is in the **.fxcore** directory and the prometheus.yml file is in **fx-core **directory
+note the config file is in the **.fxcore** directory and the prometheus.yml file is in \*\*fx-core \*\*directory
 {% endhint %}
 
 ```yaml
@@ -203,24 +203,43 @@ stop monitoring service
 ```bash
 docker-compose -f ./fx-core/develop/docker-compose.yaml -p fx-node-monitor stop
 ```
+
+### Updating Node Monitoring Services
+
+1. Pull the latest code base:
+
+```
+docker-compose -f ./fx-core/develop/docker-compose.yaml -p fx-node-monitor pull
+```
+
+&#x20;2\. Start the monitoring device:
+
+```
+docker-compose -f ./fx-core/develop/docker-compose.yaml -p fx-node-monitor up -d
+```
+
+{% hint style="info" %}
+Ensure you have changed your passwords and also that your data source is configured correctly
+{% endhint %}
+
 ## Prometheus Rules
 
-| Metric                                              | Rule                                                                                                                                     | Threshold| explain
-|:----------------------------------------------      |:---------------------------------------------------------------------------------------------------------------------------------------- |:-------- |:--------------------------------------------------------------------------------------------------------  |
-| `tendermint_consensus_height`                       | tendermint_consensus_height - (tendermint_consensus_height offset 1m) == 0                                                               |     0    | The node did not produce blocks in 1 minute                                                               |
-| `tendermint_consensus_validators`                   | avg((tendermint_consensus_validators{kind="val-node"} - tendermint_consensus_validators{kind="val-node"} offset 1m) > 0)  by (chain_id)  |     0    | The number of validators has increased compared to the number of validators a minute ago                  |
-| `tendermint_consensus_validators`                   | avg((tendermint_consensus_validators{kind="val-node"} offset 1m - tendermint_consensus_validators{kind="val-node"}) > 0)  by (chain_id)  |     0    | The number of validators is reduced compared to the number of validators one minute ago                   |
-| `tendermint_consensus_latest_block_height`          | tendermint_consensus_latest_block_height - (tendermint_consensus_latest_block_height offset 2m)                                          |     0    | The height of the node does not increase in 2 minutes                                                     |
-| `tendermint_consensus_validator_last_signed_height` | tendermint_consensus_validator_last_signed_height - (tendermint_consensus_validator_last_signed_height offset 2m) == 0                   |     0    | The verifier did not sign in 2 minutes                                                                    |
-| `tendermint_consensus_validator_missed_blocks`      | tendermint_consensus_validator_missed_blocks - (tendermint_consensus_validator_missed_blocks offset 2m) >= 3                             |     3    | The total number of blocks with the verifier address not participating in the signature is greater than 3 |
-| `tendermint_consensus_missing_validators`           | tendermint_consensus_missing_validators > 10                                                                                             |     10   | The number of verifiers not participating in the signature exceeds the threshold of 10                    |
-| `tendermint_consensus_byzantine_validators`         | tendermint_consensus_byzantine_validators > 0                                                                                            |     0    | The number of Byzantine validators exceeds the threshold 0                                                |
-| `tendermint_consensus_byzantine_validators`         | tendermint_consensus_byzantine_validators > 0                                                                                            |     0    | The number of Byzantine validators exceeds the threshold 0                                                |
-| `tendermint_consensus_block_interval_seconds_sum`   | tendermint_consensus_block_interval_seconds_sum / tendermint_consensus_block_interval_seconds_count > 7                                  |     7    | The block generation interval exceeds 7 seconds                                                           |
-| `tendermint_consensus_rounds`                       | tendermint_consensus_rounds != 0                                                                                                         |     0    | Consensus round is not equal to 0                                                                         |
-| `tendermint_consensus_num_txs`                      | tendermint_consensus_num_txs > 100                                                                                                       |     100  | The number of block packaging transactions exceeds the threshold of 100                                   |
-| `tendermint_mempool_size`                           | tendermint_mempool_size > 100                                                                                                            |     100  | The number of unchained transactions in the memory pool exceeds the threshold of 100                      |
-| `tendermint_mempool_failed_txs`                     | tendermint_mempool_failed_txs - (tendermint_mempool_failed_txs offset 1m) > 10                                                           |     10   | The number of failed transactions in the memory pool has increased by more than 10 in 1 minute            |
-| `tendermint_consensus_fast_syncing`                 | tendermint_consensus_fast_syncing - (tendermint_consensus_fast_syncing offset 5m) != 0                                                   |     0    | The current synchronization status of the node is not 0                                                   |
-| `tendermint_p2p_peers`                              | tendermint_p2p_peers < 5                                                                                                                 |     5    | The number of connected nodes is below the threshold 5                                                    |
-| `tendermint_p2p_peers`                              | (tendermint_p2p_peers offset 30s) - tendermint_p2p_peers  > 1                                                                            |     1    | The number of currently connected nodes decreases for 1 minute                                            |
+| Metric                                              | Rule                                                                                                                                        | Threshold | explain                                                                                                   |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------- | --------------------------------------------------------------------------------------------------------- |
+| `tendermint_consensus_height`                       | tendermint\_consensus\_height - (tendermint\_consensus\_height offset 1m) == 0                                                              | 0         | The node did not produce blocks in 1 minute                                                               |
+| `tendermint_consensus_validators`                   | avg((tendermint\_consensus\_validators{kind="val-node"} - tendermint\_consensus\_validators{kind="val-node"} offset 1m) > 0) by (chain\_id) | 0         | The number of validators has increased compared to the number of validators a minute ago                  |
+| `tendermint_consensus_validators`                   | avg((tendermint\_consensus\_validators{kind="val-node"} offset 1m - tendermint\_consensus\_validators{kind="val-node"}) > 0) by (chain\_id) | 0         | The number of validators is reduced compared to the number of validators one minute ago                   |
+| `tendermint_consensus_latest_block_height`          | tendermint\_consensus\_latest\_block\_height - (tendermint\_consensus\_latest\_block\_height offset 2m)                                     | 0         | The height of the node does not increase in 2 minutes                                                     |
+| `tendermint_consensus_validator_last_signed_height` | tendermint\_consensus\_validator\_last\_signed\_height - (tendermint\_consensus\_validator\_last\_signed\_height offset 2m) == 0            | 0         | The verifier did not sign in 2 minutes                                                                    |
+| `tendermint_consensus_validator_missed_blocks`      | tendermint\_consensus\_validator\_missed\_blocks - (tendermint\_consensus\_validator\_missed\_blocks offset 2m) >= 3                        | 3         | The total number of blocks with the verifier address not participating in the signature is greater than 3 |
+| `tendermint_consensus_missing_validators`           | tendermint\_consensus\_missing\_validators > 10                                                                                             | 10        | The number of verifiers not participating in the signature exceeds the threshold of 10                    |
+| `tendermint_consensus_byzantine_validators`         | tendermint\_consensus\_byzantine\_validators > 0                                                                                            | 0         | The number of Byzantine validators exceeds the threshold 0                                                |
+| `tendermint_consensus_byzantine_validators`         | tendermint\_consensus\_byzantine\_validators > 0                                                                                            | 0         | The number of Byzantine validators exceeds the threshold 0                                                |
+| `tendermint_consensus_block_interval_seconds_sum`   | tendermint\_consensus\_block\_interval\_seconds\_sum / tendermint\_consensus\_block\_interval\_seconds\_count > 7                           | 7         | The block generation interval exceeds 7 seconds                                                           |
+| `tendermint_consensus_rounds`                       | tendermint\_consensus\_rounds != 0                                                                                                          | 0         | Consensus round is not equal to 0                                                                         |
+| `tendermint_consensus_num_txs`                      | tendermint\_consensus\_num\_txs > 100                                                                                                       | 100       | The number of block packaging transactions exceeds the threshold of 100                                   |
+| `tendermint_mempool_size`                           | tendermint\_mempool\_size > 100                                                                                                             | 100       | The number of unchained transactions in the memory pool exceeds the threshold of 100                      |
+| `tendermint_mempool_failed_txs`                     | tendermint\_mempool\_failed\_txs - (tendermint\_mempool\_failed\_txs offset 1m) > 10                                                        | 10        | The number of failed transactions in the memory pool has increased by more than 10 in 1 minute            |
+| `tendermint_consensus_fast_syncing`                 | tendermint\_consensus\_fast\_syncing - (tendermint\_consensus\_fast\_syncing offset 5m) != 0                                                | 0         | The current synchronization status of the node is not 0                                                   |
+| `tendermint_p2p_peers`                              | tendermint\_p2p\_peers < 5                                                                                                                  | 5         | The number of connected nodes is below the threshold 5                                                    |
+| `tendermint_p2p_peers`                              | (tendermint\_p2p\_peers offset 30s) - tendermint\_p2p\_peers > 1                                                                            | 1         | The number of currently connected nodes decreases for 1 minute                                            |
