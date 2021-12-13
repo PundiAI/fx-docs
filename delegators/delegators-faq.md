@@ -82,13 +82,13 @@ When a user requests **** to `undelegate` from a validator, the amount of `FX` t
 
 #### Option #1 <a href="#9704" id="9704"></a>
 
-Undelegate from **Validator A** and wait for the 21 day unbonding period (cooldown) to pass. Then, delegate the ATOM to **Validator B**.
+Undelegate from **Validator A** and wait for the 21 day unbonding period (cooldown) to pass. Then, delegate the FX to **Validator B**.
 
 * Taking this path may seem un-wise because you’ll have to wait 21 days to delegate that stake with another validator. This is where the **redelegation** feature comes in handy.
 
 #### Option #2 <a href="#5320" id="5320"></a>
 
-Use the redelegation feature to immediately redelegate the ATOM from **Validator A → Validator B.**
+Use the redelegation feature to immediately redelegate the FX from **Validator A → Validator B.**
 
 * This **redelegation** feature seems wonderful. You no longer have to wait 21 days to unbond and then delegate that stake to another validator. **But there’s a catch.**
 
@@ -96,7 +96,7 @@ Use the redelegation feature to immediately redelegate the ATOM from **Validator
 
 Redelegating from **Validator A → Validator B** using the **same wallet.**
 
-Let’s say you want to **redelegate** your ATOM from Validator A → Validator B using Wallet #1. With the same wallet address, you are only able to **redelegate from Validator A → Validator B up to 7 times in a 21 day period.**
+Let’s say you want to **redelegate** your FX from Validator A → Validator B using Wallet #1. With the same wallet address, you are only able to **redelegate from Validator A → Validator B up to 7 times in a 21 day period.**
 
 #### Serial Redelegation (Validator Hopping) <a href="#cc75" id="cc75"></a>
 
