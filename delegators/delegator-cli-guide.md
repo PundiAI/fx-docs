@@ -177,9 +177,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements and costs. In order to run your own full-node, you need good bandwidth and at least 500GB of disk space.
 
-
 You will find the tutorial on how to install `fxcored` [here](../f-x-core/installation.md), and the guide to run a full-node [here](../f-x-core/setup-node/).
-
 
 ### Connecting to a Remote Full-Node
 
@@ -189,7 +187,7 @@ In order to connect to a full-node, you will need an address in the form of: `ht
 
 ## Setting Up `fxcored`
 
-> Before setting up `fxcored`, ensure that you have found a way to [**access the f(x)Core network**](delegator-cli-guide.md#accessing-the-f-x-core-network)****
+> Before setting up `fxcored`, ensure that you have found a way to [**access the f(x)Core network**](delegator-cli-guide.md#accessing-the-f-x-core-network)\*\*\*\*
 
 > **Please check that you are always using the latest stable release of `fxcored`**
 
@@ -291,7 +289,7 @@ Transaction `fees` is the product of `gas` and `gasPrice`. As a user, you can ei
 
 > Before you can bond FX and withdraw rewards, you need to [**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored) and [**create an account**](delegator-cli-guide.md#creating-an-account)
 
-> **Note: These commands need to run on an online computer. It is more secure to perform these commands using a Ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
+> **Note: These commands need to run on an online computer. It is more secure to perform these commands using a Ledger device. For the offline procedure, click** [**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 
 ```bash
 // Send a certain amount of tokens to an address
@@ -305,9 +303,9 @@ fxcored tx bank send <from_key_or_address> <to_address> <amount> --gas auto --ga
 
 > Before you can bond FX and withdraw rewards, you need to [**set up `fxcored`**](delegator-cli-guide.md#setting-up-fxcored) and [**create an account**](delegator-cli-guide.md#creating-an-account)
 
-> **Before bonding FX, please read the **[**delegator faq**](delegators-faq.md)** to understand the risk and responsibilities involved with delegating**
+> **Before bonding FX, please read the** [**delegator faq**](delegators-faq.md) **to understand the risk and responsibilities involved with delegating**
 
-> **Note: These commands need to run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
+> **Note: These commands need to run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click** [**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 
 ```bash
 // Bond a certain amount of FX to a given validator
@@ -332,8 +330,9 @@ fxcored tx distribution withdraw-all-rewards --from <delegatorKeyName> --gas aut
 
 fxcored tx staking unbond <validatorAddress> <amountToUnbond> --from <delegatorKeyName> --gas auto --gas-adjustment 1.5 --gas-prices <gasPrice>
 ```
+
 {% hint style="info" %}
-However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+However,there is a limit to how frequent you can redelegate. For more information on [redelegation](delegators-faq.md#redelegation).
 {% endhint %}
 
 > **If you are using a Ledger, you will be asked to confirm the transaction on the device before it is signed and broadcast to the network. Note that the command will only work while the Ledger is plugged in and unlocked.**
@@ -370,9 +369,9 @@ Any FX holder can submit a proposal. In order for the proposal to be open for vo
 
 Once the `deposit` reaches `minDeposit`, the proposal enters the `voting_period`, which lasts 2 weeks. Any **bonded** FX holder can then cast a vote on this proposal. The options are `Yes`, `No`, `NoWithVeto` and `Abstain`. The weight of the vote is based on the amount of bonded FX of the sender. If a delegator doesn't vote, they would inherit the vote of their validator. However, delegators can override their validator's vote by sending a vote themselves.
 
-At the end of the voting period, the proposal is accepted if there are more than 50% `Yes` votes (excluding `Abstain `votes) and less than 33.33% of `NoWithVeto` votes (excluding `Abstain` votes).
+At the end of the voting period, the proposal is accepted if there are more than 50% `Yes` votes (excluding `Abstain` votes) and less than 33.33% of `NoWithVeto` votes (excluding `Abstain` votes).
 
-> **Note: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click **[**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
+> **Note: These commands need to be run on an online computer. It is more secure to perform them commands using a ledger device. For the offline procedure, click** [**here**](delegator-cli-guide.md#signing-transactions-from-an-offline-computer)**.**
 
 ```bash
 // Submit a Proposal

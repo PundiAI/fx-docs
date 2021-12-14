@@ -11,7 +11,7 @@ In terms of risks, delegators' FX will be slashed if their validator misbehaves.
 To become delegators, FX holders need to send a "Delegate transaction" where they specify the amount of FX they want to stake and with which validator. A list of validators will be displayed in f(x)Core explorers ([mainnet](https://explorer.functionx.io/fxcore/validators)/[testnet](https://dhobyghaut-explorer.functionx.io)). Subsequently, if a delegator wants to unbond part or all of their stake, they will need to send an "Unbond transaction". Delegators will have to wait for 3 weeks to retrieve their FX after sending an "Unbond Transaction". Delegators can also send a "Redelegate Transaction" to switch from one validator to another, without having to go through the 3 weeks waiting period.
 
 {% hint style="info" %}
-However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+However,there is a limit to how frequent you can redelegate. For more information on [redelegation](delegators-faq.md#redelegation).
 {% endhint %}
 
 For a technical guide on how to become a delegator, click [here](delegator-cli-guide.md).

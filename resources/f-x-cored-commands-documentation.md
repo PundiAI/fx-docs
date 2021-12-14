@@ -240,6 +240,7 @@ Finally, let us set the `chain-id` of the blockchain we want to interact with:
 ```bash
 fxcored config config.toml chain-id dhobyghaut
 ```
+
 {% hint style="info" %}
 for Mainnet the ChainId should be **fxcore**
 {% endhint %}
@@ -603,9 +604,7 @@ Please refer to the [Validator Setup](../validators/validator-setup.md) section 
 
 #### Delegate to a Validator
 
-
 On the upcoming mainnet, you can delegate `FX` to a validator. These [delegators](../delegators/delegators-faq.md) can receive part of the validator's fee revenue. Read more about the [incentives](../delegators/delegators-faq.md#revenue).
-
 
 **Query Validators**
 
@@ -737,8 +736,9 @@ Additionally, as you can get all the outgoing redelegations from a particular va
 ```bash
 fxcored query staking redelegations-from <account_fxval>
 ```
+
 {% hint style="info" %}
-However,there is a limit to how frequent you can redelegate. For more information on [redelegation](https://medium.com/cosmostation/what-you-need-to-know-about-cosmos-atom-redelegation-e45ca7da6fdf).
+However, there is a limit to how frequent you can redelegate. For more information on [redelegation](../delegators/delegators-faq.md#redelegation).
 {% endhint %}
 
 #### Query Parameters
@@ -1069,6 +1069,7 @@ fxcored tx sign \
   --output-document=p2signature.json \
   --chain-id=dhobyghaut
 ```
+
 {% hint style="info" %}
 for Mainnet the ChainId should be **fxcore**
 {% endhint %}
