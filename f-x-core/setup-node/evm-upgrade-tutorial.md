@@ -226,3 +226,4 @@ it should return something similar to the following:
 2. All nodes will have to complete upgrading by the stipulated block height
 3. The nodes who have not upgraded by then will not be part of the consensus and if your validator node experiences [too long a downtime, it will be jailed and slashed](../../validators/validator-faq.md#what-are-the-slashing-conditions).
 4. There will be a governance proposal initiated after to initialize and affirm this upgrade
+5. After the proposal is passed, the EVM module will automatically start to run and the corresponding port 8545 will start. At this stage, the validator does not need to do anything except whether to vote in the proposal.
