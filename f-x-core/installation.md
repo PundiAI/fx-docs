@@ -118,7 +118,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). P
 Especially if you are remoting into a Ubuntu terminal, run this command to download the `go` installer:
 
 ```
-wget https://dl.google.com/go/go1.17.4.linux-amd64.tar.gz 
+wget https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz 
 ```
 
 {% hint style="info" %}
