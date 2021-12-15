@@ -42,7 +42,7 @@ you may access your config.toml file in .fxcore/config/config.toml
 {% endhint %}
 
 * `pex:` boolean. This turns the peer exchange reactor on or off for a node. When `pex=false`, only the `persistent-peers` list is available for connection. <mark style="color:blue;">**This should be set to**</mark><mark style="color:blue;">** **</mark><mark style="color:blue;">**`pex=false`**</mark><mark style="color:blue;">** **</mark><mark style="color:blue;">**so it does not gossip to the entire network**</mark><mark style="color:blue;">.</mark> <mark style="color:red;">**The sentry nodes should be able to talk to the entire network hence why**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`pex=true`**</mark><mark style="color:red;">**.**</mark>
-* `seed_mode`: boolean. The main function of the seed\_mode is to provide more node addresses to the network. It will record all the node addresses that have been connected to it, and as long as you connect to it, it will tell you all the node information it records. This way you can connect to a node quickly. The seed node will disconnect from you immediately after giving you all the node information, so it is not recommended that the validator node enable the seed mode.  <mark style="color:blue;">**This should be set to**</mark><mark style="color:blue;">** **</mark><mark style="color:blue;">**`seed_mode=false`**</mark><mark style="color:blue;">** **</mark><mark style="color:blue;">**.**</mark>** **<mark style="color:red;">**The sentry nodes should be able to talk to the entire network hence why**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**`pex=true`**</mark><mark style="color:red;">**.**</mark>
+* `seed_mode`: boolean. The main function of the seed\_mode is to provide more node addresses to the network. It will record all the node addresses that have been connected to it, and as long as you connect to it, it will tell you all the node information it records. This way you can connect to a node quickly. The seed node will disconnect from you immediately after giving you all the node information, so it is not recommended that the validator node enable the seed mode.  <mark style="color:blue;">**This should be set to**</mark><mark style="color:blue;">** **</mark><mark style="color:blue;">**`seed_mode=false`**</mark><mark style="color:blue;">** **</mark><mark style="color:blue;">**.**</mark>** **<mark style="color:red;">**This should be set to seed\_mode=false.**</mark>
 * `persistent-peers:` a comma separated list of `nodeID@ip:port` values that define a list of peers that are expected to be online at all times. This is necessary at first startup because by setting `pex=false` the node will not be able to join the network. <mark style="color:blue;">**This should be configured to a list of sentry nodes.**</mark>** **<mark style="color:red;">**This should be configured to your any nodes that you trust, this includes your validator node, the Function X's nodes and other sentry nodes (optional).**</mark>
 * `unconditional_peer_ids:` comma separated list of `nodeID`. These nodes will be connected to no matter the limits of inbound and outbound peers. This is useful for when sentry nodes have full address books. <mark style="color:blue;">**It can be filled with sentry node IDs (optional).**</mark>** **<mark style="color:red;">**Validator node ID, optionally sentry node IDs.**</mark>
 * `private_peer_ids:` comma separated list of `nodeID`. **These nodes will not be gossiped to the network.** This is an important field as you do not want your validator IP gossiped to the network. <mark style="color:blue;">**This can be left empty as the validator is not trying to hide who it is communicating with.**</mark>** **<mark style="color:red;">**This should be configured to your validator node ID to ensure your validator node's ID is hidden.**</mark>
@@ -52,26 +52,26 @@ you may access your config.toml file in .fxcore/config/config.toml
 
 **Validator Node Configuration**
 
-| Config Option            | Setting                    |
-| ------------------------ | -------------------------- |
-| mode                     | validator                  |
-| pex                      | false                      |
-| persistent-peers         | list of sentry nodes       |
-| private-peer-ids         | none                       |
-| unconditional-peer-ids   | optionally sentry node IDs |
-| addr-book-strict         | false                      |
-| double-sign-check-height | 10                         |
+| Config Option                       | Setting                    |
+| ----------------------------------- | -------------------------- |
+| seed\_mode                          | false                      |
+| pex                                 | false                      |
+| persistent-peers (`nodeID@ip:port`) | list of sentry nodes       |
+| private-peer-ids (`nodeID`)         | none                       |
+| unconditional-peer-ids (`nodeID`)   | optionally sentry node IDs |
+| addr-book-strict                    | false                      |
+| double-sign-check-height            | 10                         |
 
 **Sentry Node Configuration**
 
-| Config Option          | Setting                                       |
-| ---------------------- | --------------------------------------------- |
-| mode                   | full                                          |
-| pex                    | true                                          |
-| persistent-peers       | validator node, optionally other sentry nodes |
-| private-peer-ids       | validator node ID                             |
-| unconditional-peer-ids | validator node ID, optionally sentry node IDs |
-| addr-book-strict       | false                                         |
+| Config Option                       | Setting                                       |
+| ----------------------------------- | --------------------------------------------- |
+| seed\_mode                          | false                                         |
+| pex                                 | true                                          |
+| persistent-peers (`nodeID@ip:port`) | validator node, optionally other sentry nodes |
+| private-peer-ids (`nodeID`)         | validator node ID                             |
+| unconditional-peer-ids (`nodeID`)   | validator node ID, optionally sentry node IDs |
+| addr-book-strict                    | false                                         |
 
 ### To obtain your node ID
 
