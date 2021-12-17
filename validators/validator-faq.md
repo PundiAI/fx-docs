@@ -244,10 +244,16 @@ We have to solve this simple equation to find the reward R for each validator:
 
 ### What are the slashing conditions?
 
-If a validator misbehaves, their delegated stake will be partially slashed. There are currently two faults that can result in slashing of funds for a validator and their delegators:
+If a validator misbehaves, their delegated stake will be partially slashed. There are currently two conditions that can result in slashing of funds for a validator and their delegators:
 
 * **Double signing:** If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A. Validators who double sign will be jailed and CANNOT be unjailed thereafter.
 * **Downtime:** If a validator misses more than 95% of the last 20000 blocks (\~27.7hours), they will get slashed by 0.1%. Validators may `unjail` their validators after a 600s (10minute) window.
+
+{% hint style="info" %}
+The portion of FX that is subjected to slashing conditions is the total delegated FX. The rewards earned will not be subjected to slashing conditions.
+
+If a validator is jailed, the same rules apply to redelegation and unbonding. For unbonding, you still have to wait 21 days. While for redelegation, you may do so and the [following rules](validator-faq.md#redelegation) will apply.
+{% endhint %}
 
 ### Do validators need to self-delegate FX?
 

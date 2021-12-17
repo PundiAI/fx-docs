@@ -66,11 +66,16 @@ Then, each delegator in the staking pool can claim their portion of the delegato
 
 Staking FX is not a risk-free activity. First, staked FX are locked up, and retrieving them requires a 3 week waiting period called unbonding period. Additionally, if a validator misbehaves, a portion of their total stake can be slashed. This includes the stake of their delegators.
 
-There is one main slashing condition:
+There are currently two conditions that can result in slashing of funds for a validator and their delegators:
 
-* **Double signing:** If someone reports that a validator signed two different blocks with the same chain ID at the same height, this validator will get slashed.
+* **Double signing:** If someone reports on chain A that a validator signed two blocks at the same height on chain A and chain B, and if chain A and chain B share a common ancestor, then this validator will get slashed by 5% on chain A. Validators who double sign will be jailed and CANNOT be unjailed thereafter.
+* **Downtime:** If a validator misses more than 95% of the last 20000 blocks (\~27.7hours), they will get slashed by 0.1%. Validators may `unjail` their validators after a 600s (10minute) window.
 
-This is why FX holders should perform their due diligence on validators before delegating. It is also important that delegators actively monitor the activity of their validators. If a validator behaves suspiciously or is too often offline, delegators can choose to unbond from them or switch to another validator. **Delegators can also mitigate risk by distributing their stake across multiple validators.**
+{% hint style="info" %}
+The portion of FX that is subjected to slashing conditions is the total delegated FX. The rewards earned will not be subjected to slashing conditions.
+
+If a validator is jailed, the same rules apply to redelegation and unbonding. For unbonding, you still have to wait 21 days. While for redelegation, you may do so and the [following rules](delegators-faq.md#redelegation) will apply.
+{% endhint %}
 
 ### Redelegation
 
