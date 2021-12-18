@@ -596,6 +596,24 @@ To query for the current annual provisions value:
 fxcored query mint annual-provisions
 ```
 
+### Checking block information and validators signatures
+
+The following command will query for a transaction by hash in a committed block:
+
+```
+fxcored query block-results
+```
+
+The followin command will get verified data for a the block at given height:
+
+```
+fxcored query block
+```
+
+{% hint style="info" %}
+Using these commands and filtering out the necessary information, you will be able to deduce the uptime of other validators by checking if they missed any signatures for that block.
+{% endhint %}
+
 ### Staking
 
 #### Set up a Validator
