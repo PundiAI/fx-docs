@@ -6,8 +6,9 @@ Run the following command to open the `priv_validator_key.json` file and store i
 ❗❗❗❗❗❗THIS IS ESPECIALLY IMPORTANT!❗❗❗❗❗❗ Do ensure that you have a back-up `priv_validator_key.json` file and that it is stored safely! Overriding this `priv_validator_key.json`file and you would have lost your consensus private key and your validator if you have one set up. DO NOT OVERRIDE THIS FILE.
 {% endhint %}
 
+If you are in the `fx-core` dir, run this command:
+
 ```
-# if you are in fx-core dir
 cat ../.fxcore/config/priv_validator_key.json
 ```
 
@@ -44,17 +45,23 @@ ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
 
 The command after `Initializing fxcore` from setting up node with [Full node with Binaries](../f-x-core/setup-node/full-node-with-binaries.md) or [Full node with Docker ](../f-x-core/setup-node/full-node-with-docker.md)is to override the various files that were initialized earlier:
 
+{% tabs %}
+{% tab title="Binaries" %}
 ```
-# Binaries:
 wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
 wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
 wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+```
+{% endtab %}
 
-# Docker:
+{% tab title="Docker" %}
+```
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
+{% endtab %}
+{% endtabs %}
 
 The key file here is `priv_validator_key.json`. After initializing and overriding those files, override the __ `priv_validator_key.json` with your original `priv_validator_key.json` of the validator you want to recover. You may do this by following the command below (if you are in .fxcore/config directory):
 
@@ -80,7 +87,7 @@ root@XXXXXXXXXXXXXXX:~# cat > priv_validator_key.json
   }}
 ```
 
-Then use <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created.
+Then hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard before using <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created.
 
 Run the following command and compare if the public key you generate now matches the old public key. If it does, then you have successfully recovered your original validator.
 

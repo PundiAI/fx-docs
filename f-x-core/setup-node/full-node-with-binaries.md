@@ -1,6 +1,6 @@
 # Full node with Binaries
 
-This guide will explain how to install the `fxcored testnet` or `fxcored mainnet` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
+This guide will explain how to install the `fxcored testnet` or `fxcored mainnet` entrypoint on your system. With these installed on a server, you can participate on the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
 
 ## Install f(x)Core
 
@@ -16,26 +16,32 @@ fxcored init fx-zakir
 
 Initializing fxcored will result in the creation of a few directories and most importantly the .fxcore directory (for more information on the directory tree, refer to the validator-recovery section). This will be where your validator keys are stored and this is important for recovery of your validator.
 
-Fetching config file (copy this entire line of code):
+Fetching config file (copy this entire line of code and hit <mark style="color:red;">ENTER</mark>):
 
-```bash
-# testnet
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
-
-# mainnet
+{% tabs %}
+{% tab title="Mainnet" %}
+```
 wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
 wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
 wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
 
 Additionally, what is important is that your validator keys that is stored in a .json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
 
-Also, you can consider generating a new consensus key and [backing it up using a pin](full-node-with-binaries.md#secret-and-updating-consensus-key)
+Also, you can consider generating a new consensus key and [backing it up using a pin](full-node-with-binaries.md#secret-and-updating-consensus-key).
 {% endhint %}
 
 {% hint style="info" %}
@@ -150,10 +156,19 @@ It is important to keep `fxcored` running at all times. There are several ways t
 
 ### Register `fxcored` as a service
 
-First, create a service definition file in `/etc/systemd/system` with the follow specifications:
+First, create a service definition file in `/etc/systemd/system`.
 
-#### Sample file: `/etc/systemd/system/fxcored.service`
+Run this command to create the sample file above in the file path`/etc/systemd/system/fxcored.service` (if you are in the fx-core directory):
 
+```
+cat > /etc/systemd/system/fxcored.service
+```
+
+hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and `copy` and `paste` the contents of the file below into the command line:
+
+#### Sample file:
+
+{% code title="fxcored.service" %}
 ```
 [Unit]
 Description=f(x)Core Node
@@ -169,14 +184,9 @@ LimitNOFILE=4096
 [Install]
 WantedBy=multi-user.target
 ```
+{% endcode %}
 
-Run this command to create the sample file above in the file path`/etc/systemd/system/fxcored.service` (if you are in the fx-core directory):
-
-```
-cat > /etc/systemd/system/fxcored.service
-```
-
-hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard and `copy` and `paste` the contents of the file above into the command line, it should look like this:
+Then hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard before using <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created. It should look like this:
 
 ```
 root@XXXXXXXXXXXXXXX:~# cat > /etc/systemd/system/fxcored.service
@@ -195,8 +205,6 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 ```
 
-then use <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created.
-
 Modify the `Service` section from the given sample above to suit your settings. Note that even if we raised the number of open files for a process, we still need to include `LimitNOFILE`.
 
 After creating a service definition file, you should execute `systemctl daemon-reload` and `systemctl enable fxcored`
@@ -205,29 +213,55 @@ After creating a service definition file, you should execute `systemctl daemon-r
 
 Use `systemctl` to control (start, stop, restart)
 
-```bash
-# Start
+{% tabs %}
+{% tab title="Start" %}
+```
 sudo systemctl start fxcored
-# Status
-sudo systemctl status fxcored
-# Stop
+```
+{% endtab %}
+
+{% tab title="Stop" %}
+```
 sudo systemctl stop fxcored
-# Restart
+```
+{% endtab %}
+
+{% tab title="Restart" %}
+```
 sudo systemctl restart fxcored
 ```
+{% endtab %}
+
+{% tab title="Status" %}
+```
+sudo systemctl status fxcored
+```
+{% endtab %}
+{% endtabs %}
 
 To start the node, run `sudo systemctl start fxcored`, and thereafter run `journalctl -t fxcored -f` to see the latest and continuous logs.
 
 ### Accessing logs
 
-```bash
-# Entire log
+{% tabs %}
+{% tab title="Entire Log" %}
+```
 journalctl -t fxcored
-# Entire log reversed
+```
+{% endtab %}
+
+{% tab title="Entire log reversed" %}
+```
 journalctl -t fxcored -r
-# Latest and continuous
+```
+{% endtab %}
+
+{% tab title="Latest and continuous log" %}
+```
 journalctl -t fxcored -f
 ```
+{% endtab %}
+{% endtabs %}
 
 > Concluding tips: It is always better to sync f(x)Core using the Daemon method because this ensures stability and that your syncing is continuously running in the background.
 

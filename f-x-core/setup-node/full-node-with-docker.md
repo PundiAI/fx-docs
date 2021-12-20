@@ -4,7 +4,7 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 
 ## Install f(x)Core
 
-> **You need to **[**install f(x)Core**](../installation.md)** before you go further**
+> **You need to** [**install f(x)Core**](../installation.md) **before you go further**
 
 ### Use Docker
 
@@ -12,34 +12,55 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
-```bash
-# For testnet:
-docker pull functionx/fx-core:dhobyghaut-1.0
-# For mainnet:
+{% tabs %}
+{% tab title="Mainnet" %}
+```
 docker pull functionx/fx-core:mainnet-1.0
 ```
+{% endtab %}
 
-* init config
+{% tab title="Testnet" %}
+```
+docker pull functionx/fx-core:dhobyghaut-1.0
+```
+{% endtab %}
+{% endtabs %}
 
-```bash
-# For testnet:
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 init fx-zakir
-# For mainnet:
+* Initializing fxcore
+
+{% tabs %}
+{% tab title="Mainnet" %}
+```
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 init fx-zakir
 ```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 init fx-zakir
+```
+{% endtab %}
+{% endtabs %}
 
 * download genesis (copy and run each line, line by line)
 
-```bash
-# For testnet:
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
-# For mainnet:
+{% tabs %}
+{% tab title="Mainnet" %}
+```
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
 sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
@@ -49,12 +70,19 @@ And at this stage, what is important is your validator keys that is stored in a 
 
 * run docker
 
-```bash
-# For testnet:
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 start
-# For mainnet:
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 start 
+{% tabs %}
+{% tab title="Mainnet" %}
 ```
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 start
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 start
+```
+{% endtab %}
+{% endtabs %}
 
 To check if fxcore is synced:
 

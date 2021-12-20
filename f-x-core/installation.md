@@ -23,7 +23,9 @@ On Ubuntu this can be done with the following commands:
 {% tab title="Ubuntu" %}
 ```
 sudo apt-get update
+```
 
+```
 sudo apt-get install -y make gcc
 ```
 
@@ -33,10 +35,15 @@ sudo apt-get install -y make gcc
 {% tab title="Mac" %}
 Ensure you have [Homebrew](https://brew.sh) installed.
 
-Once you have Homebrew installed, you may run the following commands to install `make` and `gcc`:
+Once you have Homebrew installed, you may run the following commands to install `make` :
 
 ```
 brew install make
+```
+
+and `gcc`:
+
+```
 brew install gcc
 ```
 
@@ -44,6 +51,9 @@ We'll  be needing these commands later so let's install the necessary packages:
 
 ```
 brew install git
+```
+
+```
 brew install wget
 ```
 {% endtab %}
@@ -131,12 +141,21 @@ After you have downloaded the package and you may proceed to step 2 of the [offi
 **Go 1.16+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
 {% endhint %}
 
-Setting environment variable:
+Setting environment variables:
 
-```bash
+```
 mkdir -p $HOME/go/bin
+```
+
+```
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+```
+
+```
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.profile
+```
+
+```
 source ~/.profile
 ```
 
@@ -148,14 +167,14 @@ Next, let's install the latest version of f(x)Core. Make sure you have git insta
 {% tab title="All Other Environments" %}
 ```
 git clone https://github.com/functionx/fx-core.git
+```
+
+```
 cd fx-core
+```
+
+```
 make go.sum
-
-# testnet
-make install-testnet
-
-# mainnet
-make install
 ```
 {% endtab %}
 
@@ -168,31 +187,59 @@ Make sure the name of your folder does not have whitespaces!
 
 ```
 git clone https://github.com/functionx/fx-core.git
+```
+
+```
 cd fx-core
+```
 
+```
 make go.sum
-
-# mainnet
-make build-win
-
-#testnet
-make build-win network=testnet
-
-#use cmd prompt to open the fxcored.exe file
-#in the path ./build/bin/fxcored.exe
-
-#run the following commands to see if everything is ok:
-./build/bin/fxcored.exe network
-./build/bin/fxcored.exe version
 ```
 {% endtab %}
 {% endtabs %}
 
+{% tabs %}
+{% tab title="All Other Environments (Mainnet)" %}
+```
+make install
+```
+{% endtab %}
 
+{% tab title="All Other Environments (Testnet)" %}
+```
+make install-testnet
+```
+{% endtab %}
 
-That will install the `fxcored` binary. Verfiy network:
+{% tab title="Windows (Mainnet)" %}
+```
+make build-win
+```
 
-```bash
+{% hint style="info" %}
+use cmd prompt to open the fxcored.exe file
+
+in the path ./build/bin/fxcored.exe
+{% endhint %}
+{% endtab %}
+
+{% tab title="Windows (Testnet)" %}
+```
+make build-win network=testest
+```
+
+{% hint style="info" %}
+use cmd prompt to open the fxcored.exe file
+
+in the path ./build/bin/fxcored.exe
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+That will install the `fxcored` binary. Verify network:
+
+```
 fxcored network
 ```
 
@@ -216,8 +263,11 @@ Verify version:
 
 ```bash
 fxcored version --long
+```
 
-#or
+or:
+
+```
 fxcored version
 ```
 

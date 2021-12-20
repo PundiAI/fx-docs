@@ -2,49 +2,75 @@
 
 ### f(x)Core hard fork upgrade--support EVM compatibility
 
-> This upgrade introduces a new module `evm` which will enable `ethereum` compatibility
+This upgrade introduces a new module `evm` which will enable `ethereum` compatibility.
 
 ### Upgrade steps
 
 1. Ensure you have stopped the node❗
 
+{% tabs %}
+{% tab title="With Daemon" %}
 ```
-# with Daemon
 sudo systemctl stop fxcored
+```
+{% endtab %}
 
-# with PID
+{% tab title="With PID" %}
+```
 ps -ef | grep fxcored
 kill -9 <PID>
 ```
+{% endtab %}
+{% endtabs %}
 
-&#x20;2\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder) and be sure to checkout the `evm` branch:
+&#x20;2\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
 
 ```
 git pull
-
-# Testnet
-git pull 
-
-git checkout testnet-evm
 ```
 
-&#x20;3\. Update fxcored (ensure that you are in the fx-core folder):
+&#x20;3\. Checkout the `evm` branch:
+
+{% tabs %}
+{% tab title="Mainnet" %}
+No available yet
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+git checkout testnet-evm
+```
+{% endtab %}
+{% endtabs %}
+
+&#x20;4\. Update fxcored (ensure that you are in the fx-core folder):
 
 ```
 make go.sum
-
-# testnet
-make install-testnet
-
-# mainnet
-make install
 ```
 
-&#x20;4\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
+{% tabs %}
+{% tab title="Mainnet" %}
+```
+make install
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+make install-testnet
+```
+{% endtab %}
+{% endtabs %}
+
+&#x20;5\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
 
 ```
 cat >> ~/.fxcore/config/app.toml <<EOF
+```
 
+{% code title="app.toml" %}
+```
 ###############################################################################
 ###                             EVM Configuration                           ###
 ###############################################################################
@@ -102,10 +128,10 @@ certificate-path = ""
 
 # Key path defines the key.pem file path for the TLS configuration.
 key-path = ""
-EOF
 ```
+{% endcode %}
 
-&#x20;5\. Check fxcored environment & version
+&#x20;6\. Check fxcored environment & version
 
 ```
 fxcored network
@@ -166,7 +192,7 @@ JSONRPC:
 ...
 ```
 
-&#x20;6\. Features of client.toml
+&#x20;7\. Features of client.toml
 
 > Users can specify the configuration of certain commands in the configuration file `client.toml`
 >
@@ -196,13 +222,13 @@ fxcored config node "tcp://127.0.0.1:26657"
 fxcored config broadcast-mode block
 ```
 
-&#x20;7\. Restart the node:
+&#x20;8\. Restart the node:
 
 ```
 sudo systemctl restart fxcored
 ```
 
-&#x20;8\. Check whether the node is participating in consensus:
+&#x20;9\. Check whether the node is participating in consensus:
 
 ```
 cat $HOME/.fxcore/data/priv_validator_state.json
