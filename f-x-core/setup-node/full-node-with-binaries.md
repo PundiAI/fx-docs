@@ -29,9 +29,9 @@ wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/a
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/testnet-evm/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/functionx/fx-core/testnet-evm/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/testnet-evm/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
