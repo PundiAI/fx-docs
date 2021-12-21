@@ -172,10 +172,6 @@ git clone https://github.com/functionx/fx-core.git
 ```
 cd fx-core
 ```
-
-```
-make go.sum
-```
 {% endtab %}
 
 {% tab title="Windows" %}
@@ -202,17 +198,33 @@ make go.sum
 {% tabs %}
 {% tab title="All Other Environments (Mainnet)" %}
 ```
+make go.sum
+```
+
+```
 make install
 ```
 {% endtab %}
 
 {% tab title="All Other Environments (Testnet)" %}
 ```
+git checkout testnet-evm
+```
+
+```
+make go.sum
+```
+
+```
 make install-testnet
 ```
 {% endtab %}
 
 {% tab title="Windows (Mainnet)" %}
+```
+make go.sum
+```
+
 ```
 make build-win
 ```
@@ -225,6 +237,14 @@ in the path ./build/bin/fxcored.exe
 {% endtab %}
 
 {% tab title="Windows (Testnet)" %}
+```
+git checkout testnet-evm
+```
+
+```
+make go.sum
+```
+
 ```
 make build-win network=testest
 ```
@@ -250,6 +270,8 @@ ChainId: dhobyghaut
 CrossChainSupportBscBlock: "1"
 CrossChainSupportPolygonBlock: "1"
 CrossChainSupportTronBlock: "1"
+EIP155ChainID: "90001"
+EvmSupportBlock: "408000"
 GravityPruneValsetsAndAttestationBlock: "1"
 GravityValsetSlashBlock: "1"
 Network: testnet
