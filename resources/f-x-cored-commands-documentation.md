@@ -981,7 +981,7 @@ fxcored query distribution community-pool
 
 #### Query outstanding rewards
 
-To check the current outstanding (un-withdrawn) rewards, run:
+To check the current outstanding (un-withdrawn) rewards of a particular validator (transaction fees+block rewards), run:
 
 ```bash
 fxcored query distribution validator-outstanding-rewards <validator-addr>
@@ -989,7 +989,7 @@ fxcored query distribution validator-outstanding-rewards <validator-addr>
 
 #### Query Validator Commission
 
-To check the current outstanding commission for a validator, run:
+To check the current outstanding commission for a validator (transaction fees), run:
 
 ```bash
 fxcored query distribution commission <validator_address>
@@ -1017,6 +1017,22 @@ To check all current rewards for a delegation (were they to be withdrawn), run:
 
 ```bash
 fxcored query distribution rewards <delegator_address>
+```
+
+### Claiming Rewards
+
+#### Claiming rewards for delegators and validators
+
+Withdraw rewards from a given delegation address, and optionally withdraw validator commission if the delegation address given is a validator operator:
+
+```
+fxcored tx distribution withdraw-rewards <validator-addr> --from <_name>
+```
+
+Withdraw the validator's commission in addition to the rewards:
+
+```
+fxcored tx distribution withdraw-rewards validator-addr> --from mykey --commission
 ```
 
 ### Multisig Transactions
