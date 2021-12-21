@@ -120,12 +120,12 @@ fxcored tx staking create-validator \
   --gas-adjustment=1.2 \
   --gas-prices="4000000000000FX" \
   --from=<_name> \
-  --amount=100000000000000000000000FX \
+  --amount=500000000000000000000FX \
   --pubkey=$(fxcored tendermint show-validator) \
   --commission-rate="0.01" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
-  --min-self-delegation="1000000000000000000" \
+  --min-self-delegation="100000000000000000000" \
   --moniker="choose a moniker" \
   --website="https://functionx.io" \
   --details="To infinity and beyond!" 
