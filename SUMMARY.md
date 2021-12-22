@@ -37,6 +37,10 @@
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](resources/sentry-nodes.md)
 
+## Deploying on f(x)core
+
+* [With Truffle](deploying-on-f-x-core/with-truffle.md)
+
 ## Developers
 
 * [f(x)Core Network](developers/network.md)
@@ -49,7 +53,6 @@
   * [Namespaces](developers/web3/namespaces.md)
   * [JSON RPC Methods](developers/web3/endpoints.md)
   * [Events](developers/web3/events.md)
-
 
 ***
 
