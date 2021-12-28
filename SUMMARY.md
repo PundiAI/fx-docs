@@ -40,6 +40,8 @@
 ## Deploying on f(x)core
 
 * [With Truffle](deploying-on-f-x-core/with-truffle.md)
+* [With Hardhat](deploying-on-f-x-core/with-hardhat.md)
+* [Deployed Testnet Dapps](deploying-on-f-x-core/deployed-testnet-dapps.md)
 
 ## Developers
 

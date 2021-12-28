@@ -113,7 +113,7 @@ module.exports = {
 {% endcode %}
 
 {% hint style="warning" %}
-the key fields to note here are:
+The key fields to note here are:
 
 * networks to include fxtestnet
 * provider to be set to any of our f(x)Core nodes, you may use the company's hosted node https://testnet-fx-json-web3.functionx.io:8545
@@ -121,7 +121,9 @@ the key fields to note here are:
 * network\_id: 90001
 {% endhint %}
 
-> Notice, it requires mnemonic to be passed in for fxtestnet Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seed phrase from metamask wallet you can click into the Metamask icon-->Metamask Settings-->Security & Privacy-->Reveal Secret Recovery Phrase.
+{% hint style="info" %}
+Notice, it requires mnemonic to be passed in for fxtestnet Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seed phrase from metamask wallet you can click into the Metamask icon-->Metamask Settings-->Security & Privacy-->Reveal Secret Recovery Phrase.
+{% endhint %}
 
 ### **Deploying on Matic Network**
 
