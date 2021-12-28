@@ -604,7 +604,7 @@ The following command will query for a transaction by hash in a committed block:
 fxcored query block-results
 ```
 
-The followin command will get verified data for a the block at given height:
+The following command will get verified data for a the block at given height:
 
 ```
 fxcored query block
@@ -613,6 +613,12 @@ fxcored query block
 {% hint style="info" %}
 Using these commands and filtering out the necessary information, you will be able to deduce the uptime of other validators by checking if they missed any signatures for that block.
 {% endhint %}
+
+A sample query to check for any missing validator signature given a particular block height:
+
+```
+fxcored query block 644696 --node  https://testnet-fx-json.functionx.io:26657   | jq '.block.last_commit'
+```
 
 ### Staking
 
