@@ -125,7 +125,7 @@ The key fields to note here are:
 Notice, it requires mnemonic to be passed in for fxtestnet Provider, this is the seed phrase for the account you'd like to deploy from. Create a new .secret file in root directory and enter your 12 word mnemonic seed phrase to get started. To get the seed phrase from metamask wallet you can click into the Metamask icon-->Metamask Settings-->Security & Privacy-->Reveal Secret Recovery Phrase.
 {% endhint %}
 
-### **Deploying on Matic Network**
+### **Deploying on f(x)Core Network**
 
 To request for Testnet FX click on this [link](https://dhobyghaut-faucet.functionx.io)
 
