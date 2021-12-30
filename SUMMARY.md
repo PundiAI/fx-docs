@@ -39,6 +39,7 @@
 
 ## Deploying on f(x)core
 
+* [With Remix](deploying-on-f-x-core/with-remix.md)
 * [With Truffle](deploying-on-f-x-core/with-truffle.md)
 * [With Hardhat](deploying-on-f-x-core/with-hardhat.md)
 * [Deployed Testnet Dapps](deploying-on-f-x-core/deployed-testnet-dapps.md)
