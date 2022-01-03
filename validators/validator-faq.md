@@ -223,7 +223,7 @@ Let's take a concrete example to illustrate the aforementioned concept. In this 
 
 First, a 40% tax is applied. The corresponding FX goes to the reserve pool. Reserve pool's funds can be allocated through governance to fund bounties and upgrades.
 
-* `25% * 1340 = 335` FX goes to the reserve pool.
+* `40% * 1675 = 670` FX goes to the reserve pool.
 
 1005 FX now remain. Let's assume that the proposer included 100% of the signatures in its block. It thus obtains the full bonus of 5%.
 
