@@ -46,7 +46,7 @@ Any participant in the network can signal that they want to become a validator b
 * **Initial commission rate**: The commission rate on block rewards and fees that will be charged by validators and charged to delegators (more information can be found below).
 * **Maximum commission:** The maximum commission rate which this validator can charge. This parameter cannot be changed after `create-validator` is processed.
 * **Commission max change rate:** The maximum daily increase of the validator commission. This parameter cannot be changed after `create-validator` is processed.
-* **Minimum self-delegation:** Minimum amount of FX the validator needs to have bonded at all time. If the validator's self-delegated stake falls below this limit, their entire staking pool will unbond.
+* **Minimum self-delegation:** Minimum amount of FX the validator needs to have bonded at all time. If the validator's self-delegated stake falls below this limit, their entire staking pool will unbond. You may only increase this later and this makes it a somewhat irreversible change.&#x20;
 
 Once a validator is created, FX holders can delegate FX to them, effectively adding stake to their pool. The total stake of an address is the combination of FX bonded by delegators and FX self-bonded by the validator.
 
