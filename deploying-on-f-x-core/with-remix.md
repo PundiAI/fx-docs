@@ -25,7 +25,7 @@ For more information on Remix and how to use it, you may find it in the [Remix D
 
 {% tabs %}
 {% tab title="HelloWorld Tutorial" %}
-* ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1).png>)To create a new file , Name it HelloWorld.sol
+* ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it HelloWorld.sol
 * **Copy/Paste** the Smart contract below into the newly created file `HelloWorld.sol`
 
 {% code title="HelloWorld.sol" %}
@@ -69,7 +69,7 @@ The `string public message` function is another public function that is similar 
 {% endtab %}
 
 {% tab title="ERC20 Tutorial" %}
-* ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1).png>)To create a new file , Name it erc20.sol
+* ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it erc20.sol
 * **Copy/Paste** the Smart contract below into the newly created file `erc20.sol`
 * **Edit** the `string`` `<mark style="color:blue;">`public`</mark>` ``name` & `string`` `<mark style="color:blue;">`public`</mark>` ``symbol` and replace it with your own name and symbol
 
@@ -252,7 +252,7 @@ Clicking into the \_mint (example) dropdown, you will be shown a few fields:
 
 The fields are pretty self explanatory. Amount has to be of the type unit256 (unsigned integer), while Account has to be of the address (0x) type. Input your address and the amount you would like to mint. Do remember to add 18 0s behind. The amount value here is expressed in Wei. So if you want to mint 100 of your tokens, the field should be 100000000000000000000.
 
-![](<../.gitbook/assets/image (29).png>)![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (29) (1).png>)![](../.gitbook/assets/image.png)
 
 Hitting ![](<../.gitbook/assets/image (31).png>) will result in a Metamask pop-up. Remember to edit the gas fields to reflect 4000 GasPrice similar to what you did before and voila, you will have minted some of your own tokens. With your own minted tokens, you can play around with some of [our protocols](deployed-testnet-dapps.md) especially Uniswap.
 
