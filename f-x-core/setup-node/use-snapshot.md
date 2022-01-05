@@ -15,7 +15,7 @@ Download the Snapshot to your VM. To download the Snapshot Tar file to your VM y
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2021-12-20.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-01-03.tar.gz
 ```
 {% endtab %}
 
@@ -37,7 +37,7 @@ Now, to unpack the `tar` file in the fxcore Data directory run the following com
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-tar -xzvf fxcore-snapshot-mainnet-2021-12-20.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2022-01-03.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 
