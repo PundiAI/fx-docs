@@ -20,25 +20,37 @@ Before you proceed to the next section, ensure that you have already `set up a f
 
 Here we will create a new token holding account for the validator which we will bind later to the node consensus.
 
-```bash
-# For ledger
-fxcored keys add <_name> --ledger --account 0
-or
-# Without ledger
+{% tabs %}
+{% tab title="With Ledger" %}
+```
+fxcored keys add <_name> --ledger --index 0
+```
+{% endtab %}
+
+{% tab title="Without Ledger" %}
+```
 fxcored keys add <_name>
 ```
+{% endtab %}
+{% endtabs %}
 
 > Note: This creates a new token holding account for you, do record the mnemonic phrase in a safe place. Take note of the address so that you can fund the account. The `_name` will be used again later.
 
 For example:
 
-```bash
-# For ledger
-fxcored keys add test --ledger --index 0
-or
-# Without ledger
-fxcored keys add test
+{% tabs %}
+{% tab title="With Ledger" %}
 ```
+fxcored keys add Ciri --ledger --index 0
+```
+{% endtab %}
+
+{% tab title="Without Ledger" %}
+```
+fxcored keys add Geralt
+```
+{% endtab %}
+{% endtabs %}
 
 Output:
 
@@ -96,11 +108,13 @@ The command to run will be `fxcored tx staking create-validator`, copy the entir
 * `website="https://functionx.io"` This will be the website for delegators or the public to read more about your validator
 * `details="To infinity and beyond!"` You can add some additional details about your validator
 
-If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io). Before you proceed and set your validator up, make sure you do some final checks (ensure your .fxcore path is set correctly):
+If this does not work for you, please check the Common Problem section or get help on the [forum](https://forum.functionx.io). Before you proceed and set your validator up, make sure you do some final checks (ensure your .fxcore path is set correctly). If you are in the root folder:
 
 ```bash
-# if you are in the root directory
 curl -s 127.0.0.1:26657/status | jq '.result.validator_info.pub_key'
+```
+
+```bash
 cat .fxcore/config/priv_validator_key.json| jq .pub_key
 ```
 
@@ -108,6 +122,9 @@ Ensure both these outputs are the same.
 
 ```bash
 fxcored keys parse $(cat .fxcore/config/priv_validator_key.json| jq -r '.address')
+```
+
+```bash
 fxcored tendermint show-address
 ```
 
