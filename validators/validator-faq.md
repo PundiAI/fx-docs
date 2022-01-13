@@ -77,9 +77,9 @@ In short, there are two types of keys ([for more information on keys](../resourc
 
 After a validator is created with a `create-validator` transaction, they can be in three states:
 
-* `Active validator set`: Validator in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehaviour.
+* `Active validator set`: Validator in the active set and participates in consensus. Validator is earning rewards and can be slashed for misbehavior.
 * `Jailed`: Validator misbehaved and is in jail, i.e. has been kicked out off the validator set. If the reason for being jailed is due to being offline for too long, the validator can send an `unjail` transaction in order to re-enter the active validator set. If the jailing is due to double signing, the validator cannot unjail.
-* `Inactive`: Validator is not in the active set, and therefore not signing any blocks. Validator cannot be slashed, and does not earn any reward. It is still possible to delegate FX to this validator. Un-delegating from an `unbonded` validator is immediate and does not require a 21 day lockout period.
+* `Inactive`: Validator is not in the active set, and therefore not signing any blocks. Validator cannot be slashed, and does not earn any reward. It is still possible to delegate FX to this validator. Once a validator becomes inactive, all delegators will start unbonding from this validator automatically.
 
 ### What is 'self-delegation'? How can I increase my 'self-delegation'?
 

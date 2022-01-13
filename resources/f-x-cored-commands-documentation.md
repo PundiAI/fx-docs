@@ -1038,7 +1038,7 @@ fxcored tx distribution withdraw-rewards <validator-addr> --from <_name>
 Withdraw the validator's commission in addition to the rewards:
 
 ```
-fxcored tx distribution withdraw-rewards validator-addr> --from mykey --commission
+fxcored tx distribution withdraw-rewards <validator-addr> --from mykey --commission
 ```
 
 ### Multisig Transactions
