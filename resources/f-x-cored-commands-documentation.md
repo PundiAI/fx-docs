@@ -995,7 +995,7 @@ fxcored query distribution validator-outstanding-rewards <validator-addr>
 
 #### Query Validator Commission
 
-To check the current outstanding commission for a validator, run:
+To check the current outstanding commission for a validator (excluding the rewards of the wallet tied to that validator address), run:
 
 ```bash
 fxcored query distribution commission <validator_address>
