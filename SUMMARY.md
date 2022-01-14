@@ -31,7 +31,7 @@
 
 ## Resources
 
-* [f(x)cored Commands Documentation](resources/f-x-cored-commands-documentation.md)
+* [f(x)Cored CLI Commands](resources/f-x-cored-commands-documentation.md)
 * [Cloud Setup](resources/cloud-setup.md)
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)

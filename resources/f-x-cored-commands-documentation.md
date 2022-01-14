@@ -1,4 +1,4 @@
-# f(x)cored Commands Documentation
+# f(x)Cored CLI Commands
 
 ## f(x)Core Daemon
 
@@ -687,7 +687,7 @@ fxcored query staking delegations <delegator_addr>
 You can also query all of the delegations to a particular validator:
 
 ```bash
-fxcored query delegations-to <account_fxval>
+fxcored query staking delegations-to <validator_addr>
 ```
 
 #### Unbond Tokens
