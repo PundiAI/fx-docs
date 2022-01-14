@@ -1,9 +1,24 @@
+---
+description: >-
+  The documentation corresponding contains details for the RPC - HTTP, WS and
+  GRPC endpoints
+---
+
 # f(x)Core Network
 
-## fxCore-Testnet
+{% tabs %}
+{% tab title="f(x)Core Mainnet" %}
+|                    |                                                                |
+| ------------------ | -------------------------------------------------------------- |
+| ChainId            | `fxcore`                                                       |
+| Native Coin        | `FX`                                                           |
+| Block Explorer     | [https://explorer.functionx.io](https://explorer.functionx.io) |
+| JSON RPC           | https://fx-json.functionx.io:26657                             |
+| JSON RPC Websocket | wss://fx-json.functionx.io:26657/websocket                     |
+| gRPC               | https://fx-grpc.functionx.io:9090                              |
+{% endtab %}
 
-The documentation corresponding contains details for the RPC - HTTP, WS and GRPC endpoints.
-
+{% tab title="f(x)Core Testnet" %}
 |                         |                                                                                                                                                                                                     |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ChainId                 | `dhobyghaut`                                                                                                                                                                                        |
@@ -17,16 +32,5 @@ The documentation corresponding contains details for the RPC - HTTP, WS and GRPC
 | Web3 JSON RPC           | https://testnet-fx-json-web3.functionx.io:8545                                                                                                                                                      |
 | Web3 JSON RPC Websocket | wss://testnet-fx-json-web3.functionx.io:8546                                                                                                                                                        |
 | Testnet Faucet          | [https://dhobyghaut-faucet.functionx.io/](https://dhobyghaut-faucet.functionx.io)                                                                                                                   |
-
-## fxCore-Mainnet
-
-The documentation corresponding contains details for the RPC - HTTP, WS and GRPC endpoints.
-
-|                    |                                                                |
-| ------------------ | -------------------------------------------------------------- |
-| ChainId            | `fxcore`                                                       |
-| Native Coin        | `FX`                                                           |
-| Block Explorer     | [https://explorer.functionx.io](https://explorer.functionx.io) |
-| JSON RPC           | https://fx-json.functionx.io:26657                             |
-| JSON RPC Websocket | wss://fx-json.functionx.io:26657/websocket                     |
-| gRPC               | https://fx-grpc.functionx.io:9090                              |
+{% endtab %}
+{% endtabs %}
