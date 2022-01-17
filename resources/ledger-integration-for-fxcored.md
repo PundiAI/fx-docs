@@ -8,6 +8,19 @@ At the core of a Ledger device there is a mnemonic seed phrase that is used to g
 Do not lose or share your 24 words with anyone. To prevent theft or loss of funds, it is best to keep multiple copies of your mnemonic stored in safe, secure places. If someone is able to gain access to your mnemonic, they will fully control the accounts associated with them.
 {% endhint %}
 
+## Cloud + Ledger setup
+
+![Ledger + Cloud Configuration](<../.gitbook/assets/Ledger Guide.drawio.png>)
+
+Before you use a ledger to set up your validator, do make sure you understand this setup. You will need:
+
+1. Your ledger to have the Cosmos app installed
+2. f(x)Core CLI installed on your local machine but this does not have to be a full-node or validator-node if you are remoting into a cloud server. (because your ledger is connected to your local machine, you will need f(x)Core installed locally and we will be using this to send commands to the cloud server.)
+3. Your cloud server to be a full-node/validator node.
+4. To run the [ssh port forwarding command](cloud-setup.md#connecting-your-localhost-to-the-cloud-instance-for-a-specific-port)
+5. 2 terminals opened, one to run the ssh port forwarding command.
+6. The other with fxcored opened locally and we will be using this terminal to run our commands
+
 ## Install the Cosmos Ledger application
 
 Installing the `Cosmos` application on your ledger device is required before you can use it with our f(x)Core CLI. To do so, you need to:
@@ -104,7 +117,7 @@ Confirm that the address displayed on the device matches the address displayed w
 
 ### Connect to a full node
 
-Next, you need to configure fxcored with the URL of a Cosmos full node and the appropriate `chain_id`. In this example we connect to the public load balanced full node operated by Chorus One on the `cosmoshub-2` chain. But you can point your `fxcored` to any Cosmos full node. Be sure that the `chain-id` is set to the same chain as the full node.
+Next, you need to configure fxcored with the URL of a f(x)Core full node and the appropriate `chain_id`. In this example we connect to the public load balanced full node operated by Function X on the `dhobyghaut` chain. But you can point your `fxcored` to any `f(x)Core` full node. Be sure that the `chain-id` is set to the same chain as the full node.
 
 ```bash
 # configuring to a full node
@@ -123,7 +136,6 @@ fxcored query staking validators
 ```
 
 > **To run your own full node locally read more** [**here**](../f-x-core/setup-node/)**.**
-
 
 ### Sign a transaction
 
