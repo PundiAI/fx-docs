@@ -24,4 +24,3 @@ The `TEST` token contract address on the Dhobyghaut-Testnet is `0x9EfB5C66bD1F9a
 ![Click 'Import Tokens'](../../.gitbook/assets/configtoken3.png)
 
 ![New token added!](../../.gitbook/assets/configtoken4.png)
-

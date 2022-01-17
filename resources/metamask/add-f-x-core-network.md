@@ -16,8 +16,6 @@ The EVM-Mainnet will be launched soon. Stay tuned! For now please add the Dhobyg
 {% endtab %}
 
 {% tab title="Dhobyghaut-Testnet" %}
-
-
 1. Click on the Network selection dropdown and then click on 'Add Network'
 2. Fill in the fields as follow:
 
