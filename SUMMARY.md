@@ -36,18 +36,18 @@
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](resources/sentry-nodes.md)
-* [MetaMask](resources/metamask/README.md)
-  * [Download and Install MetaMask](resources/metamask/download-and-install-metamask.md)
-  * [Add f(x)Core Network](resources/metamask/add-f-x-core-network.md)
-  * [Configure Custom Tokens](resources/metamask/configure-custom-tokens.md)
-  * [Create and Import Accounts](resources/metamask/create-and-import-accounts.md)
 
-## Deploying on f(x)core
+## Deploying on f(x)core EVM
 
-* [With Remix](deploying-on-f-x-core/with-remix.md)
-* [With Truffle](deploying-on-f-x-core/with-truffle.md)
-* [With Hardhat](deploying-on-f-x-core/with-hardhat.md)
-* [Deployed Testnet Dapps](deploying-on-f-x-core/deployed-testnet-dapps.md)
+* [MetaMask](deploying-on-f-x-core-evm/metamask/README.md)
+  * [Download and Install MetaMask](deploying-on-f-x-core-evm/metamask/download-and-install-metamask.md)
+  * [Add f(x)Core Network](deploying-on-f-x-core-evm/metamask/add-f-x-core-network.md)
+  * [Configure Custom Tokens](deploying-on-f-x-core-evm/metamask/configure-custom-tokens.md)
+  * [Create and Import Accounts](deploying-on-f-x-core-evm/metamask/create-and-import-accounts.md)
+* [With Remix](deploying-on-f-x-core-evm/with-remix.md)
+* [With Truffle](deploying-on-f-x-core-evm/with-truffle.md)
+* [With Hardhat](deploying-on-f-x-core-evm/with-hardhat.md)
+* [Deployed Testnet Dapps](deploying-on-f-x-core-evm/deployed-testnet-dapps.md)
 
 ## Developers
 

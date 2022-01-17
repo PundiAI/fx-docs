@@ -165,7 +165,7 @@ For more information on the ERC20 standard and the various variables, you may re
 * Now, `Compile HelloWorld.sol` /`ERC20.sol`
 * After Successful Compilation, it will show ![](<../.gitbook/assets/image (24).png>)
 * Now, we have to deploy our smart contract on f(x)Core Network. For that, we have to connect to web3, this can be done by using services like Metamask. We will be using Metamask. Please follow this tutorial to setup a Metamask Account.
-* Open Metamask, click the **network dropdown** and then click **'Add Network'**
+* Open Metamask, click the **network dropdown** and then click **'Add Network'.** For more information on MetaMask and how to configure it to your network, you may check out this [Metamask guide](metamask/).
 
 ![](<../.gitbook/assets/image (25).png>)
 
