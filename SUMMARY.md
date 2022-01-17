@@ -36,6 +36,11 @@
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](resources/sentry-nodes.md)
+* [MetaMask](resources/metamask/README.md)
+  * [Download and Install MetaMask](resources/metamask/download-and-install-metamask.md)
+  * [Add f(x)Core Network](resources/metamask/add-f-x-core-network.md)
+  * [Configure Custom Tokens](resources/metamask/configure-custom-tokens.md)
+  * [Create and Import Accounts](resources/metamask/create-and-import-accounts.md)
 
 ## Deploying on f(x)core
 
