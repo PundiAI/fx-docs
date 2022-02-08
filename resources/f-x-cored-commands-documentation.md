@@ -1029,7 +1029,7 @@ fxcored query distribution rewards <delegator_address>
 
 #### Claiming rewards for delegators and validators
 
-Withdraw rewards from a given delegation address, and optionally withdraw validator commission if the delegation address given is a validator operator:
+Withdraw rewards from a given delegation address, and optionally withdraw validator commission (by adding in a `--commission` flag, see below) if the delegation address given is a validator operator:
 
 ```
 fxcored tx distribution withdraw-rewards <validator-addr> --from <_name>
