@@ -32,7 +32,7 @@ Before setting up any proposal on-chain, it is strongly recommended to any propo
    1. The proposer must contact the Function X team by correctly filling in the [EGF proposal form](egf-proposal-form.md) for points 1-5 (inclusive) of the EGF proposal form
    2. The more information provided, the better guidance the team will be able to provide to the proposer.
 2. Identify support opportunities
-   1. Identify ways to help, beyond monetary support e.g. coding, interfaces, source code, etc.&#x20;
+   1. Identify ways to help, beyond monetary support e.g. coding, interfaces, source code, etc.
    2. Request more information in the Inquiry Form
 3. Formal proposal
    1. If identified as requiring financial support
@@ -53,7 +53,7 @@ Before setting up any proposal on-chain, it is strongly recommended to any propo
 **The amounts are in USD. The grants will be paid out in FX, the amount will be calculated based on the exchange rate on** [**CoinMarketCap**](https://coinmarketcap.com) **at the time of payment.**
 {% endhint %}
 
-| Levels             | 1 (FaXt Grants)                                                                                                     | 2 (FaXt Grants)           | 3                                          | 4                                                                                         |
+| **Levels**         | **1 (FaXt Grants)**                                                                                                 | **2 (FaXt Grants)**       | **3**                                      | **4**                                                                                     |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | **Amount (Up to)** | $5,000                                                                                                              | $10,000                   | $50,000                                    | $100,000 & Above                                                                          |
 | **Target**         | Individuals                                                                                                         | Individuals & small teams | Small teams/start-ups                      | Companies/foundations with a proven track record (would require pitch calls & interviews) |
