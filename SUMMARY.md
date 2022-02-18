@@ -73,3 +73,4 @@
 ## Function X EGF Proposal Guidelines
 
 * [Overview](function-x-egf-proposal-guidelines/overview.md)
+* [EGF Proposal Form](function-x-egf-proposal-guidelines/egf-proposal-form.md)
