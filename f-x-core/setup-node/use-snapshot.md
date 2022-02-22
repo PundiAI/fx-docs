@@ -37,13 +37,13 @@ Now, to unpack the `tar` file in the fxcore Data directory run the following com
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-tar -xzvf fxcore-snapshot-mainnet-2022-01-03.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2022-02-21.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-tar -xzvf fxcore-snapshot-testnet-2021-12-20.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-testnet-2022-02-21.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 {% endtabs %}
