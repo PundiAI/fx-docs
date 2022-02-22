@@ -1,12 +1,12 @@
 # Table of contents
 
 * [FunctionX Technical Document](README.md)
-* [How To Use This Documentation?](how-to-use-this-documentation.md)
 
 ## f(x)Core
 
 * [What is f(x)Core](f-x-core/what-is-f-x-core.md)
 * [Installation f(x)Core](f-x-core/installation.md)
+* [Page 1](f-x-core/page-1.md)
 * [Setup Node](f-x-core/setup-node/README.md)
   * [EVM Upgrade Tutorial](f-x-core/setup-node/evm-upgrade-tutorial.md)
   * [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md)

@@ -128,7 +128,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). P
 Especially if you are remoting into a Ubuntu terminal, run this command to download the `go` installer:
 
 ```
-wget https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz 
+wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz 
 ```
 
 {% hint style="info" %}
@@ -301,7 +301,7 @@ server_name: fxcored
 version: master-9b5596f54b9cadc001725a431fdfe22768c6e4c9
 commit: 9b5596f54b9cadc001725a431fdfe22768c6e4c9
 build_tags: netgo,ledger
-go: go version go1.17.3 darwin/amd64
+go: go version go1.17.7 darwin/amd64
 ...
 ```
 
