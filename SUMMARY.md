@@ -28,6 +28,10 @@
 * [Delegator CLI Guide](delegators/delegator-cli-guide.md)
 * [Delegator Security Notice](delegators/delegator-security-notice.md)
 
+## Governance
+
+* [Governance Proposal Information](governance/governance-proposal-information.md)
+
 ## Resources
 
 * [f(x)Cored CLI Commands](resources/f-x-cored-commands-documentation.md)
@@ -56,7 +60,6 @@
 
 * [f(x)Core Network](developers/network.md)
 * [f(x)Core Info](developers/fxcore-info.md)
-* [Governance Proposal Information](developers/governance-proposal-information.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
 * [f(x)Core REST API](developers/rest\_api.md)
