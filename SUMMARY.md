@@ -56,6 +56,7 @@
 
 * [f(x)Core Network](developers/network.md)
 * [f(x)Core Info](developers/fxcore-info.md)
+* [Governance Proposal Information](developers/governance-proposal-information.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
 * [f(x)Core REST API](developers/rest\_api.md)

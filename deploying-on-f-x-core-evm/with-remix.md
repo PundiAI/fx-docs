@@ -220,7 +220,7 @@ https://testnet-fxscan.functionx.io/
 
 * Click **Confirm**
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (1).png>)
 
 **Congratulations!** You have successfully deployed HelloWorld/ERC20 Smart Contract. Now you can interact with the Smart Contract. Check the deployment status [here](https://testnet-fxscan.functionx.io).
 
