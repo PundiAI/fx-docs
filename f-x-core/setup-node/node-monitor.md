@@ -1,4 +1,22 @@
+---
+description: You may setup the node monitoring device
+---
+
 # Node Monitoring Device
+
+## Prerequisites&#x20;
+
+We recommend the following for running a node monitoring device:
+
+* 2 or more CPU cores
+* At least 40G of disk storage
+* At least 4G of memory
+* At least 10mbps network bandwidth
+* Have to be setup in a separate environment from validator nodes/sentry nodes
+
+{% hint style="info" %}
+Before setting up a node monitoring device, you may take a look at the [f(x)Core](https://functionx.gitbook.io/home/f-x-core/installation)[installation](https://functionx.gitbook.io/home/f-x-core/installation) setup to setup the f(x)Core CLI.&#x20;
+{% endhint %}
 
 ## Prometheus metrics
 
@@ -9,7 +27,7 @@ fxcore also supports the use of Prometheus metrics. This monitoring device allow
 ## Deploy and Configure Monitoring Services
 
 {% hint style="info" %}
-Before deploying monitoring program, docker needs to be installed
+Before deploying monitoring program, install docker following the [official docs](https://docs.docker.com/compose/install/). &#x20;
 {% endhint %}
 
 ### Configure node services
@@ -82,6 +100,8 @@ docker-compose -f ./fx-core/develop/docker-compose.yaml -p fx-node-monitor up -d
     The default username and password are both `admin`, once you have logged in you will be asked to set a new password.
 
     After setting a new password, you can go into Dashboards > Manage and select 'Fx Chain Dashboard'. Here you can see a dashboard of various indicators and information of a selected node.
+* You may find out the details of [`<your_IP_address>`](https://www.google.com/search?q=what+is+my+ip+address\&rlz=1C5CHFA\_enSG996SG996\&oq=what+is\&aqs=chrome.0.69i59j69i57j69i59j35i39j0i433i512j69i60l3.1255j0j7\&sourceid=chrome\&ie=UTF-8)`.`
+* Authorise inbound traffic for the  following ports ranges **9091, 9093, 3000** for  `<your_IP_address>` in node monitoring device.  you can also allow the port range **26660** for \<node\__monitoring\_public\_ip_> in the validator instance.
 
 ### Changing The Default Passwords for Prometheus and Alertmanager
 
@@ -158,7 +178,7 @@ alerting:
 
 #### Alertmanager-bot
 
-For the telegram bot to be able to obtain information from the `alertmanager` you will need to update the username and password within the `--alertmanager.url` in the `./fx-core/develop/docker-compose.yaml` file.
+For the telegram bot to be able to obtain information from the `alertmanager` you will need to update the username and password within the `--alertmanager.url` in the `./fx-core/develop/docker-compose.yaml` file. Also you may [update](https://functionx.gitbook.io/home/f-x-core/setup-node/node-monitor#updating-node-monitoring-services) the alert-manager-bot.&#x20;
 
 example:
 
@@ -206,7 +226,13 @@ docker-compose -f ./fx-core/develop/docker-compose.yaml -p fx-node-monitor stop
 
 ### Updating Node Monitoring Services
 
-1. Pull the latest code base:
+{% hint style="info" %}
+Important: Do a update by pulling the latest code with the below command, whenever&#x20;
+
+you are making changes to the telegram configuration under `./fx-core/develop/docker-compose.yaml`
+{% endhint %}
+
+1. Pull the latest code base
 
 ```
 docker-compose -f ./fx-core/develop/docker-compose.yaml -p fx-node-monitor pull
