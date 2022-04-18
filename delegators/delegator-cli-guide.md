@@ -169,7 +169,7 @@ rm ~/.bash_history
 
 ## Accessing the f(x)Core Network
 
-In order to query the state and send transactions, you need a way to access the network. To do so, you can either run your own full-node, or connect to an availble public node.
+In order to query the state and send transactions, you need a way to access the network. To do so, you can either run your own full-node, or connect to an available public node.
 
 > **NOTE: Do not share your mnemonic (24 words) with anyone. The only person who should ever need to know it is you. Do not that no one from the FunctionX team will ever send an email that asks for you to share any kind of account credentials or your mnemonics."**.
 
