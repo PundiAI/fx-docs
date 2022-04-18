@@ -21,7 +21,7 @@ docker pull functionx/fx-core:mainnet-1.0
 
 {% tab title="Testnet" %}
 ```
-docker pull functionx/fx-core:dhobyghaut-1.0
+docker pull functionx/fx-core:dhobyghaut-1.1
 ```
 {% endtab %}
 {% endtabs %}
@@ -37,7 +37,7 @@ docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 init fx-
 
 {% tab title="Testnet" %}
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.1 init fx-zakir
 ```
 {% endtab %}
 {% endtabs %}
@@ -79,7 +79,7 @@ docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 13
 
 {% tab title="Testnet" %}
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:dhobyghaut-1.1 start
 ```
 {% endtab %}
 {% endtabs %}
