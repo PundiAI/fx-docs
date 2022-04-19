@@ -19,7 +19,7 @@ For more information on Remix and how to use it, you may find it in the [Remix D
 * Search for **'Solidity Compiler'** in the plugin tab in Remix (this should be activated by default)
 * And activate the plugins (if they are not already activated)
 
-![](<../.gitbook/assets/image (18) (1).png>)![](<../.gitbook/assets/image (22).png>)
+![](<../.gitbook/assets/image (18) (1).png>)![](<../.gitbook/assets/image (17) (1) (1).png>)
 
 * The environment should be set to solidity by default
 

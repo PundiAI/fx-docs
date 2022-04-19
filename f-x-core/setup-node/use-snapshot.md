@@ -15,7 +15,7 @@ Download the Snapshot to your VM. To download the Snapshot Tar file to your VM y
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-02-21.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-04-18.tar.gz
 ```
 {% endtab %}
 
@@ -29,6 +29,8 @@ wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-02-21.t
 This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time.
 
 {% hint style="info" %}
+If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.
+
 You need to ensure that you're running this command before you `Start` your node. If your fxcore node has already started, please stop it and then run the command below. Once unpacking is complete you can start the fxcore service again.
 {% endhint %}
 
