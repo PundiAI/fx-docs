@@ -1,28 +1,36 @@
+---
+description: The various parameters of modules in f(x)Core and transaction fee calculation
+---
+
 # f(x)Core Info
 
 ## The calculation of transaction fee
 
-* GasPrice: Every validator node can set their GasPrice limit, now the setting of GasPrice limit of every validator node is the same
-* The computation of GasLimit is related to the size of transaction(s), number of transaction readings, number of transaction writings and transaction signing. The signing of the transaction is fixed at the moment.
-  * Size of transaction GasLimit: Transaction bytes \* 10
-  * The computation of GasLimit of reading data: number of readings \* cost of reading
-    * ```
-      HasCost:          1000 // to verify if cost needed
-      ReadCostFlat:     1000 // to verify the cost of reading 
-      ReadCostPerByte:  3 // cost of reading per byte
-      IterNextCostFlat: 30 // total cost of reading
-      ```
-  * The computation of GasLimit of writing data: number of writing \* cost of writing
-    * ```
-      WriteCostFlat:    2000 // cost of writing
-      WriteCostPerByte: 30 // cost of writing per byte
-      ```
-  * Computation of GasLimit of transaction signing:
-    * Fixed cost of ED25519: 590
-    * Fixed cost of Secp256k1: 1000
-* Transaction fee = GasPrice \* GasLimit
+#### Transaction fee = GasPrice \* GasLimit
 
-> Conclusion: The transaction fee may vary due to different transaction logic (block size and numbers of readings and writings) even though the transactions are similar or homogenous
+* **GasPrice**:
+  * Every validator node can set their GasPrice, currently the GasPrice of every validator node is the same.
+* **GasLimit:**
+  * Gas limit (gas units) refers to the maximum amount of gas users are willing to consume on a transaction.
+  * The computation of GasLimit is related to the size of transaction(s), number of transaction readings, writings and signings. The number of transaction signings is fixed at the moment.
+    * Size of transaction GasLimit: Transaction bytes \* 10
+    * The computation of GasLimit of reading data: number of readings \* cost of reading
+      * ```
+        HasCost:          1000 // to verify if cost needed
+        ReadCostFlat:     1000 // to verify the cost of reading 
+        ReadCostPerByte:  3 // cost of reading per byte
+        IterNextCostFlat: 30 // total cost of reading
+        ```
+    * The computation of GasLimit of writing data: number of writing \* cost of writing
+      * ```
+        WriteCostFlat:    2000 // cost of writing
+        WriteCostPerByte: 30 // cost of writing per byte
+        ```
+    * Computation of GasLimit of transaction signing:
+      * Fixed cost of ED25519: 590
+      * Fixed cost of Secp256k1: 1000
+
+> Conclusion: Even though the transactions are similar or homogenous, transaction fees may vary due to the difference in transaction logic (block size, numbers of readings and writings).&#x20;
 
 ## Mint module
 
@@ -30,10 +38,10 @@
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
 | Minter inflation variables |                                                                                                                                                                                                                                                                                                                                                                                                                      |                         |
 | Inflation                  | Initial annual inflation rate (computation on block basis, the inflation rate of each block are different)                                                                                                                                                                                                                                                                                                           | 0.35                    |
-| AnnualProvisions           | Annual provision (computation on block basis,, the inflation rate of each block are different)                                                                                                                                                                                                                                                                                                                       | 0                       |
+| AnnualProvisions           | Annual provision (computation on block basis, the inflation rate of each block are different)                                                                                                                                                                                                                                                                                                                        | 0                       |
 |                            |                                                                                                                                                                                                                                                                                                                                                                                                                      |                         |
 | Params chain variables     |                                                                                                                                                                                                                                                                                                                                                                                                                      |                         |
-| MintDenom                  | Name of the newly minted token (changable)                                                                                                                                                                                                                                                                                                                                                                           | FX                      |
+| MintDenom                  | Name of the newly minted token (dependent on sub-chains)                                                                                                                                                                                                                                                                                                                                                             | FX                      |
 | InflationRateChange        | Annual inflation change rate                                                                                                                                                                                                                                                                                                                                                                                         | 0.3 (30%)               |
 | InflationMax               | The maximum annual inflation rate                                                                                                                                                                                                                                                                                                                                                                                    | 0.416762 (41.6762%)     |
 | InflationMin               | The minimum annual inflation rate                                                                                                                                                                                                                                                                                                                                                                                    | 0.17 (17%)              |
@@ -44,7 +52,7 @@
 
     1. Request (call) for Minter value & Params variables
     2. Request total bonded token in delegation
-    3. Request BondedRatio = Total valide delegated token / Total circulating token supply
+    3. Request BondedRatio = Total delegated token / Total circulating token supply
     4. Computing the inflation rate for next block (Annual inflation rate / 6,311,520)
 
     This will require Params variable and BondedRatio
