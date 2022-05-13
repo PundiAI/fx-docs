@@ -11,6 +11,7 @@ description: >-
 | <p><br></p>                                                             | Description                                                                  | Default Port |
 | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------ |
 | **Cosmos gRPC**                                                         | Query or send f(x)Core transactions using gRPC                               | `9090`       |
+| **Cosmos restAPI**                                                      | Query or send f(x)Core transactions using restAPI                            | `1317`       |
 | **Web3** [**JSON-RPC**](web3/)****                                      | Query Web3-formatted transactions and blocks or send Web3 txs using JSON-RPC | `8545`       |
 | <p><strong></strong></p><p><strong>Web3 Websocket</strong></p>          | Subscribe to Web3 logs and events emitted in smart contracts.                | `8546`       |
 | **Tendermint** [**RPC**](json-rpc-api.md)****                           | Subscribe to f(x)Core logs and events emitted in smart contracts.            | `26657`      |
