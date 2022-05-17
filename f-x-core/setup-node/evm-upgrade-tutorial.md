@@ -38,7 +38,7 @@ No available yet
 
 {% tab title="Testnet" %}
 ```
-git checkout testnet-evm
+git checkout evm
 ```
 {% endtab %}
 {% endtabs %}
@@ -63,75 +63,7 @@ make install-testnet
 {% endtab %}
 {% endtabs %}
 
-&#x20;5\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
-
-```
-cat >> ~/.fxcore/config/app.toml <<EOF
-```
-
-{% code title="app.toml" %}
-```
-###############################################################################
-###                             EVM Configuration                           ###
-###############################################################################
-
-[evm]
-
-# Tracer defines the 'vm.Tracer' type that the EVM will use when the node is run in
-# debug mode. To enable tracing use the '--trace' flag when starting your node.
-# Valid types are: json|struct|access_list|markdown
-tracer = ""
-
-###############################################################################
-###                           JSON RPC Configuration                        ###
-###############################################################################
-
-[json-rpc]
-
-# Enable defines if the gRPC server should be enabled.
-enable = true
-
-# Address defines the EVM RPC HTTP server address to bind to.
-address = "0.0.0.0:8545"
-
-# Address defines the EVM WebSocket server address to bind to.
-ws-address = "0.0.0.0:8546"
-
-# API defines a list of JSON-RPC namespaces that should be enabled
-# Example: "eth,txpool,personal,net,debug,web3"
-api = "eth,net,web3"
-
-# GasCap sets a cap on gas that can be used in eth_call/estimateGas (0=infinite). Default: 25,000,000.
-gas-cap = 25000000
-
-# EVMTimeout is the global timeout for eth_call. Default: 5s.
-evm-timeout = "5s"
-
-# TxFeeCap is the global tx-fee cap for send transaction. Default: 1eth.
-txfee-cap = 1
-
-# FilterCap sets the global cap for total number of filters that can be created
-filter-cap = 200
-
-# FeeHistoryCap sets the global cap for total number of blocks that can be fetched
-feehistory-cap = 100
-
-
-###############################################################################
-###                             TLS Configuration                           ###
-###############################################################################
-
-[tls]
-
-# Certificate path defines the cert.pem file path for the TLS configuration.
-certificate-path = ""
-
-# Key path defines the key.pem file path for the TLS configuration.
-key-path = ""
-```
-{% endcode %}
-
-&#x20;6\. Check fxcored environment & version
+&#x20;5\. Check fxcored environment & version
 
 ```
 fxcored network
@@ -142,11 +74,11 @@ Return (you should now see a field that says "EvmSupportBlock"):
 ```
 ChainId: dhobyghaut
 CrossChainSupportBscBlock: "1"
-CrossChainSupportPolygonBlock: "1"
-CrossChainSupportTronBlock: "1"
+CrossChainSupportPolygonAndTronBlock: "1"
 EIP155ChainID: "90001"
-EvmSupportBlock: "408000"
-GravityPruneValsetsAndAttestationBlock: "1"
+EvmV0SupportBlock: "408000"
+EvmV1SupportBlock: "9223372036854775807"
+GravityPruneValsetAndAttestationBlock: "1"
 GravityValsetSlashBlock: "1"
 Network: testnet
 ```
@@ -155,6 +87,12 @@ Cross reference the latest commit hash to the commit in our [official github pag
 
 ```
 fxcored version
+```
+
+&#x20;5\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
+
+```
+fxcored config update
 ```
 
 Check evm configuration is added successfully:
@@ -167,28 +105,30 @@ Return (you should see an EVM configuration):
 
 ```
 ...
-EVM:
-  Tracer: ""
-GRPC:
-  Address: 0.0.0.0:9090
-  Enable: true
-HaltHeight: 0
-HaltTime: 0
-IndexEvents: []
-InterBlockCache: true
-JSONRPC:
-  API:
+evm:
+  max-tx-gas-wanted: 500000
+  tracer: ""
+...
+json-rpc:
+  address: 0.0.0.0:8545
+  api:
   - eth
+  - txpool
+  - personal
   - net
+  - debug
   - web3
-  Address: 0.0.0.0:8545
-  EVMTimeout: 5e+09
-  Enable: true
-  FeeHistoryCap: 100
-  FilterCap: 200
-  GasCap: 2.5e+07
-  TxFeeCap: 1
-  WsAddress: 0.0.0.0:8546
+  block-range-cap: 10000
+  enable: true
+  evm-timeout: 5e+09
+  feehistory-cap: 100
+  filter-cap: 200
+  gas-cap: 2.5e+07
+  http-idle-timeout: 1.2e+11
+  http-timeout: 3e+10
+  logs-cap: 10000
+  txfee-cap: 1
+  ws-address: 0.0.0.0:8546
 ...
 ```
 
