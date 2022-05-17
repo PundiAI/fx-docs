@@ -23,13 +23,13 @@ kill -9 <PID>
 {% endtab %}
 {% endtabs %}
 
-&#x20;2\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
+2\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
 
 ```
 git pull
 ```
 
-&#x20;3\. Checkout the `evm` branch:
+3\. Checkout the `evm` branch:
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -43,7 +43,7 @@ git checkout evm
 {% endtab %}
 {% endtabs %}
 
-&#x20;4\. Update fxcored (ensure that you are in the fx-core folder):
+4\. Update fxcored (ensure that you are in the fx-core folder):
 
 ```
 make go.sum
@@ -63,13 +63,13 @@ make install-testnet
 {% endtab %}
 {% endtabs %}
 
-&#x20;5\. Check fxcored environment & version
+5\. Check fxcored environment & version
 
 ```
 fxcored network
 ```
 
-Return (you should now see a field that says "EvmSupportBlock"):
+Return (you should now see a field that says "EvmV0SupportBlock" & "EvmV1SupportBlock"):
 
 ```
 ChainId: dhobyghaut
@@ -89,7 +89,7 @@ Cross reference the latest commit hash to the commit in our [official github pag
 fxcored version
 ```
 
-&#x20;5\. Add EVM configuration (preferably adding it after the last line of the `app.toml` file) into the **`app.toml`** file there are multiple ways to do this, a few suggestions include opening the file in a [vi editor](https://www.cs.colostate.edu/helpdocs/vi.html) or editing it by remoting into the terminal using [Visual Studio Code](https://code.visualstudio.com/docs/remote/ssh):
+6\. Running the following command will add EVM configurations to the **`app.toml`** and **`config.toml` ** files:
 
 ```
 fxcored config update
@@ -132,7 +132,37 @@ json-rpc:
 ...
 ```
 
-&#x20;7\. Features of client.toml
+7\. Restart the node:
+
+```
+sudo systemctl restart fxcored
+```
+
+8\. Check whether the node is participating in consensus:
+
+```
+cat $HOME/.fxcore/data/priv_validator_state.json
+```
+
+It should return something similar to the following:
+
+{% hint style="info" %}
+You can cross reference the block "height" field with that of the [FunctionX Explorer](https://dhobyghaut-explorer.functionx.io/fxcore/blocks)
+{% endhint %}
+
+```
+{
+  "height": "347450",
+  "round": 0,
+  "step": 3,
+  "signature": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "signbytes": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}
+```
+
+{% hint style="success" %}
+:star::star::star:Additional features of client.toml
+{% endhint %}
 
 > Users can specify the configuration of certain commands in the configuration file `client.toml`
 >
@@ -160,30 +190,6 @@ fxcored config output json
 fxcored config node "tcp://127.0.0.1:26657"
 
 fxcored config broadcast-mode block
-```
-
-&#x20;8\. Restart the node:
-
-```
-sudo systemctl restart fxcored
-```
-
-&#x20;9\. Check whether the node is participating in consensus:
-
-```
-cat $HOME/.fxcore/data/priv_validator_state.json
-```
-
-it should return something similar to the following:
-
-```
-{
-  "height": "347450",
-  "round": 0,
-  "step": 3,
-  "signature": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "signbytes": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-}
 ```
 
 ### Governance for upgrading:
