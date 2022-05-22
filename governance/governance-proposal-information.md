@@ -26,7 +26,7 @@ Currently there are the following governance proposal types:
 
 This section will give details and information on initiating a proposal.
 
-It is strongly encouraged that a proposal be discussed on the [forum](https://forum.functionx.io) before initiating it.
+It is strongly encouraged that a proposal be discussed on the [forum](https://forum.functionx.io/) before initiating it.
 
 {% hint style="info" %}
 For the EGF proposal, please fork the repository [here](https://github.com/FunctionX/FunctionX-EGF), create a copy of the application template and follow the steps as stated in the repository.

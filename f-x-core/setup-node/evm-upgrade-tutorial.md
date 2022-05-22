@@ -113,10 +113,7 @@ json-rpc:
   address: 0.0.0.0:8545
   api:
   - eth
-  - txpool
-  - personal
   - net
-  - debug
   - web3
   block-range-cap: 10000
   enable: true

@@ -4,7 +4,7 @@ description: Overview of MetaMask and guide to setup MetaMask for f(x)Core
 
 # MetaMask
 
-[MetaMask](https://metamask.io) is a crypto wallet that can be used in a web browser and on mobile devices to interact with any EVM-compatible blockchain. It allows you to run and interact with Dapps (Decentralized Apps) right in your browser without running a blockchain node.&#x20;
+[MetaMask](https://metamask.io/) is a crypto wallet that can be used in a web browser and on mobile devices to interact with any EVM-compatible blockchain. It allows you to run and interact with Dapps (Decentralized Apps) right in your browser without running a blockchain node.&#x20;
 
 ### Guide to Setup MetaMask for f(x)Core
 

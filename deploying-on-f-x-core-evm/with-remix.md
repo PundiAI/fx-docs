@@ -8,18 +8,18 @@ description: >-
 
 A Hello World style starter project. Deploys a smart contract with a message, and renders it in the front-end. You can change the message using the interactive panel!
 
-This DAPP implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org).
+This DAPP implements a "Hello World" style application that echoes a message passed to the contract to the front end. This tutorial is intended to be followed using the online IDE available at [Remix IDE](https://remix.ethereum.org/).
 
 For more information on Remix and how to use it, you may find it in the [Remix Documentation](https://remix-ide.readthedocs.io/en/latest/index.html).
 
-### Setting up [Remix IDE](https://remix.ethereum.org)
+### Setting up [Remix IDE](https://remix.ethereum.org/)
 
 * Remix IDE - an online IDE to develop smart contracts.
 * If you’re new to Remix, you’ll first need to activate two modules: **Solidity Compiler** and **Deploy and Run Transactions** (This should already be activated by default without you needing to search for it in the plugin manager).
 * Search for **'Solidity Compiler'** in the plugin tab in Remix (this should be activated by default)
 * And activate the plugins (if they are not already activated)
 
-![](<../.gitbook/assets/image (18) (1).png>)![](<../.gitbook/assets/image (17) (1) (1).png>)
+![](<../.gitbook/assets/image (18) (1).png>)![](<../.gitbook/assets/image (15) (1).png>)
 
 * The environment should be set to solidity by default
 
@@ -206,7 +206,7 @@ https://testnet-fxscan.functionx.io/
 
 ![](<../.gitbook/assets/image (27).png>)
 
-* Head over to [faucet](https://dhobyghaut-faucet.functionx.io) and request test FX - you will need this to pay for gas on f(x)Core. After inputting your wallet address in, select the option **'100 (fxCore) FX / 24h'**.
+* Head over to [faucet](https://dhobyghaut-faucet.functionx.io/) and request test FX - you will need this to pay for gas on f(x)Core. After inputting your wallet address in, select the option **'100 (fxCore) FX / 24h'**.
 * Now, let's Deploy the Smart Contract to the f(x)Core Network
 * Select Injected Web3 in the Environment dropdown ensure you have selected the right contract too.
 * Accept the connection request by clicking **Next** in Metamask after choosing the account
@@ -222,7 +222,7 @@ https://testnet-fxscan.functionx.io/
 
 ![](<../.gitbook/assets/image (7) (1).png>)
 
-**Congratulations!** You have successfully deployed HelloWorld/ERC20 Smart Contract. Now you can interact with the Smart Contract. Check the deployment status [here](https://testnet-fxscan.functionx.io).
+**Congratulations!** You have successfully deployed HelloWorld/ERC20 Smart Contract. Now you can interact with the Smart Contract. Check the deployment status [here](https://testnet-fxscan.functionx.io/).
 
 ![Interacting with Deployed Contract](<../.gitbook/assets/image (5) (1).png>)
 

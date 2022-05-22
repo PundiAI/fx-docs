@@ -11,7 +11,7 @@ description: >-
 There are a few dependencies to install before we start. Please install the following:
 
 * [Node.js v8+ LTS and npm](https://nodejs.org/en/download/) (comes with Node)
-* [Git](https://git-scm.com)
+* [Git](https://git-scm.com/)
 
 {% hint style="info" %}
 Do ensure that your npm modules have been added to your [path](https://www.java.com/en/download/help/path.html)
@@ -121,4 +121,4 @@ Greeter deployed to: 0x70A8aa0fb6a0B4732b2daaBc3143E4C3d560DD57
 
 > Remember your address would differ, the above is just to provide an idea of structure. **Congratulations!** You have successfully deployed Greeter Smart Contract. Now you can interact with the Smart Contract.
 
-You can check the deployment status on [Testnet](https://testnet-fxscan.functionx.io).
+You can check the deployment status on [Testnet](https://testnet-fxscan.functionx.io/).

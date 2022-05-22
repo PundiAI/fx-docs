@@ -45,6 +45,6 @@ description: >-
 | EVM Block Explorer      | [https://testnet-fxscan.functionx.io](https://testnet-fxscan.functionx.io)                                                                                                                          |
 | Web3 JSON RPC           | https://testnet-fx-json-web3.functionx.io:8545                                                                                                                                                      |
 | Web3 JSON RPC Websocket | wss://testnet-fx-json-web3.functionx.io:8546                                                                                                                                                        |
-| Testnet Faucet          | [https://dhobyghaut-faucet.functionx.io/](https://dhobyghaut-faucet.functionx.io)                                                                                                                   |
+| Testnet Faucet          | [https://dhobyghaut-faucet.functionx.io/](https://dhobyghaut-faucet.functionx.io/)                                                                                                                  |
 {% endtab %}
 {% endtabs %}

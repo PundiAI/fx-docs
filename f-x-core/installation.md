@@ -33,7 +33,7 @@ sudo apt-get install -y make gcc
 {% endtab %}
 
 {% tab title="Mac" %}
-Ensure you have [Homebrew](https://brew.sh) installed.
+Ensure you have [Homebrew](https://brew.sh/) installed.
 
 Once you have Homebrew installed, you may run the following commands to install `make` :
 

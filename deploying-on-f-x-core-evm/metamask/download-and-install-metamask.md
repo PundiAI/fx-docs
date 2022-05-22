@@ -16,7 +16,7 @@ In this tutorial we will be using Brave as an example, but the workflow is the s
 4. Once complete, you will be automatically brought to the 'Welcome to MetaMask' page that has a 'Get Started' button
 
 {% hint style="warning" %}
-Be extremely careful when using a search engine to access the MetaMask website. Ensure the link you click on is [https://metamask.io](https://metamask.io) and not anything else.
+Be extremely careful when using a search engine to access the MetaMask website. Ensure the link you click on is [https://metamask.io](https://metamask.io/) and not anything else.
 {% endhint %}
 
 ![Click on 'Install MetaMask for Brave'](../../.gitbook/assets/installmetamask1.png)
