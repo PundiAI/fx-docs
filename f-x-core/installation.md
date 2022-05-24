@@ -2,6 +2,8 @@
 
 This guide will explain how to install the `fxcored` entrypoint onto your system. With these installed on a server, you can participate in the mainnet as either a [Full Node](setup-node/) or a [Validator](../validators/validator-setup.md).
 
+Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial video**</mark>](https://www.youtube.com/results?search\_query=validator+set+up) <mark style="color:red;">****</mark> to set up your validator.
+
 ## Hardware Requirements
 
 We recommend the following for running f(x)Core:
@@ -128,7 +130,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). P
 Especially if you are remoting into a Ubuntu terminal, run this command to download the `go` installer:
 
 ```
-wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz 
+wget https://dl.google.com/go/go1.18.2.linux-amd64.tar.gz 
 ```
 
 {% hint style="info" %}
@@ -145,17 +147,8 @@ Setting environment variables:
 
 ```
 mkdir -p $HOME/go/bin
-```
-
-```
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-```
-
-```
 echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.profile
-```
-
-```
 source ~/.profile
 ```
 
