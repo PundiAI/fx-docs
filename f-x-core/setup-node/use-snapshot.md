@@ -2,7 +2,7 @@
 
 ## Available snapshots
 
-<mark style="color:orange;">**Snapshots are performed every Monday morning at 2:00 am UTC**</mark><mark style="color:orange;">,</mark> keeping a record of that snapshot for three weeks. If the date on the file above is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date (to the latest Monday's date) in the file name to get the latest snapshot. <mark style="color:orange;">**If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.**</mark>
+Snapshots are performed every Monday morning at 2:00 am UTC, keeping a record of that snapshot for three weeks. If the date on the file above is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date (to the latest Monday's date) in the file name to get the latest snapshot. If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.
 
 ## Using Snapshots
 
@@ -15,13 +15,13 @@ Download the Snapshot to your VM. To download the Snapshot Tar file to your VM y
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-05-23.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-04-18.tar.gz
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-05-23.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-02-21.tar.gz
 ```
 {% endtab %}
 {% endtabs %}
@@ -39,13 +39,13 @@ Now, to unpack the `tar` file in the fxcore Data directory run the following com
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-tar -xzvf fxcore-snapshot-mainnet-2022-05-23.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2022-02-21.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-tar -xzvf fxcore-snapshot-testnet-2022-05-23.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-testnet-2022-02-21.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 {% endtabs %}

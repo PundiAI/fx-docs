@@ -2,7 +2,7 @@
 
 This guide will explain how to install the `fxcored` entrypoint onto your system. With these installed on a server, you can participate in the mainnet as either a [Full Node](setup-node/) or a [Validator](../validators/validator-setup.md).
 
-Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial video**</mark>](https://www.youtube.com/results?search\_query=validator+set+up) <mark style="color:red;">****</mark> to set up your validator.
+Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial video**</mark>](https://www.youtube.com/watch?v=Fz0Y3qKG9og\&ab\_channel=FunctionX) <mark style="color:red;">****</mark> to set up your validator.
 
 ## Hardware Requirements
 
