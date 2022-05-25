@@ -19,7 +19,7 @@ For more information on Remix and how to use it, you may find it in the [Remix D
 * Search for **'Solidity Compiler'** in the plugin tab in Remix (this should be activated by default)
 * And activate the plugins (if they are not already activated)
 
-![](<../.gitbook/assets/image (18) (1).png>)![](<../.gitbook/assets/image (15) (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)![](<../.gitbook/assets/image (15) (1) (1).png>)
 
 * The environment should be set to solidity by default
 
@@ -211,7 +211,7 @@ https://testnet-fxscan.functionx.io/
 * Select Injected Web3 in the Environment dropdown ensure you have selected the right contract too.
 * Accept the connection request by clicking **Next** in Metamask after choosing the account
 
-![Injected Web3](<../.gitbook/assets/image (1).png>)
+![Injected Web3](<../.gitbook/assets/image (8) (1).png>)
 
 * Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 * Click the <mark style="color:blue;">**EDIT**</mark> button (1st picture) and then the <mark style="color:orange;">**Edit suggested gas fee**</mark> (2nd picture) before editing the **Max priority fee** and **Max fee** to 4000 Gwei then click **SAVE**.
@@ -244,11 +244,11 @@ Copy the ![](<../.gitbook/assets/image (18).png>)deployed contract address and i
 
 Now with our custom token added, we are all ready to mint some tokens and interact with the ERC20 contract.
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image (19).png>)
 
 Clicking into the \_mint (example) dropdown, you will be shown a few fields:
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (6).png>)
 
 The fields are pretty self explanatory. Amount has to be of the type unit256 (unsigned integer), while Account has to be of the address (0x) type. Input your address and the amount you would like to mint. Do remember to add 18 0s behind. The amount value here is expressed in Wei. So if you want to mint 100 of your tokens, the field should be 100000000000000000000.
 

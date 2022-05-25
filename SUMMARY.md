@@ -13,6 +13,7 @@
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
   * [Node Monitoring Device](f-x-core/setup-node/node-monitor.md)
   * [Node Peers](f-x-core/setup-node/node-peers.md)
+  * [Account Migration Guide](f-x-core/setup-node/account-migration-guide.md)
 
 ## Validators
 
