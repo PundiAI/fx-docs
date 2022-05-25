@@ -18,7 +18,7 @@ e. Your address should not be tied to a validator.
 
 `Accounts in f(x)Core` can be represented in both Bech32 and hex format for Ethereum's Web3 tooling compatibility.
 
-The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST clients. .
+The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST clients.
 
 * Address (Bech32): `fx1xzyws0l8p8alt6v7tztvqlph8r22lhn4femgr7`
 * Address (EIP55 Hex): `0x3088e83FE709fBf5e99e5896C07c3738d4aFDE75` The hex format on the other hand, is the Ethereum `common.Address` representation of a Cosmos `sdk.AccAddress`
