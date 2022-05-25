@@ -41,30 +41,30 @@
 
 Node heartbeat
 
-#### Parameters
+#### Parameters (0)
 
-None
+#### Requests
 
-#### Request
-
-**HTTP**
-
+{% tabs %}
+{% tab title="HTTP" %}
 ```
-curl http://127.0.0.1:26657/health
+curl http://localhost:26657/health
 ```
+{% endtab %}
 
-**JSONRPC**
-
+{% tab title="JSONRPC" %}
 ```
-curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"health\"}"
+curl -X POST http://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"health\"}"
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Response
 
 ```json
 {
   "jsonrpc": "2.0",
-  "id": -1,
+  "id": 2,
   "result": {}
 }
 ```
