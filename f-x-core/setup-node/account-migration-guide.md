@@ -4,15 +4,15 @@
 
 This upgrade introduces a new address which will enable `ethereum` compatibility.
 
-Things to note:❗
+Things to note❗:
 
 a. This guide can be done only on f(x)Core Testnet.
 
 c. Ensure the [new Evm upgrade](https://functionx.gitbook.io/home/f-x-core/setup-node/evm-upgrade-tutorial) is done.
 
-d. Ensure you have f(x)Core [command line interface](https://functionx.gitbook.io/home/f-x-core/installation) installed .
+d. Ensure you have f(x)Core [command line interface](https://functionx.gitbook.io/home/f-x-core/installation) installed.
 
-e. Your address should not be tied to a validator.
+e. Your address should not be bonded to any validator (Address should not have a prior successful `create-validator` command).
 
 **Accounts in f(x)Core**
 
@@ -34,7 +34,7 @@ Prepare a wallet/key derived with **secp256k1** curve, which Cosmos hub uses to 
 fxcored keys add fx-0 --algo secp256k1 --coin-type 118 --index 0
 ```
 
-You will need to store your mnemonic phrase in a safe location. You may use the [facuet link](https://testnet-faucet.functionx.io/) to get some test funds in your wallet. if necessary, you may add the—recover flag to import a foreign key. This account should have assets on the chain and guarantees sufficient transaction fees.
+You will need to store your mnemonic phrase in a safe location. You may use the [faucet link](https://testnet-faucet.functionx.io/) to get some test funds in your wallet. if necessary, you may add the `--recover` flag to import a key. This account should have assets on the chain and guarantees sufficient transaction fees.
 
 You may skip the 1st step, if you already have a wallet/key that is derived using the `"secp256k1"` algorithm. Use `fxcored keys list` to check for all keys that are present in your directory.
 
