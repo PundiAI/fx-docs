@@ -2,7 +2,7 @@
 
 ### Request Funds
 
-1. To request for Testnet FX click on this [link](https://dhobyghaut-faucet.functionx.io/)
+1. To request for Testnet FX click on this [link](https://testnet-faucet.functionx.io/)
 2. Input your address (be sure to choose the correct wallet type for the network you wish to receive funds in)
 3. Choose from the dropdown the appropriate network and coin/token type
 
