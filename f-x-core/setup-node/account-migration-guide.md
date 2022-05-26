@@ -18,41 +18,82 @@ e. Your address should not be bonded to any validator (Address should not have a
 
 `Accounts in f(x)Core` can be represented in both Bech32 and hex format for Ethereum's Web3 tooling compatibility.
 
-The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST clients.
-
-* Address (Bech32): `fx1xzyws0l8p8alt6v7tztvqlph8r22lhn4femgr7`
-* Address (EIP55 Hex): `0x3088e83FE709fBf5e99e5896C07c3738d4aFDE75` The hex format on the other hand, is the Ethereum `common.Address` representation of a Cosmos `sdk.AccAddress`
+* The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST clients.
+* Address (Bech32) with the prefix `fx` eg: `fx1xzyws0l8p8alt6v7tztvqlph8r22lhn4femgr7`
+* Address (EIP55 Hex) with the prefix `0x` eg: `0x3088e83FE709fBf5e99e5896C07c3738d4aFDE75`&#x20;
+* The hex format on the other hand, is the Ethereum `common.Address` representation of a Cosmos `sdk.AccAddress`
 * Compressed **Public Key** (Bech32): (used to **encrypt** data) `fxpub17weu6qepqgca6ed53q7frh8ftcr6c0kucfhm0yuat4sxx4hc3u2y7pydcwwyc65xl7f`
 
 ### Upgrade Steps
 
 #### **1. Prepare the account with the fx address prefix before the migration**
 
-Prepare a wallet/key derived with **secp256k1** curve, which Cosmos hub uses to identify for accounts.
+**Prerequisites:**
+
+* This account must have on-chain assets
+* This account must have made an on-chain transaction before if not it would not it's data would not be registered on-chain
+
+Prepare a wallet/key derived with **secp256k1** curve, which Cosmos hub uses to identify for accounts:
+
+{% hint style="info" %}
+if it is a mnemonics import, by specifying --recover (import) and an --index (import) the specific index account of that mnemonic
+{% endhint %}
+
+{% tabs %}
+{% tab title="create fx prefix address" %}
+```shell
+fxcored keys add <fx_key_name> --algo secp256k1 --coin-type 118 --index <index_number>
+```
+{% endtab %}
+
+{% tab title="recover fx prefix address" %}
+```shell
+fxcored keys add <fx_key_name> --algo secp256k1 --coin-type 118 --index <index_number> --recover
+```
+{% endtab %}
+{% endtabs %}
+
+example:
 
 ```bash
 fxcored keys add fx-0 --algo secp256k1 --coin-type 118 --index 0
 ```
 
-You will need to store your mnemonic phrase in a safe location. You may use the [faucet link](https://testnet-faucet.functionx.io/) to get some test funds in your wallet. if necessary, you may add the `--recover` flag to import a key. This account should have assets on the chain and guarantees sufficient transaction fees.
+{% hint style="info" %}
+You will need to store your mnemonic phrase in a safe location. You may use the [faucet link](https://testnet-faucet.functionx.io/) to get some test funds in your wallet.
 
 You may skip the 1st step, if you already have a wallet/key that is derived using the `"secp256k1"` algorithm. Use `fxcored keys list` to check for all keys that are present in your directory.
+{% endhint %}
 
-#### **2. Prepare the 0x prefix address account**
+#### **2. Prepare the 0x prefix address account (Ethereum format address)**
 
-Prepare a new wallet/key derived  using the `eth_secp256k1` curve after migration
+**Prerequisites**
+
+* This account must not have sent an on-chain transaction
+
+Prepare a new wallet/key derived  using the `eth_secp256k1` curve after migration:
+
+```shell
+fxcored keys add <0x_key_name> --algo eth_secp256k1 --coin-type 60 --index <index_number>
+```
+
+example:
 
 ```bash
 fxcored keys add 0x-0 --algo eth_secp256k1 --coin-type 60 --index 0
 ```
 
-```bash
+#### 3. **Do ensure fx prefix address accounts and 0x prefix address accounts must be in the same keyring-backend file**
+
+```shell
 fxcored keys list
 ```
 
-From the above returned results from the query, the \<fx-0> address account and the < 0x-0> address account must be in the same directory. Also you may double check that \<fx-0> and    <0x-0> 's algo should be secp256k1 and eth\_secp256k1 respectively.
+{% hint style="info" %}
+From the above returned results from the query, the \<fx-0> address account and the < 0x-0> address account must be in the same directory. Also you may double check that \<fx-0> and <0x-0>'s algo should be secp256k1 and eth\_secp256k1 respectively.
+{% endhint %}
 
-#### **3. Account Check Before Migration**
+#### **4. Account Check Before Migration**
 
 ```bash
 fxcored query migrate account $(fxcored keys show fx-0 -a)
@@ -60,31 +101,16 @@ fxcored query migrate account $(fxcored keys show fx-0 -a)
 
 The result should show the account balance, delegation, de-delegate, re-delegate, and votes, if any.
 
-```bash
-fxcored query migrate account $(fxcored keys show 0x-0 -a)
+```shell
+fxcored query migrate account $(fxcored keys show 0x-0 -e)
 ```
 
-The result should show as null as <0x-0> is a brand new wallet.
+The result fields should display null as <0x-0> is a brand new wallet.
 
-#### 4. **Initialise the \<fx-0> Account by performing a transaction.**
-
-The step can be skipped if \<fx-0> is not a newly created wallet/address, which means there has been previous transactions involving it.
+#### 5. Send the migration transaction on fxcored
 
 ```bash
-fxcored tx bank send <fx-0 address> \
- <local-wallet-1-address> 100000000000000FX \
---gas="auto" --gas-adjustment=1.5 --gas-prices=4000000000000FX
-
-Note: local-wallet-1 can be any other wallet imported in the user's 
-local directory.
-There will be some issues, if the first transaction was to do a migration, 
-as <fx-0> is a brand new wallet address, which no transaction has been made. 
-```
-
-#### 5. Send the migration transaction
-
-```bash
-fxcored tx migrate account $(fxcored keys show 0x-0 -a) \
+fxcored tx migrate account $(fxcored keys show <0x_key_name> -e) \
 --from <fx-0_keyName> --gas-adjustment 1.5 --gas="auto" --gas-adjustment=1.5 \
  --gas-prices=4000000000000FX
 ```
@@ -96,13 +122,13 @@ The following command will move **everything** in the previous old `<fx-0>` addr
 #### 6. Account check after migration
 
 ```bash
-fxcored query migrate account fx-0
+fxcored query migrate account $(fxcored keys show fx-0 -a)
 ```
 
 The results returned from the above query should show the account balance of \<fx-0> address (FX, PUNDIX, PURSE...), delegate, de-delegate, re-delegate, and vote as either null or zero.
 
 ```bash
- fxcored query migrate account 0x-0
+fxcored query migrate account $(fxcored keys show 0x-0 -e)
 ```
 
 The results returned from the above query should show account balance of <0x-0> address (FX, PUNDIX, PURSE...), delegate, de-delegate, re-delegate, and votes.
