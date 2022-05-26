@@ -7,13 +7,11 @@
 * [What is f(x)Core](f-x-core/what-is-f-x-core.md)
 * [Installation f(x)Core](f-x-core/installation.md)
 * [Setup Node](f-x-core/setup-node/README.md)
-  * [EVM Upgrade Tutorial](f-x-core/setup-node/evm-upgrade-tutorial.md)
   * [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md)
   * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md)
   * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
   * [Node Monitoring Device](f-x-core/setup-node/node-monitor.md)
   * [Node Peers](f-x-core/setup-node/node-peers.md)
-  * [Account Migration Guide](f-x-core/setup-node/account-migration-guide.md)
 
 ## Validators
 
@@ -29,10 +27,6 @@
 * [Delegator CLI Guide](delegators/delegator-cli-guide.md)
 * [Delegator Security Notice](delegators/delegator-security-notice.md)
 
-## Governance
-
-* [Governance Proposal Information](governance/governance-proposal-information.md)
-
 ## Resources
 
 * [f(x)Cored CLI Commands](resources/f-x-cored-commands-documentation.md)
@@ -40,6 +34,11 @@
 * [Testnet faucet](resources/fxtestnetfaucet.md)
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](resources/sentry-nodes.md)
+
+## EVM Upgrade
+
+* [EVM Upgrade Tutorial](evm-upgrade/evm-upgrade-tutorial.md)
+* [Account Migration Guide](evm-upgrade/account-migration-guide.md)
 
 ## Deploying on f(x)core EVM
 
@@ -69,6 +68,10 @@
   * [Namespaces](developers/web3/namespaces.md)
   * [JSON RPC Methods](developers/web3/endpoints.md)
   * [Events](developers/web3/events.md)
+
+## Governance
+
+* [Governance Proposal Information](governance/governance-proposal-information.md)
 
 ***
 
