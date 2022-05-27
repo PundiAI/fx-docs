@@ -31,7 +31,7 @@ e. Your address should not be bonded to any validator (Address should not have a
 **Prerequisites:**
 
 * This account must have on-chain assets
-* This account must have made an on-chain transaction before if not it would not it's data would not be registered on-chain
+* This account must have made an on-chain transaction before if not it's data would not be registered on-chain
 
 Prepare a wallet/key derived with **secp256k1** curve, which Cosmos hub uses to identify for accounts:
 
@@ -164,7 +164,7 @@ Once you have added `DhobyGhaut Testnet` to the Metamask `Networks`, you can aut
 
 Close the `Settings`, go to `My Accounts` (top right circle) and select `Import Account`. You should see an image like the following one:
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9).png>)
 
 In Metamask and select the `Private Key` option. Then **paste the private** key(**hexadecimal**) exported from the command in step 6, to import your new EVM-compatible account in MetaMask.
 
