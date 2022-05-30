@@ -8,11 +8,11 @@ Things to note❗:
 
 a. This guide can be done only on f(x)Core Testnet.
 
-c. Ensure the [new Evm upgrade](https://functionx.gitbook.io/home/f-x-core/setup-node/evm-upgrade-tutorial) is done.
+b. Ensure the [new Evm upgrade](https://functionx.gitbook.io/home/f-x-core/setup-node/evm-upgrade-tutorial) is done.
 
-d. Ensure you have f(x)Core [command line interface](https://functionx.gitbook.io/home/f-x-core/installation) installed.
+c. Ensure you have f(x)Core [command line interface](https://functionx.gitbook.io/home/f-x-core/installation) installed.
 
-e. Your address should not be bonded to any validator (Address should not have a prior successful `create-validator` command).
+d. Your address should not be bonded to any validator (Address should not have a prior successful `create-validator` command).
 
 **Accounts in f(x)Core**
 
