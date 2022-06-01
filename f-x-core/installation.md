@@ -231,7 +231,7 @@ in the path ./build/bin/fxcored.exe
 
 {% tab title="Windows (Testnet)" %}
 ```
-git checkout testnet-evm
+git checkout evm
 ```
 
 ```
