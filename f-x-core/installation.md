@@ -201,7 +201,7 @@ make install
 
 {% tab title="All Other Environments (Testnet)" %}
 ```
-git checkout testnet-evm
+git checkout evm
 ```
 
 ```

@@ -11,7 +11,7 @@ This guide will explain how to install the `fxcored testnet` or `fxcored mainnet
 Initializing fxcore:
 
 ```bash
-fxcored init fx-zakir
+fxcored init <your_name>
 ```
 
 Initializing fxcored will result in the creation of a few directories and most importantly the .fxcore directory (for more information on the directory tree, refer to the validator-recovery section). This will be where your validator keys are stored and this is important for recovery of your validator.
@@ -29,9 +29,9 @@ wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/a
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet-evm/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet-evm/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/functionx/fx-core/testnet-evm/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/evm/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/functionx/fx-core/evm/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/functionx/fx-core/evm/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
