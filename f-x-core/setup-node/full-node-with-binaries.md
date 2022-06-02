@@ -188,6 +188,10 @@ WantedBy=multi-user.target
 
 Then hit the <mark style="color:red;background-color:blue;">ENTER</mark> button on your keyboard before using <mark style="color:red;background-color:blue;">Ctrl+D</mark> on your keyboard, your file with the above contents will be created. It should look like this:
 
+{% hint style="info" %}
+run the command:`which fxcored` and replace the ExecStart file path with the return value of the command
+{% endhint %}
+
 ```
 root@XXXXXXXXXXXXXXX:~# cat > /etc/systemd/system/fxcored.service
 [Unit]
