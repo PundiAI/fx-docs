@@ -64,13 +64,13 @@ curl https://fx-rest.functionx.io/cosmos/bank/v1beta1/supply
 
 **Method `GET`**
 
-**Path Parameters**
+**Path Parameters:** address(string) -- f(x)Core address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
-* address(string): f(x)Core address (example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
+<details>
 
-#### Response
+<summary>Response</summary>
 
-```json
+```shell
 {
   "account": {
     "@type": "/cosmos.auth.v1beta1.BaseAccount",
@@ -85,21 +85,21 @@ curl https://fx-rest.functionx.io/cosmos/bank/v1beta1/supply
 }
 ```
 
-### Requesting the balance of the address
+</details>
 
-#### Request
+#### Requesting the balance of the address
 
-**Path `/cosmos/bank/v1beta1/balances/{address}`**
+#### Request Path: ** `/cosmos/bank/v1beta1/balances/{address}`**
 
 **Method `GET`**
 
-**Path Parameters**
+**Path Parameters:** address(string) -- f(x)Core address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
 
-* address(string): f(x)Core address(example: fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2)
+<details>
 
-#### Response
+<summary>Response</summary>
 
-```json
+```shell
 {
   "balances": [
     {
@@ -114,26 +114,26 @@ curl https://fx-rest.functionx.io/cosmos/bank/v1beta1/supply
 }
 ```
 
-### Requesting the current token supply of $FX token
+</details>
+
+#### Requesting the current token supply of $FX token
 
 * Total circulating supply of $FX = Delegated asset $FX + Non-delegated asset $FX
   * Delegated asset $FX = Total $FX that delegated in f(x)Core validator node
   * Non-delegated asset $FX = Ethereum cross chain locked fund + Unclaimed reward of validator (including commission and transaction fee) + Unclaimed reward of delegator + Wallet balance + Pool of ecosystem and community + Locked fund of Governance
   * Ethereum cross chain locked fund = Total $FX (ERC20) on Ethereum
 
-#### Request
-
-**Path `/cosmos/bank/v1beta1/supply`**
+#### Request Path: ** `/cosmos/bank/v1beta1/supply`**
 
 **Method `GET`**
 
-**Path Parameters**
+**Path Parameters:** None
 
-None
+<details>
 
-#### Response
+<summary>Response</summary>
 
-```json
+```shell
 {
   "supply": [
     {
@@ -143,3 +143,5 @@ None
   ]
 }
 ```
+
+</details>
