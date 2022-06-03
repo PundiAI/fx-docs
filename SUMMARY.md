@@ -62,7 +62,7 @@
 * [f(x)Core Info](developers/fxcore-info.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api.md)
 * [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
-* [f(x)Core REST API](developers/rest\_api.md)
+* [f(x)Core REST API & GRPC](developers/rest\_api.md)
 * [Web3 JSON RPC](developers/web3/README.md)
   * [JSON RPC Server](developers/web3/server.md)
   * [Namespaces](developers/web3/namespaces.md)
