@@ -22,14 +22,15 @@ description: >-
 
 {% tabs %}
 {% tab title="f(x)Core Mainnet" %}
-|                    |                                                                |
-| ------------------ | -------------------------------------------------------------- |
-| ChainId            | `fxcore`                                                       |
-| Native Coin        | `FX`                                                           |
-| Block Explorer     | [https://explorer.functionx.io](https://explorer.functionx.io) |
-| JSON RPC           | https://fx-json.functionx.io:26657                             |
-| JSON RPC Websocket | wss://fx-json.functionx.io:26657/websocket                     |
-| gRPC               | https://fx-grpc.functionx.io:9090                              |
+|                    |                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------- |
+| ChainId            | `fxcore`                                                                         |
+| Native Coin        | `FX`                                                                             |
+| Block Explorer     | [https://explorer.functionx.io](https://explorer.functionx.io)                   |
+| JSON RPC           | <p>https://fx-json.functionx.io:26657<br>or<br>https://fx-json.functionx.io</p>  |
+| JSON RPC Websocket | wss://fx-json.functionx.io:26657/websocket                                       |
+| gRPC               | <p>https://fx-grpc.functionx.io:9090<br>or<br>https://chain-api.functionx.io</p> |
+| REST API           | https://fx-rest.functionx.io                                                     |
 {% endtab %}
 
 {% tab title="f(x)Core Testnet" %}
