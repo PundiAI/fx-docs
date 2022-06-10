@@ -5,7 +5,7 @@
 There are many endpoints and methods for REST API. Since f(x)Core is built on cosmos-sdk, some existing cosmos endpoints would be exposed as well. You may find a list of
 
 * [Cosmos SDK - Legacy REST and gRPC Gateway docs](https://v1.cosmos.network/rpc/v0.42.6)
-* [fx-core\_rest\_and\_grpc\_gateway\_docs](https://app.swaggerhub.com/apis/functionx/fx-core\_rest\_and\_g\_rpc\_gateway\_docs/1.0.0#/)
+* [fxCore REST and gRPC Gateway docs](https://app.swaggerhub.com/apis/functionx/fxCore-rest-gRPC-Gateway-docs)
 
 Depending on the type of requests, you may specify the header, parameters and body, but generally a query should look like the following:
 
