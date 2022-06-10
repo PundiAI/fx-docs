@@ -1,12 +1,16 @@
-# f(x)Core JSON RPC ABIC Query
+# f(x)Core JSON RPC ABCI Query
 
-### Requesting the details of the address 
+{% hint style="danger" %}
+The content under the ABCI Query custom module (including the cosmos-sdk module) may not be supported eventually. It is not recommended for users to use. Users are recommended instead to use [**REST API or gRPC**](rest\_api.md)**.**
+{% endhint %}
+
+### Requesting the details of the address
 
 * JSON RPC method: `abci_query`
 * JSON RPC params path: `custom/auth/account`
 * JSON RPC params data: input json `{"address":"fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2"}` hex code
-
 * request body:
+
 ```json
 {
     "jsonrpc":"2.0",
@@ -65,8 +69,8 @@
 * JSON RPC method: `abci_query`
 * JSON RPC params path: `custom/bank/all_balances`
 * JSON RPC params data: input json`{"address":"fx1zgpzdf2uqla7hkx85wnn4p2r3duwqzd8xst6v2"}` hex code
-
 * request body:
+
 ```json
 {
     "jsonrpc":"2.0",
@@ -103,7 +107,7 @@
 }
 ```
 
-* decrypt the data in "value" by using base 64 decryption code to get the data as follows: 
+* decrypt the data in "value" by using base 64 decryption code to get the data as follows:
 
 ```json
 [
@@ -119,8 +123,8 @@
 * JSON RPC method: `abci_query`
 * JSON RPC params path: `custom/bank/supply_of`
 * JSON RPC params data: input json `{"Denom":"FX"}` hex code
-
 * request body:
+
 ```json
 {
     "jsonrpc":"2.0",
@@ -157,7 +161,7 @@
 }
 ```
 
-* decrypt the data in "value" by using base 64 decryption code to get the data as follows: 
+* decrypt the data in "value" by using base 64 decryption code to get the data as follows:
 
 ```json
 {
