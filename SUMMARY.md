@@ -60,8 +60,8 @@
 
 * [f(x)Core Network](developers/network.md)
 * [f(x)Core Info](developers/fxcore-info.md)
-* [f(x)Core JSON RPC](developers/json-rpc-api.md)
-* [f(x)Core JSON RPC ABCI Query](developers/json-rcp-abci-query.md)
+* [f(x)Core JSON RPC](developers/json-rpc-api/README.md)
+  * [ABCI Query](developers/json-rpc-api/json-rcp-abci-query.md)
 * [f(x)Core REST API](developers/rest\_api.md)
 * [Web3 JSON RPC](developers/web3/README.md)
   * [JSON RPC Server](developers/web3/server.md)

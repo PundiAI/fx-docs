@@ -10,30 +10,30 @@
 | HTTPS        |                              ✅                             |                                 ❌                                 |
 | WS           |                              ✅                             |                                 ✅                                 |
 
-|                                                        |                                                            |                                                                   |
-| ------------------------------------------------------ | :--------------------------------------------------------: | :---------------------------------------------------------------: |
-| Routes                                                 | [Tendermint-Go](https://github.com/tendermint/tendermint/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
-| [Health](json-rpc-api.md#health)                       |                              ✅                             |                                 ✅                                 |
-| [Status](json-rpc-api.md#status)                       |                              ✅                             |                                 ✅                                 |
-| [NetInfo](json-rpc-api.md#netinfo)                     |                              ✅                             |                                 ✅                                 |
-| [Blockchain](json-rpc-api.md#blockchain)               |                              ✅                             |                                 ✅                                 |
-| [Block](json-rpc-api.md#block)                         |                              ✅                             |                                 ✅                                 |
-| [BlockByHash](json-rpc-api.md#blockbyhash)             |                              ✅                             |                                 ❌                                 |
-| [BlockResults](json-rpc-api.md#blockresults)           |                              ✅                             |                                 ✅                                 |
-| [Commit](json-rpc-api.md#commit)                       |                              ✅                             |                                 ✅                                 |
-| [Validators](json-rpc-api.md#validators)               |                              ✅                             |                                 ✅                                 |
-| [Genesis](json-rpc-api.md#genesis)                     |                              ✅                             |                                 ✅                                 |
-| [GenesisChunked](json-rpc-api.md#genesischunked)       |                              ✅                             |                                 ❌                                 |
-| [ConsensusParams](json-rpc-api.md#consensusparams)     |                              ✅                             |                                 ❌                                 |
-| [UnconfirmedTxs](json-rpc-api.md#unconfirmedtxs)       |                              ✅                             |                                 ❌                                 |
-| [NumUnconfirmedTxs](json-rpc-api.md#numunconfirmedtxs) |                              ✅                             |                                 ❌                                 |
-| [Tx](json-rpc-api.md#tx)                               |                              ✅                             |                                 ❌                                 |
-| [BroadCastTxSync](json-rpc-api.md#broadcasttxsync)     |                              ✅                             |                                 ✅                                 |
-| [BroadCastTxAsync](json-rpc-api.md#broadcasttxasync)   |                              ✅                             |                                 ✅                                 |
-| [ABCIInfo](json-rpc-api.md#abciinfo)                   |                              ✅                             |                                 ✅                                 |
-| [ABCIQuery](json-rpc-api.md#abciquery)                 |                              ✅                             |                                 ✅                                 |
-| [BroadcastTxAsync](json-rpc-api.md#broadcasttxasync)   |                              ✅                             |                                 ✅                                 |
-| [BroadcastEvidence](json-rpc-api.md#broadcastevidence) |                              ✅                             |                                 ✅                                 |
+|                                           |                                                            |                                                                   |
+| ----------------------------------------- | :--------------------------------------------------------: | :---------------------------------------------------------------: |
+| Routes                                    | [Tendermint-Go](https://github.com/tendermint/tendermint/) | [Tendermint-Rs](https://github.com/informalsystems/tendermint-rs) |
+| [Health](./#health)                       |                              ✅                             |                                 ✅                                 |
+| [Status](./#status)                       |                              ✅                             |                                 ✅                                 |
+| [NetInfo](./#netinfo)                     |                              ✅                             |                                 ✅                                 |
+| [Blockchain](./#blockchain)               |                              ✅                             |                                 ✅                                 |
+| [Block](./#block)                         |                              ✅                             |                                 ✅                                 |
+| [BlockByHash](./#blockbyhash)             |                              ✅                             |                                 ❌                                 |
+| [BlockResults](./#blockresults)           |                              ✅                             |                                 ✅                                 |
+| [Commit](./#commit)                       |                              ✅                             |                                 ✅                                 |
+| [Validators](./#validators)               |                              ✅                             |                                 ✅                                 |
+| [Genesis](./#genesis)                     |                              ✅                             |                                 ✅                                 |
+| [GenesisChunked](./#genesischunked)       |                              ✅                             |                                 ❌                                 |
+| [ConsensusParams](./#consensusparams)     |                              ✅                             |                                 ❌                                 |
+| [UnconfirmedTxs](./#unconfirmedtxs)       |                              ✅                             |                                 ❌                                 |
+| [NumUnconfirmedTxs](./#numunconfirmedtxs) |                              ✅                             |                                 ❌                                 |
+| [Tx](./#tx)                               |                              ✅                             |                                 ❌                                 |
+| [BroadCastTxSync](./#broadcasttxsync)     |                              ✅                             |                                 ✅                                 |
+| [BroadCastTxAsync](./#broadcasttxasync)   |                              ✅                             |                                 ✅                                 |
+| [ABCIInfo](./#abciinfo)                   |                              ✅                             |                                 ✅                                 |
+| [ABCIQuery](./#abciquery)                 |                              ✅                             |                                 ✅                                 |
+| [BroadcastTxAsync](./#broadcasttxasync)   |                              ✅                             |                                 ✅                                 |
+| [BroadcastEvidence](./#broadcastevidence) |                              ✅                             |                                 ✅                                 |
 
 ## Info Routes
 
