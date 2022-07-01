@@ -39,6 +39,8 @@
 
 * [EVM Upgrade Tutorial](evm-upgrade/evm-upgrade-tutorial.md)
 * [Account Migration Guide](evm-upgrade/account-migration-guide.md)
+* [Upgrade Instructions](evm-upgrade/upgrade-instructions/README.md)
+  * [fxCore V2.1.0 Upgrade Instructions](evm-upgrade/upgrade-instructions/fxcore-v2.1.0-upgrade-instructions.md)
 
 ## Deploying on f(x)core EVM
 
