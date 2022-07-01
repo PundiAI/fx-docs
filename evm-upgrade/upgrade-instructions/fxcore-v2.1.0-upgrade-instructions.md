@@ -25,6 +25,17 @@ TOC:
 * [On-chain governance proposal](fxcore-v2.1.0-upgrade-instructions.md#on-chain-governance-proposal-attains-consensus)
 * [Upgrade will take place July 16, 2022](fxcore-v2.1.0-upgrade-instructions.md#upgrade-will-take-place-april-12-2022)
 * [fxCore Chain-id will remain the same and the new EVM Chain-id will be 530](fxcore-v2.1.0-upgrade-instructions.md#chain-id-will-remain-the-same)
+* [Preparing for the upgrade](fxcore-v2.1.0-upgrade-instructions.md#preparing-for-the-upgrade)
+  * [System requirements](fxcore-v2.1.0-upgrade-instructions.md#system-requirement)
+  * [Backups](fxcore-v2.1.0-upgrade-instructions.md#backups)
+  * [Testing](fxcore-v2.1.0-upgrade-instructions.md#testing)
+  * [Manual Upgrade](fxcore-v2.1.0-upgrade-instructions.md#manual-upgrade)
+  * [Upgrade failure handling method](fxcore-v2.1.0-upgrade-instructions.md#upgrade-failure-handling-method)
+* [On-Chain Upgrade Process](fxcore-v2.1.0-upgrade-instructions.md#on-chain-upgrade-process)
+* [Upgrade duration](fxcore-v2.1.0-upgrade-instructions.md#upgrade-duration)
+* [Rollback plan](fxcore-v2.1.0-upgrade-instructions.md#rollback-plan)
+* [Potential Risk Factors](fxcore-v2.1.0-upgrade-instructions.md#potential-risk-factors)
+* [Communications](fxcore-v2.1.0-upgrade-instructions.md#communications)
 
 ### On-chain governance proposal attains consensus <a href="#on-chain-governance-proposal-attains-consensus" id="on-chain-governance-proposal-attains-consensus"></a>
 
@@ -69,6 +80,26 @@ You may refer to our [official Github release page](https://github.com/FunctionX
 ### On-Chain Upgrade Process
 
 When the network reaches the [upgrade height](fxcore-v2.1.0-upgrade-instructions.md#upgrade-will-take-place-april-12-2022), the state machine program of fxCore will be halted. The classic method for upgrading requires all validators and node operators to manually substitute the existing state machine binary with the new binary. Because it is an on-chain upgrade process, the blockchain will be resumed with all the accumulated history and a rolling block height.
+
+### Upgrade duration
+
+The upgrade may take a few minutes to several hours to complete because fxCore participants operate globally with differing operating hours and it may take some time for operators to upgrade their binaries and connect to the network.
+
+### Rollback plan
+
+During the network upgrade, the core fxCore team will be keeping an ever vigilant eye and communicating with operators on the status of their upgrades. During this time, the core team will be attentive to operator needs to determine if the upgrade is experiencing unintended challenges. The core team would provide technical support during the time of the upgrade. In the event of unexpected challenges, the core team, after conferring with operators and attaining social consensus, may choose to declare that the upgrade will be skipped.
+
+Steps to skip this upgrade proposal are simply to resume the fxCore network with the (downgraded) v1.0.x binary using the following command:
+
+```shell
+fxcored start --unsafe-skip-upgrade 5713000
+```
+
+> There is no particular need to restore a state snapshot prior to the upgrade height, unless specifically directed by core fxCore team.
+
+{% hint style="info" %}
+A social consensus decision to skip the upgrade will be based solely on technical merits, thereby respecting and maintaining the decentralized governance process of the upgrade proposal's successful YES vote.
+{% endhint %}
 
 ### Potential Risk Factors
 
