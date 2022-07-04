@@ -77,13 +77,13 @@ fxcored keys add <account_name> --recover
 
 1. Bind the node consensus and validator's token holding account
 
-Now we will bind the node consensus and validator's token holding account, once this is done you will have succesfully set up a validator!
+Now we will bind the node consensus and validator's token holding account, once this is done you will have successfully set up a validator!
 
 ⚠️ ⚠️ ⚠️ Couple of items to ensure before continuing
 
-* Ensure that entire node has synchonized to the latest block height, to prevent risk of being jailed
+* Ensure that entire node has synchronised to the latest block height, to prevent risk of being jailed
 
-> Using `curl localhost:26657/status` or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronized, this could take up to a day depending on network usage.
+> Using `curl localhost:26657/status` or `fxcored status` to check `"catching_up":false`. If `"catching_up":true`, please continue to wait until entire node has synchronised, this could take up to a day depending on network usage.
 
 * Ensure that your token holding account has enough `FX tokens` before creating a validator. For `Testnet version`, you may obtain `FX tokens` via [FX Faucet](https://dhobyghaut-faucet.functionx.io). For more information on how to obtain `FX tokens` on [Testnet](../resources/fxtestnetfaucet.md).
 

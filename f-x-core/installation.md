@@ -130,7 +130,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). P
 Especially if you are remoting into a Ubuntu terminal, run this command to download the `go` installer:
 
 ```
-wget https://dl.google.com/go/go1.18.2.linux-amd64.tar.gz 
+wget https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz 
 ```
 
 {% hint style="info" %}
@@ -258,33 +258,61 @@ fxcored network
 
 The output should look something similar to this:
 
+{% tabs %}
+{% tab title="Mainnet" %}
+```json
+{
+    "ChainId": "fxcore",
+    "CrossChainSupportBscBlock": "1354000",
+    "CrossChainSupportPolygonBlock": "2062000",
+    "CrossChainSupportTronBlock": "2062000",
+    "GravityPruneValsetsAndAttestationBlock": "610000",
+    "GravityValsetSlashBlock": "1685000",
+    "Network": "mainnet"
+}
 ```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```json
 {
   "ChainId": "dhobyghaut",
   "EIP155ChainID": "90001",
+  "IBCRouterBlock": "3433511",
   "Network": "testnet"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
-for Mainnet the ChainId should be **fxcore**
+* Mainnet ChainId: **fxcore**
+* Testnet ChainId: **dhobyghaut**
+* EVM Mainnet ChainId: 530
+* EVM Testnet ChainId: 90001
 {% endhint %}
 
 Verify version:
 
-```bash
+{% tabs %}
+{% tab title="Long version" %}
+```
 fxcored version --long
 ```
+{% endtab %}
 
-or:
-
+{% tab title="Short version" %}
 ```
 fxcored version
 ```
+{% endtab %}
+{% endtabs %}
 
 `fxcored version --long` should output something similar to:
 
-```bash
+{% tabs %}
+{% tab title="Mainnet" %}
+```shell
 name: fxcore
 server_name: fxcored
 version: master-9b5596f54b9cadc001725a431fdfe22768c6e4c9
@@ -293,6 +321,20 @@ build_tags: netgo,ledger
 go: go version go1.17.7 darwin/amd64
 ...
 ```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+name: fxcore
+server_name: fxcored
+version: testnet/v2.0.x-bf13f3c6452fac475b3aeee363842dd9c7926688
+commit: bf13f3c6452fac475b3aeee363842dd9c7926688
+build_tags: netgo,ledger
+go: go version go1.18.2 linux/amd64
+...
+```
+{% endtab %}
+{% endtabs %}
 
 ### Build Tags
 

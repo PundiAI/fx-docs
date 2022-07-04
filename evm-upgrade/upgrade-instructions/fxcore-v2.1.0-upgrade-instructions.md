@@ -45,6 +45,10 @@ TOC:
 
 The upgrade will take place at a block height of `5,713,000`. At the time of writing, and at current block times (around 5.5s/block), this block height corresponds approximately to `Saturday, 16-July-22` 12:00:00 `UTC`. This date/time is approximate as blocks are not generated at a constant interval.
 
+{% hint style="warning" %}
+Validators must upgrade within a 20,000 block timeframe if not they risk being slashed. More on [slashing conditions](../../validators/validator-faq.md#what-are-the-slashing-conditions).
+{% endhint %}
+
 ### fxCore Chain-id will remain the same and new EVM Chain-id will be 530 <a href="#chain-id-will-remain-the-same" id="chain-id-will-remain-the-same"></a>
 
 The chain-id of the network will remain the same, `fxcore`. This is because an in-place migration of state will take place, i.e., this upgrade does not export any state.
@@ -56,6 +60,8 @@ However, with the additional of the new EVM module, the corresponding EVM Chain-
 #### System requirements <a href="#system-requirement" id="system-requirement"></a>
 
 For a smooth upgrade, ensure that you have the [minimum system requirements](../../f-x-core/installation.md#hardware-requirements).
+
+> Minimum system requirements have an upgrade by 2 Cores and 4GB
 
 #### Backups <a href="#backups" id="backups"></a>
 
@@ -69,7 +75,7 @@ For those validator and full node operators that are interested in ensuring prep
 
 #### Manual Upgrade
 
-You may refer to this [upgrade tutorial](broken-reference) to upgrade your nodes.
+You may refer to this [upgrade tutorial](../evm-upgrade-tutorial.md) to upgrade your nodes.
 
 #### Upgrade failure handling method
 

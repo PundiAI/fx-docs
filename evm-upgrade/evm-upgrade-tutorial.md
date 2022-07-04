@@ -75,6 +75,7 @@ Return (you should now see a field that says "EvmV0SupportBlock" & "EvmV1Support
 {
   "ChainId": "dhobyghaut",
   "EIP155ChainID": "90001",
+  "IBCRouterBlock": "3433511",
   "Network": "testnet"
 }
 ```

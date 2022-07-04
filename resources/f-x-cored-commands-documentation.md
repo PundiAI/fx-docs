@@ -285,6 +285,8 @@ The command will prompt for each passphrase. If a passphrase is incorrect, it wi
 
 You'll need an account with a private and public key pair (a.k.a. `sk, pk` respectively) to be able to receive funds, send txs, bond tx, etc.
 
+To generate a new _eth\_secp256k1_ key, follow this [guide](../evm-upgrade/account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). This will be the default key generation scheme when f(x)Core becomes EVM compatible.
+
 To generate a new _secp256k1_ key:
 
 ```bash
@@ -305,7 +307,7 @@ fxcored keys show <account_name>
 
 Additionally and ⚠⚠ importantly, if you wish to have an added layer of protection on your keys, you may add the `--keyring-backend` flag and specify the file name. Setting your key up this way will ensure another layer of protection for signing any transactions.
 
-> \--keyring-backend string Select keyring's backend (os|file|test) (default "test")
+> \--keyring-backend string Select keyring's backend (os|file|test) (default "file")
 
 ```
 fxcored keys add <secondKeyName> \

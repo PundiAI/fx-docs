@@ -1,6 +1,6 @@
 # Full node with Docker
 
-This guide will explain how to install the `fxcored testnet` or `fxcored mainnet` entrypoint onto your system. With these installed on a server, you can participate in the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
+This guide will explain how to install the `fxcored mainnet` or `fxcored testnet` command line interface (CLI) on your system. With these installed on a server, you can participate on the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
 
 ## Install f(x)Core
 
@@ -55,9 +55,9 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/main
 
 {% tab title="Testnet" %}
 ```
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/evm/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/evm/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/evm/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/v2.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/v2.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/v2.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}

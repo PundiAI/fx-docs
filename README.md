@@ -12,12 +12,12 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 
 [**Setup Node**](f-x-core/setup-node/) **(technical)**
 
-* [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md): Initializing the core (where your consensus keys are generated), configuring the necessary files, running the node with [Daemon](f-x-core/setup-node/full-node-with-binaries.md#running-server-as-a-daemon).
+* [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md): Initialising the core (where your consensus keys are generated), configuring the necessary files, running the node with [Daemon](f-x-core/setup-node/full-node-with-binaries.md#running-server-as-a-daemon).
 * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md): Similar to setting it up using binaries, but using the docker container.
 * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md): Downloading a snapshot of the blockchain data to enable a faster sync.
 * [Node Metrics](f-x-core/setup-node/node-monitor.md): Setting up of [Prometheus monitoring services](f-x-core/setup-node/node-monitor.md#prometheus-metrics) and also [creating alerts for telegram](f-x-core/setup-node/node-monitor.md#telegram-administrator-and-bot-configuration).
 * [Node Peers](f-x-core/setup-node/node-peers.md): Trustable nodes.
-* ****[Live Upgrade](broken-reference): How to upgrade your node's code base on the fly.
+* [EVM Upgrade Tutorial](evm-upgrade/evm-upgrade-tutorial.md): How to upgrade your node's code to be compatible with the latest EVM module
 
 ### VALIDATORS
 
