@@ -146,9 +146,7 @@ After you have downloaded the package and you may proceed to step 2 of the [offi
 Setting environment variables:
 
 ```
-mkdir -p $HOME/go/bin
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-echo "export PATH=$PATH:$(go env GOPATH)/bin" >> ~/.profile
 source ~/.profile
 ```
 
