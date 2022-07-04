@@ -1,6 +1,6 @@
 # Installation f(x)Core
 
-This guide will explain how to install the `fxcored` entrypoint onto your system. With these installed on a server, you can participate in the mainnet as either a [Full Node](setup-node/) or a [Validator](../validators/validator-setup.md).
+This guide will explain how to install the `fxcored` CLI onto your system. With this installed on a server, you can participate on the mainnet as either a [Full Node](setup-node/) or a [Validator](../validators/validator-setup.md).
 
 Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial video**</mark>](https://www.youtube.com/watch?v=Fz0Y3qKG9og\&ab\_channel=FunctionX) <mark style="color:red;">****</mark> to set up your validator.
 
@@ -8,9 +8,9 @@ Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial
 
 We recommend the following for running f(x)Core:
 
-* 2 or more CPU cores
+* 4 or more CPU cores
 * At least 500G of disk storage
-* At least 4G of memory
+* At least 8G of memory
 * At least 10mbps network bandwidth
 
 To see a [quick cloud setup](../resources/cloud-setup.md) on how to setup and deploy it on the cloud.
@@ -140,7 +140,7 @@ After you have downloaded the package and you may proceed to step 2 of the [offi
 {% endtabs %}
 
 {% hint style="info" %}
-**Go 1.16+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
+**Go 1.18+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
 {% endhint %}
 
 Setting environment variables:
@@ -201,7 +201,7 @@ make install
 
 {% tab title="All Other Environments (Testnet)" %}
 ```
-git checkout evm
+git checkout testnet/v2.0.x
 ```
 
 ```
@@ -231,7 +231,7 @@ in the path ./build/bin/fxcored.exe
 
 {% tab title="Windows (Testnet)" %}
 ```
-git checkout evm
+git checkout testnet/v2.0.x
 ```
 
 ```
@@ -259,15 +259,11 @@ fxcored network
 The output should look something similar to this:
 
 ```
-ChainId: dhobyghaut
-CrossChainSupportBscBlock: "1"
-CrossChainSupportPolygonBlock: "1"
-CrossChainSupportTronBlock: "1"
-EIP155ChainID: "90001"
-EvmSupportBlock: "408000"
-GravityPruneValsetsAndAttestationBlock: "1"
-GravityValsetSlashBlock: "1"
-Network: testnet
+{
+  "ChainId": "dhobyghaut",
+  "EIP155ChainID": "90001",
+  "Network": "testnet"
+}
 ```
 
 {% hint style="info" %}
