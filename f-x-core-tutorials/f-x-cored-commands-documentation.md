@@ -285,7 +285,7 @@ The command will prompt for each passphrase. If a passphrase is incorrect, it wi
 
 You'll need an account with a private and public key pair (a.k.a. `sk, pk` respectively) to be able to receive funds, send txs, bond tx, etc.
 
-To generate a new _eth\_secp256k1_ key, follow this [guide](../node-upgrade/account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). This will be the default key generation scheme when f(x)Core becomes EVM compatible.
+To generate a new _eth\_secp256k1_ key, follow this [guide](../upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). This will be the default key generation scheme when f(x)Core becomes EVM compatible.
 
 To generate a new _secp256k1_ key:
 

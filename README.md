@@ -17,7 +17,7 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md): Downloading a snapshot of the blockchain data to enable a faster sync.
 * [Node Metrics](f-x-core/setup-node/node-monitor.md): Setting up of [Prometheus monitoring services](f-x-core/setup-node/node-monitor.md#prometheus-metrics) and also [creating alerts for telegram](f-x-core/setup-node/node-monitor.md#telegram-administrator-and-bot-configuration).
 * [Node Peers](f-x-core/setup-node/node-peers.md): Trustable nodes.
-* [EVM Upgrade Tutorial](node-upgrade/evm-upgrade-tutorial.md): How to upgrade your node's code to be compatible with the latest EVM module
+* [EVM Upgrade Tutorial](f-x-core-tutorials/evm-upgrade-tutorial.md): How to upgrade your node's code to be compatible with the latest EVM module
 
 ### VALIDATORS
 
@@ -41,13 +41,13 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 
 ### RESOURCES
 
-[**Cloud setup**](resources/cloud-setup.md): how to remote ssh and [connecting your localhost to the cloud instance for a specific port](resources/cloud-setup.md#connecting-your-localhost-to-the-cloud-instance-for-a-specific-port).
+[**Cloud setup**](f-x-core-tutorials/cloud-setup.md): how to remote ssh and [connecting your localhost to the cloud instance for a specific port](f-x-core-tutorials/cloud-setup.md#connecting-your-localhost-to-the-cloud-instance-for-a-specific-port).
 
-[**Testnet faucet**](resources/fxtestnetfaucet.md)**:** sorry, there isn't one for Mainnet.
+[**Testnet faucet**](f-x-core-tutorials/fxtestnetfaucet.md)**:** sorry, there isn't one for Mainnet.
 
-[**f(x)cored Commands Documentation**](resources/f-x-cored-commands-documentation.md): [Main structure of running fxcored commands](resources/f-x-cored-commands-documentation.md#main-structure-of-running-fxcored-commands), [keys](resources/f-x-cored-commands-documentation.md#keys), [send tokens](resources/f-x-cored-commands-documentation.md#send-tokens), [query transactions](resources/f-x-cored-commands-documentation.md#query-transactions), [slashing](resources/f-x-cored-commands-documentation.md#slashing), [staking](resources/f-x-cored-commands-documentation.md#staking), [governance](resources/f-x-cored-commands-documentation.md#governance), [fee distribution](resources/f-x-cored-commands-documentation.md#fee-distribution), [multisig transactions](resources/f-x-cored-commands-documentation.md#multisig-transactions).
+[**f(x)cored Commands Documentation**](f-x-core-tutorials/f-x-cored-commands-documentation.md): [Main structure of running fxcored commands](f-x-core-tutorials/f-x-cored-commands-documentation.md#main-structure-of-running-fxcored-commands), [keys](f-x-core-tutorials/f-x-cored-commands-documentation.md#keys), [send tokens](f-x-core-tutorials/f-x-cored-commands-documentation.md#send-tokens), [query transactions](f-x-core-tutorials/f-x-cored-commands-documentation.md#query-transactions), [slashing](f-x-core-tutorials/f-x-cored-commands-documentation.md#slashing), [staking](f-x-core-tutorials/f-x-cored-commands-documentation.md#staking), [governance](f-x-core-tutorials/f-x-cored-commands-documentation.md#governance), [fee distribution](f-x-core-tutorials/f-x-cored-commands-documentation.md#fee-distribution), [multisig transactions](f-x-core-tutorials/f-x-cored-commands-documentation.md#multisig-transactions).
 
-[**Ledger Integration for fxcored**](resources/ledger-integration-for-fxcored.md): [Installing cosmos ledger application](resources/ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application), [adding keys to your ledger using f(x)Core CLI](resources/ledger-integration-for-fxcored.md#f-x-core-cli-+-ledger-nano).
+[**Ledger Integration for fxcored**](f-x-core-tutorials/ledger-integration-for-fxcored.md): [Installing cosmos ledger application](f-x-core-tutorials/ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application), [adding keys to your ledger using f(x)Core CLI](f-x-core-tutorials/ledger-integration-for-fxcored.md#f-x-core-cli-+-ledger-nano).
 
 ### STEP BY STEP SUMMARY OF HOW TO SET UP A VALIDATOR
 
@@ -66,7 +66,7 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 [**Setting Up a Validator for f(x)Core**](validators/validator-setup.md)
 
 1. Ensure your node is synced up, "catch\_up"=false
-2. You can use [ledger](resources/ledger-integration-for-fxcored.md) to create your token holding account keys and add a layer of protection by using the `keyring-backend` flag (highly recommended), you can even use a multi-sig account but that will make transactions a hassle later, and do some test transactions to make sure everything works
+2. You can use [ledger](f-x-core-tutorials/ledger-integration-for-fxcored.md) to create your token holding account keys and add a layer of protection by using the `keyring-backend` flag (highly recommended), you can even use a multi-sig account but that will make transactions a hassle later, and do some test transactions to make sure everything works
 3. Make sure you do the necessary checks before you create your validator❗
 4. Also set up your [node monitoring device](f-x-core/setup-node/node-monitor.md) on a separate server
 5. [Create your validator](validators/validator-setup.md#create-your-validator)

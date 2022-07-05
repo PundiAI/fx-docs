@@ -27,20 +27,20 @@
 * [Delegator CLI Guide](delegators/delegator-cli-guide.md)
 * [Delegator Security Notice](delegators/delegator-security-notice.md)
 
-## Resources
+## f(x)Core Tutorials
 
-* [f(x)Cored CLI Commands](resources/f-x-cored-commands-documentation.md)
-* [Cloud Setup](resources/cloud-setup.md)
-* [Testnet faucet](resources/fxtestnetfaucet.md)
-* [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
-* [Sentry Nodes](resources/sentry-nodes.md)
+* [f(x)Cored CLI Commands](f-x-core-tutorials/f-x-cored-commands-documentation.md)
+* [Cloud Setup](f-x-core-tutorials/cloud-setup.md)
+* [Testnet faucet](f-x-core-tutorials/fxtestnetfaucet.md)
+* [Ledger Integration for fxcored](f-x-core-tutorials/ledger-integration-for-fxcored.md)
+* [Sentry Nodes](f-x-core-tutorials/sentry-nodes.md)
+* [Upgrading Your Node](f-x-core-tutorials/evm-upgrade-tutorial.md)
 
-## Node Upgrade
+## Upgrade Instructions
 
-* [Upgrading Your Node](node-upgrade/evm-upgrade-tutorial.md)
-* [Account Migration Guide](node-upgrade/account-migration-guide.md)
-* [Upgrade Instructions](node-upgrade/upgrade-instructions/README.md)
-  * [fxCore V2.1.0 Upgrade Instructions](node-upgrade/upgrade-instructions/fxcore-v2.1.0-upgrade-instructions.md)
+* [fxCore V2.1.0 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
+  * [Account Migration Guide (CLI)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/account-migration-guide.md)
+  * [Testnet Upgrade Practice](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
 
 ## Deploying on f(x)core EVM
 

@@ -62,7 +62,7 @@ We view testnet participation as a great way to signal to the community that you
 
 ### What are the different types of keys?
 
-In short, there are two types of keys ([for more information on keys](../resources/f-x-cored-commands-documentation.md#keys)):
+In short, there are two types of keys ([for more information on keys](../f-x-core-tutorials/f-x-cored-commands-documentation.md#keys)):
 
 * **Operator Key**: This is a unique key used to sign consensus votes.
   * It is associated with a public key `fxvalconspub` (To get the public key, run the command `fxcored tendermint show-validator`).

@@ -22,20 +22,20 @@ description: >-
 
 TOC:
 
-* [On-chain governance proposal](fxcore-v2.1.0-upgrade-instructions.md#on-chain-governance-proposal-attains-consensus)
-* [Upgrade will take place July 16, 2022](fxcore-v2.1.0-upgrade-instructions.md#upgrade-will-take-place-april-12-2022)
-* [fxCore Chain-id will remain the same and the new EVM Chain-id will be 530](fxcore-v2.1.0-upgrade-instructions.md#chain-id-will-remain-the-same)
-* [Preparing for the upgrade](fxcore-v2.1.0-upgrade-instructions.md#preparing-for-the-upgrade)
-  * [System requirements](fxcore-v2.1.0-upgrade-instructions.md#system-requirement)
-  * [Backups](fxcore-v2.1.0-upgrade-instructions.md#backups)
-  * [Testing](fxcore-v2.1.0-upgrade-instructions.md#testing)
-  * [Manual Upgrade](fxcore-v2.1.0-upgrade-instructions.md#manual-upgrade)
-  * [Upgrade failure handling method](fxcore-v2.1.0-upgrade-instructions.md#upgrade-failure-handling-method)
-* [On-Chain Upgrade Process](fxcore-v2.1.0-upgrade-instructions.md#on-chain-upgrade-process)
-* [Upgrade duration](fxcore-v2.1.0-upgrade-instructions.md#upgrade-duration)
-* [Rollback plan](fxcore-v2.1.0-upgrade-instructions.md#rollback-plan)
-* [Potential Risk Factors](fxcore-v2.1.0-upgrade-instructions.md#potential-risk-factors)
-* [Communications](fxcore-v2.1.0-upgrade-instructions.md#communications)
+* [On-chain governance proposal](./#on-chain-governance-proposal-attains-consensus)
+* [Upgrade will take place July 16, 2022](./#upgrade-will-take-place-april-12-2022)
+* [fxCore Chain-id will remain the same and the new EVM Chain-id will be 530](./#chain-id-will-remain-the-same)
+* [Preparing for the upgrade](./#preparing-for-the-upgrade)
+  * [System requirements](./#system-requirement)
+  * [Backups](./#backups)
+  * [Testing](./#testing)
+  * [Manual Upgrade](./#manual-upgrade)
+  * [Upgrade failure handling method](./#upgrade-failure-handling-method)
+* [On-Chain Upgrade Process](./#on-chain-upgrade-process)
+* [Upgrade duration](./#upgrade-duration)
+* [Rollback plan](./#rollback-plan)
+* [Potential Risk Factors](./#potential-risk-factors)
+* [Communications](./#communications)
 
 ### On-chain governance proposal attains consensus <a href="#on-chain-governance-proposal-attains-consensus" id="on-chain-governance-proposal-attains-consensus"></a>
 
@@ -75,7 +75,7 @@ For those validator and full node operators that are interested in ensuring prep
 
 #### Manual Upgrade
 
-You may refer to this [upgrade tutorial](../evm-upgrade-tutorial.md) to upgrade your nodes.
+You may refer to this [upgrade tutorial](../../f-x-core-tutorials/evm-upgrade-tutorial.md) to upgrade your nodes.
 
 #### Upgrade failure handling method
 
@@ -85,7 +85,7 @@ You may refer to our [official Github release page](https://github.com/FunctionX
 
 ### On-Chain Upgrade Process
 
-When the network reaches the [upgrade height](fxcore-v2.1.0-upgrade-instructions.md#upgrade-will-take-place-april-12-2022), the state machine program of fxCore will be halted. The classic method for upgrading requires all validators and node operators to manually substitute the existing state machine binary with the new binary. Because it is an on-chain upgrade process, the blockchain will be resumed with all the accumulated history and a rolling block height.
+When the network reaches the [upgrade height](./#upgrade-will-take-place-april-12-2022), the state machine program of fxCore will be halted. The classic method for upgrading requires all validators and node operators to manually substitute the existing state machine binary with the new binary. Because it is an on-chain upgrade process, the blockchain will be resumed with all the accumulated history and a rolling block height.
 
 ### Upgrade duration
 
