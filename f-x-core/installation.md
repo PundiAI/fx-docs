@@ -201,7 +201,7 @@ make install
 
 {% tab title="All Other Environments (Testnet)" %}
 ```
-git checkout testnet/v2.0.x
+git checkout release/v2.1.x
 ```
 
 ```
@@ -231,7 +231,7 @@ in the path ./build/bin/fxcored.exe
 
 {% tab title="Windows (Testnet)" %}
 ```
-git checkout testnet/v2.0.x
+git checkout release/v2.1.x
 ```
 
 ```

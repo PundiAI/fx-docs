@@ -35,12 +35,12 @@
 * [Ledger Integration for fxcored](resources/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](resources/sentry-nodes.md)
 
-## EVM Upgrade
+## Node Upgrade
 
-* [EVM Upgrade Tutorial](evm-upgrade/evm-upgrade-tutorial.md)
-* [Account Migration Guide](evm-upgrade/account-migration-guide.md)
-* [Upgrade Instructions](evm-upgrade/upgrade-instructions/README.md)
-  * [fxCore V2.1.0 Upgrade Instructions](evm-upgrade/upgrade-instructions/fxcore-v2.1.0-upgrade-instructions.md)
+* [Upgrading Your Node](node-upgrade/evm-upgrade-tutorial.md)
+* [Account Migration Guide](node-upgrade/account-migration-guide.md)
+* [Upgrade Instructions](node-upgrade/upgrade-instructions/README.md)
+  * [fxCore V2.1.0 Upgrade Instructions](node-upgrade/upgrade-instructions/fxcore-v2.1.0-upgrade-instructions.md)
 
 ## Deploying on f(x)core EVM
 

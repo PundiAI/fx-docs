@@ -1,4 +1,4 @@
-# EVM Upgrade Tutorial
+# Upgrading Your Node
 
 ### f(x)Core hard fork upgrade--support EVM compatibility
 
@@ -29,7 +29,7 @@ kill -9 <PID>
 git pull
 ```
 
-3\. Checkout the `evm` branch:
+3\. Checkout the branch of the upgrade version:
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -37,6 +37,12 @@ No available yet
 {% endtab %}
 
 {% tab title="Testnet" %}
+```shell
+git checkout <upgradeable version branch>
+```
+
+for example:
+
 ```
 git checkout testnet/v2.0.x
 ```

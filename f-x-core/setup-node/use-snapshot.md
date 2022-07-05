@@ -21,7 +21,7 @@ wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-04.t
 
 {% tab title="Testnet" %}
 ```
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-04-07.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-04.tar.gz
 ```
 {% endtab %}
 {% endtabs %}
