@@ -55,9 +55,9 @@ sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/main
 
 {% tab title="Testnet" %}
 ```
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/v2.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/v2.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/v2.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/v2.0.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/v2.0.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+sudo wget https://raw.githubusercontent.com/functionx/fx-core/testnet/v2.0.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
