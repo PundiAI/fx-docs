@@ -209,7 +209,7 @@ make go.sum
 ```
 
 ```
-make install-testnet
+make install
 ```
 {% endtab %}
 
