@@ -252,6 +252,8 @@ in the path ./build/bin/fxcored.exe
 
 That will install the `fxcored` binary. Verify network:
 
+> the following command will not be available in v2.0.x and above
+
 ```
 fxcored network
 ```
