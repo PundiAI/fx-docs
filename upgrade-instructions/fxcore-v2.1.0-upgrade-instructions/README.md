@@ -1,24 +1,26 @@
 ---
 description: >-
   This document describes the steps for validator and full node operators for
-  the successful execution of the fxCore V2.1.0 Upgrade
+  the successful execution of the fxCore V2.1.1 Upgrade
 ---
 
-# fxCore V2.1.0 Upgrade Instructions
+# fxCore V2.1.1 Upgrade Instructions
 
 ### The upgrade contains the following main new features/improvement:
 
-* Tendermint version from v0.34.9 to v0.34.20
-* Cosmos-SDK version from v0.42.4 to v.45.5
-* IBC version upgrade from cosmos-sdk/x/ibc to ibc-go v3.1.0
-* New modules: feegrant, authz, feemarket, evm, erc20, migrate
-* Migration modules: auth, bank, distribution, gov, slashing, ibc, crosschain (bsc, polygon, tron)
-* Crosschain module upgrade: the original oracle deposit will be automatically entrusted to the validator with the largest power value after the upgrade, the oracle can replace the entrusted validator by itself in the future, oracle needs to manually receive the entrusted reward
-* [CLI Breaking Changes](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md#cli-breaking-changes)
-* [API Breaking Changes](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md#api-breaking-changes)
-* [Features](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md#features)
-* [Bug Fixes](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md#bug-fixes)
-* More on the details of the upgrade and changes can be found in [CHANGELOG.MD](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md)
+{% hint style="info" %}
+For changes and improvements of the previous version, you may refer to [**fxCore V2.1.0 (since been deprecated)**](fxcore-v2.1.0-since-been-deprecated.md)****
+{% endhint %}
+
+**Bug Fixes**
+
+* Add support for the `x-crisis-skip-assert-invariants` CLI flag to the `start` command
+* CLI parse legacy proposal `InitCrossChainParamsProposal` failed
+* Deleted Polygon(USDT) and Tron(USDT) contracts and metadata initialization during migration and upgrade
+
+**Improvements**
+
+* Refactor gravity handle FxOriginatedTokenClaim
 
 TOC:
 
@@ -126,4 +128,3 @@ Operators are encouraged to join the
   * [f(x)Core Mainnet Validator Bugs/Fixes & Technical Support](https://forum.functionx.io/t/f-x-core-mainnet-validator-bugs-fixes-technical-support/2140)
   * [https://forum.functionx.io/t/fx-evm-mainnet/4281/3](https://forum.functionx.io/t/fx-evm-mainnet/4281/3)
 * Receive updates on releases in our [official Github](https://github.com/FunctionX/fx-core/releases)
-

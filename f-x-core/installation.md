@@ -228,26 +228,6 @@ use cmd prompt to open the fxcored.exe file
 in the path ./build/bin/fxcored.exe
 {% endhint %}
 {% endtab %}
-
-{% tab title="Windows (Testnet)" %}
-```
-git checkout release/v2.1.x
-```
-
-```
-make go.sum
-```
-
-```
-make build-win network=testest
-```
-
-{% hint style="info" %}
-use cmd prompt to open the fxcored.exe file
-
-in the path ./build/bin/fxcored.exe
-{% endhint %}
-{% endtab %}
 {% endtabs %}
 
 That will install the `fxcored` binary. Verify network:

@@ -38,9 +38,10 @@
 
 ## Upgrade Instructions
 
-* [fxCore V2.1.0 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
+* [fxCore V2.1.1 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
   * [Account Migration Guide (CLI)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/account-migration-guide.md)
   * [Testnet Upgrade Practice](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
+  * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/fxcore-v2.1.0-since-been-deprecated.md)
 
 ## Deploying on f(x)core EVM
 
