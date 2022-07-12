@@ -1,4 +1,13 @@
+---
+description: >-
+  f(x)Core mainnet upgrade V2.1.0 was aborted due to unexpected contradictions
+  with working-on updates. V2.1.1 was released to continue the fxv2 upgrade
+  proposed to take place at height 5,713,000.
+---
+
 # fxCore V2.1.0 (since been deprecated)
+
+### The upgrade contains the following main new features/improvement:
 
 * Tendermint version from v0.34.9 to v0.34.20
 * Cosmos-SDK version from v0.42.4 to v.45.5
@@ -13,5 +22,5 @@
 * More on the details of the upgrade and changes can be found in [CHANGELOG.MD](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md)
 
 {% hint style="info" %}
-For more information on the latest version of the upgrade and the upgrade process, refer to [fxCore V2.1.1 Upgrade Instructions](./)
+For more information on the latest version of the upgrade and the upgrade process, refer to [**fxCore V2.1.1 Upgrade Instructions**](./)****
 {% endhint %}

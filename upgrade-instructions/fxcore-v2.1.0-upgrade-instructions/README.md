@@ -10,7 +10,11 @@ description: >-
 
 {% hint style="info" %}
 For changes and improvements of the previous version, you may refer to [**fxCore V2.1.0 (since been deprecated)**](fxcore-v2.1.0-since-been-deprecated.md)****
+
+Additionally, you may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 {% endhint %}
+
+**f(x)Core mainnet upgrade V2.1.0 was aborted due to unexpected contradictions with working-on updates.** V2.1.1 was released to continue the fxv2 upgrade proposed to take place at height 5,713,000.
 
 **Bug Fixes**
 
