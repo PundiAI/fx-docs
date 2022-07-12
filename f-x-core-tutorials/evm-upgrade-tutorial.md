@@ -64,7 +64,7 @@ make install
 
 {% tab title="Testnet" %}
 ```
-make install-testnet
+make install
 ```
 {% endtab %}
 {% endtabs %}
