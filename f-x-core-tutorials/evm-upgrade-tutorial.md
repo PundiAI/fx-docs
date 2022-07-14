@@ -31,12 +31,6 @@ git pull
 
 3\. Checkout the branch of the upgrade version:
 
-{% tabs %}
-{% tab title="Mainnet" %}
-No available yet
-{% endtab %}
-
-{% tab title="Testnet" %}
 ```shell
 git checkout <upgradeable version branch>
 ```
@@ -46,28 +40,13 @@ for example:
 ```
 git checkout release/v2.1.x
 ```
-{% endtab %}
-{% endtabs %}
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
 
 ```
 make go.sum
-```
-
-{% tabs %}
-{% tab title="Mainnet" %}
-```
 make install
 ```
-{% endtab %}
-
-{% tab title="Testnet" %}
-```
-make install
-```
-{% endtab %}
-{% endtabs %}
 
 5\. Check fxcored environment & version
 
