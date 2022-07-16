@@ -56,8 +56,6 @@
 * [With Remix](deploying-on-f-x-core-evm/with-remix.md)
 * [With Truffle](deploying-on-f-x-core-evm/with-truffle.md)
 * [With Hardhat](deploying-on-f-x-core-evm/with-hardhat.md)
-* [Deployed Testnet Dapps](deploying-on-f-x-core-evm/deployed-testnet-dapps.md)
-* [The Graph](deploying-on-f-x-core-evm/the-graph.md)
 * [Bridging Tokens from other networks](deploying-on-f-x-core-evm/bridging-tokens-from-other-networks.md)
 
 ## Developers

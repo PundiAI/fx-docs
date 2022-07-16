@@ -254,7 +254,7 @@ The fields are pretty self explanatory. Amount has to be of the type unit256 (un
 
 ![](<../.gitbook/assets/image (29) (1).png>)![](../.gitbook/assets/image.png)
 
-Hitting ![](<../.gitbook/assets/image (31).png>) will result in a Metamask pop-up. Remember to edit the gas fields to reflect 4000 GasPrice similar to what you did before and voila, you will have minted some of your own tokens. With your own minted tokens, you can play around with some of [our protocols](deployed-testnet-dapps.md) especially Uniswap.
+Hitting ![](<../.gitbook/assets/image (31).png>) will result in a Metamask pop-up. Remember to edit the gas fields to reflect 4000 GasPrice similar to what you did before and voila, you will have minted some of your own tokens.
 
 ![](<../.gitbook/assets/image (4).png>)
 

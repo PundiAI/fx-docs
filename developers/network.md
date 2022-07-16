@@ -22,15 +22,19 @@ description: >-
 
 {% tabs %}
 {% tab title="f(x)Core Mainnet" %}
-|                    |                                                                                  |
-| ------------------ | -------------------------------------------------------------------------------- |
-| ChainId            | `fxcore`                                                                         |
-| Native Coin        | `FX`                                                                             |
-| Block Explorer     | [https://explorer.functionx.io](https://explorer.functionx.io)                   |
-| JSON RPC           | <p>https://fx-json.functionx.io:26657<br>or<br>https://fx-json.functionx.io</p>  |
-| JSON RPC Websocket | wss://fx-json.functionx.io:26657/websocket                                       |
-| gRPC               | <p>https://fx-grpc.functionx.io:9090<br>or<br>https://chain-api.functionx.io</p> |
-| REST API           | https://fx-rest.functionx.io                                                     |
+|                         |                                                                                  |
+| ----------------------- | -------------------------------------------------------------------------------- |
+| ChainId                 | `fxcore`                                                                         |
+| Native Coin             | `FX`                                                                             |
+| Block Explorer          | [https://explorer.functionx.io](https://explorer.functionx.io)                   |
+| JSON RPC                | <p>https://fx-json.functionx.io:26657<br>or<br>https://fx-json.functionx.io</p>  |
+| JSON RPC Websocket      | wss://fx-json.functionx.io:26657/websocket                                       |
+| gRPC                    | <p>https://fx-grpc.functionx.io:9090<br>or<br>https://chain-api.functionx.io</p> |
+| REST API                | https://fx-rest.functionx.io                                                     |
+| EVM ChainID             | 530                                                                              |
+| EVM Block Explorer​     | [https://fxscan.functionx.io](https://testnet-fxscan.functionx.io/)              |
+| Web3 JSON RPC           | https://fx-json-web3.functionx.io:8545                                           |
+| Web3 JSON RPC Websocket | wss://fx-json-web3.functionx.io:8546                                             |
 {% endtab %}
 
 {% tab title="f(x)Core Testnet" %}
