@@ -61,6 +61,7 @@ ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
 /home/ubuntu/.fxcore
 ├── config
 │   ├── app.toml
+│   ├── client.toml
 │   ├── config.toml
 │   ├── genesis.json
 │   ├── node_key.json
