@@ -138,19 +138,6 @@ Return:
 
 To ensure that the blocks are synced up with your node, under "sync\_info", "catching\_up value" should be false `"catching_up value": false`. This may take a few hours and your node has to be fully synced up before proceeding to the next step. You may cross reference the latest block you are synced to "sync\_info": "latest\_block\_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://testnet-explorer.functionx.io/fxcore/blocks) or our [Mainnet](https://explorer.functionx.io/fxcore/proposals).
 
-### Upgrading Your Node
 
-These instructions are for full nodes that have ran on previous versions of and would like to upgrade to the latest testnet.
-
-#### Reset Data
-
-First, remove the outdated files and reset the data.
-
-```bash
-rm $HOME/.fxcore/config/addrbook.json $HOME/.fxcore/config/genesis.json
-fxcored unsafe-reset-all
-```
-
-Your node is now in a pristine state while keeping the original `priv_validator.json` and `config.toml`. If you had any sentry nodes or full nodes setup before, your node will still try to connect to them, but may fail if they haven't also been upgraded.
 
 > Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.
