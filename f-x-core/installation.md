@@ -189,7 +189,7 @@ make go.sum
 {% endtabs %}
 
 {% tabs %}
-{% tab title="All Other Environments (Mainnet)" %}
+{% tab title="All Other Environments " %}
 ```
 make go.sum
 ```
@@ -199,21 +199,7 @@ make install
 ```
 {% endtab %}
 
-{% tab title="All Other Environments (Testnet)" %}
-```
-git checkout release/v2.1.x
-```
-
-```
-make go.sum
-```
-
-```
-make install
-```
-{% endtab %}
-
-{% tab title="Windows (Mainnet)" %}
+{% tab title="Windows " %}
 ```
 make go.sum
 ```
@@ -292,31 +278,19 @@ fxcored version
 
 `fxcored version --long` should output something similar to:
 
-{% tabs %}
-{% tab title="Mainnet" %}
-```shell
+```
 name: fxcore
 server_name: fxcored
-version: master-9b5596f54b9cadc001725a431fdfe22768c6e4c9
-commit: 9b5596f54b9cadc001725a431fdfe22768c6e4c9
+version: main-757603244376759f872158ea254ae501d046e094
+commit: 757603244376759f872158ea254ae501d046e094
 build_tags: netgo,ledger
-go: go version go1.17.7 darwin/amd64
+go: go version go1.18 darwin/amd64
+build_deps:
 ...
+cosmos_sdk_version: v0.45.5
 ```
-{% endtab %}
 
-{% tab title="Testnet" %}
-```
-name: fxcore
-server_name: fxcored
-version: testnet/v2.0.x-bf13f3c6452fac475b3aeee363842dd9c7926688
-commit: bf13f3c6452fac475b3aeee363842dd9c7926688
-build_tags: netgo,ledger
-go: go version go1.18.2 linux/amd64
-...
-```
-{% endtab %}
-{% endtabs %}
+
 
 ### Build Tags
 
