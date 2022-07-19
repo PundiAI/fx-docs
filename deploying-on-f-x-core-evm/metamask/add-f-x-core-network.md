@@ -24,7 +24,7 @@ f(x)Core
 New RPC URL
 
 ```
-https:/fx-json-web3.functionx.io:8545
+https://fx-json-web3.functionx.io:8545
 ```
 
 Chain ID
