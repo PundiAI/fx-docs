@@ -185,8 +185,6 @@ In this case, a transaction fee must be paid! So do remember to add --fees XXXXX
 The minimum fee for this transaction is 1.2FX which after multiplying by 10^18 is 1200000000000000000FX.
 
 Alternatively, a more universal command is --gas=auto --gas-adjustment=1.25 --gas-prices=4000000000000FX. --gas=auto automatically assesses the gas used for that transaction. This depends on the transaction itself and also the state of the blockchain. --gas-adjustment=1.25 means that there will be a 25% buffer added to the automatically assessed gas amount. --gas-prices=4000000000000FX is the gas price you will be paying for. For more details on gas, kindly refer to the section on gas below.
-
-The **gas-prices** flag will default to the gas price value of your current node if it is not specified.
 {% endhint %}
 
 ```
