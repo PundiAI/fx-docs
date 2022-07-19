@@ -113,11 +113,21 @@ Next, click [here](delegator-cli-guide.md#using-a-ledger-device) to learn how to
 
 To restore an account using a mnemonic and store the associated encrypted private key on a computer, use the following command:
 
-```bash
-fxcored keys add <yourKeyName> --recover
+{% tabs %}
+{% tab title="recover fx address" %}
+```shell
+fxcored keys add <fx_key_name> --algo secp256k1 --coin-type 118 --index <index_number> --recover
 ```
+{% endtab %}
 
-* `<yourKeyName>` is the name of the account. It is a reference to the account number used to derive the key pair from the mnemonic. You will use this name to identify your account when you want to send a transaction.
+{% tab title="recover fx-evm wallet" %}
+```shell
+fxcored keys add <0x_key_name> --algo eth_secp256k1 --coin-type 60 --index <index_number> --recover
+```
+{% endtab %}
+{% endtabs %}
+
+* `<_key_name>` is the name of the account. It is a reference to the account number used to derive the key pair from the mnemonic. You will use this name to identify your account when you want to send a transaction.
 * You can add the optional `--index` flag to specify the path (`0`, `1`, `2`, ...) you want to use to generate your account. By default, account `0` is generated.
 
 The private key of account `0` will be saved in your operating system's credentials storage. Each time you want to send a transaction, you will need to unlock your system's credentials store. If you lose access to your credentials storage, you can always recover the private key with the mnemonic.
@@ -141,19 +151,29 @@ When you initialize your ledger, a 24-word mnemonic is generated and stored in t
 
 Then, to create an account, run the following command:
 
-```bash
-fxcored keys add <yourAccountName> --ledger 
+{% tabs %}
+{% tab title="create fx address" %}
+```shell
+fxcored keys add <fx_key_name> --algo secp256k1 --coin-type 118 --ledger --index <index_number>
 ```
+{% endtab %}
+
+{% tab title="create fx-evm address" %}
+```shell
+fxcored keys add <0x_key_name> --algo eth_secp256k1 --coin-type 60 --ledger --index <index_number>
+```
+{% endtab %}
+{% endtabs %}
 
 > **This command will only work while the Ledger is plugged in and unlocked**
 
-* `<yourKeyName>` is the name of the account. It is a reference to the account number used to derive the key pair from the mnemonic. You will use this name to identify your account when you want to send a transaction.
+* `<_key_name>` is the name of the account. It is a reference to the account number used to derive the key pair from the mnemonic. You will use this name to identify your account when you want to send a transaction.
 * You can add the optional `--index` flag to specify the path (`0`, `1`, `2`, ...) you want to use to generate your account. By default, account `0` is generated. Just remember to take note of the accounts and index you have stored the keys in your ledger.
 
 You can generate more accounts from the same mnemonic using the following command:
 
 ```bash
-fxcored keys add <yourKeyName> --recover --index 1
+fxcored keys add brucebanner<0x_key_name> --algo eth_secp256k1 --coin-type 60 --ledger --index 2
 ```
 
 This command will prompt you to input a passphrase as well as your mnemonic. Change the account number to generate an account with a different index.
@@ -187,7 +207,7 @@ In order to connect to a full-node, you will need an address in the form of: `ht
 
 ## Setting Up `fxcored`
 
-> Before setting up `fxcored`, ensure that you have found a way to [**access the f(x)Core network**](delegator-cli-guide.md#accessing-the-f-x-core-network)\*\*\*\*
+> Before setting up `fxcored`, ensure that you have found a way to [**access the f(x)Core network**](delegator-cli-guide.md#accessing-the-f-x-core-network)
 
 > **Please check that you are always using the latest stable release of `fxcored`**
 
@@ -218,10 +238,10 @@ fxcored config trust-node false
 # Set to true if you trust the full-node you are connecting to, false otherwise
 ```
 
-Finally, let us set the `chain-id` of the blockchain we want to interact with:
+Finally, let us set the `chain-id` of the blockchain we want to interact with (chain-id for testnet is dhobyghaut):
 
 ```bash
-fxcored config config.toml chain-id dhobyghaut
+fxcored config config.toml chain-id fxcore
 ```
 
 ## Querying the State

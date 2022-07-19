@@ -35,11 +35,11 @@
 * [Ledger Integration for fxcored](f-x-core-tutorials/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](f-x-core-tutorials/sentry-nodes.md)
 * [Upgrading Your Node](f-x-core-tutorials/evm-upgrade-tutorial.md)
+* [Account Migration Guide (CLI)](f-x-core-tutorials/account-migration-guide.md)
 
 ## Upgrade Instructions
 
 * [fxCore V2.1.1 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
-  * [Account Migration Guide (CLI)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/account-migration-guide.md)
   * [Testnet Upgrade Practice](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
   * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/fxcore-v2.1.0-since-been-deprecated.md)
 
