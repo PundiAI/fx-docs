@@ -283,7 +283,7 @@ Use this at your own risk❗ I suggest trying it out on testnet first and also b
 Before setting up your validator if you would like to have a backup of your keys with a pin. You may run the following command:
 
 ```
-fxcored tendermint update-validator <secret>
+fxcored tendermint unsafe-reset-priv-validator <secret>
 ```
 
 {% hint style="info" %}
@@ -317,7 +317,7 @@ rm ~/.fxcore/config/priv_validator_key.json
 The following command will recover your original consensus key:
 
 ```
-fxcored tendermint update-validator <secret>
+fxcored tendermint unsafe-reset-priv-validator <secret>
 ```
 
 Match this output with the previous output above:

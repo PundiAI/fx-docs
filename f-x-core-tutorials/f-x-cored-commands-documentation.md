@@ -417,7 +417,7 @@ fxcored tx bank send ... --gas-prices=4000000000000FX
 To query the gas price of your current node:
 
 ```
-fxcored query other gasPrice
+fxcored query gas-price
 ```
 
 {% hint style="info" %}
