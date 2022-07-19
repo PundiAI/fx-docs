@@ -74,12 +74,11 @@ in the file `./fx-core/develop/docker-compose.yaml` under `alertmanager-bot` - `
           - '--template.paths=/templates/default.tmpl'
           - '--listen.addr=0.0.0.0:9091'
         environment:
-          TELEGRAM_ADMIN: "XXXXXX\nAdmin1USERID\nAdmin2USERID"
+          TELEGRAM_ADMIN: "XXXXXX"
           TELEGRAM_TOKEN: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     ```
 * `TELEGRAM_ADMIN`: The Telegram user id for the admin (not the bot itself, you, the user). The bot will only reply to messages sent from an admin. All other messages are dropped and logged on the bot's console. Your can get your user id from `@userinfobot`.
 * `TELEGRAM_TOKEN`: Token you get from `@botfather`
-* \n is to input multiple admin user
 * for more information with regards to the telegram bot, see [here](https://core.telegram.org/bots#creating-a-new-bot) and [here](https://github.com/metalmatze/alertmanager-bot):
 
 ### Access the monitoring services

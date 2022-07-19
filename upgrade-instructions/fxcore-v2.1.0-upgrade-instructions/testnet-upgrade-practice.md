@@ -131,7 +131,7 @@ created by github.com/tendermint/tendermint/blockchain/v0.(*BlockchainReactor).O
 Ctrl/Control+C
 ```
 
-#### 7.  Restart the node with fxCore v2.1.1
+#### 7.  Restart the node with fxCore v2.1.0
 
 ```bash
 git checkout release/v2.1.x
