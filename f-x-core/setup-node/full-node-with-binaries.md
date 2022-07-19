@@ -21,9 +21,9 @@ Fetching config file (copy this entire line of code and hit <mark style="color:r
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
@@ -177,7 +177,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/root
-ExecStart=/usr/bin/fxcored start --home /root/.fxcore
+ExecStart=/root/go/bin/fxcored start --home /root/.fxcore
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096
@@ -201,7 +201,7 @@ After=network.target
 Type=simple
 User=root
 WorkingDirectory=/root
-ExecStart=/usr/bin/fxcored start --home /root/.fxcore
+ExecStart=/root/go/bin/fxcored start --home /root/.fxcore
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=4096
@@ -211,7 +211,12 @@ WantedBy=multi-user.target
 
 Modify the `Service` section from the given sample above to suit your settings. Note that even if we raised the number of open files for a process, we still need to include `LimitNOFILE`.
 
-After creating a service definition file, you should execute `systemctl daemon-reload` and `systemctl enable fxcored`
+After creating a service definition file, you should execute:
+
+```
+systemctl daemon-reload
+systemctl enable fxcored
+```
 
 ### Controlling the service
 
