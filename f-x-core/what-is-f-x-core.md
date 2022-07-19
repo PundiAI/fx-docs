@@ -17,5 +17,11 @@ About the FunctionX Core: The FunctionX Core also known as a Hub is the first Co
 * `x/gov`: Governance logic.
 * `ibc-go/modules`: Inter-blockchain communication. Hosted in the `cosmos/ibc-go` repository.
 * `x/params`: Handles app-level parameters.
+* `x/freegrant`
+* `x/authz`
+* `x/freemarket`
+* `x/evm`: Enable Ethereum Virtual Machine compatibility
+* `x/erc20`: Enable ERC20 token standards
+* `x/migrate`: Allows migration of address to new address scheme
 
 Next, learn how to [install f(x)Core](installation.md).
