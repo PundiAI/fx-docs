@@ -1,3 +1,7 @@
+---
+description: asdasdasd
+---
+
 # Full node with Binaries
 
 This guide will explain how to install the `fxcored mainnet` or `fxcored testnet` command line interface (CLI) on your system. With these installed on a server, you can participate on the mainnet or testnet as a [Validator](../../validators/validator-setup.md).

@@ -1,8 +1,30 @@
 # Upgrading Your Node
 
-### f(x)Core hard fork upgrade--support EVM compatibility
+### f(x)Core Network Upgrades
 
-This upgrade introduces a new module `evm` which will enable `ethereum` compatibility.
+16th July 2022 at block height `5,713,000`: Upgrade `v2.1.1` introduces a new module `evm` which will enable `ethereum` compatibility.
+
+Coming soon: Stablecoins (usdt) on multiple chains (eth/bsc/polygon/tron) cross-chain to fxCore evm through gravity.
+
+{% hint style="warning" %}
+<mark style="color:yellow;">**WARNING**</mark>
+
+There are 2 types of network upgrades with similar steps but it is IMPORTANT to identify which to perform prior to the upgrade as hard fork required to do it before the height and proposal are after the height
+
+
+
+#### **Hard fork upgrade:**
+
+The code after the upgrade is backward compatible, so the node _**can (and needs to) be updated before the upgrade height**_, and when the upgrade height is reached, the node will automatically switch to the new logic
+
+
+
+**Proposal upgrade:**
+
+When the upgrade proposal is passed, _**we also need to wait for the block height to reach the upgrade height set in the proposal. We cannot use the new program to update the node in advance**_, because the code after the upgrade is backward incompatible. When the block height reaches the upgrade height, the node will automatically stop producing blocks and print the log: "ERR UPGRADE" upgrade proposal plan name "NEEDED at height: upgrade proposal set height...", and then we can use the latest program to update the node
+{% endhint %}
+
+****
 
 ### Upgrade steps
 
