@@ -2,29 +2,25 @@
 
 ### f(x)Core Network Upgrades
 
-16th July 2022 at block height `5,713,000`: Upgrade `v2.1.1` introduces a new module `evm` which will enable `ethereum` compatibility.
-
-Coming soon: Stablecoins (usdt) on multiple chains (eth/bsc/polygon/tron) cross-chain to fxCore evm through gravity.
-
 {% hint style="warning" %}
 <mark style="color:yellow;">**WARNING**</mark>
 
-There are 2 types of network upgrades with similar steps but it is IMPORTANT to identify which to perform prior to the upgrade as hard fork required to do it before the height and proposal are after the height
+There are 2 types of network upgrades with similar steps but it is IMPORTANT to differentiate and identify which type of upgrade is required and which to perform before the upgrade height is reached. Hard fork requires validators to upgrade their nodes before the upgrade height and software upgrade requires validators to do so after the upgrade height.
 
 
 
 #### **Hard fork upgrade:**
 
-The code after the upgrade is backward compatible, so the node _**can (and needs to) be updated before the upgrade height**_, and when the upgrade height is reached, the node will automatically switch to the new logic
+The code after the upgrade is backward compatible, so the node _**can (and needs to) be updated before the upgrade height**_, and when the upgrade height is reached, the node will automatically switch to the new logic.
 
 
 
-**Proposal upgrade:**
+**Software upgrade:**
 
-When the upgrade proposal is passed, _**we also need to wait for the block height to reach the upgrade height set in the proposal. We cannot use the new program to update the node in advance**_, because the code after the upgrade is backward incompatible. When the block height reaches the upgrade height, the node will automatically stop producing blocks and print the log: "ERR UPGRADE" upgrade proposal plan name "NEEDED at height: upgrade proposal set height...", and then we can use the latest program to update the node
+When the upgrade proposal is passed, _**we need to wait for the block height to reach the upgrade height set in the proposal. We cannot use the new program to update the node in advance**_, because the code after the upgrade is backward incompatible. When the block height reaches the upgrade height, the node will automatically stop producing blocks and print the log: "ERR UPGRADE" upgrade proposal plan name "NEEDED at height: upgrade proposal set height...", and then we can use the latest program to update the node
 {% endhint %}
 
-****
+> For more information on past upgrades and instructions, refer to [**Upgrade Instructions**](broken-reference).
 
 ### Upgrade steps
 
