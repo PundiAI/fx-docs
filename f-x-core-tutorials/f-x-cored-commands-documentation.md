@@ -19,34 +19,35 @@ Return:
 ```
 FunctionX Core Chain App
 
-Usage:the 
+Usage:
   fxcored [command]
 
 Available Commands:
   add-genesis-account Add a genesis account to genesis.json
   collect-gentxs      Collect genesis txs and output a genesis.json file
-  config              Update or query an application configuration file
+  config              Create or query an application CLI configuration file
+  data                modify data or query data in database
   debug               Tool for helping with debugging your application
   export              Export state to JSON
   gentx               Generate a genesis tx carrying a self delegation
   help                Help about any command
-  init                Initialize private validator, p2p, genesis, and application configuration files
+  init                Initialize private validator, p2p, genesis, application and client configuration files
   keys                Manage your application's keys
-  migrate             Migrate genesis to a specified target version
   query               Querying subcommands
+  rollback            rollback cosmos-sdk and tendermint state by one height
+  rosetta             spin up a rosetta server
   start               Run the full node
   status              Query remote node for status
   tendermint          Tendermint subcommands
   testnet             Initialize files for a fxchain testnet
   tx                  Transactions subcommands
-  unsafe-reset-all    Resets the blockchain database, removes address book files, and resets data/priv_validator_state.json to the genesis state
   validate-genesis    validates the genesis file at the default location or at the location passed as an arg
   version             Print the application binary version information
 
 Flags:
   -h, --help                 help for fxcored
       --home string          directory for config and data (default "/root/.fxcore")
-      --log_filter strings   The logging filter can discard custom log type (ABCIQuery) (default "")
+      --log_filter strings   The logging filter can discard custom log type (ABCIQuery)
       --log_format string    The logging format (json|plain) (default "plain")
       --log_level string     The logging level (trace|debug|info|warn|error|fatal|panic) (default "info")
       --trace                print out full stack trace on errors
@@ -283,9 +284,9 @@ The command will prompt for each passphrase. If a passphrase is incorrect, it wi
 
 You'll need an account with a private and public key pair (a.k.a. `sk, pk` respectively) to be able to receive funds, send txs, bond tx, etc.
 
-To generate a new _eth\_secp256k1_ key, follow this [guide](account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). This will be the default key generation scheme when f(x)Core becomes EVM compatible.
+To generate an old _secp256k1_ key, follow this [guide](account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). New eth\_secp256k1 will be the default key generation scheme when f(x)Core becomes EVM compatible.
 
-To generate a new _secp256k1_ key:
+To generate a new eth\__secp256k1_ key:
 
 ```bash
 fxcored keys add <account_name>
