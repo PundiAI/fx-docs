@@ -8,20 +8,20 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 
 ### Use Docker
 
-* pull docker images
+* Pull docker images
 
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker pull functionx/fx-core:mainnet-1.0
+docker pull functionx/fx-core:v2.1.1
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-docker pull functionx/fx-core:v2.1.0
+docker pull functionx/fx-core:v2.1.1
 ```
 {% endtab %}
 {% endtabs %}
@@ -31,25 +31,25 @@ docker pull functionx/fx-core:v2.1.0
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.0 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
 ```
 {% endtab %}
 {% endtabs %}
 
-* download genesis (copy and run each line, line by line)
+* Download genesis (copy and run each line, line by line)
 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-sudo wget https://raw.githubusercontent.com/functionx/fx-core/master/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
@@ -68,18 +68,18 @@ At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast s
 And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
 {% endhint %}
 
-* run docker
+* Run docker
 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:mainnet-1.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
 ```
 {% endtab %}
 {% endtabs %}
