@@ -6,7 +6,7 @@ This upgrade introduces a new address which will enable `ethereum` compatibility
 
 Things to note❗:
 
-a. This guide can be done only on f(x)Core Testnet.
+a. This guide can be done on f(x)Core Mainnet & Testnet.
 
 b. Ensure the [new Evm upgrade](https://functionx.gitbook.io/home/f-x-core/setup-node/evm-upgrade-tutorial) is done.
 
@@ -66,6 +66,8 @@ You may skip the 1st step, if you already have a wallet/key that is derived usin
 {% endhint %}
 
 #### **2. Prepare the 0x prefix address account (Ethereum format address)**
+
+> By default, the `fxcored keys add` command is defaulted to `--algo=eth_secp256k1 --coin-type=60` without specifying the flag, specifying it will have the same result.
 
 **Prerequisites**
 
@@ -143,7 +145,7 @@ Now you can **export your private key** from the f(x)Core **terminal** using the
 
 ### **Connect your MetaMask wallet**
 
-The MetaMask  browser extension is a wallet for accessing Ethereum-enabled applications and managing user identities.
+The MetaMask browser extension is a wallet for accessing Ethereum-enabled applications and managing user identities.
 
 ### **Adding a New Network**
 
@@ -156,6 +158,12 @@ Here is the **list of fields** that you can use to paste on Metamask:
 * **Chain ID:** `90001`
 * **Currency Symbol (optional):** `FX`
 
+> For more details, you may refer to below page:
+
+{% content-ref url="../deploying-on-f-x-core-evm/metamask/add-f-x-core-network.md" %}
+[add-f-x-core-network.md](../deploying-on-f-x-core-evm/metamask/add-f-x-core-network.md)
+{% endcontent-ref %}
+
 ### **Import Account to Metamask**
 
 Once you have added `DhobyGhaut Testnet` to the Metamask `Networks`, you can automatically import your accounts by:
@@ -164,7 +172,7 @@ Once you have added `DhobyGhaut Testnet` to the Metamask `Networks`, you can aut
 
 Close the `Settings`, go to `My Accounts` (top right circle) and select `Import Account`. You should see an image like the following one:
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9).png>)
 
 In Metamask and select the `Private Key` option. Then **paste the private** key(**hexadecimal**) exported from the command in step 6, to import your new EVM-compatible account in MetaMask.
 

@@ -23,7 +23,7 @@ Here we will create a new token holding account for the validator which we will 
 {% tabs %}
 {% tab title="With Ledger" %}
 ```
-fxcored keys add <_name> --ledger --index 0
+fxcored keys add <_name> --algo secp256k1 --coin-type 118 --ledger --index 0
 ```
 {% endtab %}
 
@@ -41,7 +41,7 @@ For example:
 {% tabs %}
 {% tab title="With Ledger" %}
 ```
-fxcored keys add Ciri --ledger --index 0
+fxcored keys add Ciri --algo secp256k1 --coin-type 118 --ledger --index 0
 ```
 {% endtab %}
 

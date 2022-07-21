@@ -477,6 +477,9 @@ Furthermore, you can build a transaction and print its JSON format to STDOUT by 
 ```bash
 fxcored tx send <sender_address> <recipient_address> 10000000000000000000FX \
   --chain-id=<chain_id> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --generate-only > unsignedSendTx.json
 ```
 
