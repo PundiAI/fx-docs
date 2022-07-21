@@ -1,5 +1,15 @@
 # Ledger Integration for fxcored
 
+{% hint style="info" %}
+<mark style="color:blue;">**DISCLAIMER**</mark>
+
+Currently, the cosmos app only supports the path **m/44/118**. By default, the `fxcored keys add` command is defaulted to `--algo=eth_secp256k1 --coin-type=60` which is compatible with Ethereum accounts. If you want to a use ledger to add a cosmos account, you must specify the flag `--algo=secp256k1 --coin-type=118`. Without this flag, the ledger is not supported even if the Ethereum app is installed on the ledger, below are the command and errors that will occur:
+
+`fxcored keys add 0x_wallet --ledger --index 102 --keyring-backend file`
+
+`Error: failed to generate ledger key: failed to recover pubkey: [APDU_CODE_DATA_INVALID] Referenced data reversibly blocked (invalidated): address rejected for path m/44'/60'/0'/0/102`
+{% endhint %}
+
 Using a hardware wallet to store your keys greatly improves the security of your crypto assets. The Ledger device acts as an enclave of the seed and private keys, and the process of signing transaction takes place within it. No private information ever leaves the Ledger device. The following is a short tutorial on using the Cosmos Ledger app with the f(x)Core CLI.
 
 At the core of a Ledger device there is a mnemonic seed phrase that is used to generate private keys. This phrase is generated when you initialize your Ledger. The mnemonic is compatible with Cosmos and can be used to seed new accounts.
