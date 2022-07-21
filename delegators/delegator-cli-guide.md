@@ -157,12 +157,6 @@ Then, to create an account, run the following command:
 fxcored keys add <fx_key_name> --algo secp256k1 --coin-type 118 --ledger --index <index_number>
 ```
 {% endtab %}
-
-{% tab title="create fx-evm address" %}
-```shell
-fxcored keys add <0x_key_name> --algo eth_secp256k1 --coin-type 60 --ledger --index <index_number>
-```
-{% endtab %}
 {% endtabs %}
 
 > **This command will only work while the Ledger is plugged in and unlocked**
@@ -173,7 +167,7 @@ fxcored keys add <0x_key_name> --algo eth_secp256k1 --coin-type 60 --ledger --in
 You can generate more accounts from the same mnemonic using the following command:
 
 ```bash
-fxcored keys add brucebanner<0x_key_name> --algo eth_secp256k1 --coin-type 60 --ledger --index 2
+fxcored keys add brucebanner<0x_key_name> --algo secp256k1 --coin-type 118 --ledger --index 2
 ```
 
 This command will prompt you to input a passphrase as well as your mnemonic. Change the account number to generate an account with a different index.
