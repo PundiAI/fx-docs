@@ -1,16 +1,64 @@
-# Full node with Docker
+# Docker - Upgrading Your Node
 
-This guide will explain how to install the `fxcored mainnet` or `fxcored testnet` command line interface (CLI) on your system. With these installed on a server, you can participate on the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
+### f(x)Core Network Upgrades
 
-## Install f(x)Core
+{% hint style="warning" %}
+<mark style="color:yellow;">**WARNING**</mark>
 
-> **You need to** [**install f(x)Core**](../installation.md) **before you go further**
+There are 2 types of network upgrades with similar steps but it is IMPORTANT to differentiate and identify which type of upgrade is required and which to perform before the upgrade height is reached. Hard fork requires validators to upgrade their nodes before the upgrade height and software upgrade requires validators to do so after the upgrade height.
 
-### Use Docker
 
-* Pull docker images
 
-> if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
+#### **Hard fork upgrade:**
+
+The code after the upgrade is backward compatible, so the node _**can (and needs to) be updated before the upgrade height**_, and when the upgrade height is reached, the node will automatically switch to the new logic.
+
+
+
+**Software upgrade:**
+
+When the upgrade proposal is passed, _**we need to wait for the block height to reach the upgrade height set in the proposal. We cannot use the new program to update the node in advance**_, because the code after the upgrade is backward incompatible. When the block height reaches the upgrade height, the node will automatically stop producing blocks and print the log: "ERR UPGRADE" upgrade proposal plan name "NEEDED at height: upgrade proposal set height...", and then we can use the latest program to update the node
+{% endhint %}
+
+> For more information on past upgrades and instructions, refer to [**Upgrade Instructions**](broken-reference).
+
+### Upgrade steps
+
+1. Ensure you have stopped the docker container to stop node❗
+
+```
+docker stop fxcore
+docker rm fxcore
+```
+
+&#x20;   \*fxcore is a container name, change the container name according to your setup
+
+2\. Local setup Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
+
+```
+git pull
+```
+
+3\. Checkout the branch of the upgrade version:
+
+```shell
+git checkout <upgradeable version branch>
+```
+
+&#x20;  Example:
+
+```
+git checkout release/v2.1.x
+```
+
+4\. Update fxcored (ensure that you are in the fx-core folder):
+
+```
+make go.sum
+make install
+```
+
+5\. Pull latest docker images
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -18,15 +66,9 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 docker pull functionx/fx-core:v2.1.1
 ```
 {% endtab %}
-
-{% tab title="Testnet" %}
-```
-docker pull functionx/fx-core:v2.1.1
-```
-{% endtab %}
 {% endtabs %}
 
-* Initializing fxcore
+6\. Initializing fxcore
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -34,15 +76,9 @@ docker pull functionx/fx-core:v2.1.1
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
 ```
 {% endtab %}
-
-{% tab title="Testnet" %}
-```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
-```
-{% endtab %}
 {% endtabs %}
 
-* Download genesis (copy and run each line, line by line)
+7\. Download genesis (copy and run each line, line by line)
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -52,32 +88,12 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/m
 wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
-
-{% tab title="Testnet" %}
-```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
-```
-{% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-\*\* IMPORTANT At this stage \*\*BEFORE \*\*starting the node, please download the latest snapshot, refer to this [link](use-snapshot.md).
-
-And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
-{% endhint %}
-
-* Run docker
+8\. Restart docker container to start the node:
 
 {% tabs %}
 {% tab title="Mainnet" %}
-```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
 ```
 docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
 ```
@@ -141,3 +157,4 @@ To ensure that the blocks are synced up with your node, under "sync\_info", "cat
 
 
 > Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.
+

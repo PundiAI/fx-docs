@@ -34,7 +34,8 @@
 * [Testnet faucet](f-x-core-tutorials/fxtestnetfaucet.md)
 * [Ledger Integration for fxcored](f-x-core-tutorials/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](f-x-core-tutorials/sentry-nodes.md)
-* [Upgrading Your Node](f-x-core-tutorials/evm-upgrade-tutorial.md)
+* [Binaries - Upgrading Your Node](f-x-core-tutorials/evm-upgrade-tutorial.md)
+* [Docker - Upgrading Your Node](f-x-core-tutorials/evm-upgrade-tutorial-docker.md)
 * [Account Migration Guide (CLI)](f-x-core-tutorials/account-migration-guide.md)
 
 ## Upgrade Instructions
