@@ -3,7 +3,7 @@
 {% hint style="info" %}
 <mark style="color:blue;">**DISCLAIMER**</mark>
 
-Currently, the cosmos app only supports the path **m/44/118**. By default, the `fxcored keys add` command is defaulted to `--algo=eth_secp256k1 --coin-type=60` which is compatible with Ethereum accounts. If you want to a use ledger to add a cosmos account, you must specify the flag `--algo=secp256k1 --coin-type=118`. Without this flag, the ledger is not supported even if the Ethereum app is installed on the ledger, below are the command and errors that will occur:
+Currently, the cosmos app on Ledger only supports the path **m/44/118**. By default, the `fxcored keys add` command is defaulted to `--algo=eth_secp256k1 --coin-type=60` which is compatible with Ethereum accounts. If you want to use ledger to add a cosmos account, you must specify the flag `--algo=secp256k1 --coin-type=118`. Without this flag, running the following command will return the following error:
 
 `fxcored keys add 0x_wallet --ledger --index 102 --keyring-backend file`
 
