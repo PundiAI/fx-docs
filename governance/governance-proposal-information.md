@@ -61,7 +61,7 @@ A qualified FX holder is as follow:
 
 The above FX holders are considered to have bonded their FX tokens. Unbonded FX holders and other users do not have the right to participate in governance. However, they can submit and deposit on proposals.
 
-> ⚠️ The voting period for testnet will be 2 days instead.
+> ⚠️ The voting period for testnet will be 2 hours instead.
 
 #### Quorum (%)
 

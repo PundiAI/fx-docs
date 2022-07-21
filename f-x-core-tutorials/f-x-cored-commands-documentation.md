@@ -446,7 +446,7 @@ Note When you query an account balance with zero tokens, you will get this error
 The following command could be used to send coins from one account to another:
 
 ```bash
- fxcored tx bank send <from_key_or_address> <to_address> <amount>
+ fxcored tx bank send <from_key_or_address> <to_address> <amount> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
 ```
 
 {% hint style="info" %}
@@ -469,7 +469,7 @@ fxcored query account <account_fx> --height <int>
 You can simulate a transaction without actually broadcasting it by appending the `--dry-run` flag to the command line (this is to return a gas estimate):
 
 ```bash
-fxcored tx bank send <from_key_or_address> <to_address> <amount> --dry-run
+fxcored tx bank send <from_key_or_address> <to_address> <amount> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX" --dry-run
 ```
 
 Furthermore, you can build a transaction and print its JSON format to STDOUT by appending `--generate-only` to the list of the command line arguments. Running the following command will store build the transaction and store it in a file named "unsignedSendTx.json":
@@ -561,7 +561,7 @@ tx hash on the block explorer are preceded with 0x. please omit the 0x from the 
 To unjail your jailed validator
 
 ```bash
-fxcored tx slashing unjail --from <validator-operator-addr>
+fxcored tx slashing unjail --from <validator-operator-addr> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
 ```
 
 #### Signing Info
@@ -656,8 +656,10 @@ On the f(x)Core mainnet, we delegate `FX`. Here's how you can bond tokens to a t
 fxcored tx staking delegate \
   <validator> \
   <amount> \
-  --from=<key_name>
-  --fees=<fees>
+  --from=<key_name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX"
 ```
 
 `<validator>` is the operator address of the validator to which you intend to delegate. If you are running a local testnet, you can find this with:
@@ -703,6 +705,9 @@ fxcored tx staking unbond \
   <validator_addr> \
   10FX \
   --from=<key_name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --chain-id=<chain_id>
 ```
 
@@ -738,6 +743,9 @@ fxcored tx staking redelegate \
   <dst-validator-operator-addr> \
   10FX \
   --from=<key_name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --chain-id=<chain_id>
 ```
 
@@ -832,6 +840,9 @@ fxcored tx gov submit-proposal \
   --type="Text" \
   --deposit="1000000FX" \
   --from=<name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --chain-id=<chain_id>
 ```
 
@@ -842,6 +853,9 @@ To submit a parameter change proposal, you must provide a proposal file as its c
 ```bash
 fxcored tx gov submit-proposal param-change <path/to/proposal.json> \
   --from=<name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --chain-id=<chain_id>
 ```
 
@@ -904,6 +918,9 @@ In order for a proposal to be broadcasted to the network, the amount deposited m
 ```bash
 fxcored tx gov deposit <proposal_id> "10000000000000000000000FX" \
   --from=<name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --chain-id=<chain_id>
 ```
 
@@ -930,6 +947,9 @@ After a proposal's deposit reaches the `MinDeposit` value, the voting period ope
 ```bash
 fxcored tx gov vote <proposal_id> <Yes/No/NoWithVeto/Abstain> \
   --from=<name> \
+  --gas=auto \
+  --gas-adjustment=1.5 \
+  --gas-prices="4000000000000FX" \
   --chain-id=<chain_id>
 ```
 
@@ -1036,13 +1056,13 @@ fxcored query distribution rewards <delegator_address>
 Withdraw rewards from a given delegation address, and optionally withdraw validator commission (by adding in a `--commission` flag, see below) if the delegation address given is a validator operator:
 
 ```
-fxcored tx distribution withdraw-rewards <validator-addr> --from <_name>
+fxcored tx distribution withdraw-rewards <validator-addr> --from <_name> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
 ```
 
 Withdraw the validator's commission in addition to the rewards:
 
 ```
-fxcored tx distribution withdraw-rewards <validator-addr> --from mykey --commission
+fxcored tx distribution withdraw-rewards <validator-addr> --from mykey --commission --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
 ```
 
 ### Multisig Transactions
