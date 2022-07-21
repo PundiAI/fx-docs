@@ -15,13 +15,13 @@ Download the Snapshot to your VM. To download the Snapshot Tar file to your VM y
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-04.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-daily-mainnet-2022-07-18.tar.gz
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-04.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-18.tar.gz
 ```
 {% endtab %}
 {% endtabs %}
@@ -39,13 +39,13 @@ Now, to unpack the `tar` file in the fxcore Data directory run the following com
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-tar -xzvf fxcore-snapshot-mainnet-2022-07-04.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-daily-mainnet-2022-07-18.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-tar -xzvf fxcore-snapshot-testnet-2022-07-04.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-testnet-2022-07-18.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 {% endtabs %}
