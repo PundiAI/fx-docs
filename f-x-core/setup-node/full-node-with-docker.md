@@ -1,6 +1,6 @@
 # Full node with Docker
 
-This guide will explain how to install the `fxcored mainnet` or `fxcored testnet` command line interface (CLI) on your system. With these installed on a server, you can participate on the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
+This guide will explain how to install the `fxcored mainnet` or `fxcored testnet` command line interface (CLI) on your system with `Docker` option. With these installed on a server, you can participate on the mainnet or testnet as a [Validator](../../validators/validator-setup.md).
 
 ## Install f(x)Core
 
@@ -15,13 +15,13 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker pull functionx/fx-core:v2.1.1
+docker pull functionx/fx-core:v2.2.0
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-docker pull functionx/fx-core:v2.1.1
+docker pull functionx/fx-core:v2.2.0
 ```
 {% endtab %}
 {% endtabs %}
@@ -31,13 +31,13 @@ docker pull functionx/fx-core:v2.1.1
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
 ```
 {% endtab %}
 {% endtabs %}
@@ -47,23 +47,23 @@ docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
-At this stage \*\*BEFORE \*\*starting the node, if you would like to do a fast sync with the snapshot guide, please refer to this [link](use-snapshot.md).
+\*\* IMPORTANT At this stage \*\*BEFORE \*\*starting the node, please download the latest snapshot, refer to this [link](use-snapshot.md).
 
 And at this stage, what is important is your validator keys that is stored in a json file for you to do a recovery in the future. For more [information](../../validators/validator-recovery.md) how to access the files.
 {% endhint %}
@@ -73,13 +73,13 @@ And at this stage, what is important is your validator keys that is stored in a 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
 ```
 {% endtab %}
 {% endtabs %}

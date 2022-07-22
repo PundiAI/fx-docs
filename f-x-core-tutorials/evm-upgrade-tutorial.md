@@ -1,4 +1,4 @@
-# Upgrading Your Node
+# Binaries - Upgrading Your Node
 
 ### f(x)Core Network Upgrades
 
@@ -56,7 +56,7 @@ git checkout <upgradeable version branch>
 for example:
 
 ```
-git checkout release/v2.1.x
+git checkout release/v2.2.x
 ```
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
@@ -72,45 +72,25 @@ make install
 fxcored version
 ```
 
-6\. Running the following command will add EVM configurations to the **`app.toml`** and **`config.toml` ** files:
+6\. Download genesis (copy and run each line, line by line)
 
+{% tabs %}
+{% tab title="Mainnet" %}
 ```
-fxcored config update
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
+{% endtab %}
 
-Check evm configuration is added successfully:
-
+{% tab title="Testnet" %}
 ```
-fxcored config app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
-
-Return (you should see an EVM configuration):
-
-```
-...
-evm:
-  max-tx-gas-wanted: 500000
-  tracer: ""
-...
-json-rpc:
-  address: 0.0.0.0:8545
-  api:
-  - eth
-  - net
-  - web3
-  block-range-cap: 10000
-  enable: true
-  evm-timeout: 5e+09
-  feehistory-cap: 100
-  filter-cap: 200
-  gas-cap: 2.5e+07
-  http-idle-timeout: 1.2e+11
-  http-timeout: 3e+10
-  logs-cap: 10000
-  txfee-cap: 1
-  ws-address: 0.0.0.0:8546
-...
-```
+{% endtab %}
+{% endtabs %}
 
 7\. Restart the node:
 

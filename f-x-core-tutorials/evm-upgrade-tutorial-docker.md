@@ -48,7 +48,7 @@ git checkout <upgradeable version branch>
 &#x20;  Example:
 
 ```
-git checkout release/v2.1.x
+git checkout release/v2.2.x
 ```
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
@@ -63,7 +63,13 @@ make install
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker pull functionx/fx-core:v2.1.1
+docker pull functionx/fx-core:v2.2.0
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+docker pull functionx/fx-core:v2.2.0
 ```
 {% endtab %}
 {% endtabs %}
@@ -73,7 +79,13 @@ docker pull functionx/fx-core:v2.1.1
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
 ```
 {% endtab %}
 {% endtabs %}
@@ -83,9 +95,17 @@ docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 init fx-zakir
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
@@ -95,7 +115,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.1.x/public/m
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.1.1 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
 ```
 {% endtab %}
 {% endtabs %}
