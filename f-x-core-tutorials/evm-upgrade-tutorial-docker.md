@@ -61,13 +61,7 @@ make install
 5\. Pull latest docker images
 
 {% tabs %}
-{% tab title="Mainnet" %}
-```
-docker pull functionx/fx-core:v2.2.0
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
+{% tab title="Mainnet & Testnet" %}
 ```
 docker pull functionx/fx-core:v2.2.0
 ```
@@ -77,13 +71,7 @@ docker pull functionx/fx-core:v2.2.0
 6\. Initializing fxcore
 
 {% tabs %}
-{% tab title="Mainnet" %}
-```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
+{% tab title="Mainnet & Testnet" %}
 ```
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
 ```
@@ -113,7 +101,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/t
 8\. Restart docker container to start the node:
 
 {% tabs %}
-{% tab title="Mainnet" %}
+{% tab title="Mainnet & Testnet" %}
 ```
 docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
 ```

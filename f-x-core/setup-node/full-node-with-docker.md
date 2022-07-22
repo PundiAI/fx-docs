@@ -13,13 +13,7 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 {% tabs %}
-{% tab title="Mainnet" %}
-```
-docker pull functionx/fx-core:v2.2.0
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
+{% tab title="Mainnet & Testnet" %}
 ```
 docker pull functionx/fx-core:v2.2.0
 ```
@@ -29,13 +23,7 @@ docker pull functionx/fx-core:v2.2.0
 * Initializing fxcore
 
 {% tabs %}
-{% tab title="Mainnet" %}
-```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
+{% tab title="Mainnet & Testnet" %}
 ```
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
 ```
@@ -71,13 +59,7 @@ And at this stage, what is important is your validator keys that is stored in a 
 * Run docker
 
 {% tabs %}
-{% tab title="Mainnet" %}
-```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
+{% tab title="Mainnet & Testnet" %}
 ```
 docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
 ```
