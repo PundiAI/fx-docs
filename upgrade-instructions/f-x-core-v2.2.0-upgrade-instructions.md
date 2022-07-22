@@ -18,6 +18,10 @@ description: >-
 
 > Note: You may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 
+{% hint style="info" %}
+**Note:** Refer to [Binaries upgrade steps](../f-x-core-tutorials/evm-upgrade-tutorial.md) or [Docker upgrade steps](../f-x-core-tutorials/evm-upgrade-tutorial-docker.md)
+{% endhint %}
+
 ### Testnet upgrade plan:
 
 * Code release time: The Testnet code is expected to be released by 4pm (GMT+8) on Friday, 22 July 2022.
