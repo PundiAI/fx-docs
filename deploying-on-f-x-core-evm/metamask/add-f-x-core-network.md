@@ -42,7 +42,7 @@ FX
 Block Explorer URL
 
 ```
-https://fx-evm.functionx.io/
+https://explorer.functionx.io/evm
 ```
 
 &#x20;3\. Click 'Save'
