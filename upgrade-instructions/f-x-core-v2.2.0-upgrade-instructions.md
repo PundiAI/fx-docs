@@ -24,7 +24,7 @@ description: >-
 
 ### Testnet upgrade plan:
 
-* Code release time: The Testnet code is expected to be released by 4pm (GMT+8) on Friday, 22 July 2022.
+* Code release time: The Testnet code is expected to be released by 6pm (GMT+8) on Friday, 22 July 2022.
 * Upgrading validator nodes:
   * Validators can update their node once the code is released (please read about the difference between Software Upgrade and Hard Fork [here](../f-x-core-tutorials/evm-upgrade-tutorial.md#f-x-core-network-upgrades)). The upgrade height will be written in the code. The upgrade height time will tentatively be set at 12pm (GMT+8) on Monday, 25 July 2022.
   * The validator must update the Testnet node before the upgrade height, otherwise it will result in issues with consensus because of the inconsistencies of versions with other validators.
