@@ -14,6 +14,8 @@ description: >-
 * Any addition of new tokens to this Gravity Cross-Chain Bridge feature logic would have to go through governance.
   * The proposal would need to be launched under the proposal type "**RegisterCoinProposal**"
 
+![](<../.gitbook/assets/Unified ERC20.drawio.png>)
+
 > Note: You may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 
 ### Testnet upgrade plan:
