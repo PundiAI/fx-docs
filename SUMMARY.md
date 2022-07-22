@@ -44,6 +44,7 @@
 * [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
   * [Testnet Upgrade Practice](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
   * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/fxcore-v2.1.0-since-been-deprecated.md)
+* [Upgrade FAQ](upgrade-instructions/upgrade-faq.md)
 
 ## Deploying on f(x)core EVM
 

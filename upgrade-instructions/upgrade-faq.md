@@ -1,0 +1,63 @@
+# Upgrade FAQ
+
+## f(x)Core Upgrade
+
+* Where is the default installation by make install for fxcored?
+  * The default installation will be at $GOPATH/bin/fxcored
+* How to determine whether the node upgrade is successful?
+  * It can be seen that the node outputs the following log information. At the same time, the node does not have any panic information, and there is no other error information except the error output by the p2p module, indicating that the node upgrade and startup are completed.
+
+```
+10:29AM INF Starting Node service impl=Node server=node
+10:29AM INF Starting P2P Switch service impl="P2P Switch" module=p2p server=node
+10:29AM INF Starting PEX service impl=PEX module=pex server=node
+10:29AM INF Starting AddrBook service book=fxcore/config/addrbook.json impl=AddrBook module=p2p server=node
+10:29AM INF Starting RPC HTTP server on [::]:26657 module=rpc-server server=node 10:29AM INF Starting Mempool service impl=Mempool module=mempool server=node
+10:29AM INF Starting BlockchainReactor service impl=BlockchainReactor module=blockchain server=node
+10:29AM INF Starting BlockPool service impl=BlockPool module=blockchain server=node
+```
+
+* What should I do if the "`panic: Failed to start consensus state: found signature from the same key`" appears in log?
+  * We should first check whether the `priv_validator_key.json` configured by the node is used by its node, if not, run the command `fxcored config config.toml consensus.double_sign_check_height 0`, to modify the double-sign check, and then restart the node
+* How to determine whether the f(x)core mainnet genesis is correct
+  * `md5 $HOME/.fxcore/config/genesis.json`
+  * `ded64cf0d1e556b7fd4577cfd44cc328`
+* Is there any CLI command to check if a validator node is validating a block without checking the resource manager?
+  * Query the consensus signature address used by the local node
+    * `fxcored status -o json | jq .ValidatorInfo`
+* Query the signature status of the local node
+  * `fxcored query slashing signing-info $(fxcored tendermint show-validator)`
+* Query the validator‘s signature status
+  * `fxcored query slashing signing-infos`
+
+## fxCore Gravity cross-chain
+
+* How are cross-chain tokens converted on different chains?
+  * FX Token is a native token on the fxCore chain (FX is generated from the fxCore chain), so FX ERC20 is burn in the Ethereum contract and unlock in fxCore;
+  * PURSE Token is a native token on the Pundix chain (PURSE is generated in the Pundix chain), so PURSE is burn in the BSC contract and unlock on the pundix chain
+  * Other non-native tokens are locked in the contract on the counterparty chain and mint on the fxCore chain
+* Can users choose to cross-chain ERC20 FX Token to fx-native or WFX?
+  * Yes, users can choose to cross-chain the FX token of Ethereum to the FX-native token on the fxCore chain or the WFX in the fxCore EVM contract. The WFX here is the same as the WETH of Ethereum. It is to convert the native token into conforming to the ERC20 token specification, in order to be more convenient to apply in defi scenarios such as uniswap
+
+## Evm
+
+* Can users currently link fxevm using metamask?
+  * Yes
+
+## Ledger
+
+* How can I generate Cosmos eth\_secp256k1 keys with Ledger?
+
+Ether eth\_secp256k1 keys are not supported on f(x)Core with Ledger. Only Cosmos keys (secp256k1) can be generated with Ledger.
+
+* I can’t generate keys using the CLI with fxcored with the --ledger flag
+
+CLI bindings with fxcored binary are not currently supported. In the meantime, you can use the Cosmos Ledger App with EIP712 using evmos.me (opens new window). See the EIP712 Signing section for reference.
+
+* I can’t generate a key for the f(x)Core native multisig using the fxcored CLI and and Ledger
+
+You can generate a multisig wallet using the fxcored CLI, although the --ledger option is not available at the moment.
+
+* I can’t use Metamask or Keplr with the Cosmos Ledger app
+
+Since f(x)Core only support Cosmos keys and uses the same HD path as Cosmos, the Cosmos Ledger app doesn’t work to sign Ether transactions.
