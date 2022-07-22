@@ -1,15 +1,15 @@
 ---
 description: >-
   This document describes the steps for validator and full node operators for
-  the successful execution of the fxCore V2.1.1 Upgrade
+  the successful execution of the f(x)Core V2.1.1 Upgrade
 ---
 
-# fxCore V2.1.1 Upgrade Instructions
+# f(x)Core v2.1.1 Upgrade Instructions
 
 ### The upgrade contains the following main new features/improvement:
 
 {% hint style="info" %}
-For changes and improvements of the previous version, you may refer to [**fxCore V2.1.0 (since been deprecated)**](fxcore-v2.1.0-since-been-deprecated.md)****
+For changes and improvements of the previous version, you may refer to [**f(x)Core V2.1.0 (since been deprecated)**](fxcore-v2.1.0-since-been-deprecated.md)****
 
 Additionally, you may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 {% endhint %}

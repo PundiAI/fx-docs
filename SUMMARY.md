@@ -40,7 +40,8 @@
 
 ## Upgrade Instructions
 
-* [fxCore V2.1.1 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
+* [f(x)Core v2.2.0 Upgrade Instructions](upgrade-instructions/f-x-core-v2.2.0-upgrade-instructions.md)
+* [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/README.md)
   * [Testnet Upgrade Practice](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
   * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/fxcore-v2.1.0-upgrade-instructions/fxcore-v2.1.0-since-been-deprecated.md)
 
