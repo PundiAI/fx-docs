@@ -61,7 +61,7 @@ make install
 5\. Pull latest docker images
 
 ```
-docker pull functionx/fx-core:v2.2.0o
+docker pull functionx/fx-core:v2.2.0
 ```
 
 6\. Initializing fxcore
