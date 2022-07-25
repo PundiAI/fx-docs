@@ -196,7 +196,7 @@ FX
 * (Optional Field) Block Explorer URL:&#x20;
 
 ```
-https://testnet-fxscan.functionx.io/
+https://testnet-explorer.functionx.io/evm
 ```
 
 ![Metamask Network Configuration](<../.gitbook/assets/image (3).png>)

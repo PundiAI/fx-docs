@@ -83,7 +83,7 @@ FX
 Block Explorer URL
 
 ```
-https://testnet-fxscan.functionx.io/
+https://testnet-explorer.functionx.io/evm
 ```
 
 &#x20;3\. Click 'Save'

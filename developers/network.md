@@ -32,7 +32,7 @@ description: >-
 | gRPC                    | <p>https://fx-grpc.functionx.io:9090<br>or<br>https://chain-api.functionx.io</p> |
 | REST API                | https://fx-rest.functionx.io                                                     |
 | EVM ChainID             | 530                                                                              |
-| EVM Block Explorer​     | [https://fx-evm.functionx.io/](https://fx-evm.functionx.io/)                     |
+| EVM Block Explorer​     | [https://explorer.functionx.io/evm](https://explorer.functionx.io/evm)           |
 | Web3 JSON RPC           | https://fx-json-web3.functionx.io:8545                                           |
 | Web3 JSON RPC Websocket | wss://fx-json-web3.functionx.io:8546                                             |
 {% endtab %}
@@ -47,7 +47,7 @@ description: >-
 | JSON RPC Websocket      | wss://testnet-fx-json.functionx.io:26657/websocket                                                                                                                                                  |
 | gRPC                    | https://testnet-fx-grpc.functionx.io:9090                                                                                                                                                           |
 | EVM ChainID             | 90001                                                                                                                                                                                               |
-| EVM Block Explorer      | [https://testnet-fxscan.functionx.io](https://testnet-fxscan.functionx.io)                                                                                                                          |
+| EVM Block Explorer      | [https://testnet-explorer.functionx.io/evm](https://testnet-explorer.functionx.io/evm)                                                                                                              |
 | Web3 JSON RPC           | https://testnet-fx-json-web3.functionx.io:8545                                                                                                                                                      |
 | Web3 JSON RPC Websocket | wss://testnet-fx-json-web3.functionx.io:8546                                                                                                                                                        |
 | Testnet Faucet          | [https://dhobyghaut-faucet.functionx.io/](https://dhobyghaut-faucet.functionx.io/)                                                                                                                  |

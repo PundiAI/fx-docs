@@ -20,7 +20,9 @@ The code after the upgrade is backward compatible, so the node _**can (and needs
 When the upgrade proposal is passed, _**we need to wait for the block height to reach the upgrade height set in the proposal. We cannot use the new program to update the node in advance**_, because the code after the upgrade is backward incompatible. When the block height reaches the upgrade height, the node will automatically stop producing blocks and print the log: "ERR UPGRADE" upgrade proposal plan name "NEEDED at height: upgrade proposal set height...", and then we can use the latest program to update the node
 {% endhint %}
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Instructions**](broken-reference).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../upgrade-versions/).
+>
+> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-upgrade/index.html) which will countdown the time till the upgrade height.
 
 ### Upgrade steps
 

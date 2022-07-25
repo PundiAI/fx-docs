@@ -52,7 +52,7 @@ TOC:
 The upgrade will take place at a block height of `5,713,000`. At the time of writing, and at current block times (around 5.5s/block), this block height corresponds approximately to `Saturday, 16-July-22` 12:00:00 `UTC`. This date/time is approximate as blocks are not generated at a constant interval.
 
 {% hint style="warning" %}
-Validators must upgrade within a 20,000 block timeframe if not they risk being slashed. More on [slashing conditions](../../validators/validator-faq.md#what-are-the-slashing-conditions).
+Validators must upgrade within a 20,000 block timeframe if not they risk being slashed. More on [slashing conditions](../../../validators/validator-faq.md#what-are-the-slashing-conditions).
 {% endhint %}
 
 ### fxCore Chain-id will remain the same and new EVM Chain-id will be 530 <a href="#chain-id-will-remain-the-same" id="chain-id-will-remain-the-same"></a>
@@ -65,7 +65,7 @@ However, with the additional of the new EVM module, the corresponding EVM Chain-
 
 #### System requirements <a href="#system-requirement" id="system-requirement"></a>
 
-For a smooth upgrade, ensure that you have the [minimum system requirements](../../f-x-core/installation.md#hardware-requirements).
+For a smooth upgrade, ensure that you have the [minimum system requirements](../../../f-x-core/installation.md#hardware-requirements).
 
 > Minimum system requirements have an upgrade by 2 Cores and 4GB
 
@@ -73,15 +73,15 @@ For a smooth upgrade, ensure that you have the [minimum system requirements](../
 
 It is critically important for validator operators to back-up the `.fxcore/data/priv_validator_state.json` file after stopping the fxcore process. This file is updated every block as your validator participates in consensus rounds. It is a critical file needed to prevent double-signing, in case the upgrade fails and the previous chain needs to be restarted.
 
-Also validator operators should back-up their `.fxcore/config/`priv\_validator\_key`.json` file so they will be able to recover their validators in case the upgrade fails. More on the [validator recovery process](../../validators/validator-recovery.md).
+Also validator operators should back-up their `.fxcore/config/`priv\_validator\_key`.json` file so they will be able to recover their validators in case the upgrade fails. More on the [validator recovery process](../../../validators/validator-recovery.md).
 
 #### Testing <a href="#testing" id="testing"></a>
 
-For those validator and full node operators that are interested in ensuring preparedness for the impending upgrade, you can join in our public-testnet by [installing f(x)Core](../../f-x-core/installation.md) (ensure that you click into the testnet installation tabs).
+For those validator and full node operators that are interested in ensuring preparedness for the impending upgrade, you can join in our public-testnet by [installing f(x)Core](../../../f-x-core/installation.md) (ensure that you click into the testnet installation tabs).
 
 #### Manual Upgrade
 
-You may refer to this [upgrade tutorial](../../f-x-core-tutorials/evm-upgrade-tutorial.md) to upgrade your nodes.
+You may refer to this [upgrade tutorial](../../upgrade-guide/evm-upgrade-tutorial.md) to upgrade your nodes.
 
 #### Upgrade failure handling method
 

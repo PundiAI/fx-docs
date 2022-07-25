@@ -61,3 +61,13 @@ You can generate a multisig wallet using the fxcored CLI, although the --ledger 
 * I can’t use Metamask or Keplr with the Cosmos Ledger app
 
 Since f(x)Core only support Cosmos keys and uses the same HD path as Cosmos, the Cosmos Ledger app doesn’t work to sign Ether transactions.
+
+## Countdown Timer
+
+Where can i check the upgrade countdown timer?
+
+{% embed url="https://functionx.github.io/fx-upgrade/index.html" %}
+![](<../.gitbook/assets/image (21).png>)
+{% endembed %}
+
+We will be using this link for both Mainnet and Testnet.
