@@ -1,5 +1,31 @@
 # Upgrade FAQ
 
+## What is the difference between hard fork and software upgrade?
+
+### About upgrades: hard fork upgrades, software upgrades
+
+* For validators:
+  * The biggest difference between the two updates is what happens before and after the upgrade height. The hard fork method is to update the node before the upgrade height, and the software upgrade is to update the node after the upgrade height.
+* For users:
+  * There is not much difference between the two updates. The updated content will take effect through the proposal. The hard fork only adds new functions to the node first, but it will not be enabled immediately. To enable the new functions and features, a proposal will need to be launched after the upgrade.
+
+Validator node hard fork upgrade
+
+* Advantages:
+  * No downtime, will not affect user use
+  * Enough time for validators to update nodes
+* Disadvantages:
+  * Only simpler functions can be updated
+
+Validator node software upgrade
+
+* Advantages:
+  * More secure
+  * Maximize node performance
+* Disadvantages:
+  * Downtime, affecting user usage
+  * Validator fails to update node in a timely manner and leads to jail time
+
 ## f(x)Core Upgrade
 
 * Where is the default installation by make install for fxcored?
