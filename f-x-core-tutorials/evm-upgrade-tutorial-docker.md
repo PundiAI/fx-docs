@@ -64,13 +64,7 @@ make install
 docker pull functionx/fx-core:v2.2.0
 ```
 
-6\. Initializing fxcore
-
-```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
-```
-
-7\. Download genesis (copy and run each line, line by line)
+6\. Download genesis (copy and run each line, line by line)
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -90,7 +84,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/t
 {% endtab %}
 {% endtabs %}
 
-8\. Restart docker container to start the node:
+7\. Restart docker container to start the node:
 
 ```
 docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
