@@ -8,13 +8,16 @@ description: >-
 
 ### The upgrade contains the following main new feature/improvement:
 
-* Enable Gravity Cross-Chain Bridge to allow a many-to-one ERC20 token mapping feature.
+* Enable [f(x)Core Gravity Cross-Chain Bridge](../../deploying-on-f-x-core-evm/cross-chain-bridges/f-x-core-gravity-bridge.md) to allow a many-to-one ERC20 token mapping feature.
   * This would allow tokens from different chains (registered on the bridge) to be bridged into f(x)Core forming a unified token which is chain agnostic.
   * Example: ETH-USDT, Polygon-USDT, Tron-USDT cross-chain through the Gravity Cross-Chain Bridge, then converted by the fx-ERC20 module, and unified into a FX-USDT ERC20 Token upon entering fx-evm.
-* Any addition of new tokens to this Gravity Cross-Chain Bridge feature logic would have to go through governance.
-  * The proposal would need to be launched under the proposal type "**RegisterCoinProposal**"
+*   Any addition of new tokens to this Gravity Cross-Chain Bridge feature logic would have to go through governance.
 
-![](<../../.gitbook/assets/Unified ERC20.drawio.png>)
+    * The proposal would need to be launched under the proposal type "**RegisterCoinProposal**"
+
+
+
+![](<../../.gitbook/assets/Unified V2.drawio (1).png>)
 
 > Note: You may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 

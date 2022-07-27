@@ -14,7 +14,13 @@ The bridge allows the seamless addition of ERC20 tokens to the bridge, and there
 
 ### Features
 
-Simple by design, the f(x)Core Gravity Bridge eliminates design complexity and offers greater security Highly decentralised: All funds are directly controlled by validators (currently 20) Secure and censor-resistant: Advanced slashing ensures that validators cannot sign or submit bridge messages not agreed upon by consensus Gas Efficient: Rollup-style batch transactions reduce individual users’ gas costs by up to 96% Fast and Reliable: Robust relaying reward systems combined with reduced gas costs create extremely fast and reliable transfers Unified token: The unification of the same token from different chains to form a single unified token on f(x)Core that is chain-agnostic
+Simple by design, the f(x)Core Gravity Bridge eliminates design complexity and offers greater security.
+
+* **Highly decentralised:** All funds are directly controlled by validators (currently 20)
+* **Secure and censor-resistant:** Advanced slashing ensures that validators cannot sign or submit bridge messages not agreed upon by consensus
+* **Gas Efficient:** Rollup-style batch transactions reduce individual users’ gas costs by up to 96%
+* **Fast and Reliable:** Robust relaying reward systems combined with reduced gas costs create extremely fast and reliable transfers
+* **Unified token:** The unification of the same token from different chains to form a single unified token on f(x)Core that is chain-agnostic
 
 ### The Building Blocks of the f(x)Core Gravity Bridge
 
@@ -30,6 +36,8 @@ Like most cross-chain bridges, the Gravity Bridge involves locking up a native t
 
 When a representation of the token is minted on the f(x)Core chain, it will form a unified token which is chain agnostic. Example: ETH-USDT, Polygon-USDT, Tron-USDT cross-chain through the Gravity Cross-Chain Bridge, then converted by the fx-ERC20 module, and unified into a FX-USDT ERC20 Token upon entering fx-evm. Below is a diagram to show how the bridge works.
 
+![](<../../.gitbook/assets/Unified V2.drawio.png>)
+
 ### Deposits
 
 Depositing assets to Gravity Bridge from Ethereum is permissionless and censorship-resistant. Each validator attests to every deposit event as they occur on Ethereum. When an event is attested by more than ⅔ of the validator set, representative tokens are minted. Validators must submit all attestations in order.
@@ -39,10 +47,15 @@ Depositing assets to Gravity Bridge from Ethereum is permissionless and censorsh
 
 ### Withdrawals
 
-Gravity Bridge batches withdrawal transactions, placing multiple SendToEth messages together in an individual batch. This works like a rollup on Ethereum: Executing many transactions in a single shared context is far more efficient than doing so individually. Users call the sendToEth transaction of the fxCore chain through f(x)wallet and apply for withdrawal One of the arbitrage relays will monitor the transactions that apply for withdrawal on the f(x)Core chain. When the bridgeFee paid by all withdrawal transactions is enough to offset the transaction fee of sending submitBatch on the Ethereum chain, it will send requestBatch transactions to the f(x)Core chain to package all sendToEth transactions When other relayers listen to the requestBatch transaction on the f(x)Core chain, they will sign the packaged transaction, and then the confirmBatch transaction will occur on the f(x)Core chain The arbitrage relay will then collect the withdrawal package signature information of all relays from the f(x)Core chain, and call the submitBatch method of the Ethereum contract. The submitBatch method will check the signature information of the relay, and verify that the signatures collected are greater than 2/3. Once verified, the contract will unlock USDT and transfer it to the user account, completing the withdrawal. The remaining bridge fee will be transferred to the arbitrage relay
+Gravity Bridge batches withdrawal transactions, placing multiple SendToEth messages together in an individual batch. This works like a rollup on Ethereum: Executing many transactions in a single shared context is far more efficient than doing so individually.
+
+1. Users call the sendToEth transaction of the fxCore chain through f(x)wallet and apply for withdrawal&#x20;
+2. One of the arbitrage relays will monitor the transactions that apply for withdrawal on the f(x)Core chain. When the bridgeFee paid by all withdrawal transactions is enough to offset the transaction fee of sending submitBatch on the Ethereum chain, it will send requestBatch transactions to the f(x)Core chain to package all sendToEth transactions&#x20;
+3. When other relayers listen to the requestBatch transaction on the f(x)Core chain, they will sign the packaged transaction, and then the confirmBatch transaction will occur on the f(x)Core chain&#x20;
+4. The arbitrage relay will then collect the withdrawal package signature information of all relays from the f(x)Core chain, and call the submitBatch method of the Ethereum contract. The submitBatch method will check the signature information of the relay, and verify that the signatures collected are greater than 2/3. Once verified, the contract will unlock USDT and transfer it to the user account, completing the withdrawal. The remaining bridge fee will be transferred to the arbitrage relay
 
 ### How to Use Gravity Bridge
 
 **For users:** f(x)Wallet will soon be able to support the Gravity Bridge
 
-**For developers:** You may refer to this document to learn how to add your token to the Gravity Bridge
+**For developers:** You may refer to this document to learn how to add your token to the [Gravity Bridge](bridging-tokens-from-other-networks.md)
