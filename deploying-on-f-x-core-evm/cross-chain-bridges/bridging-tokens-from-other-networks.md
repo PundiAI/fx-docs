@@ -6,9 +6,9 @@ description: >-
 
 # Bridging Tokens from other networks
 
-### Using the [Cosmos Gravity Bridge](https://github.com/cosmos/gravity-bridge/blob/main/docs/design/overview.md)
+### Using the [Cosmos Gravity Bridge](https://etherscan.io/address/0x9f5f3e25fc389ce62b1f8296272a1dfd05de2654#code)
 
-Bridging tokens from other networks (supported by the [Cosmos Gravity Bridge](https://github.com/cosmos/gravity-bridge/blob/main/docs/design/overview.md)) via [Cosmos Gravity Bridge](https://github.com/cosmos/gravity-bridge/blob/main/docs/design/overview.md). This would require the following steps:
+Bridging tokens from other networks (supported by the [Cosmos Gravity Bridge](https://etherscan.io/address/0x9f5f3e25fc389ce62b1f8296272a1dfd05de2654#code)) via C[osmos Gravity Bridge](https://etherscan.io/address/0x9f5f3e25fc389ce62b1f8296272a1dfd05de2654#code). This would require the following steps:
 
 1. ERC20 token contract address is needed
 2. Launch a governance proposal on [f(x)Core network](https://explorer.functionx.io/fxcore/proposals) specifying the type: **RegisterCoinProposal**

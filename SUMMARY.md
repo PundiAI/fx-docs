@@ -61,7 +61,9 @@
 * [With Remix](deploying-on-f-x-core-evm/with-remix.md)
 * [With Truffle](deploying-on-f-x-core-evm/with-truffle.md)
 * [With Hardhat](deploying-on-f-x-core-evm/with-hardhat.md)
-* [Bridging Tokens from other networks](deploying-on-f-x-core-evm/bridging-tokens-from-other-networks.md)
+* [Cross-Chain Bridges](deploying-on-f-x-core-evm/cross-chain-bridges/README.md)
+  * [Bridging Tokens from other networks](deploying-on-f-x-core-evm/cross-chain-bridges/bridging-tokens-from-other-networks.md)
+  * [f(x)Core Gravity Bridge](deploying-on-f-x-core-evm/cross-chain-bridges/f-x-core-gravity-bridge.md)
 
 ## Developers
 
