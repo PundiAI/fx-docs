@@ -16,7 +16,7 @@ The bridge allows the seamless addition of ERC20 tokens to the bridge, and there
 
 Simple by design, the f(x)Core Gravity Bridge eliminates design complexity and offers greater security.
 
-* **Highly decentralised:** All funds are directly controlled by validators (currently 20)
+* **Highly decentralised:** All funds are directly controlled by validators
 * **Secure and censor-resistant:** Advanced slashing ensures that validators cannot sign or submit bridge messages not agreed upon by consensus
 * **Gas Efficient:** Rollup-style batch transactions reduce individual users’ gas costs by up to 96%
 * **Fast and Reliable:** Robust relaying reward systems combined with reduced gas costs create extremely fast and reliable transfers
