@@ -159,7 +159,7 @@ Next, let's install the latest version of f(x)Core. Make sure you have git insta
 {% tabs %}
 {% tab title="All Other Environments" %}
 ```
-git clone --branch release/v2.1.x https://github.com/functionx/fx-core.git
+git clone --branch release/v2.2.x https://github.com/functionx/fx-core.git
 ```
 
 ```
