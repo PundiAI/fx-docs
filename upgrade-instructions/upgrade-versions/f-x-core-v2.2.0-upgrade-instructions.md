@@ -8,6 +8,19 @@ description: >-
 
 ### The upgrade contains the following main new feature/improvement:
 
+**Bug Fixes**
+
+* Fix transaction msg `MsgConvertCoin` `MsgConvertERC20` too much gas
+* Fix crosschain to ethereum
+* Fix tendermint subcommand
+
+**New**
+
+* Add query oracle reward in the cross-chain module
+* Check fxcored version when synchronizing blocks from scratch
+* Add denom many to one support
+* Update RegisterCoinProposal support denom many to one
+* Add UpdateDenomAliasProposal and MsgConvertDenom
 * Enable [f(x)Core Gravity Cross-Chain Bridge](../../deploying-on-f-x-core-evm/cross-chain-bridges/f-x-core-gravity-bridge.md) to allow a many-to-one ERC20 token mapping feature.
   * This would allow tokens from different chains (registered on the bridge) to be bridged into f(x)Core forming a unified token which is chain agnostic.
   * Example: ETH-USDT, Polygon-USDT, Tron-USDT cross-chain through the Gravity Cross-Chain Bridge, then converted by the fx-ERC20 module, and unified into a FX-USDT ERC20 Token upon entering fx-evm.
