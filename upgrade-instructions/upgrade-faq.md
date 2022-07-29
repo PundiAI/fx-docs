@@ -56,6 +56,22 @@ Validator node software upgrade
 * Query the validator‘s signature status
   * `fxcored query slashing signing-infos`
 
+## Rollback plan
+
+During the network upgrade, the core fxCore team will be keeping an ever vigilant eye and communicating with operators on the status of their upgrades. During this time, the core team will be attentive to operator needs to determine if the upgrade is experiencing unintended challenges. The core team would provide technical support during the time of the upgrade. In the event of unexpected challenges, the core team, after conferring with operators and attaining social consensus, may choose to declare that the upgrade will be skipped.
+
+Steps to skip this upgrade proposal are simply to resume the fxCore network with the (downgraded) binary using the following command:
+
+```shell
+fxcored start --unsafe-skip-upgrade <block_height>
+```
+
+> There is no particular need to restore a state snapshot prior to the upgrade height, unless specifically directed by core fxCore team.
+
+{% hint style="info" %}
+A social consensus decision to skip the upgrade will be based solely on technical merits, thereby respecting and maintaining the decentralized governance process of the upgrade proposal's successful YES vote.
+{% endhint %}
+
 ## fxCore Gravity cross-chain
 
 * How are cross-chain tokens converted on different chains?
