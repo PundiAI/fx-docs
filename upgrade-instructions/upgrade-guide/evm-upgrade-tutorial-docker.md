@@ -50,8 +50,16 @@ git checkout <upgradeable version branch>
 &#x20;  Example:
 
 ```
-git checkout release/v2.2.x
+git checkout tags/v2.2.1 -b release/v2.2.x
 ```
+
+Check log whether is the latest commit
+
+```
+git log
+```
+
+> <mark style="color:orange;">**commit 5eef07630e89ad0bd786fb08fa0fb937e5c84d67 (**</mark><mark style="color:blue;">**HEAD -**</mark>**> **<mark style="color:green;">**release/v2.2.x**</mark><mark style="color:yellow;">**,**</mark>**  **<mark style="color:yellow;">**tag: v2.2.1)**</mark>
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
 
@@ -63,7 +71,7 @@ make install
 5\. Pull latest docker images
 
 ```
-docker pull functionx/fx-core:v2.2.0
+docker pull functionx/fx-core:v2.2.1
 ```
 
 6\. Download genesis (copy and run each line, line by line)
@@ -89,7 +97,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/t
 7\. Restart docker container to start the node:
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 start
 ```
 
 To check if fxcore is synced:

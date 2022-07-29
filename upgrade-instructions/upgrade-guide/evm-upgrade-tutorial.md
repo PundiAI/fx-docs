@@ -58,8 +58,16 @@ git checkout <upgradeable version branch>
 for example:
 
 ```
-git checkout release/v2.2.x
+git checkout tags/v2.2.1 -b release/v2.2.x
 ```
+
+Check log whether is the latest commit
+
+```
+git log
+```
+
+> <mark style="color:orange;">**commit 5eef07630e89ad0bd786fb08fa0fb937e5c84d67 (**</mark><mark style="color:blue;">**HEAD -**</mark>**> **<mark style="color:green;">**release/v2.2.x**</mark><mark style="color:yellow;">**,**</mark>**  **<mark style="color:yellow;">**tag: v2.2.1)**</mark>
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
 
