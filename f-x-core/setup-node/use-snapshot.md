@@ -1,8 +1,59 @@
 # Snapshot Guide
 
+## Types of f(x)Core Snapshots
+
+1. A pruned-snapshot, which contains only the most recent day's data
+   * Only data for the most recent day, no earlier data
+   * Small amount of data and footprint
+2. A snapshot of all the transaction data
+   * Contains all transaction data, as well as current state data
+   * Large amount of data and footprint
+3. An archive-snapshot, which contains all transaction data as well as all state data (<mark style="color:red;">**syncing, not open yet**</mark>)
+   * Contains all transaction and status data
+   * The amount of data is very large and takes up a lot of space
+   * In general, you do not need to use an archive node
+
 ## Available snapshots
 
-<mark style="color:orange;">**Snapshots are performed every Monday morning at 2:00 am UTC**</mark><mark style="color:orange;">,</mark> keeping a record of that snapshot for three weeks. If the date on the file above is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date (to the latest Monday's date) in the file name to get the latest snapshot. <mark style="color:orange;">**If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.**</mark>
+<mark style="color:orange;">**Snapshots are performed based on its type as per below**</mark><mark style="color:orange;">,</mark> keeping a record of recent snapshot for as per below. If the date on the file is not yet updated and more than a week has lapsed since the last snapshot, you may replace the date in the file name to get the latest snapshot. <mark style="color:orange;">**If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.**</mark>
+
+{% tabs %}
+{% tab title="Mainnet" %}
+* Status data (pruned node)
+  * Snapshot frequency: once a day (10am GMT +8)
+  * Snapshot record keeping: 7 most recent
+  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-07-22.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-07-22.tar.gz)
+  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-07-22.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-07-22.tar.gz.md5)
+* Data (full node)
+  * Snapshot frequency: every Monday (10am GMT +8)
+  * Snapshot record keeping: 3 most recent
+  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-22.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-22.tar.gz)
+  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-22.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-22.tar.gz.md5)
+* Archive node - <mark style="color:red;">**synchronising**</mark>
+  * Snapshot frequency: once a day (10am GMT +8)
+  * Snapshot record keeping: 3 most recent
+  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-07-22.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-07-22.tar.gz)
+  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-07-22.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-07-22.tar.gz.md5)
+{% endtab %}
+
+{% tab title="Testnet" %}
+* Status data (pruned node)
+  * Snapshot frequency: once a day (10am GMT +8)
+  * Snapshot record keeping: 7 most recent
+  * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-07-22.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-07-22.tar.gz)
+  * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-07-22.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-07-22.tar.gz.md5)
+* Data (full node)
+  * Snapshot frequency: every Monday (10am GMT +8)
+  * Snapshot record keeping: 3 most recent
+  * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-22.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-22.tar.gz)
+  * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-22.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-22.tar.gz.md5)
+* Archive node - <mark style="color:red;">**synchronising**</mark>
+  * Snapshot frequency: once a day (10am GMT +8)
+  * Snapshot record keeping: 3 most recent
+  * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-07-22.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-07-22.tar.gz)
+  * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-07-22.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-07-22.tar.gz.md5)
+{% endtab %}
+{% endtabs %}
 
 ## Using Snapshots
 
@@ -15,7 +66,7 @@ Download the Snapshot to your VM. To download the Snapshot Tar file to your VM y
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-daily-mainnet-2022-07-18.tar.gz
+https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-18.tar.gz
 ```
 {% endtab %}
 
@@ -26,7 +77,7 @@ wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-18.t
 {% endtab %}
 {% endtabs %}
 
-This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time.
+This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time depending on its type.
 
 {% hint style="info" %}
 If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.
@@ -34,12 +85,20 @@ If the date or day of the month are single digits, make sure to prepend a 0 in f
 You need to ensure that you're running this command before you `Start` your node. If your fxcore node has already started, please stop it and then run the command below. Once unpacking is complete you can start the fxcore service again.
 {% endhint %}
 
+## MD5 checksum for downloaded file
+
+```
+md5sum fxcore-snapshot-mainnet-2022-07-18.tar.gz
+
+// compare it against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-07-18.tar.gz.md5
+```
+
 Now, to unpack the `tar` file in the fxcore Data directory run the following command:
 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-tar -xzvf fxcore-snapshot-daily-mainnet-2022-07-18.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2022-07-18.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 
