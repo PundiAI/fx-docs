@@ -10,45 +10,30 @@ First, you need to set your node up with the pre-requisites as per the node **se
 
 > The greater the blockchain data, the more evident the reduction is syncing time will be. If the current state of the blockchain will take about 2 days to sync, this method of syncing will reduce the time to sync by at least 12 hours.
 
-Download the Snapshot to your VM. To download the Snapshot Tar file to your VM you can run the following command:
+Download the Snapshot to your VM and decompress it to destination. To download and decompress the Snapshot Tar file to your VM you can run the following command:
 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-daily-mainnet-2022-07-18.tar.gz
+wget -qO- https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz | tar -xvz -C ~/.fxcore/
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-07-18.tar.gz
+wget -qO- https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz | tar -xvz -C ~/.fxcore/
 ```
 {% endtab %}
 {% endtabs %}
 
-This will download the Snapshot of fxcore. Downloading the snapshot and unpacking the file will take some time.
+This will download the Snapshot of fxcore and decompress it in `~/.fxcore/` folder. Downloading the snapshot and unpacking the file will take some time.
 
 {% hint style="info" %}
 If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.
+Sometimes 
 
 You need to ensure that you're running this command before you `Start` your node. If your fxcore node has already started, please stop it and then run the command below. Once unpacking is complete you can start the fxcore service again.
 {% endhint %}
-
-Now, to unpack the `tar` file in the fxcore Data directory run the following command:
-
-{% tabs %}
-{% tab title="Mainnet" %}
-```
-tar -xzvf fxcore-snapshot-daily-mainnet-2022-07-18.tar.gz -C ~/.fxcore/
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
-```
-tar -xzvf fxcore-snapshot-testnet-2022-07-18.tar.gz -C ~/.fxcore/
-```
-{% endtab %}
-{% endtabs %}
 
 {% hint style="info" %}
 Note that if your fxcore data directory is named differently then please rename that directory.
