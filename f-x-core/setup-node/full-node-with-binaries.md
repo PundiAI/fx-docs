@@ -276,7 +276,7 @@ journalctl -t fxcored -f
 
 ## Secret and updating consensus key
 
-Use this at your own risk❗ I suggest trying it out on testnet first and also backing up your `priv_validator_key.json` if you already have this set up for a validator. The file can be found in this file path `/.fxcore/config/priv_validator_key.json`.
+Use this at your own risk❗ I suggest trying it out on testnet first and also backing up your `priv_validator_key.json` if you already have this set up for a validator. The file can be found in this file path `~/.fxcore/config/priv_validator_key.json`.
 
 ### Updating your consensus key and tagging it to a pin
 
