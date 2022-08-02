@@ -55,7 +55,7 @@
 {% endtab %}
 {% endtabs %}
 
-## Using Snapshots
+## Downloading the Snapshots
 
 First, you need to set your node up with the pre-requisites as per the node **setup guide**. Before you `start node` for fxcore to sync, follow the steps below to use snapshot.
 
@@ -87,11 +87,16 @@ You need to ensure that you're running this command before you `Start` your node
 
 ## MD5 checksum for downloaded file
 
-```
-md5sum fxcore-snapshot-mainnet-2022-08-01.tar.gz
+Checksums are often used to verify data integrity but are not relied upon to verify data authenticity, below are example of the `md5sum` command to check whether the file is downloaded correctly using
 
-// compare it against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz.md5
+```bash
+$ md5sum fxcore-snapshot-mainnet-2022-08-01.tar.gz
+4269fe416ca2d74d3925449f5ce7d214  fxcore-snapshot-mainnet-2022-08-01.tar.gz
 ```
+
+> compare the md5 hash against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz.md
+
+## Extracting the Snapshots
 
 Now, to unpack the `tar` file in the fxcore Data directory run the following command:
 
