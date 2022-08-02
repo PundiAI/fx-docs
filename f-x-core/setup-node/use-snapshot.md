@@ -66,13 +66,13 @@ Download the Snapshot to your VM and decompress it to destination. To download a
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz
 ```
 {% endtab %}
 {% endtabs %}
