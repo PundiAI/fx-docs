@@ -68,7 +68,7 @@
 
 ## Downloading the Snapshots
 
-Download the Snapshot to your VM and decompress it to destination. To download and decompress the Snapshot Tar file to your VM you can run the following command:
+Download the snapshot to your VM. To download the snapshot tar file to your VM you can run the following command:
 
 {% tabs %}
 {% tab title="Mainnet" %}
