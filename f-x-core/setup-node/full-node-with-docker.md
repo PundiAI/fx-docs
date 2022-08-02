@@ -13,13 +13,13 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 ```
-docker pull functionx/fx-core:v2.2.0
+docker pull functionx/fx-core:v2.2.1
 ```
 
 * Initializing fxcore
 
 ```
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 init fx-zakir
 ```
 
 * Download genesis (copy and run each line, line by line)
@@ -51,7 +51,7 @@ And at this stage, what is important is your validator keys that is stored in a 
 * Run docker
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 start
 ```
 
 To check if fxcore is synced:
