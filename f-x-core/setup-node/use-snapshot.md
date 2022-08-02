@@ -9,8 +9,6 @@
 4. Once unpacking is complete, you can start the fxcore service again
 {% endhint %}
 
-> The greater the blockchain data, the more evident the reduction is syncing time will be. If the current state of the blockchain will take about 2 days to sync, this method of syncing will reduce the time to sync by at least 12 hours.
-
 ## Types of f(x)Core Snapshots
 
 1. A pruned-snapshot, which contains only the most recent day's data
@@ -23,6 +21,8 @@
    * Contains all transaction and status data
    * The amount of data is very large and takes up a lot of space
    * In general, you do not need to use an archive node
+
+> The greater the blockchain data, the more evident the reduction is syncing time will be. If the current state of the blockchain will take about 2 days to sync, this method of syncing will reduce the time to sync by at least 12 hours.
 
 ## Available snapshots
 
