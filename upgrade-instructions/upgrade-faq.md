@@ -46,7 +46,7 @@ Validator node software upgrade
 * What should I do if the "`panic: Failed to start consensus state: found signature from the same key`" appears in log?
   * We should first check whether the `priv_validator_key.json` configured by the node is used by its node, if not, run the command `fxcored config config.toml consensus.double_sign_check_height 0`, to modify the double-sign check, and then restart the node
 * How to determine whether the f(x)core mainnet genesis is correct
-  * `md5 $HOME/.fxcore/config/genesis.json`
+  * `md5sum $HOME/.fxcore/config/genesis.json`
   * `ded64cf0d1e556b7fd4577cfd44cc328`
 * Is there any CLI command to check if a validator node is validating a block without checking the resource manager?
   * Query the consensus signature address used by the local node
