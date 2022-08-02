@@ -66,32 +66,24 @@ Download the Snapshot to your VM and decompress it to destination. To download a
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-
-wget -qO- https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz | tar -xvz -C ~/.fxcore/
-
+wget https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-
-wget -qO- https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz | tar -xvz -C ~/.fxcore/
-
+wget https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz
 ```
 {% endtab %}
 {% endtabs %}
 
-
 This will download the Snapshot of fxcore and decompress it in `~/.fxcore/` folder. Downloading the snapshot and unpacking the file will take some time.
 
-
 {% hint style="info" %}
-If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD.
-Sometimes 
+If the date or day of the month are single digits, make sure to prepend a 0 in front of the single digit number. Date format will be in YYYY-MM-DD. Sometimes
 
 You need to ensure that you're running this command before you `Start` your node. If your fxcore node has already started, please stop it and then run the command below. Once unpacking is complete you can start the fxcore service again.
 {% endhint %}
-
 
 ## MD5 checksum for downloaded file
 
@@ -116,7 +108,6 @@ tar -xzvf fxcore-snapshot-testnet-2022-08-01.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 {% endtabs %}
-
 
 {% hint style="info" %}
 Note that if your fxcore data directory is named differently then please rename that directory.
