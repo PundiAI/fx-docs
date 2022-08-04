@@ -2,7 +2,7 @@
 description: A list of deployed Dapps
 ---
 
-# Deployed DApps
+# Deployed Dapps
 
 
 
