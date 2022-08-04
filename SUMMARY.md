@@ -50,6 +50,7 @@
 
 ## Deploying on f(x)core EVM
 
+* [Deployed Dapps](deploying-on-f-x-core-evm/deployed-dapps.md)
 * [MetaMask](deploying-on-f-x-core-evm/metamask/README.md)
   * [Download and Install MetaMask](deploying-on-f-x-core-evm/metamask/download-and-install-metamask.md)
   * [Add f(x)Core Network](deploying-on-f-x-core-evm/metamask/add-f-x-core-network.md)
