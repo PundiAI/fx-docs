@@ -2,7 +2,7 @@
 description: A list of deployed Dapps
 ---
 
-# Deployed Dapps
+# Deployed DApps
 
 
 
@@ -16,7 +16,7 @@ description: A list of deployed Dapps
 {% endtab %}
 
 {% tab title="Testnet" %}
-| Dapp Name | URL                                        |
+| DApp Name | URL                                        |
 | --------- | ------------------------------------------ |
 | FX-Swap   | [https://fx-swap.io/](https://fx-swap.io/) |
 |           |                                            |
