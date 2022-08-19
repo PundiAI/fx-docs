@@ -12,15 +12,31 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
+{% tabs %}
+{% tab title="Miannet" %}
 ```
 docker pull functionx/fx-core:v2.2.1
 ```
+{% endtab %}
+
+{% tab title="Tesetnet" %}
+```
+docker pull functionx/fx-core:v2.3.0
+```
+{% endtab %}
+{% endtabs %}
 
 * Initializing fxcore
 
-```
+{% tabs %}
+{% tab title="Mainnet" %}
 docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 init fx-zakir
-```
+{% endtab %}
+
+{% tab title="Testnet" %}
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.0 init fx-zakir
+{% endtab %}
+{% endtabs %}
 
 * Download genesis (copy and run each line, line by line)
 
