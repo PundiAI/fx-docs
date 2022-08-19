@@ -2,7 +2,7 @@
 
 This guide will explain how to install the `fxcored` CLI onto your system. With this installed on a server, you can participate on the mainnet as either a [Full Node](setup-node/) or a [Validator](../validators/validator-setup.md).
 
-Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial video**</mark>](https://www.youtube.com/watch?v=Fz0Y3qKG9og\&ab\_channel=FunctionX) <mark style="color:red;">****</mark> to set up your validator.
+Additionally, you may refer to this [<mark style="color:red;">**YouTube tutorial video**</mark>](https://www.youtube.com/watch?v=Fz0Y3qKG9og\&ab\_channel=FunctionX) <mark style="color:red;">\*\*\*\*</mark> to set up your validator.
 
 ## Hardware Requirements
 
@@ -49,7 +49,7 @@ and `gcc`:
 brew install gcc
 ```
 
-We'll  be needing these commands later so let's install the necessary packages:
+We'll be needing these commands later so let's install the necessary packages:
 
 ```
 brew install git
@@ -157,9 +157,19 @@ source ~/.profile
 Next, let's install the latest version of f(x)Core. Make sure you have git installed if not you will be prompted to `install git`. Follow the instruction in the terminal.
 
 {% tabs %}
-{% tab title="All Other Environments" %}
+{% tab title="Mainnet" %}
 ```
 git clone --branch release/v2.2.x https://github.com/functionx/fx-core.git
+```
+
+```
+cd fx-core
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+git clone --branch release/v2.3.x https://github.com/functionx/fx-core.git
 ```
 
 ```
@@ -289,8 +299,6 @@ build_deps:
 ...
 cosmos_sdk_version: v0.45.5
 ```
-
-
 
 ### Build Tags
 
