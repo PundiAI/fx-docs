@@ -36,12 +36,12 @@
   * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-08-01.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-08-01.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2022-08-01.tar.gz.md5)
 * Full-node snapshot (full node)
-  * Snapshot frequency: every Monday (10am GMT +8)
+  * Snapshot frequency: once a day (10am GMT +8)
   * Snapshot record keeping: 3 most recent
   * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2022-08-01.tar.gz.md5)
 * Archive node - <mark style="color:red;">**synchronising**</mark>
-  * Snapshot frequency: once a day (10am GMT +8)
+  * Snapshot frequency: every Monday (10am GMT +8)
   * Snapshot record keeping: 3 most recent
   * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz.md5)
@@ -54,12 +54,12 @@
   * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz.md5)
 * Data (full node)
-  * Snapshot frequency: every Monday (10am GMT +8)
+  * Snapshot frequency: once a day (10am GMT +8)
   * Snapshot record keeping: 3 most recent
   * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz.md5)
 * Archive node - <mark style="color:red;">**synchronising**</mark>
-  * Snapshot frequency: once a day (10am GMT +8)
+  * Snapshot frequency: every Monday (10am GMT +8)
   * Snapshot record keeping: 3 most recent
   * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz.md5)
