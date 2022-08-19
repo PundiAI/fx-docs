@@ -48,12 +48,12 @@
 {% endtab %}
 
 {% tab title="Testnet" %}
-* Status data (pruned node)
+* Pruned-shapshot (light node)
   * Snapshot frequency: once a day (10am GMT +8)
   * Snapshot record keeping: 7 most recent
   * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz)
   * Md5 link: [https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz.md5](https://fx-testnet.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2022-08-01.tar.gz.md5)
-* Data (full node)
+* Full-node snapshot (full node)
   * Snapshot frequency: once a day (10am GMT +8)
   * Snapshot record keeping: 3 most recent
   * Shapshot link: [https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz](https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2022-08-01.tar.gz)
