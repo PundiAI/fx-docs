@@ -51,9 +51,9 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/m
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
@@ -67,7 +67,7 @@ And at this stage, what is important is your validator keys that is stored in a 
 * Run docker
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.0 start
 ```
 
 To check if fxcore is synced:
