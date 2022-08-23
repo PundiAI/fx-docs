@@ -79,7 +79,7 @@ make install
 5\. Pull latest docker images
 
 ```
-docker pull functionx/fx-core:v2.3.0
+docker pull functionx/fx-core:v2.2.1
 ```
 
 6\. Download genesis (copy and run each line, line by line)
@@ -87,9 +87,9 @@ docker pull functionx/fx-core:v2.3.0
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
@@ -105,7 +105,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/t
 7\. Restart docker container to start the node:
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 start
 ```
 
 To check if fxcore is synced:

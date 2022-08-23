@@ -61,6 +61,8 @@ brew install wget
 {% endtab %}
 
 {% tab title="Windows" %}
+You will need to run git bash. You may find the installation link [here](https://git-scm.com/download/win).
+
 Ensure you have `make` and `gcc` installed and that the paths are set correctly for git bash.
 
 One option for installing `gcc` can be found [here](https://jmeubank.github.io/tdm-gcc/articles/2021-05/10.3.0-release).
@@ -193,7 +195,6 @@ cd fx-core
 ```
 
 ```
-make go.sum
 ```
 {% endtab %}
 {% endtabs %}
