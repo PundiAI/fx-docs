@@ -113,8 +113,8 @@ The result fields should display null as <0x-0> is a brand new wallet.
 
 ```bash
 fxcored tx migrate account $(fxcored keys show <0x_key_name> -e) \
---from <fx-0_keyName> --gas-adjustment 1.5 --gas="auto" --gas-adjustment=1.5 \
- --gas-prices=4000000000000FX
+--from <fx-0_keyName> --gas-adjustment 1.5 --gas="auto" --gas-prices=4000000000000FX \
+--chain-id=<chain-id>
 ```
 
 **Migration of address**

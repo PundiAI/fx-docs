@@ -446,7 +446,7 @@ Note When you query an account balance with zero tokens, you will get this error
 The following command could be used to send coins from one account to another:
 
 ```bash
- fxcored tx bank send <from_key_or_address> <to_address> <amount> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
+ fxcored tx bank send <from_key_or_address> <to_address> <amount> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX" --chain-id=<chain-id>
 ```
 
 {% hint style="info" %}
@@ -1056,13 +1056,13 @@ fxcored query distribution rewards <delegator_address>
 Withdraw rewards from a given delegation address, and optionally withdraw validator commission (by adding in a `--commission` flag, see below) if the delegation address given is a validator operator:
 
 ```
-fxcored tx distribution withdraw-rewards <validator-addr> --from <_name> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
+fxcored tx distribution withdraw-rewards <validator-addr> --from <_name> --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX" --chain-id=<chain-id>
 ```
 
 Withdraw the validator's commission in addition to the rewards:
 
 ```
-fxcored tx distribution withdraw-rewards <validator-addr> --from mykey --commission --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX"
+fxcored tx distribution withdraw-rewards <validator-addr> --from mykey --commission --gas auto --gas-adjustment 1.5 --gas-prices "4000000000000FX" --chain-id=<chain-id>
 ```
 
 ### Multisig Transactions
