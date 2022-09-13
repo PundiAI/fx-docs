@@ -50,11 +50,11 @@ git checkout <upgradeable version branch>
 &#x20;  Example:
 
 ```
-git checkout release/v2.2.x
+git checkout release/v2.3.x
 
 or
 
-git checkout tags/v2.2.1 -b release/v2.2.x
+git checkout tags/v2.3.1 -b release/v2.3.x
 ```
 
 Check log whether is the latest commit
@@ -63,11 +63,7 @@ Check log whether is the latest commit
 git log
 ```
 
-> <mark style="color:orange;">**commit d5d54614f3227bb070e4a930c0ca95f0e31006a5**</mark> if you checked out the branch without specifying the tags
->
-> or
->
-> <mark style="color:orange;">**commit 5eef07630e89ad0bd786fb08fa0fb937e5c84d67 (**</mark><mark style="color:blue;">**HEAD -**</mark>**> **<mark style="color:green;">**release/v2.2.x**</mark><mark style="color:yellow;">**,**</mark>**  **<mark style="color:yellow;">**tag: v2.2.1)**</mark>  if you checked out the tags
+> <mark style="color:orange;">**commit 5f8ef310e06d11f051ad4931a4a4aa5443b11261**</mark> if you checked out the branch without specifying the tags
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
 
@@ -79,7 +75,7 @@ make install
 5\. Pull latest docker images
 
 ```
-docker pull functionx/fx-core:v2.2.1
+docker pull functionx/fx-core:v2.3.1
 ```
 
 6\. Download genesis (copy and run each line, line by line)
@@ -87,17 +83,17 @@ docker pull functionx/fx-core:v2.2.1
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
@@ -105,7 +101,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/t
 7\. Restart docker container to start the node:
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.1 start
 ```
 
 To check if fxcore is synced:

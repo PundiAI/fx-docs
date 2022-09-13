@@ -39,8 +39,8 @@
 ## Upgrade Instructions
 
 * [Upgrade Guide](upgrade-instructions/upgrade-guide/README.md)
-  * [Docker - Upgrading Your Node](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial-docker.md)
   * [Binaries - Upgrading Your Node](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial.md)
+  * [Docker - Upgrading Your Node](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial-docker.md)
 * [Upgrade Versions](upgrade-instructions/upgrade-versions/README.md)
   * [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/upgrade-versions/fxcore-v2.1.0-upgrade-instructions/README.md)
     * [Testnet Upgrade Practice](upgrade-instructions/upgrade-versions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
