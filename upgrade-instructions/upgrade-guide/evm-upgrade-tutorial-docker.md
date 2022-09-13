@@ -63,7 +63,7 @@ Check log whether is the latest commit
 git log
 ```
 
-> <mark style="color:orange;">**commit 5f8ef310e06d11f051ad4931a4a4aa5443b11261**</mark> if you checked out the branch without specifying the tags
+> <mark style="color:orange;">**commit 50a98ef23bffa392e4652518e8a5ae75343f3e1a**</mark> if you checked out the branch without specifying the tags
 
 4\. Update fxcored (ensure that you are in the fx-core folder):
 
