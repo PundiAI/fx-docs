@@ -4,6 +4,8 @@ description: Steps to connect f(x)Wallet using Wallet Connect to Dapps
 
 # Connect using f(x)Wallet (Wallet Connect)
 
+## Connecting through the UI
+
 ### Connect f(x)Wallet account to Dapp
 
 When you create an account on the f(x)Wallet application, it automatically generates an Ethereum address. This address can be used to interact with Dapps via Wallet Connect. In this tutorial iOS is used, the process is similar on Andriod.
@@ -51,3 +53,94 @@ WalletConnect only allows you to connect to one Dapp at a time. You will have to
 
 Your Dapp should now not show your address being connected anymore.
 
+## For Developers
+
+### Dependencies
+
+* fxwallet version (minimum): v2.0
+* fx-js-sdk: [https://www.npmjs.com/package/fx-js-sdk](https://www.npmjs.com/package/fx-js-sdk)
+
+### WalletConnectId
+
+* 39778
+
+### CHAIN\_ID
+
+* fxevm
+
+### Get Accounts
+
+{% code lineNumbers="true" %}
+```javascript
+export function getAccountRequest(chainIds) {
+  return {
+    id: payloadId(),
+    jsonrpc: '2.0',
+    method: 'functionx_wc_accounts_v1',
+    params: chainIds,
+  };
+}
+```
+{% endcode %}
+
+Example
+
+{% code lineNumbers="true" %}
+```javascript
+const request = getAccountRequest([CHAIN_ID,CHAIN_ID]);
+connector.sendCustomRequest(request)
+  .then((accounts) => {
+    setAccounts(accounts);
+    console.log(accounts.length == 1);
+  }).catch((error) => {
+    console.error(error);
+  });
+```
+{% endcode %}
+
+Result
+
+\[name, algo, publicKey, addressByte, bech32Address]
+
+### Sign Transactions (amino)
+
+Sign transaction using FunctionX Mobile Wallet via Wallet Connect
+
+* signer: bech32Address
+
+Example:
+
+{% code lineNumbers="true" %}
+```javascript
+import {
+  makeSignDoc as makeAminoSignDoc,
+  serializeSignDoc
+} from "@cosmjs/amino"
+import { fromUtf8 } from "@cosmjs/encoding"
+
+const signDoc = makeAminoSignDoc(messages, fee, chainId, memo, accountNumber, sequence)
+const signBytes = serializeSignDoc(signDoc)
+const signData = fromUtf8(signBytes)
+     
+connector.sendCustomRequest({
+    id: payloadId(),
+    jsonrpc: '2.0',
+    method: 'functionx_wc_sign_tx_v1',
+    params: [chainId, signer, signData],
+  })
+  .then((response) => {
+    const signed = _.get(response, '0.signed');
+    const signature = _.get(response, '0.signature');
+    return broadcastTx(signed, signature);
+  }).then((result) => {
+    const code = _.get(result, 'code');
+    if (code === 0) {
+      const txHash = _.get(result, 'txhash');
+      console.log(txHash);
+    } else {
+      const rawLog = _.get(result, 'raw_log');
+      console.error(rawLog);
+    }
+  })
+```
+{% endcode %}
