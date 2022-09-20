@@ -78,6 +78,7 @@
   * [Namespaces](developers/web3/namespaces.md)
   * [JSON RPC Methods](developers/web3/endpoints.md)
   * [Events](developers/web3/events.md)
+* [WalletConnect-fxCore](developers/walletconnect-fxcore.md)
 
 ## Governance
 
