@@ -81,7 +81,8 @@
 
 ## Governance
 
-* [Governance Proposal Information](governance/governance-proposal-information.md)
+* [Governance Proposal Information](governance/governance-proposal-information/README.md)
+  * [Current EGF Deposit Status](governance/governance-proposal-information/current-egf-deposit-status.md)
 
 ***
 

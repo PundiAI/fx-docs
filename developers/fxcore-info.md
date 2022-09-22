@@ -190,7 +190,7 @@ Jail / discharge: The validator node that offline or failure to sign <5% of the 
 
 ## Governance module (gov)
 
-The gov module allows on-chain governance system. A brief explanation of the process flow of submitting a proposal is as follow (for an in-depth explanation and examples, go [here](../governance/governance-proposal-information.md)):&#x20;
+The gov module allows on-chain governance system. A brief explanation of the process flow of submitting a proposal is as follow (for an in-depth explanation and examples, go [here](../governance/governance-proposal-information/)):&#x20;
 
 1. To submit a proposal, it requires an _initial deposit_ of at least 1000 FX, there is a deposit period (`max deposit period`) for the `min deposit` to be reached
 2. The `min deposit` is 10000 FX (the _initial deposit_ is counted towards the threshold)
