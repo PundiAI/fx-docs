@@ -10,13 +10,13 @@ description: >-
 
 Currently there are the following governance proposal types:
 
-| Type                         | Description                                                                                                                          |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Ecosystem Genesis Fund (EGF) | Proposal for request of funds from the EGF, for the complete process please read [this](https://github.com/FunctionX/FunctionX-EGF). |
-| Add Cross Chain Parameters   | Proposal for adding cross-chain functionality of a new chain and configuring the parameters of Relayers.                             |
-| Upgrade Chain Oracles        | Proposal for updating the configuration of Relayers on the newly added chain.                                                        |
-| Parameter Change             | Proposal for configuring f(x)core chain parameters.                                                                                  |
-| Others                       | Any governance proposal that does not involved a modification of the source code.                                                    |
+| Type                         | Description                                                                                              |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Ecosystem Genesis Fund (EGF) | Proposal for request of funds from the EGF, for the complete process please read [this](egf-info.md).    |
+| Add Cross Chain Parameters   | Proposal for adding cross-chain functionality of a new chain and configuring the parameters of Relayers. |
+| Upgrade Chain Oracles        | Proposal for updating the configuration of Relayers on the newly added chain.                            |
+| Parameter Change             | Proposal for configuring f(x)core chain parameters.                                                      |
+| Others                       | Any governance proposal that does not involved a modification of the source code.                        |
 
 ### Process Flow of Governance Proposal
 
