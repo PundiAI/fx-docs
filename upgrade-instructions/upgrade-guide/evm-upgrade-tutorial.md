@@ -43,13 +43,17 @@ kill -9 <PID>
 {% endtab %}
 {% endtabs %}
 
-2\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
+2\. Get the latest `fxcored` binary
+
+{% tabs %}
+{% tab title="Build from source" %}
+1\. Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
 
 ```
 git pull
 ```
 
-3\. Checkout the branch of the upgrade version:
+2\. Checkout the branch of the upgrade version:
 
 ```shell
 git checkout <upgradeable version branch>
@@ -73,20 +77,40 @@ git log
 
 > <mark style="color:orange;">**commit 50a98ef23bffa392e4652518e8a5ae75343f3e1a**</mark> if you checked out the branch without specifying the tags
 
-4\. Update fxcored (ensure that you are in the fx-core folder):
+3\. Update fxcored (ensure that you are in the fx-core folder):
 
 ```
 make go.sum
 make install
 ```
+{% endtab %}
 
-5\. Cross reference the latest commit hash to the commit in our [official github page](https://github.com/FunctionX/fx-core):
+{% tab title="Download binary" %}
+[https://github.com/FunctionX/fx-core/releases/tag/v2.4.0-dragonberry](https://github.com/FunctionX/fx-core/releases/tag/v2.4.0-dragonberry)
+
+1.
+
+```
+curl -o fx-core_2.4.0.tar.gz -LJO https://github.com/FunctionX/fx-core/releases/download/v2.4.0-dragonberry/fx-core_2.4.0_Linux_x86_64.tar.gz
+```
+
+2\.&#x20;
+
+```
+mkdir -p fxcore-temp
+tar -zxvf fx-core_2.4.0.tar.gz -C fxcore-temp
+cp fxcore-temp/bin/fxcored $(GOPATH)/bin/fxcored
+```
+{% endtab %}
+{% endtabs %}
+
+3\. Cross reference the latest commit hash to the commit in our [official github page](https://github.com/FunctionX/fx-core):
 
 ```
 fxcored version
 ```
 
-6\. Download genesis (copy and run each line, line by line)
+4\. Download genesis (copy and run each line, line by line)
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -106,13 +130,13 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/t
 {% endtab %}
 {% endtabs %}
 
-7\. Restart the node:
+5\. Restart the node:
 
 ```
 sudo systemctl restart fxcored
 ```
 
-8\. Check whether the node is participating in consensus:
+6\. Check whether the node is participating in consensus:
 
 ```
 cat $HOME/.fxcore/data/priv_validator_state.json
