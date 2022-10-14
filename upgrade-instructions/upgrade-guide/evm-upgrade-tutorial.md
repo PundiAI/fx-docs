@@ -62,11 +62,11 @@ git checkout <upgradeable version branch>
 for example:
 
 ```
-git checkout release/v2.3.x
+git checkout release/v2.4.x
 
 or
 
-git checkout tags/v2.3.1 -b release/v2.3.x
+git checkout tags/v2.4.0 -b release/v2.4.x
 ```
 
 Check log whether is the latest commit
@@ -88,13 +88,13 @@ make install
 {% tab title="Download binary" %}
 [https://github.com/FunctionX/fx-core/releases/tag/v2.4.0-dragonberry](https://github.com/FunctionX/fx-core/releases/tag/v2.4.0-dragonberry)
 
-1.
+1\.
 
 ```
 curl -o fx-core_2.4.0.tar.gz -LJO https://github.com/FunctionX/fx-core/releases/download/v2.4.0-dragonberry/fx-core_2.4.0_Linux_x86_64.tar.gz
 ```
 
-2\.&#x20;
+2\.
 
 ```
 mkdir -p fxcore-temp
@@ -115,17 +115,17 @@ fxcored version
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
