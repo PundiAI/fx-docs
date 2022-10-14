@@ -35,50 +35,13 @@ docker rm fxcore
 
 &#x20;   \*fxcore is a container name, change the container name according to your setup
 
-2\. Local setup Pulling the latest fx-core code base (ensure that you are in the fx-core folder):
+2\. Pull latest docker images
 
 ```
-git pull
+docker pull functionx/fx-core:2.4.0
 ```
 
-3\. Checkout the branch of the upgrade version:
-
-```shell
-git checkout <upgradeable version branch>
-```
-
-&#x20;  Example:
-
-```
-git checkout release/v2.3.x
-
-or
-
-git checkout tags/v2.3.1 -b release/v2.3.x
-```
-
-Check log whether is the latest commit
-
-```
-git log
-```
-
-> <mark style="color:orange;">**commit 50a98ef23bffa392e4652518e8a5ae75343f3e1a**</mark> if you checked out the branch without specifying the tags
-
-4\. Update fxcored (ensure that you are in the fx-core folder):
-
-```
-make go.sum
-make install
-```
-
-5\. Pull latest docker images
-
-```
-docker pull functionx/fx-core:v2.3.1
-```
-
-6\. Download genesis (copy and run each line, line by line)
+3\. Download genesis (copy and run each line, line by line)
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -98,10 +61,10 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/t
 {% endtab %}
 {% endtabs %}
 
-7\. Restart docker container to start the node:
+4\. Restart docker container to start the node:
 
-```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.1 start
+```shell
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:2.4.0 start
 ```
 
 To check if fxcore is synced:
