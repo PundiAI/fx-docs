@@ -2,7 +2,7 @@
 
 ## f(x)Core Daemon
 
-`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../f-x-core/installation.md).
+`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../fxcore/installation.md).
 
 ### Main structure of running fxcored commands
 
@@ -385,7 +385,7 @@ Multisig addresses can also be generated on-the-fly and printed through the whic
 fxcored keys show --multisig-threshold K name1 name2 name3 [...]
 ```
 
-For more information regarding how to generate, sign and broadcast transactions with a multi signature account see [Multisig Transactions](f-x-cored-commands-documentation.md#multisig-transactions).
+For more information regarding how to generate, sign and broadcast transactions with a multi signature account see [Multisig Transactions](fxcored-commands-documentation.md#multisig-transactions).
 
 ### Tx Broadcasting
 

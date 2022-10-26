@@ -12,6 +12,6 @@ For users to be able to interact with the applications on the blockchain, they w
 [connect-using-metamask.md](connect-using-metamask.md)
 {% endcontent-ref %}
 
-{% content-ref url="connect-using-f-x-wallet-wallet-connect.md" %}
-[connect-using-f-x-wallet-wallet-connect.md](connect-using-f-x-wallet-wallet-connect.md)
+{% content-ref url="connect-using-fxwallet-wallet-connect.md" %}
+[connect-using-fxwallet-wallet-connect.md](connect-using-fxwallet-wallet-connect.md)
 {% endcontent-ref %}

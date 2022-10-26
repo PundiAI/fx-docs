@@ -12,8 +12,8 @@ description: Overview of MetaMask and guide to setup MetaMask for f(x)Core
 [download-and-install-metamask.md](download-and-install-metamask.md)
 {% endcontent-ref %}
 
-{% content-ref url="add-f-x-core-network.md" %}
-[add-f-x-core-network.md](add-f-x-core-network.md)
+{% content-ref url="add-fxcore-network.md" %}
+[add-fxcore-network.md](add-fxcore-network.md)
 {% endcontent-ref %}
 
 {% content-ref url="configure-custom-tokens.md" %}

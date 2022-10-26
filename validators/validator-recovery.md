@@ -43,7 +43,7 @@ ubuntu@ip-192.168.0.100:~$ tree $HOME/.fxcore
 2 directories, 6 files
 ```
 
-The command after `Initializing fxcore` from setting up node with [Full node with Binaries](../f-x-core/setup-node/full-node-with-binaries.md) or [Full node with Docker ](../f-x-core/setup-node/full-node-with-docker.md)is to override the various files that were initialized earlier:
+The command after `Initializing fxcore` from setting up node with [Full node with Binaries](../fxcore/setup-node/full-node-with-binaries.md) or [Full node with Docker ](../fxcore/setup-node/full-node-with-docker.md)is to override the various files that were initialized earlier:
 
 {% tabs %}
 {% tab title="Binaries" %}

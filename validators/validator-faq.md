@@ -8,7 +8,7 @@ description: This is work in progress. Mechanisms and values are susceptible to 
 
 ### What is a validator?
 
-[f(x)Core](../f-x-core/what-is-f-x-core.md) is built on Tendermint, which relies on a set of validators to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
+[f(x)Core](../fxcore/what-is-fxcore.md) is built on Tendermint, which relies on a set of validators to secure the network. The role of validators is to run a full-node and participate in consensus by broadcasting votes which contain cryptographic signatures signed by their private key. Validators commit new blocks in the blockchain and receive revenue in exchange for their work. They must also participate in governance by voting on proposals. Validators are weighted according to their total stake.
 
 ### What is 'staking'?
 
@@ -62,7 +62,7 @@ We view testnet participation as a great way to signal to the community that you
 
 ### What are the different types of keys?
 
-In short, there are two types of keys ([for more information on keys](../f-x-core-tutorials/f-x-cored-commands-documentation.md#keys)):
+In short, there are two types of keys ([for more information on keys](../fxcore-tutorials/fxcored-commands-documentation.md#keys)):
 
 * **Operator Key**: This is a unique key used to sign consensus votes.
   * It is associated with a public key `fxvalconspub` (To get the public key, run the command `fxcored tendermint show-validator`).
