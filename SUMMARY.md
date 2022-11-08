@@ -59,6 +59,7 @@
 * [Connect Wallet to Dapps](deploying-on-fxcore-evm/connect-wallet-to-dapps/README.md)
   * [Connect using MetaMask](deploying-on-fxcore-evm/connect-wallet-to-dapps/connect-using-metamask.md)
   * [Connect using f(x)Wallet (Wallet Connect)](deploying-on-fxcore-evm/connect-wallet-to-dapps/connect-using-fxwallet-wallet-connect.md)
+* [Keplr](deploying-on-fxcore-evm/keplr.md)
 * [With Remix](deploying-on-fxcore-evm/with-remix.md)
 * [With Truffle](deploying-on-fxcore-evm/with-truffle.md)
 * [With Hardhat](deploying-on-fxcore-evm/with-hardhat.md)
