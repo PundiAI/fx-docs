@@ -42,7 +42,7 @@ FX
 Block Explorer URL
 
 ```
-https://explorer.functionx.io/evm
+https://starscan.io/evm
 ```
 
 &#x20;3\. Click 'Save'
@@ -83,7 +83,7 @@ FX
 Block Explorer URL
 
 ```
-https://testnet-explorer.functionx.io/evm
+https://testnet.starscan.io/evm
 ```
 
 &#x20;3\. Click 'Save'
