@@ -7,11 +7,11 @@ Add [Suggest Chain](https://docs.keplr.app/api/suggest-chain.html)
 3. Run the code below
 
 {% tabs %}
-{% tab title="Mainnet" %}
+{% tab title="Mainnet Classic" %}
 ```javascript
 await window.keplr.experimentalSuggestChain({
   chainId: "fxcore",
-  chainName: "f(x)Core",
+  chainName: "f(x)Core Classic",
   rpc: "https://fx-json.functionx.io:26657",
   rest: "https://fx-rest.functionx.io",
   walletUrl: "https://starscan.io/fxcore/validators",
@@ -58,11 +58,11 @@ await window.keplr.experimentalSuggestChain({
 ```
 {% endtab %}
 
-{% tab title="Testnet" %}
+{% tab title="Testnet Classic" %}
 ```javascript
 await window.keplr.experimentalSuggestChain({
   chainId: "dhobyghaut",
-  chainName: "f(x)Core Testnet",
+  chainName: "f(x)Core Testnet Classic",
   rpc: "https://testnet-fx-json.functionx.io:26657",
   rest: "https://testnet-fx-rest.functionx.io",
   walletUrl: "https://testnet.starscan.io/fxcore/validators",
