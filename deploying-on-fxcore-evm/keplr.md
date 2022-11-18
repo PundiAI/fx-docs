@@ -117,7 +117,7 @@ await window.keplr.experimentalSuggestChain({
 ```
 await window.keplr.experimentalSuggestChain({
   chainId: "dhobyghaut",
-  chainName: "f(x)Core Testnet Classic",
+  chainName: "f(x)Core Testnet",
   rpc: "https://testnet-fx-json.functionx.io:26657",
   rest: "https://testnet-fx-rest.functionx.io",
   walletUrl: "https://testnet.starscan.io/fxcore/validators",
