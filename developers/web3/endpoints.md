@@ -1,166 +1,166 @@
-# JSON-RPC Methods
+# JSON RPC Methods
 
 Check the JSON-RPC methods supported on fxcore.
 
 ## Additional Readings
 
-- [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API)
-- [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server)
+* [Ethereum JSON-RPC](https://eth.wiki/json-rpc/API)
+* [Geth JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server)
 
 ## Endpoints
 
-| Method                                                                            | Namespace | Implemented | Public | Notes              |
-|-----------------------------------------------------------------------------------|-----------|-------------|--------|--------------------|
-| [`web3_clientVersion`](#web3-clientversion)                                       | Web3      | ✔           | ✔      |                    |
-| [`web3_sha3`](#web3-sha3)                                                         | Web3      | ✔           | ✔      |                    |
-| [`net_version`](#net-version)                                                     | Net       | ✔           | ✔      |                    |
-| [`net_peerCount`](#net-peerCount)                                                 | Net       | ✔           | ✔      |                    |
-| [`net_listening`](#net-listening)                                                 | Net       | ✔           | ✔      |                    |
-| [`eth_protocolVersion`](#eth-protocolversion)                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_syncing`](#eth-syncing)                                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_gasPrice`](#eth-gasprice)                                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_accounts`](#eth-accounts)                                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_blockNumber`](#eth-blocknumber)                                             | Eth       | ✔           | ✔      |                    |
-| [`eth_getBalance`](#eth-getbalance)                                               | Eth       | ✔           | ✔      |                    |
-| [`eth_getStorageAt`](#eth-getstorageat)                                           | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionCount`](#eth-gettransactioncount)                             | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockTransactionCountByNumber`](#eth-getblocktransactioncountbynumber)   | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockTransactionCountByHash`](#eth-getblocktransactioncountbyhash)       | Eth       | ✔           | ✔      |                    |
-| [`eth_getCode`](#eth-getcode)                                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_sign`](#eth-sign)                                                           | Eth       | ✔           | ✔      |                    |
-| [`eth_sendTransaction`](#eth-sendtransaction)                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_sendRawTransaction`](#eth-sendrawtransaction)                               | Eth       | ✔           | ✔      |                    |
-| [`eth_call`](#eth-call)                                                           | Eth       | ✔           | ✔      |                    |
-| [`eth_estimateGas`](#eth-estimategas)                                             | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockByNumber`](#eth-getblockbynumber)                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_getBlockByHash`](#eth-getblockbyhash)                                       | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionByHash`](#eth-gettransactionbyhash)                           | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionByBlockHashAndIndex`](#eth-gettransactionbyblockhashandindex) | Eth       | ✔           | ✔      |                    |
-| [`eth_getTransactionReceipt`](#eth-gettransactionreceipt)                         | Eth       | ✔           | ✔      |                    |
-| [`eth_newFilter`](#eth-newfilter)                                                 | Eth       | ✔           | ✔      |                    |
-| [`eth_newBlockFilter`](#eth-newblockfilter)                                       | Eth       | ✔           | ✔      |                    |
-| [`eth_newPendingTransactionFilter`](#eth-newpendingtransactionfilter)             | Eth       | ✔           | ✔      |                    |
-| [`eth_uninstallFilter`](#eth-uninstallfilter)                                     | Eth       | ✔           | ✔      |                    |
-| [`eth_getFilterChanges`](#eth-getfilterchanges)                                   | Eth       | ✔           | ✔      |                    |
-| [`eth_getFilterLogs`](#eth-getfilterlogs)                                         | Eth       | ✔           | ✔      |                    |
-| [`eth_getLogs`](#eth-getlogs)                                                     | Eth       | ✔           | ✔      |                    |
-| `eth_getTransactionbyBlockNumberAndIndex`                                         | Eth       |             | ✔      |                    |
-| `eth_getWork`                                                                     | Eth       | N/A         | ✔      | PoW-only           |
-| `eth_submitWork`                                                                  | Eth       | N/A         | ✔      | PoW-only           |
-| `eth_submitHashrate`                                                              | Eth       |             |        |                    |
-| `eth_getCompilers`                                                                | Eth       |             |        |                    |
-| `eth_compileLLL`                                                                  | Eth       |             |        |                    |
-| `eth_compileSolidity`                                                             | Eth       |             |        |                    |
-| `eth_compileSerpent`                                                              | Eth       |             |        |                    |
-| `eth_signTransaction`                                                             | Eth       |             |        |                    |
-| `eth_mining`                                                                      | Eth       |             | ❌      |                    |
-| [`eth_coinbase`](#eth-coinbase)                                                   | Eth       | ✔           |        |                    |
-| `eth_hashrate`                                                                    | Eth       | N/A         | ❌      | PoW-only           |
-| `eth_getUncleCountByBlockHash`                                                    | Eth       | N/A         |        | PoW-only           |
-| `eth_getUncleCountByBlockNumber`                                                  | Eth       | N/A         |        | PoW-only           |
-| `eth_getUncleByBlockHashAndIndex`                                                 | Eth       | N/A         |        | PoW-only           |
-| `eth_getUncleByBlockNumberAndIndex`                                               | Eth       | N/A         |        | PoW-only           |
-| [`eth_getProof`](#eth-getProof)                                                   | Eth       | ✔           |        |                    |
-| [`eth_subscribe`](#eth-subscribe)                                                 | Websocket | ✔           |        |                    |
-| [`eth_unsubscribe`](#eth-unsubscribe)                                             | Websocket | ✔           |        |                    |
-| [`personal_importRawKey`](#personal-importrawkey)                                 | Personal  | ✔           | ❌      |                    |
-| [`personal_listAccounts`](#personal-listaccounts)                                 | Personal  | ✔           | ❌      |                    |
-| [`personal_lockAccount`](#personal-lockaccount)                                   | Personal  | ✔           | ❌      |                    |
-| [`personal_newAccount`](#personal-newaccount)                                     | Personal  | ✔           | ❌      |                    |
-| [`personal_unlockAccount`](#personal-unlockaccount)                               | Personal  | ✔           | ❌      |                    |
-| [`personal_sendTransaction`](#personal-sendtransaction)                           | Personal  | ✔           | ❌      |                    |
-| [`personal_sign`](#personal-sign)                                                 | Personal  | ✔           | ❌      |                    |
-| [`personal_ecRecover`](#personal-ecrecover)                                       | Personal  | ✔           | ❌      |                    |
-| [`personal_initializeWallet`](#personal_initializewallet)                                       | Personal  | ✔           | ❌      ||
-| [`personal_unpair`](#personal_unpair)                                       | Personal  | ✔           | ❌      |                    |
-| `db_putString`                                                                    | DB        |             |        |                    |
-| `db_getString`                                                                    | DB        |             |        |                    |
-| `db_putHex`                                                                       | DB        |             |        |                    |
-| `db_getHex`                                                                       | DB        |             |        |                    |
-| `shh_post`                                                                        | SSH       |             |        |                    |
-| `shh_version`                                                                     | SSH       |             |        |                    |
-| `shh_newIdentity`                                                                 | SSH       |             |        |                    |
-| `shh_hasIdentity`                                                                 | SSH       |             |        |                    |
-| `shh_newGroup`                                                                    | SSH       |             |        |                    |
-| `shh_addToGroup`                                                                  | SSH       |             |        |                    |
-| `shh_newFilter`                                                                   | SSH       |             |        |                    |
-| `shh_uninstallFilter`                                                             | SSH       |             |        |                    |
-| `shh_getFilterChanges`                                                            | SSH       |             |        |                    |
-| `shh_getMessages`                                                                 | SSH       |             |        |                    |
-| `admin_addPeer`                                                                   | Admin     |             | ❌      |                    |
-| `admin_datadir`                                                                   | Admin     |             | ❌      |                    |
-| `admin_nodeInfo`                                                                  | Admin     |             | ❌      |                    |
-| `admin_peers`                                                                     | Admin     |             | ❌      |                    |
-| `admin_startRPC`                                                                  | Admin     |             | ❌      |                    |
-| `admin_startWS`                                                                   | Admin     |             | ❌      |                    |
-| `admin_stopRPC`                                                                   | Admin     |             | ❌      |                    |
-| `admin_stopWS`                                                                    | Admin     |             | ❌      |                    |
-| `clique_getSnapshot`                                                              | Clique    |             |        |                    |
-| `clique_getSnapshotAtHash`                                                        | Clique    |             |        |                    |
-| `clique_getSigners`                                                               | Clique    |             |        |                    |
-| `clique_proposals`                                                                | Clique    |             |        |                    |
-| `clique_propose`                                                                  | Clique    |             |        |                    |
-| `clique_discard`                                                                  | Clique    |             |        |                    |
-| `clique_status`                                                                   | Clique    |             |        |                    |
-| `debug_backtraceAt`                                                               | Debug     |             |        |                    |
-| `debug_blockProfile`                                                              | Debug     | ✔           |        |                    |
-| `debug_cpuProfile`                                                                | Debug     | ✔           |        |                    |
-| `debug_dumpBlock`                                                                 | Debug     |             |        |                    |
-| `debug_gcStats`                                                                   | Debug     | ✔           |        |                    |
-| `debug_getBlockRlp`                                                               | Debug     |             |        |                    |
-| `debug_goTrace`                                                                   | Debug     | ✔           |        |                    |
-| `debug_freeOSMemory`                                                              | Debug     | ✔           |        |                    |
-| `debug_memStats`                                                                  | Debug     | ✔           |        |                    |
-| `debug_mutexProfile`                                                              | Debug     | ✔           |        |                    |
-| `debug_seedHash`                                                                  | Debug     |             |        |                    |
-| `debug_setHead`                                                                   | Debug     |             |        |                    |
-| `debug_setBlockProfileRate`                                                       | Debug     | ✔           |        |                    |
-| `debug_setGCPercent`                                                              | Debug     | ✔           |        |                    |
-| `debug_setMutexProfileFraction`                                                   | Debug     | ✔           |        |                    |
-| `debug_stacks`                                                                    | Debug     | ✔           |        |                    |
-| `debug_startCPUProfile`                                                           | Debug     | ✔           |        |                    |
-| `debug_startGoTrace`                                                              | Debug     | ✔           |        |                    |
-| `debug_stopCPUProfile`                                                            | Debug     | ✔           |        |                    |
-| `debug_stopGoTrace`                                                               | Debug     | ✔           |        |                    |
-| [`debug_traceBlock`](#debug-traceblock)                                                                | Debug     | ✔           |        |                    |
-| [`debug_traceBlockByNumber`](#debug-traceblockbynumber)                                                        | Debug     | ✔ |        |                    |
-| [`debug_traceBlockByHash`](#debug-traceblockbyhash)                                                          | Debug     | ✔ |        |                    |
-| `debug_traceBlockFromFile`                                                        | Debug     |             |        |                    |
-| `debug_standardTraceBlockToFile`                                                  | Debug     |             |        |                    |
-| `debug_standardTraceBadBlockToFile`                                               | Debug     |             |        |                    |
-| [`debug_traceTransaction`](#debug-tracetransaction)                                                          | Debug     | ✔           |        |                    |
-| `debug_verbosity`                                                                 | Debug     |             |        |                    |
-| `debug_vmodule`                                                                   | Debug     |             |        |                    |
-| `debug_writeBlockProfile`                                                         | Debug     | ✔           |        |                    |
-| `debug_writeMemProfile`                                                           | Debug     | ✔           |        |                    |
-| `debug_writeMutexProfile`                                                         | Debug     | ✔           |        |                    |
-| `les_serverInfo`                                                                  | Les       |             |        |                    |
-| `les_clientInfo`                                                                  | Les       |             |        |                    |
-| `les_priorityClientInfo`                                                          | Les       |             |        |                    |
-| `les_addBalance`                                                                  | Les       |             |        |                    |
-| `les_setClientParams`                                                             | Les       |             |        |                    |
-| `les_setDefaultParams`                                                            | Les       |             |        |                    |
-| `les_latestCheckpoint`                                                            | Les       |             |        |                    |
-| `les_getCheckpoint`                                                               | Les       |             |        |                    |
-| `les_getCheckpointContractAddress`                                                | Les       |             |        |                    |
-| [`miner_getHashrate`](#miner-gethashrate)                                         | Miner     | ✔           | ❌      | No-op              |
-| [`miner_setExtra`](#miner-setextra)                                               | Miner     | ✔           | ❌      | No-op              |
-| [`miner_setGasPrice`](#miner-setgasprice)                                         | Miner     | ✔           | ❌      | Needs node restart |
-| [`miner_start`](#miner-start)                                                     | Miner     | ✔           | ❌      | No-op              |
-| [`miner_stop`](#miner-stop)                                                       | Miner     | ✔           | ❌      | No-op              |
-| [`miner_setGasLimit`](#miner-setgaslimit)                                         | Miner     | ✔           | ❌      | No-op              |
-| [`miner_setEtherbase`](#miner-setetherbase)                                       | Miner     | ✔           | ❌      |                    |
-| [`txpool_content`](#txpool-content)                                               | TxPool    | ✔           |        |                    |
-| [`txpool_inspect`](#txpool-inspect)                                               | TxPool    | ✔           |        |                    |
-| [`txpool_status`](#txpool-status)                                                 | TxPool    | ✔           |        |                    |
+| Method                                                                                        | Namespace | Implemented | Public | Notes              |
+| --------------------------------------------------------------------------------------------- | --------- | ----------- | ------ | ------------------ |
+| [`web3_clientVersion`](endpoints.md#web3-clientversion)                                       | Web3      | ✔           | ✔      |                    |
+| [`web3_sha3`](endpoints.md#web3-sha3)                                                         | Web3      | ✔           | ✔      |                    |
+| [`net_version`](endpoints.md#net-version)                                                     | Net       | ✔           | ✔      |                    |
+| [`net_peerCount`](endpoints.md#net-peerCount)                                                 | Net       | ✔           | ✔      |                    |
+| [`net_listening`](endpoints.md#net-listening)                                                 | Net       | ✔           | ✔      |                    |
+| [`eth_protocolVersion`](endpoints.md#eth-protocolversion)                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_syncing`](endpoints.md#eth-syncing)                                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_gasPrice`](endpoints.md#eth-gasprice)                                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_accounts`](endpoints.md#eth-accounts)                                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_blockNumber`](endpoints.md#eth-blocknumber)                                             | Eth       | ✔           | ✔      |                    |
+| [`eth_getBalance`](endpoints.md#eth-getbalance)                                               | Eth       | ✔           | ✔      |                    |
+| [`eth_getStorageAt`](endpoints.md#eth-getstorageat)                                           | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionCount`](endpoints.md#eth-gettransactioncount)                             | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockTransactionCountByNumber`](endpoints.md#eth-getblocktransactioncountbynumber)   | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockTransactionCountByHash`](endpoints.md#eth-getblocktransactioncountbyhash)       | Eth       | ✔           | ✔      |                    |
+| [`eth_getCode`](endpoints.md#eth-getcode)                                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_sign`](endpoints.md#eth-sign)                                                           | Eth       | ✔           | ✔      |                    |
+| [`eth_sendTransaction`](endpoints.md#eth-sendtransaction)                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_sendRawTransaction`](endpoints.md#eth-sendrawtransaction)                               | Eth       | ✔           | ✔      |                    |
+| [`eth_call`](endpoints.md#eth-call)                                                           | Eth       | ✔           | ✔      |                    |
+| [`eth_estimateGas`](endpoints.md#eth-estimategas)                                             | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockByNumber`](endpoints.md#eth-getblockbynumber)                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_getBlockByHash`](endpoints.md#eth-getblockbyhash)                                       | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionByHash`](endpoints.md#eth-gettransactionbyhash)                           | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionByBlockHashAndIndex`](endpoints.md#eth-gettransactionbyblockhashandindex) | Eth       | ✔           | ✔      |                    |
+| [`eth_getTransactionReceipt`](endpoints.md#eth-gettransactionreceipt)                         | Eth       | ✔           | ✔      |                    |
+| [`eth_newFilter`](endpoints.md#eth-newfilter)                                                 | Eth       | ✔           | ✔      |                    |
+| [`eth_newBlockFilter`](endpoints.md#eth-newblockfilter)                                       | Eth       | ✔           | ✔      |                    |
+| [`eth_newPendingTransactionFilter`](endpoints.md#eth-newpendingtransactionfilter)             | Eth       | ✔           | ✔      |                    |
+| [`eth_uninstallFilter`](endpoints.md#eth-uninstallfilter)                                     | Eth       | ✔           | ✔      |                    |
+| [`eth_getFilterChanges`](endpoints.md#eth-getfilterchanges)                                   | Eth       | ✔           | ✔      |                    |
+| [`eth_getFilterLogs`](endpoints.md#eth-getfilterlogs)                                         | Eth       | ✔           | ✔      |                    |
+| [`eth_getLogs`](endpoints.md#eth-getlogs)                                                     | Eth       | ✔           | ✔      |                    |
+| `eth_getTransactionbyBlockNumberAndIndex`                                                     | Eth       |             | ✔      |                    |
+| `eth_getWork`                                                                                 | Eth       | N/A         | ✔      | PoW-only           |
+| `eth_submitWork`                                                                              | Eth       | N/A         | ✔      | PoW-only           |
+| `eth_submitHashrate`                                                                          | Eth       |             |        |                    |
+| `eth_getCompilers`                                                                            | Eth       |             |        |                    |
+| `eth_compileLLL`                                                                              | Eth       |             |        |                    |
+| `eth_compileSolidity`                                                                         | Eth       |             |        |                    |
+| `eth_compileSerpent`                                                                          | Eth       |             |        |                    |
+| `eth_signTransaction`                                                                         | Eth       |             |        |                    |
+| `eth_mining`                                                                                  | Eth       |             | ❌      |                    |
+| [`eth_coinbase`](endpoints.md#eth-coinbase)                                                   | Eth       | ✔           |        |                    |
+| `eth_hashrate`                                                                                | Eth       | N/A         | ❌      | PoW-only           |
+| `eth_getUncleCountByBlockHash`                                                                | Eth       | N/A         |        | PoW-only           |
+| `eth_getUncleCountByBlockNumber`                                                              | Eth       | N/A         |        | PoW-only           |
+| `eth_getUncleByBlockHashAndIndex`                                                             | Eth       | N/A         |        | PoW-only           |
+| `eth_getUncleByBlockNumberAndIndex`                                                           | Eth       | N/A         |        | PoW-only           |
+| [`eth_getProof`](endpoints.md#eth-getProof)                                                   | Eth       | ✔           |        |                    |
+| [`eth_subscribe`](endpoints.md#eth-subscribe)                                                 | Websocket | ✔           |        |                    |
+| [`eth_unsubscribe`](endpoints.md#eth-unsubscribe)                                             | Websocket | ✔           |        |                    |
+| [`personal_importRawKey`](endpoints.md#personal-importrawkey)                                 | Personal  | ✔           | ❌      |                    |
+| [`personal_listAccounts`](endpoints.md#personal-listaccounts)                                 | Personal  | ✔           | ❌      |                    |
+| [`personal_lockAccount`](endpoints.md#personal-lockaccount)                                   | Personal  | ✔           | ❌      |                    |
+| [`personal_newAccount`](endpoints.md#personal-newaccount)                                     | Personal  | ✔           | ❌      |                    |
+| [`personal_unlockAccount`](endpoints.md#personal-unlockaccount)                               | Personal  | ✔           | ❌      |                    |
+| [`personal_sendTransaction`](endpoints.md#personal-sendtransaction)                           | Personal  | ✔           | ❌      |                    |
+| [`personal_sign`](endpoints.md#personal-sign)                                                 | Personal  | ✔           | ❌      |                    |
+| [`personal_ecRecover`](endpoints.md#personal-ecrecover)                                       | Personal  | ✔           | ❌      |                    |
+| [`personal_initializeWallet`](endpoints.md#personal\_initializewallet)                        | Personal  | ✔           | ❌      |                    |
+| [`personal_unpair`](endpoints.md#personal\_unpair)                                            | Personal  | ✔           | ❌      |                    |
+| `db_putString`                                                                                | DB        |             |        |                    |
+| `db_getString`                                                                                | DB        |             |        |                    |
+| `db_putHex`                                                                                   | DB        |             |        |                    |
+| `db_getHex`                                                                                   | DB        |             |        |                    |
+| `shh_post`                                                                                    | SSH       |             |        |                    |
+| `shh_version`                                                                                 | SSH       |             |        |                    |
+| `shh_newIdentity`                                                                             | SSH       |             |        |                    |
+| `shh_hasIdentity`                                                                             | SSH       |             |        |                    |
+| `shh_newGroup`                                                                                | SSH       |             |        |                    |
+| `shh_addToGroup`                                                                              | SSH       |             |        |                    |
+| `shh_newFilter`                                                                               | SSH       |             |        |                    |
+| `shh_uninstallFilter`                                                                         | SSH       |             |        |                    |
+| `shh_getFilterChanges`                                                                        | SSH       |             |        |                    |
+| `shh_getMessages`                                                                             | SSH       |             |        |                    |
+| `admin_addPeer`                                                                               | Admin     |             | ❌      |                    |
+| `admin_datadir`                                                                               | Admin     |             | ❌      |                    |
+| `admin_nodeInfo`                                                                              | Admin     |             | ❌      |                    |
+| `admin_peers`                                                                                 | Admin     |             | ❌      |                    |
+| `admin_startRPC`                                                                              | Admin     |             | ❌      |                    |
+| `admin_startWS`                                                                               | Admin     |             | ❌      |                    |
+| `admin_stopRPC`                                                                               | Admin     |             | ❌      |                    |
+| `admin_stopWS`                                                                                | Admin     |             | ❌      |                    |
+| `clique_getSnapshot`                                                                          | Clique    |             |        |                    |
+| `clique_getSnapshotAtHash`                                                                    | Clique    |             |        |                    |
+| `clique_getSigners`                                                                           | Clique    |             |        |                    |
+| `clique_proposals`                                                                            | Clique    |             |        |                    |
+| `clique_propose`                                                                              | Clique    |             |        |                    |
+| `clique_discard`                                                                              | Clique    |             |        |                    |
+| `clique_status`                                                                               | Clique    |             |        |                    |
+| `debug_backtraceAt`                                                                           | Debug     |             |        |                    |
+| `debug_blockProfile`                                                                          | Debug     | ✔           |        |                    |
+| `debug_cpuProfile`                                                                            | Debug     | ✔           |        |                    |
+| `debug_dumpBlock`                                                                             | Debug     |             |        |                    |
+| `debug_gcStats`                                                                               | Debug     | ✔           |        |                    |
+| `debug_getBlockRlp`                                                                           | Debug     |             |        |                    |
+| `debug_goTrace`                                                                               | Debug     | ✔           |        |                    |
+| `debug_freeOSMemory`                                                                          | Debug     | ✔           |        |                    |
+| `debug_memStats`                                                                              | Debug     | ✔           |        |                    |
+| `debug_mutexProfile`                                                                          | Debug     | ✔           |        |                    |
+| `debug_seedHash`                                                                              | Debug     |             |        |                    |
+| `debug_setHead`                                                                               | Debug     |             |        |                    |
+| `debug_setBlockProfileRate`                                                                   | Debug     | ✔           |        |                    |
+| `debug_setGCPercent`                                                                          | Debug     | ✔           |        |                    |
+| `debug_setMutexProfileFraction`                                                               | Debug     | ✔           |        |                    |
+| `debug_stacks`                                                                                | Debug     | ✔           |        |                    |
+| `debug_startCPUProfile`                                                                       | Debug     | ✔           |        |                    |
+| `debug_startGoTrace`                                                                          | Debug     | ✔           |        |                    |
+| `debug_stopCPUProfile`                                                                        | Debug     | ✔           |        |                    |
+| `debug_stopGoTrace`                                                                           | Debug     | ✔           |        |                    |
+| [`debug_traceBlock`](endpoints.md#debug-traceblock)                                           | Debug     | ✔           |        |                    |
+| [`debug_traceBlockByNumber`](endpoints.md#debug-traceblockbynumber)                           | Debug     | ✔           |        |                    |
+| [`debug_traceBlockByHash`](endpoints.md#debug-traceblockbyhash)                               | Debug     | ✔           |        |                    |
+| `debug_traceBlockFromFile`                                                                    | Debug     |             |        |                    |
+| `debug_standardTraceBlockToFile`                                                              | Debug     |             |        |                    |
+| `debug_standardTraceBadBlockToFile`                                                           | Debug     |             |        |                    |
+| [`debug_traceTransaction`](endpoints.md#debug-tracetransaction)                               | Debug     | ✔           |        |                    |
+| `debug_verbosity`                                                                             | Debug     |             |        |                    |
+| `debug_vmodule`                                                                               | Debug     |             |        |                    |
+| `debug_writeBlockProfile`                                                                     | Debug     | ✔           |        |                    |
+| `debug_writeMemProfile`                                                                       | Debug     | ✔           |        |                    |
+| `debug_writeMutexProfile`                                                                     | Debug     | ✔           |        |                    |
+| `les_serverInfo`                                                                              | Les       |             |        |                    |
+| `les_clientInfo`                                                                              | Les       |             |        |                    |
+| `les_priorityClientInfo`                                                                      | Les       |             |        |                    |
+| `les_addBalance`                                                                              | Les       |             |        |                    |
+| `les_setClientParams`                                                                         | Les       |             |        |                    |
+| `les_setDefaultParams`                                                                        | Les       |             |        |                    |
+| `les_latestCheckpoint`                                                                        | Les       |             |        |                    |
+| `les_getCheckpoint`                                                                           | Les       |             |        |                    |
+| `les_getCheckpointContractAddress`                                                            | Les       |             |        |                    |
+| [`miner_getHashrate`](endpoints.md#miner-gethashrate)                                         | Miner     | ✔           | ❌      | No-op              |
+| [`miner_setExtra`](endpoints.md#miner-setextra)                                               | Miner     | ✔           | ❌      | No-op              |
+| [`miner_setGasPrice`](endpoints.md#miner-setgasprice)                                         | Miner     | ✔           | ❌      | Needs node restart |
+| [`miner_start`](endpoints.md#miner-start)                                                     | Miner     | ✔           | ❌      | No-op              |
+| [`miner_stop`](endpoints.md#miner-stop)                                                       | Miner     | ✔           | ❌      | No-op              |
+| [`miner_setGasLimit`](endpoints.md#miner-setgaslimit)                                         | Miner     | ✔           | ❌      | No-op              |
+| [`miner_setEtherbase`](endpoints.md#miner-setetherbase)                                       | Miner     | ✔           | ❌      |                    |
+| [`txpool_content`](endpoints.md#txpool-content)                                               | TxPool    | ✔           |        |                    |
+| [`txpool_inspect`](endpoints.md#txpool-inspect)                                               | TxPool    | ✔           |        |                    |
+| [`txpool_status`](endpoints.md#txpool-status)                                                 | TxPool    | ✔           |        |                    |
 
-> Block Number can be entered as a Hex string, `"earliest"`, ``"latest"`` or `"pending"`.
+> Block Number can be entered as a Hex string, `"earliest"`, `"latest"` or `"pending"`.
 
 Below is a list of the RPC methods, the parameters and an example response from the namespaces.
 
 ## Web3 Methods
 
-### web3_clientVersion
+### web3\_clientVersion
 
 Returns the current client version.
 
@@ -178,27 +178,23 @@ none
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "web3_clientVersion", "params": []}'
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "web3_clientVersion", "params": []}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 web3.clientVersion();
 ```
 {% endtab %}
-
-{% endtab %}
+{% endtabs %}
 
 ### `web3_sha3`
 
@@ -208,9 +204,9 @@ Returns Keccak-256 (not the standardized SHA3-256) of the given data.
 
 1: input `hexutil.Bytes`
 
-- Required: ✓ Yes
+* Required: ✓ Yes
 
-#### Result 
+#### Result
 
 ```json
 {"jsonrpc":"2.0","id":1,"result":"0x1b84adea42d5b7d192fd8a61a85b25abe0757e9a65cab1da470258914053823f"}
@@ -220,26 +216,22 @@ Returns Keccak-256 (not the standardized SHA3-256) of the given data.
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "web3_sha3", "params": [<input>]}'
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "web3_sha3", "params": [<input>]}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 web3.sha3(input);
 ```
 {% endtab %}
-
 {% endtabs %}
 
 ## Net Methods
@@ -348,9 +340,8 @@ Returns the account balance for a given account address and Block Number.
 
 #### Parameters
 
-- Account Address
-
-- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+* Account Address
+* Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```shell
 // Request
@@ -366,11 +357,9 @@ Returns the storage address for a given account address.
 
 #### Parameters
 
-- Account Address
-
-- Integer of the position in the storage
-
-- Block Number  or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+* Account Address
+* Integer of the position in the storage
+* Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```shell
 // Request
@@ -386,9 +375,8 @@ Returns the total transaction for a given account address and Block Number.
 
 #### Parameters
 
-- Account Address
-
-- Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+* Account Address
+* Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```shell
 // Request
@@ -404,7 +392,7 @@ Returns the total transaction count for a given block number.
 
 #### Parameters
 
-- Block number
+* Block number
 
 ```shell
 // Request
@@ -420,7 +408,7 @@ Returns the total transaction count for a given block hash.
 
 #### Parameters
 
-- Block Hash
+* Block Hash
 
 ```shell
 // Request
@@ -436,9 +424,8 @@ Returns the code for a given account address and Block Number.
 
 #### Parameters
 
-- Account Address
-
-- Block Number  or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+* Account Address
+* Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```shell
 // Request
@@ -458,9 +445,8 @@ By adding a prefix to the message makes the calculated signature recognizable as
 
 #### Parameters
 
-- Account Address
-
-- Message to sign
+* Account Address
+* Message to sign
 
 ```shell
 // Request
@@ -476,7 +462,7 @@ Sends transaction from given account to a given account.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
     `from`: `DATA`, 20 Bytes - The address the transaction is send from.
 
@@ -502,12 +488,11 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 
 ### `eth_sendRawTransaction`
 
-Creates new message call transaction or a contract creation for signed transactions.
-You can get signed transaction data using the [`personal_sign`](#personal-sign) method.
+Creates new message call transaction or a contract creation for signed transactions. You can get signed transaction data using the [`personal_sign`](endpoints.md#personal-sign) method.
 
 #### Parameters
 
-- The signed transaction data
+* The signed transaction data
 
 ```shell
 // Request
@@ -523,21 +508,20 @@ Executes a new message call immediately without creating a transaction on the bl
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
     `from`: `DATA`, 20 Bytes - (optional) The address the transaction is sent from.
 
     `to`: `DATA`, 20 Bytes - The address the transaction is directed to.
 
-    `gas`: QUANTITY - gas provided for the transaction execution. eth_call consumes zero gas, but this parameter may be needed by some executions.
+    `gas`: QUANTITY - gas provided for the transaction execution. eth\_call consumes zero gas, but this parameter may be needed by some executions.
 
     `gasPrice`: QUANTITY - gasPrice used for each paid gas
 
     `value`: QUANTITY - value sent with this transaction
 
     `data`: `DATA` - (optional) Hash of the method signature and encoded parameters. For details see Ethereum Contract ABI in the Solidity documentation
-
-- Block number  or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+* Block number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```shell
 // Request
@@ -553,7 +537,7 @@ Returns an estimate value of the gas required to send the transaction.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
     `from`: `DATA`, 20 Bytes - The address the transaction is send from.
 
@@ -575,9 +559,8 @@ Returns information about a block by block number.
 
 #### Parameters
 
-- Block Number
-
-- If true it returns the full transaction objects, if false only the hashes of the transactions.
+* Block Number
+* If true it returns the full transaction objects, if false only the hashes of the transactions.
 
 ```shell
 // Request
@@ -591,11 +574,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 
 Returns the block info given the hash found in the command above and a bool.
 
-#### Parameters 
+#### Parameters
 
-- Hash of a block.
-
-- If true it returns the full transaction objects, if false only the hashes of the transactions.
+* Hash of a block.
+* If true it returns the full transaction objects, if false only the hashes of the transactions.
 
 ```shell
 // Request
@@ -611,7 +593,7 @@ Returns transaction details given the ethereum tx something.
 
 #### Parameters
 
-- hash of a transaction
+* hash of a transaction
 
 ```shell
 // Request
@@ -627,9 +609,8 @@ Returns transaction details given the block hash and the transaction index.
 
 #### Parameters
 
-- Hash of a block.
-
-- Transaction index position.
+* Hash of a block.
+* Transaction index position.
 
 ```shell
 // Request
@@ -644,14 +625,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 Returns the receipt of a transaction by transaction hash.
 
 Note: Tx Code from Tendermint and the Ethereum receipt status are switched:
+
 |         | Tendermint | Ethereum |
-|---------|------------|----------|
+| ------- | ---------- | -------- |
 | Success | 0          | 1        |
 | Fail    | 1          | 0        |
 
 #### Parameters
 
-- Hash of a transaction
+* Hash of a transaction
 
 ```shell
 // Request
@@ -667,7 +649,7 @@ Create new filter using topics of some kind.
 
 #### Parameters
 
-- hash of a transaction
+* hash of a transaction
 
 ```shell
 // Request
@@ -707,7 +689,7 @@ Removes the filter with the given filter id. Returns true if the filter was succ
 
 #### Parameters
 
-- The filter id
+* The filter id
 
 ```shell
 // Request
@@ -723,7 +705,7 @@ Polling method for a filter, which returns an array of logs which occurred since
 
 #### Parameters
 
-- The filter id
+* The filter id
 
 ```shell
 // Request
@@ -739,7 +721,7 @@ Returns an array of all logs matching filter with given id.
 
 #### Parameters
 
-- `QUANTITY` - The filter id
+* `QUANTITY` - The filter id
 
 ```shell
 // Request
@@ -755,7 +737,7 @@ Returns an array of all logs matching a given filter object.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
     `fromBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 
@@ -775,7 +757,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 {"jsonrpc":"2.0","id":1,"result":[]}
 ```
 
-### eth_coinbase
+### eth\_coinbase
 
 Returns the account the mining rewards will be send to.
 
@@ -787,17 +769,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":1
 {"jsonrpc":"2.0","id":1,"result":"0x7cB61D4117AE31a12E393a1Cfa3BaC666481D02E"}
 ```
 
-### eth_getProof
+### eth\_getProof
 
 Returns the account- and storage-values of the specified account including the Merkle-proof.
 
 #### Parameters
 
-- Address of account or contract
-
-- Integer of the position in the storage
-
-- Block Number  or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
+* Address of account or contract
+* Integer of the position in the storage
+* Block Number or Block Hash ([EIP-1898](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1898.md))
 
 ```shell
 // Request
@@ -807,10 +787,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getProof","params":["0x12345
 {"jsonrpc": "2.0", "id": 1, "result": {"address": "0x1234567890123456789012345678901234567890", "accountProof": ["0xf90211a090dcaf88c40c7bbc95a912cbdde67c175767b31173df9ee4b0d733bfdd511c43a0babe369f6b12092f49181ae04ca173fb68d1a5456f18d20fa32cba73954052bda0473ecf8a7e36a829e75039a3b055e51b8332cbf03324ab4af2066bbd6fbf0021a0bbda34753d7aa6c38e603f360244e8f59611921d9e1f128372fec0d586d4f9e0a04e44caecff45c9891f74f6a2156735886eedf6f1a733628ebc802ec79d844648a0a5f3f2f7542148c973977c8a1e154c4300fec92f755f7846f1b734d3ab1d90e7a0e823850f50bf72baae9d1733a36a444ab65d0a6faaba404f0583ce0ca4dad92da0f7a00cbe7d4b30b11faea3ae61b7f1f2b315b61d9f6bd68bfe587ad0eeceb721a07117ef9fc932f1a88e908eaead8565c19b5645dc9e5b1b6e841c5edbdfd71681a069eb2de283f32c11f859d7bcf93da23990d3e662935ed4d6b39ce3673ec84472a0203d26456312bbc4da5cd293b75b840fc5045e493d6f904d180823ec22bfed8ea09287b5c21f2254af4e64fca76acc5cd87399c7f1ede818db4326c98ce2dc2208a06fc2d754e304c48ce6a517753c62b1a9c1d5925b89707486d7fc08919e0a94eca07b1c54f15e299bd58bdfef9741538c7828b5d7d11a489f9c20d052b3471df475a051f9dd3739a927c89e357580a4c97b40234aa01ed3d5e0390dc982a7975880a0a089d613f26159af43616fd9455bb461f4869bfede26f2130835ed067a8b967bfb80", "0xf90211a0395d87a95873cd98c21cf1df9421af03f7247880a2554e20738eec2c7507a494a0bcf6546339a1e7e14eb8fb572a968d217d2a0d1f3bc4257b22ef5333e9e4433ca012ae12498af8b2752c99efce07f3feef8ec910493be749acd63822c3558e6671a0dbf51303afdc36fc0c2d68a9bb05dab4f4917e7531e4a37ab0a153472d1b86e2a0ae90b50f067d9a2244e3d975233c0a0558c39ee152969f6678790abf773a9621a01d65cd682cc1be7c5e38d8da5c942e0a73eeaef10f387340a40a106699d494c3a06163b53d956c55544390c13634ea9aa75309f4fd866f312586942daf0f60fb37a058a52c1e858b1382a8893eb9c1f111f266eb9e21e6137aff0dddea243a567000a037b4b100761e02de63ea5f1fcfcf43e81a372dafb4419d126342136d329b7a7ba032472415864b08f808ba4374092003c8d7c40a9f7f9fe9cc8291f62538e1cc14a074e238ff5ec96b810364515551344100138916594d6af966170ff326a092fab0a0d31ac4eef14a79845200a496662e92186ca8b55e29ed0f9f59dbc6b521b116fea090607784fe738458b63c1942bba7c0321ae77e18df4961b2bc66727ea996464ea078f757653c1b63f72aff3dcc3f2a2e4c8cb4a9d36d1117c742833c84e20de994a0f78407de07f4b4cb4f899dfb95eedeb4049aeb5fc1635d65cf2f2f4dfd25d1d7a0862037513ba9d45354dd3e36264aceb2b862ac79d2050f14c95657e43a51b85c80", "0xf90171a04ad705ea7bf04339fa36b124fa221379bd5a38ffe9a6112cb2d94be3a437b879a08e45b5f72e8149c01efcb71429841d6a8879d4bbe27335604a5bff8dfdf85dcea00313d9b2f7c03733d6549ea3b810e5262ed844ea12f70993d87d3e0f04e3979ea0b59e3cdd6750fa8b15164612a5cb6567cdfb386d4e0137fccee5f35ab55d0efda0fe6db56e42f2057a071c980a778d9a0b61038f269dd74a0e90155b3f40f14364a08538587f2378a0849f9608942cf481da4120c360f8391bbcc225d811823c6432a026eac94e755534e16f9552e73025d6d9c30d1d7682a4cb5bd7741ddabfd48c50a041557da9a74ca68da793e743e81e2029b2835e1cc16e9e25bd0c1e89d4ccad6980a041dda0a40a21ade3a20fcd1a4abb2a42b74e9a32b02424ff8db4ea708a5e0fb9a09aaf8326a51f613607a8685f57458329b41e938bb761131a5747e066b81a0a16808080a022e6cef138e16d2272ef58434ddf49260dc1de1f8ad6dfca3da5d2a92aaaadc58080", "0xf851808080a009833150c367df138f1538689984b8a84fc55692d3d41fe4d1e5720ff5483a6980808080808080808080a0a319c1c415b271afc0adcb664e67738d103ac168e0bc0b7bd2da7966165cb9518080"], "balance": "0x0", "codeHash": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470", "nonce": "0x0", "storageHash": "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421", "storageProof": [{"key": "0x0000000000000000000000000000000000000000000000000000000000000000", "value": "0x0", "proof": []}, {"key": "0x0000000000000000000000000000000000000000000000000000000000000001", "value": "0x0", "proof": []}]}}
 ```
 
-
 ## WebSocket Methods
 
-Read about websockets in [events](./events.md)
+Read about websockets in [events](events.md)
 
 ### `eth_subscribe`
 
@@ -820,9 +799,8 @@ It works by subscribing to particular events. The node will return a subscriptio
 
 #### Parameters
 
-- Subscription Name
-
-- Optional Arguments
+* Subscription Name
+* Optional Arguments
 
 ```shell
 // Request
@@ -838,7 +816,7 @@ Unsubscribe from an event using the subscription id
 
 #### Parameters
 
-- Subscription ID
+* Subscription ID
 
 ```shell
 // Request
@@ -862,18 +840,15 @@ Returns the address of the new account.
 
 **1:** privkey `string`
 
-- Required: ✓ Yes
+* Required: ✓ Yes
 
 **2:** password `string`
 
-- Required: ✓ Yes
-
-
+* Required: ✓ Yes
 
 ```shell
 // Request
 curl -X POST --data '{"jsonrpc":"2.0","method":"personal_importRawKey","params":["c5bd76cd0cd948de17a31261567d219576e992d9066fe1a6bca97496dec634e2c8e06f8949773b300b9f73fabbbc7710d5d6691e96bcf3c9145e15daf6fe07b9", "the key is this"],"id":1}' -H "Content-Type: application/json" http://localhost:8545
-
 ```
 
 ### `personal_listAccounts`
@@ -898,7 +873,7 @@ Removes the private key with given address from memory. The account can no longe
 
 #### Parameters
 
-- Account Address
+* Account Address
 
 ```shell
 // Request
@@ -916,7 +891,7 @@ Generates a new private key and stores it in the key store directory. The key fi
 
 #### Parameters
 
-- Passphrase
+* Passphrase
 
 ```shell
 // Request
@@ -934,15 +909,13 @@ Decrypts the key with the given address from the key store.
 
 Both passphrase and unlock duration are optional when using the JavaScript console. The unencrypted key will be held in memory until the unlock duration expires. If the unlock duration defaults to 300 seconds. An explicit duration of zero seconds unlocks the key until geth exits.
 
-The account can be used with [`eth_sign`](#eth-sign) and [`eth_sendTransaction`](#eth-sendtransaction) while it is unlocked.
+The account can be used with [`eth_sign`](endpoints.md#eth-sign) and [`eth_sendTransaction`](endpoints.md#eth-sendtransaction) while it is unlocked.
 
 #### Parameters
 
-- Account Address
-
-- Passphrase
-
-- Duration
+* Account Address
+* Passphrase
+* Duration
 
 ```shell
 // Request
@@ -958,21 +931,20 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_unlockAccount","params"
 
 Validate the given passphrase and submit transaction.
 
-The transaction is the same argument as for [`eth_sendTransaction`](#eth-sendtransaction) and contains the `from` address. If the passphrase can be used to decrypt the private key belonging to `tx.from` the transaction is verified, signed and send onto the network.
+The transaction is the same argument as for [`eth_sendTransaction`](endpoints.md#eth-sendtransaction) and contains the `from` address. If the passphrase can be used to decrypt the private key belonging to `tx.from` the transaction is verified, signed and send onto the network.
 
 > The account is not unlocked globally in the node and cannot be used in other RPC calls.
 
 #### Parameters
 
-- Object containing:
+*   Object containing:
 
     `from`: `DATA`, 20 Bytes - The address the transaction is send from.
 
     `to`: `DATA`, 20 Bytes - (optional when creating new contract) The address the transaction is directed to.
 
     `value`: QUANTITY - value sent with this transaction
-
-- Passphrase
+* Passphrase
 
 ```shell
 // Request
@@ -990,11 +962,9 @@ The sign method calculates an Ethereum specific signature with: `sign(keccack256
 
 #### Parameters
 
-- Message
-
-- Account Address
-
-- Password
+* Message
+* Account Address
+* Password
 
 ```shell
 // Request
@@ -1008,13 +978,12 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"personal_sign","params":["0xdead
 
 > **Private**: Requires authentication.
 
-`ecRecover` returns the address associated with the private key that was used to calculate the signature in [`personal_sign`](#personal-sign).
+`ecRecover` returns the address associated with the private key that was used to calculate the signature in [`personal_sign`](endpoints.md#personal-sign).
 
 #### Parameters
 
-- Message
-
-- Signature returned from [`personal_sign`](#personal-sign)
+* Message
+* Signature returned from [`personal_sign`](endpoints.md#personal-sign)
 
 ```shell
 // Request
@@ -1036,34 +1005,29 @@ Parameters must be given by position.
 
 1: url `string`
 
--  Required: ✓ Yes
+* Required: ✓ Yes
 
 #### Client Examples
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "personal_initializeWallet", "params": [<url>]}'
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "personal_initializeWallet", "params": [<url>]}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 personal.initializeWallet(url);
 ```
 {% endtab %}
-
 {% endtabs %}
-
 
 ### `personal_unpair`
 
@@ -1073,36 +1037,30 @@ Unpair deletes a pairing between wallet and the node.
 
 #### Parameters (2)
 
-- URL
-
-- Pairing password
+* URL
+* Pairing password
 
 #### Client Examples
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST -H "Content-Type: application/json" http://localhost:8545 --data '{"jsonrpc": "2.0", "id": 42, "method": "personal_unpair", "params": [<url>, <pin>]}'
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "personal_unpair", "params": [<url>, <pin>]}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 personal.unpair(url,pin);
 ```
 {% endtab %}
-
 {% endtabs %}
-
 
 ## Debug Methods
 
@@ -1112,7 +1070,7 @@ The `traceTransaction` debugging method will attempt to run the transaction in t
 
 #### Parameters
 
-- Trace Config
+* Trace Config
 
 ```shell
 // Request
@@ -1128,7 +1086,7 @@ The `traceBlockByNumber` endpoint accepts a block number and will replay the blo
 
 #### Parameters
 
-- Trace Config
+* Trace Config
 
 ```shell
 // Request
@@ -1137,7 +1095,6 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"debug_traceBlockByNumber","param
 //Result
 {"jsonrpc":"2.0","id":1,"result":[{"result":["68410", "51470"]}]}
 ```
-
 
 ## Miner Methods
 
@@ -1167,7 +1124,7 @@ Sets the extra data a validator can include when proposing blocks. This is cappe
 
 #### Parameters
 
-- Data
+* Data
 
 ```shell
 // Request
@@ -1189,7 +1146,7 @@ Make sure your `fxcored start` call is not using the flag `minimum-gas-prices` b
 
 #### Parameters
 
-- Hex Gas Price
+* Hex Gas Price
 
 ```shell
 // Request
@@ -1209,7 +1166,7 @@ Start the CPU validation process with the given number of threads.
 
 #### Parameters
 
-- Hex Number of threads
+* Hex Number of threads
 
 ```shell
 // Request
@@ -1242,7 +1199,7 @@ Sets the gas limit the miner will target when mining. Note: on networks where [E
 
 #### Parameters
 
-- Hex gas limit
+* Hex gas limit
 
 ```shell
 // Request
@@ -1254,7 +1211,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"miner_start","params":["0x10000"
 
 #### Parameters
 
-- Hex Number of threads
+* Hex Number of threads
 
 ```shell
 // Request
@@ -1272,7 +1229,7 @@ Sets the etherbase. It changes the wallet where the validator rewards will be de
 
 #### Parameters
 
-- Account Address
+* Account Address
 
 ```shell
 // Request
@@ -1294,26 +1251,22 @@ Returns a list of the exact details of all the transactions currently pending fo
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_content","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "txpool_content", "params": []}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 txpool.content();
 ```
 {% endtab %}
-
 {% endtabs %}
 
 #### Result
@@ -1332,26 +1285,22 @@ Returns a list on text format to summarize all the transactions currently pendin
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_inspect","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "txpool_inspect", "params": []}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 txpool.inspect();
 ```
 {% endtab %}
-
 {% endtabs %}
 
 #### Result
@@ -1370,26 +1319,22 @@ Returns the number of transactions currently pending for inclusion in the next b
 
 {% tabs %}
 {% tab title="HTTP" %}
-
 ```shell
 curl -X POST --data '{"jsonrpc":"2.0","method":"txpool_status","params":[],"id":1}' -H "Content-Type: application/json" http://localhost:8545
 ```
 {% endtab %}
 
 {% tab title="WebSocket" %}
-
 ```shell
 wscat -c ws://localhost:8546 -x '{"jsonrpc": "2.0", "id": 1, "method": "txpool_status", "params": []}'
 ```
 {% endtab %}
 
 {% tab title="Console" %}
-
 ```javascript
 txpool.status();
 ```
 {% endtab %}
-
 {% endtabs %}
 
 #### Result
