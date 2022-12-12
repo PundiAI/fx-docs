@@ -13,15 +13,15 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 > if you do not already have docker installed, there will be a prompt for you to install it. Follow the instructions given.
 
 {% tabs %}
-{% tab title="Miannet" %}
+{% tab title="Mainnet" %}
 ```
-docker pull functionx/fx-core:v2.2.1
+docker pull functionx/fx-core:v2.4.0
 ```
 {% endtab %}
 
-{% tab title="Tesetnet" %}
+{% tab title="Testnet" %}
 ```
-docker pull functionx/fx-core:v2.3.0
+docker pull functionx/fx-core:v2.4.0
 ```
 {% endtab %}
 {% endtabs %}
@@ -30,11 +30,11 @@ docker pull functionx/fx-core:v2.3.0
 
 {% tabs %}
 {% tab title="Mainnet" %}
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.2.1 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.4.0 init fx-zakir
 {% endtab %}
 
 {% tab title="Testnet" %}
-docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.0 init fx-zakir
+docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.4.0 init fx-zakir
 {% endtab %}
 {% endtabs %}
 
@@ -43,17 +43,17 @@ docker run -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.0 init fx-zakir
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.2.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}
@@ -67,7 +67,7 @@ And at this stage, what is important is your validator keys that is stored in a 
 * Run docker
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.3.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.4.0 start
 ```
 
 To check if fxcore is synced:

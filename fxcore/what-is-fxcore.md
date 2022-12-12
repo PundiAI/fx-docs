@@ -24,4 +24,4 @@ About the FunctionX Core: The FunctionX Core also known as a Hub is the first Co
 * `x/erc20`: Enable ERC20 token standards
 * `x/migrate`: Allows migration of address to new address scheme
 
-Next, learn how to [install f(x)Core](installation.md).
+Next, learn how to [install f(x)Core](../f-x-core/installation.md).

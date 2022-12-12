@@ -191,7 +191,7 @@ In order to query the state and send transactions, you need a way to access the 
 
 This is the most secure option, but comes with relatively high resource requirements and costs. In order to run your own full-node, you need good bandwidth and at least 500GB of disk space.
 
-You will find the tutorial on how to install `fxcored` [here](../fxcore/installation.md), and the guide to run a full-node [here](../fxcore/setup-node/).
+You will find the tutorial on how to install `fxcored` [here](../f-x-core/installation.md), and the guide to run a full-node [here](../f-x-core/setup-node/).
 
 ### Connecting to a Remote Full-Node
 

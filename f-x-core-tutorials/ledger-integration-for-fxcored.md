@@ -61,7 +61,7 @@ The tool used to generate addresses and transactions on the f(x)Core network is 
 
 ### Install f(x)Core
 
-> **You need to** [**install f(x)Core**](../fxcore/installation.md) **before you proceed further**
+> **You need to** [**install f(x)Core**](../f-x-core/installation.md) **before you proceed further**
 
 ### Add your Ledger key
 
@@ -145,7 +145,7 @@ Test your connection with a query such as:
 fxcored query staking validators
 ```
 
-> **To run your own full node locally read more** [**here**](../fxcore/setup-node/)**.**
+> **To run your own full node locally read more** [**here**](../f-x-core/setup-node/)**.**
 
 ### Sign a transaction
 

@@ -13,7 +13,7 @@ We recommend the following for running f(x)Core:
 * At least 8G of memory
 * At least 10mbps network bandwidth
 
-To see a [quick cloud setup](../fxcore-tutorials/cloud-setup.md) on how to setup and deploy it on the cloud.
+To see a [quick cloud setup](../f-x-core-tutorials/cloud-setup.md) on how to setup and deploy it on the cloud.
 
 ## Install build requirements
 
@@ -161,7 +161,7 @@ Next, let's install the latest version of f(x)Core. Make sure you have git insta
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-git clone --branch release/v2.2.x https://github.com/functionx/fx-core.git
+git clone --branch release/v2.4.x https://github.com/functionx/fx-core.git
 ```
 
 ```
@@ -171,7 +171,7 @@ cd fx-core
 
 {% tab title="Testnet" %}
 ```
-git clone --branch release/v2.3.x https://github.com/functionx/fx-core.git
+git clone --branch release/v2.4.x https://github.com/functionx/fx-core.git
 ```
 
 ```
@@ -198,6 +198,10 @@ cd fx-core
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+You may find the latest branches here: [https://github.com/FunctionX/fx-core/branches](https://github.com/FunctionX/fx-core/branches)
+{% endhint %}
 
 {% tabs %}
 {% tab title="All Other Environments " %}

@@ -99,7 +99,7 @@ curl -o fx-core_2.4.0.tar.gz -LJO https://github.com/FunctionX/fx-core/releases/
 ```
 mkdir -p fxcore-temp
 tar -zxvf fx-core_2.4.0.tar.gz -C fxcore-temp
-cp fxcore-temp/bin/fxcored $(GOPATH)/bin/fxcored
+cp fxcore-temp/bin/fxcored $(go env GOPATH)/bin/fxcored
 ```
 {% endtab %}
 {% endtabs %}

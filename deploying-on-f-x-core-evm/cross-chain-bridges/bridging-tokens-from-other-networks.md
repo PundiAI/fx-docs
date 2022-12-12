@@ -9,9 +9,9 @@ description: >-
 
 ## For Developers
 
-### Add tokens to the [f(x)Core Gravity Bridge](fxcore-gravity-bridge.md)
+### Add tokens to the [f(x)Core Gravity Bridge](../../deploying-on-fxcore-evm/cross-chain-bridges/fxcore-gravity-bridge.md)
 
-Bridging tokens from other networks (supported by the [f(x)Core Gravity Bridge](fxcore-gravity-bridge.md)) via [f(x)Core Gravity Bridge](fxcore-gravity-bridge.md). This would require the following steps:
+Bridging tokens from other networks (supported by the [f(x)Core Gravity Bridge](../../deploying-on-fxcore-evm/cross-chain-bridges/fxcore-gravity-bridge.md)) via [f(x)Core Gravity Bridge](../../deploying-on-fxcore-evm/cross-chain-bridges/fxcore-gravity-bridge.md). This would require the following steps:
 
 1.  Deploy the token contract to fxcore-evm to support cross-chain
 

@@ -30,7 +30,7 @@ description: >-
 
 
 
-![](<../../.gitbook/assets/Unified V2.drawio (1).png>)
+![](<../../.gitbook/assets/Unified V2.drawio.png>)
 
 > Note: You may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 

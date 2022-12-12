@@ -43,8 +43,8 @@
 * Archive node - <mark style="color:red;">**synchronising**</mark>
   * Snapshot frequency: every Monday (10am GMT +8)
   * Snapshot record keeping: 3 most recent
-  * ~~Shapshot link:~~ [~~https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz~~](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz)~~~~
-  * ~~Md5 link:~~ [~~https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz.md5~~](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz.md5)~~~~
+  * ~~Shapshot link:~~ [~~https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz~~](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz)\~\~\~\~
+  * ~~Md5 link:~~ [~~https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz.md5~~](https://fx-mainnet.s3.amazonaws.com/fxcore-archive-snapshot-mainnet-2022-08-01.tar.gz.md5)\~\~\~\~
 {% endtab %}
 
 {% tab title="Testnet" %}
@@ -61,8 +61,8 @@
 * Archive node - <mark style="color:red;">**synchronising**</mark>
   * Snapshot frequency: every Monday (10am GMT +8)
   * Snapshot record keeping: 3 most recent
-  * ~~Shapshot link:~~ [~~https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz~~](https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz)~~~~
-  * ~~Md5 link:~~ [~~https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz.md5~~](https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz.md5)~~~~
+  * ~~Shapshot link:~~ [~~https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz~~](https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz)\~\~\~\~
+  * ~~Md5 link:~~ [~~https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz.md5~~](https://testnet-fx.s3.amazonaws.com/fxcore-archive-snapshot-testnet-2022-08-01.tar.gz.md5)\~\~\~\~
 {% endtab %}
 {% endtabs %}
 
@@ -117,8 +117,6 @@ tar -xzvf fxcore-snapshot-testnet-2022-08-01.tar.gz -C ~/.fxcore/
 
 {% hint style="info" %}
 Note that if your fxcore data directory is placed on different directory then please rename to that
-
-
 
 When you are unpacking the snapshot, it is already contained in a data folder, you will be replacing the data folder below. Be sure to maintain the integrity of this directory tree structure.
 {% endhint %}

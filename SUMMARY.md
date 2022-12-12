@@ -5,13 +5,13 @@
 ## f(x)Core <a href="#fxcore" id="fxcore"></a>
 
 * [What is f(x)Core](fxcore/what-is-fxcore.md)
-* [Installation f(x)Core](fxcore/installation.md)
-* [Setup Node](fxcore/setup-node/README.md)
-  * [Full node with Binaries](fxcore/setup-node/full-node-with-binaries.md)
-  * [Full node with Docker](fxcore/setup-node/full-node-with-docker.md)
-  * [Snapshot Guide](fxcore/setup-node/use-snapshot.md)
-  * [Node Monitoring Device](fxcore/setup-node/node-monitor.md)
-  * [Node Peers](fxcore/setup-node/node-peers.md)
+* [Installation f(x)Core](f-x-core/installation.md)
+* [Setup Node](f-x-core/setup-node/README.md)
+  * [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md)
+  * [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md)
+  * [Snapshot Guide](f-x-core/setup-node/use-snapshot.md)
+  * [Node Monitoring Device](f-x-core/setup-node/node-monitor.md)
+  * [Node Peers](f-x-core/setup-node/node-peers.md)
 
 ## Validators
 
@@ -30,11 +30,11 @@
 ## f(x)Core Tutorials <a href="#fxcore-tutorials" id="fxcore-tutorials"></a>
 
 * [f(x)Cored CLI Commands](fxcore-tutorials/fxcored-commands-documentation.md)
-* [Cloud Setup](fxcore-tutorials/cloud-setup.md)
-* [Testnet faucet](fxcore-tutorials/fxtestnetfaucet.md)
-* [Ledger Integration for fxcored](fxcore-tutorials/ledger-integration-for-fxcored.md)
-* [Sentry Nodes](fxcore-tutorials/sentry-nodes.md)
-* [Account Migration Guide (CLI)](fxcore-tutorials/account-migration-guide.md)
+* [Cloud Setup](f-x-core-tutorials/cloud-setup.md)
+* [Testnet faucet](f-x-core-tutorials/fxtestnetfaucet.md)
+* [Ledger Integration for fxcored](f-x-core-tutorials/ledger-integration-for-fxcored.md)
+* [Sentry Nodes](f-x-core-tutorials/sentry-nodes.md)
+* [Account Migration Guide (CLI)](f-x-core-tutorials/account-migration-guide.md)
 
 ## Upgrade Instructions
 
@@ -50,20 +50,20 @@
 
 ## Deploying on f(x)core EVM <a href="#deploying-on-fxcore-evm" id="deploying-on-fxcore-evm"></a>
 
-* [Deployed DApps](deploying-on-fxcore-evm/deployed-dapps.md)
-* [MetaMask](deploying-on-fxcore-evm/metamask/README.md)
-  * [Download and Install MetaMask](deploying-on-fxcore-evm/metamask/download-and-install-metamask.md)
+* [Deployed DApps](deploying-on-f-x-core-evm/deployed-dapps.md)
+* [MetaMask](deploying-on-f-x-core-evm/metamask/README.md)
+  * [Download and Install MetaMask](deploying-on-f-x-core-evm/metamask/download-and-install-metamask.md)
   * [Add f(x)Core Network](deploying-on-fxcore-evm/metamask/add-fxcore-network.md)
-  * [Configure Custom Tokens](deploying-on-fxcore-evm/metamask/configure-custom-tokens.md)
-  * [Create and Import Accounts](deploying-on-fxcore-evm/metamask/create-and-import-accounts.md)
-* [Connect Wallet to Dapps](deploying-on-fxcore-evm/connect-wallet-to-dapps/README.md)
-  * [Connect using MetaMask](deploying-on-fxcore-evm/connect-wallet-to-dapps/connect-using-metamask.md)
+  * [Configure Custom Tokens](deploying-on-f-x-core-evm/metamask/configure-custom-tokens.md)
+  * [Create and Import Accounts](deploying-on-f-x-core-evm/metamask/create-and-import-accounts.md)
+* [Connect Wallet to Dapps](deploying-on-f-x-core-evm/connect-wallet-to-dapps/README.md)
+  * [Connect using MetaMask](deploying-on-f-x-core-evm/connect-wallet-to-dapps/connect-using-metamask.md)
   * [Connect using f(x)Wallet (Wallet Connect)](deploying-on-fxcore-evm/connect-wallet-to-dapps/connect-using-fxwallet-wallet-connect.md)
-* [With Remix](deploying-on-fxcore-evm/with-remix.md)
-* [With Truffle](deploying-on-fxcore-evm/with-truffle.md)
-* [With Hardhat](deploying-on-fxcore-evm/with-hardhat.md)
-* [Cross-Chain Bridges](deploying-on-fxcore-evm/cross-chain-bridges/README.md)
-  * [Bridging Tokens from other networks](deploying-on-fxcore-evm/cross-chain-bridges/bridging-tokens-from-other-networks.md)
+* [With Remix](deploying-on-f-x-core-evm/with-remix.md)
+* [With Truffle](deploying-on-f-x-core-evm/with-truffle.md)
+* [With Hardhat](deploying-on-f-x-core-evm/with-hardhat.md)
+* [Cross-Chain Bridges](deploying-on-f-x-core-evm/cross-chain-bridges/README.md)
+  * [Bridging Tokens from other networks](deploying-on-f-x-core-evm/cross-chain-bridges/bridging-tokens-from-other-networks.md)
   * [f(x)Core Gravity Bridge](deploying-on-fxcore-evm/cross-chain-bridges/fxcore-gravity-bridge.md)
 
 ## Developers

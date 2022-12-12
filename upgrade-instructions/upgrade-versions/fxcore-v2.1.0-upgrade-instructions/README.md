@@ -65,7 +65,7 @@ However, with the additional of the new EVM module, the corresponding EVM Chain-
 
 #### System requirements <a href="#system-requirement" id="system-requirement"></a>
 
-For a smooth upgrade, ensure that you have the [minimum system requirements](../../../fxcore/installation.md#hardware-requirements).
+For a smooth upgrade, ensure that you have the [minimum system requirements](../../../f-x-core/installation.md#hardware-requirements).
 
 > Minimum system requirements have an upgrade by 2 Cores and 4GB
 
@@ -77,7 +77,7 @@ Also validator operators should back-up their `.fxcore/config/`priv\_validator\_
 
 #### Testing <a href="#testing" id="testing"></a>
 
-For those validator and full node operators that are interested in ensuring preparedness for the impending upgrade, you can join in our public-testnet by [installing f(x)Core](../../../fxcore/installation.md) (ensure that you click into the testnet installation tabs).
+For those validator and full node operators that are interested in ensuring preparedness for the impending upgrade, you can join in our public-testnet by [installing f(x)Core](../../../f-x-core/installation.md) (ensure that you click into the testnet installation tabs).
 
 #### Manual Upgrade
 
