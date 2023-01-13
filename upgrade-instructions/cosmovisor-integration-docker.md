@@ -1,3 +1,3 @@
 # Cosmovisor Integration - Docker
 
-Docker comes with cosmovisor, just start it directly
+Docker image already has cosmovisor, just pull the image and run it
