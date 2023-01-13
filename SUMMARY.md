@@ -38,6 +38,8 @@
 
 ## Upgrade Instructions
 
+* [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor-integration-binaries.md)
+* [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor-integration-docker.md)
 * [Upgrade Guide](upgrade-instructions/upgrade-guide/README.md)
   * [Binaries - Upgrading Your Node](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial.md)
   * [Docker - Upgrading Your Node](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial-docker.md)
