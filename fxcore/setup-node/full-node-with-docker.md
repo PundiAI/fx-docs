@@ -67,7 +67,7 @@ And at this stage, what is important is your validator keys that is stored in a 
 * Run docker
 
 ```
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.4.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -p 8545:8545 -p 8546:8546 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:v2.4.0 start
 ```
 
 To check if fxcore is synced:

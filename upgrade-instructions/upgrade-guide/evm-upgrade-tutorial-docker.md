@@ -64,7 +64,7 @@ wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.3.x/public/t
 4\. Restart docker container to start the node:
 
 ```shell
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:2.4.0 start
+docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -p 8545:8545 -p 8546:8546 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:2.4.0 start
 ```
 
 To check if fxcore is synced:

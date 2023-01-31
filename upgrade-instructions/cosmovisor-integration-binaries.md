@@ -37,9 +37,9 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 Manually download the binary and extract it to folder:
 
 ```
-wget https://github.com/FunctionX/fx-core/releases/download/v0.1.3/fxcore_0.1.3_Linux_x86_64.tar.gz && tar -xvf fxcore_0.1.3_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
+wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Linux_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
 
-wget https://github.com/FunctionX/fx-core/releases/download/v0.2.1/fxcore_0.2.1_Linux_x86_64.tar.gz && tar -xvf fxcore_0.2.1_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv2/
+wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Linux_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv2/
 ```
 
 To check that you did this correctly, ensure your versions of `cosmovisor` and `fxcored` are the same:
