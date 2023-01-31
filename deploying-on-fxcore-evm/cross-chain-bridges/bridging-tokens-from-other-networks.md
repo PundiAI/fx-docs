@@ -40,7 +40,7 @@ Example:
 1. After the proposal passes, the Ethereum ERC20 address will be added to the Ethereum bridge contract
 2. You will be able to perform cross-chain transactions
 
-> More on[ f(x)Core governance](broken-reference)
+> More on[ f(x)Core governance](../../governance)
 
 ### Building the bridge yourself
 

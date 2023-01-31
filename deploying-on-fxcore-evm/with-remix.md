@@ -19,7 +19,7 @@ For more information on Remix and how to use it, you may find it in the [Remix D
 * Search for **'Solidity Compiler'** in the plugin tab in Remix (this should be activated by default)
 * And activate the plugins (if they are not already activated)
 
-![](<../.gitbook/assets/image (1) (1).png>)![](<../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>)![](<../.gitbook/assets/image (15) (1).png>)
 
 * The environment should be set to solidity by default
 
@@ -165,7 +165,7 @@ For more information on the ERC20 standard and the various variables, you may re
 * Now, `Compile HelloWorld.sol` /`ERC20.sol`
 * After Successful Compilation, it will show ![](<../.gitbook/assets/image (24).png>)
 * Now, we have to deploy our smart contract on f(x)Core Network. For that, we have to connect to web3, this can be done by using services like Metamask. We will be using Metamask. Please follow this tutorial to setup a Metamask Account.
-* Open Metamask, click the **network dropdown** and then click **'Add Network'.** For more information on MetaMask and how to configure it to your network, you may check out this [Metamask guide](metamask/).
+* Open Metamask, click the **network dropdown** and then click **'Add Network'.** For more information on MetaMask and how to configure it to your network, you may check out this [Metamask guide](metamask).
 
 ![](<../.gitbook/assets/image (25).png>)
 
@@ -252,7 +252,7 @@ Clicking into the \_mint (example) dropdown, you will be shown a few fields:
 
 The fields are pretty self explanatory. Amount has to be of the type unit256 (unsigned integer), while Account has to be of the address (0x) type. Input your address and the amount you would like to mint. Do remember to add 18 0s behind. The amount value here is expressed in Wei. So if you want to mint 100 of your tokens, the field should be 100000000000000000000.
 
-![](<../.gitbook/assets/image (29) (1).png>)![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (29) (1).png>)![](../.gitbook/assets/remix-mint-image.png)
 
 Hitting ![](<../.gitbook/assets/image (31).png>) will result in a Metamask pop-up. Remember to edit the gas fields to reflect 4000 GasPrice similar to what you did before and voila, you will have minted some of your own tokens.
 

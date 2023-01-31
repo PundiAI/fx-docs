@@ -2,7 +2,7 @@
 
 ## f(x)Core Daemon
 
-`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../f-x-core/installation.md).
+`fxcored` is the tool that enables you to interact with the node that runs on the `f(x)Core network`. In order to install it, follow the [installation procedure](../fxcore/installation.md).
 
 ### Main structure of running fxcored commands
 
@@ -284,7 +284,7 @@ The command will prompt for each passphrase. If a passphrase is incorrect, it wi
 
 You'll need an account with a private and public key pair (a.k.a. `sk, pk` respectively) to be able to receive funds, send txs, bond tx, etc.
 
-To generate an old _secp256k1_ key, follow this [guide](../f-x-core-tutorials/account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). New eth\_secp256k1 will be the default key generation scheme when f(x)Core becomes EVM compatible.
+To generate an old _secp256k1_ key, follow this [guide](../fxcore-tutorials/account-migration-guide.md#2.-prepare-the-0x-prefix-address-account-ethereum-format-address). New eth\_secp256k1 will be the default key generation scheme when f(x)Core becomes EVM compatible.
 
 To generate a new eth\__secp256k1_ key:
 
@@ -427,7 +427,7 @@ Note: You may want to cap the maximum gas that can be consumed by the transactio
 
 #### Get Tokens
 
-On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](../f-x-core-tutorials/fxtestnetfaucet.md).
+On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](../fxcore-tutorials/fxtestnetfaucet.md).
 
 #### Query Account Balance
 

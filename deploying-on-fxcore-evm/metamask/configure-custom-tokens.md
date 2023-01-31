@@ -4,7 +4,7 @@ description: Process of configuring/adding custom tokens to MetaMask
 
 # Configure Custom Tokens
 
-This page demonstrates the process of configuring/adding custom tokens to MetaMask. Tokens are created by deploying smart contracts (eg. ERC20 and ERC721), please refer to this [link](https://functionx.gitbook.io/home/deploying-on-f-x-core/with-remix) to learn the various methods of deploying smart contracts.
+This page demonstrates the process of configuring/adding custom tokens to MetaMask. Tokens are created by deploying smart contracts (eg. ERC20 and ERC721), please refer to this [link](../with-remix) to learn the various methods of deploying smart contracts.
 
 In this tutorial, we will be adding the `TEST` token (ERC20) to your MetaMask account on the f(x)Core Dhobyghaut-Testnet Network.
 

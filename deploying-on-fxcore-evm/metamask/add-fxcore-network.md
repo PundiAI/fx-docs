@@ -8,7 +8,7 @@ description: >-
 
 In order to interact with decentralised applications that have been built on the f(x)Core Network, you will need to add the network to MetaMask. At the time of writing, the only available network is the f(x)Core Testnet Network called Dhobyghaut.
 
-****[**Get Test Tokens on Dhobyghaut-Testnet**](https://functionx.gitbook.io/home/resources/fxtestnetfaucet)
+****[**Get Test Tokens on Dhobyghaut-Testnet**](../../fxcore-tutorials/fxtestnetfaucet.md)
 
 {% tabs %}
 {% tab title="f(x)Core EVM-Mainnet" %}

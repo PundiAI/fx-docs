@@ -1,7 +1,7 @@
 # ABCI Query
 
 {% hint style="danger" %}
-The content under the ABCI Query custom module (including the cosmos-sdk module) may not be supported eventually. It is not recommended for users to use. Users are recommended instead to use [**REST API or gRPC**](../rest\_api.md)**.**
+The content under the ABCI Query custom module (including the cosmos-sdk module) may not be supported eventually. It is not recommended for users to use. Users are recommended instead to use [**REST API or gRPC**](../rest-api.md)**.**
 {% endhint %}
 
 ### Requesting the details of the address

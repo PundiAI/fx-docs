@@ -8,15 +8,15 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 
 [**What is f(x)Core**](fxcore/what-is-fxcore.md): Brief overview of f(x)Core including the various modules.
 
-[**Installation f(x)Core**](f-x-core/installation.md) **(technical):** The hardware requirements and the technical setup for the f(x)Core command line interface (CLI).
+[**Installation f(x)Core**](fxcore/installation.md) **(technical):** The hardware requirements and the technical setup for the f(x)Core command line interface (CLI).
 
-[**Setup Node**](f-x-core/setup-node/) **(technical)**
+[**Setup Node**](fxcore/setup-node/) **(technical)**
 
-* [Full node with Binaries](f-x-core/setup-node/full-node-with-binaries.md): Initialising the core (where your consensus keys are generated), configuring the necessary files, running the node with [Daemon](f-x-core/setup-node/full-node-with-binaries.md#running-server-as-a-daemon).
-* [Full node with Docker](f-x-core/setup-node/full-node-with-docker.md): Similar to setting it up using binaries, but using the docker container.
-* [Snapshot Guide](f-x-core/setup-node/use-snapshot.md): Downloading a snapshot of the blockchain data to enable a faster sync.
-* [Node Metrics](f-x-core/setup-node/node-monitor.md): Setting up of [Prometheus monitoring services](f-x-core/setup-node/node-monitor.md#prometheus-metrics) and also [creating alerts for telegram](f-x-core/setup-node/node-monitor.md#telegram-administrator-and-bot-configuration).
-* [Node Peers](f-x-core/setup-node/node-peers.md): Trustable nodes.
+* [Full node with Binaries](fxcore/setup-node/full-node-with-binaries.md): Initialising the core (where your consensus keys are generated), configuring the necessary files, running the node with [Daemon](fxcore/setup-node/full-node-with-binaries.md#running-server-as-a-daemon).
+* [Full node with Docker](fxcore/setup-node/full-node-with-docker.md): Similar to setting it up using binaries, but using the docker container.
+* [Snapshot Guide](fxcore/setup-node/use-snapshot.md): Downloading a snapshot of the blockchain data to enable a faster sync.
+* [Node Metrics](fxcore/setup-node/node-monitor.md): Setting up of [Prometheus monitoring services](fxcore/setup-node/node-monitor.md#prometheus-metrics) and also [creating alerts for telegram](fxcore/setup-node/node-monitor.md#telegram-administrator-and-bot-configuration).
+* [Node Peers](fxcore/setup-node/node-peers.md): Trustable nodes.
 * [EVM Upgrade Tutorial](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial.md): How to upgrade your node's code to be compatible with the latest EVM module
 
 ### VALIDATORS
@@ -41,32 +41,32 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 
 ### RESOURCES
 
-[**Cloud setup**](f-x-core-tutorials/cloud-setup.md): how to remote ssh and [connecting your localhost to the cloud instance for a specific port](f-x-core-tutorials/cloud-setup.md#connecting-your-localhost-to-the-cloud-instance-for-a-specific-port).
+[**Cloud setup**](fxcore-tutorials/cloud-setup.md): how to remote ssh and [connecting your localhost to the cloud instance for a specific port](fxcore-tutorials/cloud-setup.md#connecting-your-localhost-to-the-cloud-instance-for-a-specific-port).
 
-[**Testnet faucet**](f-x-core-tutorials/fxtestnetfaucet.md)**:** sorry, there isn't one for Mainnet.
+[**Testnet faucet**](fxcore-tutorials/fxtestnetfaucet.md)**:** sorry, there isn't one for Mainnet.
 
 [**f(x)cored Commands Documentation**](fxcore-tutorials/fxcored-commands-documentation.md): [Main structure of running fxcored commands](fxcore-tutorials/fxcored-commands-documentation.md#main-structure-of-running-fxcored-commands), [keys](fxcore-tutorials/fxcored-commands-documentation.md#keys), [send tokens](fxcore-tutorials/fxcored-commands-documentation.md#send-tokens), [query transactions](fxcore-tutorials/fxcored-commands-documentation.md#query-transactions), [slashing](fxcore-tutorials/fxcored-commands-documentation.md#slashing), [staking](fxcore-tutorials/fxcored-commands-documentation.md#staking), [governance](fxcore-tutorials/fxcored-commands-documentation.md#governance), [fee distribution](fxcore-tutorials/fxcored-commands-documentation.md#fee-distribution), [multisig transactions](fxcore-tutorials/fxcored-commands-documentation.md#multisig-transactions).
 
-[**Ledger Integration for fxcored**](f-x-core-tutorials/ledger-integration-for-fxcored.md): [Installing cosmos ledger application](f-x-core-tutorials/ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application), [adding keys to your ledger using f(x)Core CLI](f-x-core-tutorials/ledger-integration-for-fxcored.md#f-x-core-cli-+-ledger-nano).
+[**Ledger Integration for fxcored**](fxcore-tutorials/ledger-integration-for-fxcored.md): [Installing cosmos ledger application](fxcore-tutorials/ledger-integration-for-fxcored.md#install-the-cosmos-ledger-application), [adding keys to your ledger using f(x)Core CLI](fxcore-tutorials/ledger-integration-for-fxcored.md#f-x-core-cli-+-ledger-nano).
 
 ### STEP BY STEP SUMMARY OF HOW TO SET UP A VALIDATOR
 
-[**Installation f(x)Core**](f-x-core/installation.md)
+[**Installation f(x)Core**](fxcore/installation.md)
 
-1. Install the necessary dependencies and [install Go](f-x-core/installation.md#install-go)
-2. [Install the binaries](f-x-core/installation.md#install-go)
+1. Install the necessary dependencies and [install Go](fxcore/installation.md#install-go)
+2. [Install the binaries](fxcore/installation.md#install-go)
 
-[**Setup Node**](f-x-core/setup-node/) **(you can choose to set it up using** [**Binaries**](f-x-core/setup-node/full-node-with-binaries.md) **or** [**Docker**](f-x-core/setup-node/full-node-with-docker.md)**)**
+[**Setup Node**](fxcore/setup-node) **(you can choose to set it up using** [**Binaries**](fxcore/setup-node/full-node-with-binaries.md) **or** [**Docker**](fxcore/setup-node/full-node-with-docker.md)**)**
 
 1. Initialize fxcore
 2. Make sure you [backup your consensus key](validators/validator-recovery.md)❗
-3. Before starting the node, you can choose to [download the snapshot](f-x-core/setup-node/use-snapshot.md) (recommended)
-4. Start the node to sync, [running server as a daemon](f-x-core/setup-node/full-node-with-binaries.md#running-server-as-a-daemon) is highly recommended
+3. Before starting the node, you can choose to [download the snapshot](fxcore/setup-node/use-snapshot.md) (recommended)
+4. Start the node to sync, [running server as a daemon](fxcore/setup-node/full-node-with-binaries.md#running-server-as-a-daemon) is highly recommended
 
 [**Setting Up a Validator for f(x)Core**](validators/validator-setup.md)
 
 1. Ensure your node is synced up, "catch\_up"=false
-2. You can use [ledger](f-x-core-tutorials/ledger-integration-for-fxcored.md) to create your token holding account keys and add a layer of protection by using the `keyring-backend` flag (highly recommended), you can even use a multi-sig account but that will make transactions a hassle later, and do some test transactions to make sure everything works
+2. You can use [ledger](fxcore-tutorials/ledger-integration-for-fxcored.md) to create your token holding account keys and add a layer of protection by using the `keyring-backend` flag (highly recommended), you can even use a multi-sig account but that will make transactions a hassle later, and do some test transactions to make sure everything works
 3. Make sure you do the necessary checks before you create your validator❗
-4. Also set up your [node monitoring device](f-x-core/setup-node/node-monitor.md) on a separate server
+4. Also set up your [node monitoring device](fxcore/setup-node/node-monitor.md) on a separate server
 5. [Create your validator](validators/validator-setup.md#create-your-validator)

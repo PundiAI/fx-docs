@@ -15,7 +15,7 @@ We recommend the following for running a node monitoring device:
 * Have to be setup in a separate environment from validator nodes/sentry nodes
 
 {% hint style="info" %}
-Before setting up a node monitoring device, you may take a look at the [f(x)Core](https://functionx.gitbook.io/home/f-x-core/installation)[installation](https://functionx.gitbook.io/home/f-x-core/installation) setup to setup the f(x)Core CLI.&#x20;
+Before setting up a node monitoring device, you may take a look at the [f(x)Core](../what-is-fxcore.md)[installation](../installation) setup to setup the f(x)Core CLI.&#x20;
 {% endhint %}
 
 ## Prometheus metrics
@@ -179,7 +179,7 @@ alerting:
 
 #### Alertmanager-bot
 
-For the telegram bot to be able to obtain information from the `alertmanager` you will need to update the username and password within the `--alertmanager.url` in the `./fx-core/develop/docker-compose.yaml` file. Also you may [update](https://functionx.gitbook.io/home/f-x-core/setup-node/node-monitor#updating-node-monitoring-services) the alert-manager-bot.&#x20;
+For the telegram bot to be able to obtain information from the `alertmanager` you will need to update the username and password within the `--alertmanager.url` in the `./fx-core/develop/docker-compose.yaml` file. Also you may [update](./node-monitor#updating-node-monitoring-services) the alert-manager-bot.&#x20;
 
 example:
 
