@@ -19,7 +19,7 @@ For more information on Remix and how to use it, you may find it in the [Remix D
 * Search for **'Solidity Compiler'** in the plugin tab in Remix (this should be activated by default)
 * And activate the plugins (if they are not already activated)
 
-![](<../.gitbook/assets/image (1) (1).png>)![](<../.gitbook/assets/image (15) (1).png>)
+![](<../.gitbook/assets/image (1) (1).png>) ![](<../.gitbook/assets/image (15) (1) (2).png>)
 
 * The environment should be set to solidity by default
 
@@ -71,7 +71,7 @@ The `string public message` function is another public function that is similar 
 {% tab title="ERC20 Tutorial" %}
 * ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it erc20.sol
 * **Copy/Paste** the Smart contract below into the newly created file `erc20.sol`
-* **Edit** the `string`` `<mark style="color:blue;">`public`</mark>` ``name` & `string`` `<mark style="color:blue;">`public`</mark>` ``symbol` and replace it with your own name and symbol
+* **Edit** the ` string`` `` `<mark style="color:blue;">`public`</mark>` `` ``name ` & ` string`` `` `<mark style="color:blue;">`public`</mark>` `` ``symbol ` and replace it with your own name and symbol
 
 {% hint style="info" %}
 Feel free to edit other parts of the contract. This is just a sample ERC20 contract for testing and might not have the necessary security checks in place.
@@ -150,7 +150,7 @@ contract Token {
 
 The first line, `pragma solidity ^0.8.0` specifies that the source code is for a Solidity version greater than 0.8.0. [Pragmas](https://solidity.readthedocs.io/en/latest/layout-of-source-files.html#pragma) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
-A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. The line `string public name & symbol` declares public state variables called `name & symbol` of type `string`. The line `uint256`` `<mark style="color:blue;">`public`</mark>` ``totalSupply` declares a uint256 variable that stores the amount of this particular token in existence. You can think of it as a single slot in a database that you can query and alter by calling functions of the code that manages the database. The keyword public automatically generates a function that allows you to access the current value of the state variable from outside of the contract. Without this keyword, other contracts have no way to access the variable.
+A contract in the sense of Solidity is a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain. The line `string public name & symbol` declares public state variables called `name & symbol` of type `string`. The line ` uint256`` `` `<mark style="color:blue;">`public`</mark>` `` ``totalSupply ` declares a uint256 variable that stores the amount of this particular token in existence. You can think of it as a single slot in a database that you can query and alter by calling functions of the code that manages the database. The keyword public automatically generates a function that allows you to access the current value of the state variable from outside of the contract. Without this keyword, other contracts have no way to access the variable.
 
 Events are called Events because they are very good at signalling that an event has taken place. In blockchain terms, they’re cheap. They’re cheap to write in a contract in terms of deployment cost and gas cost when calling a function with an event, and they’re free to read. In short, they’re a very good way of broadcasting relevant information.
 
@@ -165,7 +165,7 @@ For more information on the ERC20 standard and the various variables, you may re
 * Now, `Compile HelloWorld.sol` /`ERC20.sol`
 * After Successful Compilation, it will show ![](<../.gitbook/assets/image (24).png>)
 * Now, we have to deploy our smart contract on f(x)Core Network. For that, we have to connect to web3, this can be done by using services like Metamask. We will be using Metamask. Please follow this tutorial to setup a Metamask Account.
-* Open Metamask, click the **network dropdown** and then click **'Add Network'.** For more information on MetaMask and how to configure it to your network, you may check out this [Metamask guide](metamask).
+* Open Metamask, click the **network dropdown** and then click **'Add Network'.** For more information on MetaMask and how to configure it to your network, you may check out this [Metamask guide](metamask/).
 
 ![](<../.gitbook/assets/image (25).png>)
 
@@ -193,7 +193,7 @@ https://testnet-fx-json-web3.functionx.io:8545
 FX
 ```
 
-* (Optional Field) Block Explorer URL:&#x20;
+* (Optional Field) Block Explorer URL:
 
 ```
 https://testnet-explorer.functionx.io/evm
@@ -240,7 +240,7 @@ Taking a look at the side panel in particular these sets of button functions whe
 
 Copy the ![](<../.gitbook/assets/image (18).png>)deployed contract address and input it in Metamask. And step through with adding the custom token.
 
-![](<../.gitbook/assets/image (30).png>)![](<../.gitbook/assets/image (16).png>)
+![](<../.gitbook/assets/image (30).png>) ![](<../.gitbook/assets/image (16).png>)
 
 Now with our custom token added, we are all ready to mint some tokens and interact with the ERC20 contract.
 
@@ -248,11 +248,11 @@ Now with our custom token added, we are all ready to mint some tokens and intera
 
 Clicking into the \_mint (example) dropdown, you will be shown a few fields:
 
-![](<../.gitbook/assets/image (6).png>)
+![](<../.gitbook/assets/image (6) (1).png>)
 
 The fields are pretty self explanatory. Amount has to be of the type unit256 (unsigned integer), while Account has to be of the address (0x) type. Input your address and the amount you would like to mint. Do remember to add 18 0s behind. The amount value here is expressed in Wei. So if you want to mint 100 of your tokens, the field should be 100000000000000000000.
 
-![](<../.gitbook/assets/image (29) (1).png>)![](../.gitbook/assets/remix-mint-image.png)
+![](<../.gitbook/assets/image (29) (1).png>) ![](../.gitbook/assets/remix-mint-image.png)
 
 Hitting ![](<../.gitbook/assets/image (31).png>) will result in a Metamask pop-up. Remember to edit the gas fields to reflect 4000 GasPrice similar to what you did before and voila, you will have minted some of your own tokens.
 
