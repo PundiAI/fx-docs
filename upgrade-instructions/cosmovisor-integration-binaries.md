@@ -25,7 +25,7 @@ After this, you must make the necessary folders for `cosmosvisor` in your `DAEMO
 mkdir -p ~/.fxcore/cosmovisor
 mkdir -p ~/.fxcore/cosmovisor/genesis
 mkdir -p ~/.fxcore/cosmovisor/genesis/bin
-mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv2
+mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv3
 ```
 
 ## 2. Download the fxcore release
@@ -60,7 +60,7 @@ Description=Fxcore Daemon
 After=network-online.target
 
 [Service]
-User=$USER
+User=root
 ExecStart=/root/go/bin/cosmovisor run start --home=/root/.fxcore
 Restart=always
 RestartSec=3
@@ -74,7 +74,7 @@ Environment="UNSAFE_SKIP_BACKUP=false"
 
 [Install]
 WantedBy=multi-user.target
-EOFd
+EOF
 ```
 
 Reload, enable and restart the node with daemon service file
