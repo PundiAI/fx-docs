@@ -81,7 +81,7 @@ For those validator and full node operators that are interested in ensuring prep
 
 #### Manual Upgrade
 
-You may refer to this [upgrade tutorial](../../upgrade-guide/evm-upgrade-tutorial.md) to upgrade your nodes.
+You may refer to this [upgrade tutorial](../../upgrade-guide/upgrade-tutorial.md) to upgrade your nodes.
 
 #### Upgrade failure handling method
 

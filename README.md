@@ -17,7 +17,7 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 * [Snapshot Guide](fxcore/setup-node/use-snapshot.md): Downloading a snapshot of the blockchain data to enable a faster sync.
 * [Node Metrics](fxcore/setup-node/node-monitor.md): Setting up of [Prometheus monitoring services](fxcore/setup-node/node-monitor.md#prometheus-metrics) and also [creating alerts for telegram](fxcore/setup-node/node-monitor.md#telegram-administrator-and-bot-configuration).
 * [Node Peers](fxcore/setup-node/node-peers.md): Trustable nodes.
-* [EVM Upgrade Tutorial](upgrade-instructions/upgrade-guide/evm-upgrade-tutorial.md): How to upgrade your node's code to be compatible with the latest EVM module
+* [EVM Upgrade Tutorial](upgrade-instructions/upgrade-guide/upgrade-tutorial.md): How to upgrade your node's code to be compatible with the latest EVM module
 
 ### VALIDATORS
 

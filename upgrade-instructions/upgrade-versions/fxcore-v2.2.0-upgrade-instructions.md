@@ -35,14 +35,14 @@ description: >-
 > Note: You may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 
 {% hint style="info" %}
-**Note:** Refer to [Binaries upgrade steps](../upgrade-guide/evm-upgrade-tutorial.md) or [Docker upgrade steps](../upgrade-guide/evm-upgrade-tutorial-docker.md)
+**Note:** Refer to [Binaries upgrade steps](../upgrade-guide/upgrade-tutorial.md) or [Docker upgrade steps](../upgrade-guide/upgrade-tutorial-docker.md)
 {% endhint %}
 
 ### Testnet upgrade plan:
 
 * Code release time: The Testnet code is expected to be released by 6pm (GMT+8) on Friday, 22 July 2022.
 * Upgrading validator nodes:
-  * Validators can update their node once the code is released (please read about the difference between Software Upgrade and Hard Fork [here](../upgrade-guide/evm-upgrade-tutorial.md#f-x-core-network-upgrades)). The upgrade height will be written in the code. The upgrade height time will tentatively be set at 12pm (GMT+8) on Monday, 25 July 2022.
+  * Validators can update their node once the code is released (please read about the difference between Software Upgrade and Hard Fork [here](../upgrade-guide/upgrade-tutorial.md#f-x-core-network-upgrades)). The upgrade height will be written in the code. The upgrade height time will tentatively be set at 12pm (GMT+8) on Monday, 25 July 2022.
   * The validator must update the Testnet node before the upgrade height, otherwise it will result in issues with consensus because of the inconsistencies of versions with other validators.
 * Initiate a many-to-one cross-chain proposal to add USDT
   * The node will not apply the update content until it reaches the upgrade height, thereafter, there will be a need to send a RegisterCoinProposal proposal after the upgrade height to add USDT to the list of tokens in the many-to-one cross-chain feature.
@@ -54,7 +54,7 @@ description: >-
 
 * Code release time: The Mainnet code is expected to be released in the morning of Wednesday, 27 July 2022.
 * Upgrading validator nodes:
-  * Validators can update their node once the code is released (please read about the difference between Software Upgrade and Hard Fork [here](../upgrade-guide/evm-upgrade-tutorial.md#f-x-core-network-upgrades)). The upgrade height will be written in the code. The upgrade height time will tentatively be set at 12pm (GMT+8) on Monday, 1 August 2022.
+  * Validators can update their node once the code is released (please read about the difference between Software Upgrade and Hard Fork [here](../upgrade-guide/upgrade-tutorial.md#f-x-core-network-upgrades)). The upgrade height will be written in the code. The upgrade height time will tentatively be set at 12pm (GMT+8) on Monday, 1 August 2022.
   * The validator must update the Mainnet node before the upgrade height, otherwise it will result in issues with consensus because of the inconsistencies of versions with other validators
 * Initiate a many-to-one cross-chain proposal to add USDT
   * The node will not apply the update content until it reaches the upgrade height, thereafter, there will be a need to send a RegisterCoinProposal proposal after the upgrade height to add USDT to the list of tokens in the many-to-one cross-chain feature.

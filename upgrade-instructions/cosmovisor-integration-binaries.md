@@ -36,7 +36,7 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 Manually download the binary and extract it to folder:
 
 {% tabs %}
-{% tab title="Manually Install" %}
+{% tab title="Build from source" %}
 ```sh
 git clone https://github.com/functionx/fx-core.git
 ```
