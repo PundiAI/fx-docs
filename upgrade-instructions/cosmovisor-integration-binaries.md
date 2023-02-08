@@ -78,6 +78,25 @@ cosmovisor version: devel-4846b9b49cbaac9da2c5df74391b9d30bfc4242e
 app version: HEAD-cbba9a3bd29cfff6b9b1a7b8154922e8bc9027e8
 ```
 
+The directory structure after correctly configuring cosmovisor should be like this
+
+```
+/root/.fxcore:$ tree cosmovisor
+cosmovisor
+├── current -> /root/.fxcore/cosmovisor/genesis
+├── genesis
+│   ├── bin
+│   │   └── fxcored
+│   └── upgrade-info.json
+└── upgrades
+    └── fxv3
+        └── bin
+            └── fxcored
+
+6 directories, 3 files
+```
+
+
 ## 3. Start your node
 
 To keep the process always running. If you're on linux, you can do this by creating a service.
