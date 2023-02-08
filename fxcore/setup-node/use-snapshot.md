@@ -92,10 +92,10 @@ Checksums are often used to verify data integrity but are not relied upon to ver
 
 ```bash
 $ md5sum fxcore-snapshot-mainnet-2023-02-08.tar.gz
-4269fe416ca2d74d3925449f5ce7d214  fxcore-snapshot-mainnet-2023-02-08.tar.gz
+5aef6523cc434fa54ad5863782734fdc  fxcore-snapshot-mainnet-2023-02-08.tar.gz
 ```
 
-> compare the md5 hash against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2023-02-08.tar.gz.md
+> compare the md5 hash against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2023-02-08.tar.gz.md5
 
 ## Extracting the Snapshots
 
