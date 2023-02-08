@@ -42,6 +42,12 @@ wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2
 wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Linux_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
 ```
 
+Copying the json upgrade info, you do not need to perform this step if there is no `upgrade-info.json` file in the `/data` folder
+
+```
+cp ~/.fxcore/data/upgrade-info.json `~/.fxcore/cosmovisor/genesis/
+```
+
 To check that you did this correctly, ensure your versions of `cosmovisor` and `fxcored` are the same:
 
 ```
