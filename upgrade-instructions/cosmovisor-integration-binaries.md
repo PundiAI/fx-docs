@@ -76,7 +76,7 @@ Environment="DAEMON_HOME=/root/.fxcore"
 Environment="DAEMON_NAME=fxcored"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-Environment="UNSAFE_SKIP_BACKUP=false"
+Environment="UNSAFE_SKIP_BACKUP=true"
 
 [Install]
 WantedBy=multi-user.target
