@@ -36,11 +36,32 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 
 Manually download the binary and extract it to folder:
 
+{% tabs %}
+{% tab title="Ubuntu" %}
 ```
 wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Linux_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
 
 wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Linux_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
 ```
+{% endtab %}
+
+{% tab title="Mac" %}
+```
+wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Darwin_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Darwin_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
+
+wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Darwin_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Darwin_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
+```
+{% endtab %}
+
+{% tab title="Windows" %}
+```
+https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Windows_x86_64.zip && tar -xvf fx-core_2.4.2_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/genesis/
+
+https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Windows_x86_64.zip && tar -xvf fx-core_3.1.0_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/upgrades/fxv3/
+```
+{% endtab %}
+{% endtabs %}
+
 
 Copying the json upgrade info, you do not need to perform this step if there is no `upgrade-info.json` file in the `~/.fxcore/data/data` folder
 
@@ -52,7 +73,9 @@ To check that you did this correctly, ensure your versions of `cosmovisor` and `
 
 ```
 cosmovisor version
-fxcored version
+
+cosmovisor version: devel-4846b9b49cbaac9da2c5df74391b9d30bfc4242e
+app version: HEAD-cbba9a3bd29cfff6b9b1a7b8154922e8bc9027e8
 ```
 
 ## 3. Start your node
