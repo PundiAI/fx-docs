@@ -23,7 +23,6 @@ After this, you must make the necessary folders for `cosmosvisor` in your `DAEMO
 
 ```
 mkdir -p ~/.fxcore/cosmovisor
-mkdir -p ~/.fxcore/cosmovisor/genesis
 mkdir -p ~/.fxcore/cosmovisor/genesis/bin
 mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv3
 ```
@@ -37,31 +36,54 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 Manually download the binary and extract it to folder:
 
 {% tabs %}
-{% tab title="Ubuntu" %}
+{% tab title="Manually Install" %}
 ```
-wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Linux_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
+git clone https://github.com/functionx/fx-core.git
+```
 
+```
+git checkout release/v2.4.x
+make build
+cp ./build/bin/fxcored ~/.fxcore/cosmovisor/genesis/bin/
+```
+
+```
+git checkout release/v3.1.x
+make build
+cp ./build/bin/fxcored ~/.fxcore/cosmovisor/upgrades/fxv3/bin/
+```
+{% endtab %}
+
+{% tab title="Ubuntu" %}
+```sh
+wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Linux_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
+```
+
+```sh
 wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Linux_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
 ```
 {% endtab %}
 
 {% tab title="Mac" %}
-```
+```sh
 wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Darwin_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Darwin_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
+```
 
+```sh
 wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Darwin_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Darwin_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
 ```
 {% endtab %}
 
 {% tab title="Windows" %}
+```sh
+wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Windows_x86_64.zip && tar -xvf fx-core_2.4.2_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/genesis/
 ```
-https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Windows_x86_64.zip && tar -xvf fx-core_2.4.2_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/genesis/
 
-https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Windows_x86_64.zip && tar -xvf fx-core_3.1.0_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/upgrades/fxv3/
+```sh
+wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Windows_x86_64.zip && tar -xvf fx-core_3.1.0_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/upgrades/fxv3/
 ```
 {% endtab %}
 {% endtabs %}
-
 
 Copying the json upgrade info, you do not need to perform this step if there is no `upgrade-info.json` file in the `~/.fxcore/data/data` folder
 
@@ -95,7 +117,6 @@ cosmovisor
 
 6 directories, 3 files
 ```
-
 
 ## 3. Start your node
 
