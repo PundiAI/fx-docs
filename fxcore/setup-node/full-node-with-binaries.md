@@ -21,17 +21,17 @@ Fetching config file (copy this entire line of code and hit <mark style="color:r
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v2.4.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
 ```
 {% endtab %}
 {% endtabs %}

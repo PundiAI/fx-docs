@@ -161,7 +161,7 @@ Next, let's install the latest version of f(x)Core. Make sure you have git insta
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-git clone --branch release/v2.4.x https://github.com/functionx/fx-core.git
+git clone --branch release/v3.1.x https://github.com/functionx/fx-core.git
 ```
 
 ```
@@ -171,7 +171,7 @@ cd fx-core
 
 {% tab title="Testnet" %}
 ```
-git clone --branch release/v2.4.x https://github.com/functionx/fx-core.git
+git clone --branch release/v3.1.x https://github.com/functionx/fx-core.git
 ```
 
 ```
