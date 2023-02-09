@@ -4,7 +4,7 @@
 
 When setting up a validator there are countless ways to configure your setup. This guide is aimed at showing one of them, the sentry node design. This design is mainly for DDOS prevention.
 
-![](<../.gitbook/assets/Sentry nodes picture (2) (1).png>)
+![](<../.gitbook/assets/Sentry nodes picture (1).png>)
 
 The diagram is based on AWS, other cloud providers will have similar solutions to design a solution. Running nodes is not limited to cloud providers, you can run nodes on bare metal systems as well. The architecture will be the same no matter which setup you decide to go with.
 

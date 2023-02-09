@@ -155,3 +155,13 @@ sudo -S systemctl daemon-reload
 sudo -S systemctl enable fxcored
 sudo -S systemctl restart fxcored
 ```
+
+Accessing logs
+
+{% tabs %}
+{% tab title="Entire Log" %}
+```
+journalctl -u fxcored
+```
+{% endtab %}
+{% endtabs %}

@@ -255,19 +255,19 @@ To start the node, run `sudo systemctl start fxcored`, and thereafter run `journ
 {% tabs %}
 {% tab title="Entire Log" %}
 ```
-journalctl -t fxcored
+journalctl -u fxcored
 ```
 {% endtab %}
 
 {% tab title="Entire log reversed" %}
 ```
-journalctl -t fxcored -r
+journalctl -u fxcored -r
 ```
 {% endtab %}
 
 {% tab title="Latest and continuous log" %}
 ```
-journalctl -t fxcored -f
+journalctl -u fxcored -f
 ```
 {% endtab %}
 {% endtabs %}
