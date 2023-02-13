@@ -1,36 +1,8 @@
 ---
-description: The various parameters of modules in f(x)Core and transaction fee calculation
+description: The various parameters of modules in f(x)Core
 ---
 
-# f(x)Core Info
-
-## The calculation of transaction fee
-
-#### Transaction fee = GasPrice \* GasLimit
-
-* **GasPrice**:
-  * Every validator node can set their GasPrice, currently the GasPrice of every validator node is the same.
-* **GasLimit:**
-  * Gas limit (gas units) refers to the maximum amount of gas users are willing to consume on a transaction.
-  * The computation of GasLimit is related to the size of transaction(s), number of transaction readings, writings and signings. The number of transaction signings is fixed at the moment.
-    * Size of transaction GasLimit: Transaction bytes \* 10
-    * The computation of GasLimit of reading data: number of readings \* cost of reading
-      * ```
-        HasCost:          1000 // to verify if cost needed
-        ReadCostFlat:     1000 // to verify the cost of reading 
-        ReadCostPerByte:  3 // cost of reading per byte
-        IterNextCostFlat: 30 // total cost of reading
-        ```
-    * The computation of GasLimit of writing data: number of writing \* cost of writing
-      * ```
-        WriteCostFlat:    2000 // cost of writing
-        WriteCostPerByte: 30 // cost of writing per byte
-        ```
-    * Computation of GasLimit of transaction signing:
-      * Fixed cost of ED25519: 590
-      * Fixed cost of Secp256k1: 1000
-
-> Conclusion: Even though the transactions are similar or homogenous, transaction fees may vary due to the difference in transaction logic (block size, numbers of readings and writings).&#x20;
+# f(x)Core Modules
 
 ## Mint module
 

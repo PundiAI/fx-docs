@@ -71,7 +71,7 @@
 ## Developers
 
 * [f(x)Core Network](developers/network.md)
-* [f(x)Core Info](developers/fxcore-info.md)
+* [f(x)Core Modules](developers/modules.md)
 * [f(x)Core JSON RPC](developers/json-rpc-api/README.md)
   * [ABCI Query](developers/json-rpc-api/json-rcp-abci-query.md)
 * [f(x)Core REST API](developers/rest-api.md)
