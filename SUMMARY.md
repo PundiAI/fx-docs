@@ -31,7 +31,7 @@
 
 * [f(x)Cored CLI Commands](fxcore-tutorials/fxcored-commands-documentation.md)
 * [Cloud Setup](fxcore-tutorials/cloud-setup.md)
-* [Testnet faucet](fxcore-tutorials/fxtestnetfaucet.md)
+* [Testnet faucet](fxcore-tutorials/testnet-faucet.md)
 * [Ledger Integration for fxcored](fxcore-tutorials/ledger-integration-for-fxcored.md)
 * [Sentry Nodes](fxcore-tutorials/sentry-nodes.md)
 * [Account Migration Guide (CLI)](fxcore-tutorials/account-migration-guide.md)

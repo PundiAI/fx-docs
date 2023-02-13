@@ -427,7 +427,7 @@ Note: You may want to cap the maximum gas that can be consumed by the transactio
 
 #### Get Tokens
 
-On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](../fxcore-tutorials/fxtestnetfaucet.md).
+On a testnet, getting tokens is usually done via a faucet. You may refer to this [link](../fxcore-tutorials/testnet-faucet.md).
 
 #### Query Account Balance
 

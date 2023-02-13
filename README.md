@@ -43,7 +43,7 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 
 [**Cloud setup**](fxcore-tutorials/cloud-setup.md): how to remote ssh and [connecting your localhost to the cloud instance for a specific port](fxcore-tutorials/cloud-setup.md#connecting-your-localhost-to-the-cloud-instance-for-a-specific-port).
 
-[**Testnet faucet**](fxcore-tutorials/fxtestnetfaucet.md)**:** sorry, there isn't one for Mainnet.
+[**Testnet faucet**](fxcore-tutorials/testnet-faucet.md)**:** sorry, there isn't one for Mainnet.
 
 [**f(x)cored Commands Documentation**](fxcore-tutorials/fxcored-commands-documentation.md): [Main structure of running fxcored commands](fxcore-tutorials/fxcored-commands-documentation.md#main-structure-of-running-fxcored-commands), [keys](fxcore-tutorials/fxcored-commands-documentation.md#keys), [send tokens](fxcore-tutorials/fxcored-commands-documentation.md#send-tokens), [query transactions](fxcore-tutorials/fxcored-commands-documentation.md#query-transactions), [slashing](fxcore-tutorials/fxcored-commands-documentation.md#slashing), [staking](fxcore-tutorials/fxcored-commands-documentation.md#staking), [governance](fxcore-tutorials/fxcored-commands-documentation.md#governance), [fee distribution](fxcore-tutorials/fxcored-commands-documentation.md#fee-distribution), [multisig transactions](fxcore-tutorials/fxcored-commands-documentation.md#multisig-transactions).
 
