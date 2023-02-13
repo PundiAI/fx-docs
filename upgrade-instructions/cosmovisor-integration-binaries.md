@@ -91,7 +91,7 @@ Copying the json upgrade info, you do not need to perform this step if there is 
 cp ~/.fxcore/data/upgrade-info.json ~/.fxcore/cosmovisor/genesis/
 ```
 
-To check that you did this correctly, ensure your versions of `cosmovisor` and `fxcored` are the same:
+To check that you did this correctly, ensure your versions of `cosmovisor`  are the same:
 
 ```sh
 cosmovisor version
