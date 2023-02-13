@@ -56,7 +56,7 @@ await window.keplr.experimentalSuggestChain({
     coinDecimals: 18,
     coinGeckoId: "fx-coin",
   },
-  features: ["eth-address-gen", "eth-key-sign"],
+  features: ["eth-address-gen", "eth-key-sign", "ibc-transfer"],
   beta: true,
 });
 ```
@@ -114,7 +114,7 @@ await window.keplr.experimentalSuggestChain({
 {% endtab %}
 
 {% tab title="Testnet" %}
-```
+```javascript
 await window.keplr.experimentalSuggestChain({
   chainId: "dhobyghaut",
   chainName: "f(x)Core Testnet",
@@ -160,7 +160,7 @@ await window.keplr.experimentalSuggestChain({
     coinDecimals: 18,
     coinGeckoId: "fx-coin",
   },
-  features: ["eth-address-gen", "eth-key-sign"],
+  features: ["eth-address-gen", "eth-key-sign", "ibc-transfer"],
   beta: true,
 });
 ```
