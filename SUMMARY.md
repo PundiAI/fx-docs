@@ -89,6 +89,7 @@
   * [EGF Grants Program](governance/governance-proposal-information/egf-grants-program.md)
   * [Application Template](governance/governance-proposal-information/application-template.md)
   * [Successful Grant Applicants](governance/governance-proposal-information/successful-grant-applicants.md)
+  * [Launching an EGF Proposal](governance/governance-proposal-information/launching-an-egf-proposal.md)
 
 ***
 

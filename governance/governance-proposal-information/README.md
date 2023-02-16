@@ -34,25 +34,29 @@ For the EGF proposal, please fork the repository [here](https://github.com/Funct
 
 #### Deposit
 
+{% hint style="info" %}
+As of proposal [#19](https://starscan.io/fxcore/proposals/19), the `min deposit (deposit threshold)` has been changed to `3000 FX` and the `voting period` has been changed to `7 days.`
+{% endhint %}
+
 A deposit is required by the proposer to initiate a proposal. It is designed to prevent spam.
 
 To submit a proposal, the proposer can head to the [f(x)Core block explorer](https://explorer.functionx.io/fxcore/proposals/form), connect their address and fill up the form. It requires an `initial deposit` of at least 1,000 FX. The `initial deposit` will be _counted as part of the entire deposit_ of initiating the governance voting.
 
-In order to initiate the governance voting (enter the `voting period`), all proposals are required to have a minimum amount of FX deposit, referred to as the _deposit threshold_ or `min deposit`. The `min deposit` is currently set at 10,000 FX. This parameter can be changed via governance.
+In order to initiate the governance voting (enter the `voting period`), all proposals are required to have a minimum amount of FX deposit, referred to as the _deposit threshold_ or `min deposit`. The `min deposit` is currently set at 3,000 FX. This parameter can be changed via governance.
 
-The proposal owners are not required to deposit the full amount on their own. Once a proposal is submitted successfully, the proposal will enter the `max deposit period` or the _deposit period_ where other FX holders can increase the proposal's deposit by sending a Deposit transaction. The `max deposit period` is currently set as 14 days.
+The proposal owners are not required to deposit the full amount on their own. Once a proposal is submitted successfully, the proposal will enter the `max deposit period` or the _deposit period_ where other FX holders can increase the proposal's deposit by sending a Deposit transaction. The `max deposit period` is currently set as 7 days.
 
-Once the `min deposit` of 10,000 FX is reached, the proposal will automatically enter the `voting period`.
+Once the `min deposit` of 3,000 FX is reached, the proposal will automatically enter the `voting period`.
 
 #### Examples
 
-Tom initiates a proposal with 1,002 FX, proposal enters `max deposit period`. Dick deposits 8,000 FX to the same proposal 2 days later. The total deposit is now 9,002 FX. Harry then deposits 1,000 FX a few days later. After Harry's deposit, `min deposit` has been reached and the proposal enters the `voting period`.
+Tom initiates a proposal with 1,002 FX, proposal enters `max deposit period`. Dick deposits 1,000 FX to the same proposal 2 days later. The total deposit is now 2,002 FX. Harry then deposits 1,000 FX a few days later. After Harry's deposit, `min deposit` has been reached and the proposal enters the `voting period`.
 
-Tommy initiates a proposal with 10,001 FX, proposal immediately enters the `voting period` as the `min deposit` has been reached.
+Tommy initiates a proposal with 3,001 FX, proposal immediately enters the `voting period` as the `min deposit` has been reached.
 
 ### Voting Period
 
-The `voting period` is currently set as 14 days. Once a proposal has entered the `voting period`, a qualified FX holder will have the right to vote on the proposal.
+The `voting period` is currently set as 7 days. Once a proposal has entered the `voting period`, a qualified FX holder will have the right to vote on the proposal.
 
 A qualified FX holder is as follow:
 
@@ -76,6 +80,10 @@ $$
 If a proposal fails to reach quorum, the proposal will be marked as 'Rejected' regardless of the results of the vote.
 
 If a proposal reached quorum, the proposal will be marked as 'Passed' and the results of the vote will be accepted.
+
+{% hint style="info" %}
+As of proposal [#17](https://starscan.io/fxcore/proposals/17), the quorum for coin-related bridging proposal is lowered to 25%
+{% endhint %}
 
 #### Examples
 
