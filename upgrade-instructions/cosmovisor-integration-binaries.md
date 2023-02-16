@@ -85,13 +85,13 @@ wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0
 {% endtab %}
 {% endtabs %}
 
-Copying the json upgrade info, you do not need to perform this step if there is no `upgrade-info.json` file in the `~/.fxcore/data/data` folder
+Copying the json upgrade info, you do not need to perform this step if there is no `upgrade-info.json` file in the `~/.fxcore/data/` folder
 
 ```sh
 cp ~/.fxcore/data/upgrade-info.json ~/.fxcore/cosmovisor/genesis/
 ```
 
-To check that you did this correctly, ensure your versions of `cosmovisor`  are the same:
+To check that you did this correctly, ensure your versions of `cosmovisor` are the same:
 
 ```sh
 cosmovisor version
