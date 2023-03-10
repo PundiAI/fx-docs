@@ -1,5 +1,11 @@
 # Validator Security Notice
 
+\---
+
+hidden: true
+
+\---
+
 Each validator is encouraged to run its operations independently, as diverse setups increase the resilience of the network. Validators should be well versed in the setup and maintenance process of a validator to ensure security and stability of their individual validators and the network as a whole.
 
 ## Key Management - HSM
