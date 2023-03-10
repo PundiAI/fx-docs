@@ -219,7 +219,7 @@ Fees are similarly distributed with the exception that the block proposer can ge
 
 When a validator is selected to propose the next block, they must include at least 2/3 precommits of the previous block. However, there is an incentive to include more than 2/3 precommits in the form of a bonus. The bonus is linear: it ranges from 1% if the proposer includes 2/3rd precommits (minimum for the block to be valid) to 5% if the proposer includes 100% precommits. Of course the proposer should not wait too long or other validators may timeout and move on to the next proposer. As such, validators have to find a balance between the waiting time to get the most signatures and the risk of losing out on proposing the next block. This mechanism aims to incentivize non-empty block proposals, better networking between validators as well as to mitigate censorship.
 
-Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stake. Each of them applies a 1% commission rate and has 20% of self-delegated FX. Now comes a successful block that collects a total of 1340 FX in fees.
+Let's take a concrete example to illustrate the aforementioned concept. In this example, there are 10 validators with equal stake. Each of them applies a 1% commission rate and has 20% of self-delegated FX. Now comes a successful block that collects a total of 1675 FX in fees.
 
 First, a 40% tax is applied. The corresponding FX goes to the reserve pool. Reserve pool's funds can be allocated through governance to fund bounties and upgrades.
 
