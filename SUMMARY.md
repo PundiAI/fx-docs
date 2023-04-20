@@ -41,7 +41,7 @@
   * [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor/tutorial-binaries.md)
   * [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor/tutorial-docker.md)
 * [Manual Upgrade Guide](upgrade-instructions/manual/README.md)
-  * [Binaries - Upgrading Your Node](upgrade-instructions/manual/README.md)
+  * [Binaries - Upgrading Your Node](upgrade-instructions/manual/tutorial-binaries.md)
   * [Docker - Upgrading Your Node](upgrade-instructions/manual/tutorial-docker.md)
 * [Upgrade Versions](upgrade-instructions/versions/README.md)
   * [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/versions/v2.1.0/README.md)
