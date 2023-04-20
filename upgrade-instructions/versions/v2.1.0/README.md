@@ -9,7 +9,7 @@ description: >-
 ### The upgrade contains the following main new features/improvement:
 
 {% hint style="info" %}
-For changes and improvements of the previous version, you may refer to [**f(x)Core V2.1.0 (since been deprecated)**](fxcore-v2.1.0-since-been-deprecated.md)****
+For changes and improvements of the previous version, you may refer to [**f(x)Core V2.1.0 (since been deprecated)**](since-been-deprecated.md)****
 
 Additionally, you may refer to the latest news and releases information in the [official FunctionX Github](https://github.com/FunctionX/fx-core/releases)
 {% endhint %}
@@ -81,7 +81,7 @@ For those validator and full node operators that are interested in ensuring prep
 
 #### Manual Upgrade
 
-You may refer to this [upgrade tutorial](../../upgrade-guide/upgrade-tutorial.md) to upgrade your nodes.
+You may refer to this [upgrade tutorial](../../manual/README.md) to upgrade your nodes.
 
 #### Upgrade failure handling method
 

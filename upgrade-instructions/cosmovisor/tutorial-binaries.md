@@ -24,7 +24,7 @@ After this, you must make the necessary folders for `cosmosvisor` in your `DAEMO
 ```sh
 mkdir -p ~/.fxcore/cosmovisor
 mkdir -p ~/.fxcore/cosmovisor/genesis/bin
-mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv3
+mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv3/bin
 ```
 
 ## 2. Download the fxcore release
@@ -53,43 +53,7 @@ make build
 cp ./build/bin/fxcored ~/.fxcore/cosmovisor/upgrades/fxv3/bin/
 ```
 {% endtab %}
-
-{% tab title="Ubuntu" %}
-```sh
-wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Linux_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
-```
-
-```sh
-wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Linux_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Linux_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
-```
-{% endtab %}
-
-{% tab title="Mac" %}
-```sh
-wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Darwin_x86_64.tar.gz && tar -xvf fx-core_2.4.2_Darwin_x86_64.tar.gz -C ~/.fxcore/cosmovisor/genesis/
-```
-
-```sh
-wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Darwin_x86_64.tar.gz && tar -xvf fx-core_3.1.0_Darwin_x86_64.tar.gz -C ~/.fxcore/cosmovisor/upgrades/fxv3/
-```
-{% endtab %}
-
-{% tab title="Windows" %}
-```sh
-wget https://github.com/FunctionX/fx-core/releases/download/v2.4.2/fx-core_2.4.2_Windows_x86_64.zip && tar -xvf fx-core_2.4.2_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/genesis/
-```
-
-```sh
-wget https://github.com/FunctionX/fx-core/releases/download/v3.1.0/fx-core_3.1.0_Windows_x86_64.zip && tar -xvf fx-core_3.1.0_Windows_x86_64.zip -C ~/.fxcore/cosmovisor/upgrades/fxv3/
-```
-{% endtab %}
 {% endtabs %}
-
-Copying the json upgrade info, you do not need to perform this step if there is no `upgrade-info.json` file in the `~/.fxcore/data/` folder
-
-```sh
-cp ~/.fxcore/data/upgrade-info.json ~/.fxcore/cosmovisor/genesis/
-```
 
 To check that you did this correctly, ensure your versions of `cosmovisor` are the same:
 
@@ -104,8 +68,10 @@ app version: HEAD-cbba9a3bd29cfff6b9b1a7b8154922e8bc9027e8
 
 The directory structure after correctly configuring cosmovisor should be like this
 
+```sh
+tree ~/.fxcore/cosmovisor
 ```
-/root/.fxcore:$ tree cosmovisor
+```
 cosmovisor
 ├── current -> /root/.fxcore/cosmovisor/genesis
 ├── genesis
@@ -125,7 +91,7 @@ cosmovisor
 To keep the process always running. If you're on linux, you can do this by creating a service.
 
 ```sh
-sudo tee /etc/systemd/system/fxcored.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/fxcorevisor.service > /dev/null <<EOF
 [Unit]
 Description=Fxcore Daemon
 After=network-online.target
@@ -152,8 +118,8 @@ Reload, enable and restart the node with daemon service file
 
 ```sh
 sudo -S systemctl daemon-reload
-sudo -S systemctl enable fxcored
-sudo -S systemctl restart fxcored
+sudo -S systemctl enable fxcorevisor
+sudo -S systemctl restart fxcorevisor
 ```
 
 Accessing logs
@@ -161,7 +127,7 @@ Accessing logs
 {% tabs %}
 {% tab title="Entire Log" %}
 ```
-journalctl -u fxcored
+journalctl -u fxcorevisor -f
 ```
 {% endtab %}
 {% endtabs %}

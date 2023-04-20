@@ -142,7 +142,7 @@ After you have downloaded the package and you may proceed to step 2 of the [offi
 {% endtabs %}
 
 {% hint style="info" %}
-**Go 1.18+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
+**Go 1.19+** or later is required for the f(x)Core. If you are remoting into a terminal, you may input the following command:
 {% endhint %}
 
 Setting environment variables:
@@ -231,51 +231,7 @@ in the path ./build/bin/fxcored.exe
 {% endtab %}
 {% endtabs %}
 
-That will install the `fxcored` binary. Verify network:
-
-> the following command will not be available in v2.0.x and above
-
-```
-fxcored network
-```
-
-The output should look something similar to this:
-
-{% tabs %}
-{% tab title="Mainnet" %}
-```json
-{
-    "ChainId": "fxcore",
-    "CrossChainSupportBscBlock": "1354000",
-    "CrossChainSupportPolygonBlock": "2062000",
-    "CrossChainSupportTronBlock": "2062000",
-    "GravityPruneValsetsAndAttestationBlock": "610000",
-    "GravityValsetSlashBlock": "1685000",
-    "Network": "mainnet"
-}
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
-```json
-{
-  "ChainId": "dhobyghaut",
-  "EIP155ChainID": "90001",
-  "IBCRouterBlock": "3433511",
-  "Network": "testnet"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% hint style="info" %}
-* Mainnet ChainId: **fxcore**
-* Testnet ChainId: **dhobyghaut**
-* EVM Mainnet ChainId: 530
-* EVM Testnet ChainId: 90001
-{% endhint %}
-
-Verify version:
+That will install the `fxcored` binary. Verify version:
 
 {% tabs %}
 {% tab title="Long version" %}

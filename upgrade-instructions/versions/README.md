@@ -4,3 +4,5 @@ description: This group of pages will reflect the all the upgrade versions, past
 
 # Upgrade Versions
 
+
+This directory houses f(x)Core history major upgrade migration instructions.

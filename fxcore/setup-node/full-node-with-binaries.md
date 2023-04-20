@@ -11,30 +11,53 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 Initializing fxcore:
 
 ```bash
-fxcored init <your_name>
+fxcored init <custom-moniker>
+```
+
+> **Note**: Monikers can contain only ASCII characters. Using Unicode characters is not supported and renders the node unreachable.
+
+The `moniker` can be edited in the `~/.fxcore/config/config.toml` file:
+
+```
+# A custom human readable name for this node
+moniker = "<custom_moniker>"
 ```
 
 Initializing fxcored will result in the creation of a few directories and most importantly the .fxcore directory (for more information on the directory tree, refer to the validator-recovery section). This will be where your validator keys are stored and this is important for recovery of your validator.
 
-Fetching config file (copy this entire line of code and hit <mark style="color:red;">ENTER</mark>):
+Fetching genesis file (copy this entire line of code and hit <mark style="color:red;">ENTER</mark>):
 
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/main/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
+wget https://raw.githubusercontent.com/FunctionX/fx-core/main/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
 ```
 {% endtab %}
 {% endtabs %}
+
+Upon startup the node will need to connect to peers. you can add peers to the `config.toml` config file:
+
+{% tabs %}
+{% tab title="Mainnet" %}
+```bash
+fxcored config config.toml p2p.seeds "c5877d9d243af1a504caf5b7f7a9c915b3ae94ae@fxcore-mainnet-seed-node-1.functionx.io:26656,b289311ece065c813287e3a25835bb6378999aa5@fxcore-mainnet-seed-node-2.functionx.io:26656,96f04dffc25ffcce11e179581d2a3ab6cb5535d5@fxcore-mainnet-node-1.functionx.io:26656,836ded83bac83a4ac8511826fa1ad4ca2238f960@fxcore-mainnet-node-2.functionx.io:26656,7c7a260eeefda37eac896ae423e78cf345a2ef70@fxcore-mainnet-node-3.functionx.io:26656,0fee38117655b6961319950d6beb929fb194217c@fxcore-mainnet-node-4.functionx.io:26656,6e8818051a2ca9b8be67a6f2ba48c33d8c489d5c@fxcore-mainnet-node-5.functionx.io:26656"
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```bash
+fxcored config config.toml p2p.seeds "e922b34e660976a64d6024bde495666752141992@dhobyghaut-seed-node-1.functionx.io:26656,a817685c010402703820be2b5a90d9e07bc5c2d3@dhobyghaut-node-1.functionx.io:26656,d22e741b4e8e2586dbe38fd348d3de8dfbb889a0@dhobyghaut-node-2.functionx.io:26656,c1a985c7e4c0b5ce6d343d87e070a63b24a76594@dhobyghaut-node-3.functionx.io:26656,cc267dac09a38b67b3bda0033f62678cb54bf843@dhobyghaut-node-4.functionx.io:26656,0ea7e81071d4004a1fbbe304477d8ca3183a5282@dhobyghaut-node-5.functionx.io:26656"
+```
+{% endtab %}
+{% endtabs %}
+
+you can optionally download the [address book](https://raw.githubusercontent.com/FunctionX/fx-core/main/public/testnet/addrbook.fxcore.json). Make sure to move this to `~/.fxcore/config/addrbook.json`.
 
 {% hint style="info" %}
 \*\* IMPORTANT At this stage \*\*BEFORE \*\*starting the node, please download the latest snapshot, refer to this [link](use-snapshot.md).
@@ -213,8 +236,8 @@ Modify the `Service` section from the given sample above to suit your settings. 
 After creating a service definition file, you should execute:
 
 ```
-systemctl daemon-reload
-systemctl enable fxcored
+sudo systemctl daemon-reload
+sudo systemctl enable fxcored
 ```
 
 ### Controlling the service

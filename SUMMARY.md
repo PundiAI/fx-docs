@@ -11,7 +11,6 @@
   * [Full node with Docker](fxcore/setup-node/full-node-with-docker.md)
   * [Snapshot Guide](fxcore/setup-node/use-snapshot.md)
   * [Node Monitoring Device](fxcore/setup-node/node-monitor.md)
-  * [Node Peers](fxcore/setup-node/node-peers.md)
 
 ## Validators
 
@@ -38,16 +37,18 @@
 
 ## Upgrade Instructions
 
-* [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor-integration-binaries.md)
-* [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor-integration-docker.md)
-* [Upgrade Guide](upgrade-instructions/upgrade-guide/README.md)
-  * [Binaries - Upgrading Your Node](upgrade-instructions/upgrade-guide/upgrade-tutorial.md)
-  * [Docker - Upgrading Your Node](upgrade-instructions/upgrade-guide/upgrade-tutorial-docker.md)
-* [Upgrade Versions](upgrade-instructions/upgrade-versions/README.md)
-  * [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/upgrade-versions/fxcore-v2.1.0-upgrade-instructions/README.md)
-    * [Testnet Upgrade Practice](upgrade-instructions/upgrade-versions/fxcore-v2.1.0-upgrade-instructions/testnet-upgrade-practice.md)
-    * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/upgrade-versions/fxcore-v2.1.0-upgrade-instructions/fxcore-v2.1.0-since-been-deprecated.md)
-  * [f(x)Core v2.2.0 Upgrade Instructions](upgrade-instructions/upgrade-versions/fxcore-v2.2.0-upgrade-instructions.md)
+* [Cosmovisor Upgrade Guide](upgrade-instructions/cosmovisor/README.md)
+  * [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor/tutorial-binaries.md)
+  * [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor/tutorial-docker.md)
+* [Manual Upgrade Guide](upgrade-instructions/manual/README.md)
+  * [Binaries - Upgrading Your Node](upgrade-instructions/manual/README.md)
+  * [Docker - Upgrading Your Node](upgrade-instructions/manual/tutorial-docker.md)
+* [Upgrade Versions](upgrade-instructions/versions/README.md)
+  * [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/versions/v2.1.0/README.md)
+    * [Testnet Upgrade Practice](upgrade-instructions/versions/v2.1.0/testnet-upgrade-practice.md)
+    * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/versions/v2.1.0/since-been-deprecated.md)
+  * [f(x)Core v2.2.0 Upgrade Instructions](upgrade-instructions/versions/v2.2.0/upgrade-instructions.md)
+  * [f(x)Core v3.1.0 Upgrade Instructions](upgrade-instructions/versions/v3.1.0/tutorial-binaries.md)
 * [Upgrade FAQ](upgrade-instructions/upgrade-faq.md)
 
 ## Deploying on f(x)core EVM <a href="#deploying-on-fxcore-evm" id="deploying-on-fxcore-evm"></a>

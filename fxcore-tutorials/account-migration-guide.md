@@ -8,7 +8,7 @@ Things to note❗:
 
 a. This guide can be done on f(x)Core Mainnet & Testnet.
 
-b. Ensure the [new Evm upgrade](../upgrade-instructions/upgrade-guide/upgrade-tutorial.md) is done.
+b. Ensure the [new Evm upgrade](../upgrade-instructions/manual/README.md) is done.
 
 c. Ensure you have f(x)Core [command line interface](../fxcore/installation) installed.
 
