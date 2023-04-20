@@ -75,7 +75,6 @@ nohup fxcored start --api.enable true --address 0.0.0.0:1317 2>&1 > fxcore.log &
 The execution of the previous command will return something like this (this is to check the status of nodes and which blocks are being synced/are syncing):
 
 ```bash
-2 height=12893 module=state num_txs=0
 5:05PM INF minted coins from module account amount=21043599215998775405FX from=mint module=x/bank
 5:05PM INF indexed block height=12893 module=txindex
 5:05PM INF executed block height=12894 module=state num_invalid_txs=0 num_valid_txs=0

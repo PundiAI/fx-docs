@@ -132,7 +132,7 @@ Install `go` by following the [official docs](https://golang.org/doc/install). P
 Especially if you are remoting into a Ubuntu terminal, run this command to download the `go` installer:
 
 ```
-wget https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz 
+wget -c https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz
 ```
 
 {% hint style="info" %}
@@ -187,7 +187,7 @@ Make sure the name of your folder does not have whitespaces!
 {% endhint %}
 
 ```
-git clone https://github.com/functionx/fx-core.git
+git clone --branch release/v3.1.x https://github.com/functionx/fx-core.git
 ```
 
 ```
