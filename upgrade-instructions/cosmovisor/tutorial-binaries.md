@@ -65,8 +65,8 @@ cosmovisor version
 ```
 
 ```
-cosmovisor version: devel-4846b9b49cbaac9da2c5df74391b9d30bfc4242e
-app version: HEAD-cbba9a3bd29cfff6b9b1a7b8154922e8bc9027e8
+cosmovisor version: xxx
+app version: xxx
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct.
