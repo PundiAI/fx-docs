@@ -252,13 +252,13 @@ fxcored version
 ```
 name: fxcore
 server_name: fxcored
-version: main-757603244376759f872158ea254ae501d046e094
-commit: 757603244376759f872158ea254ae501d046e094
+version: release/vx.x.x xxx
+commit: xxx
 build_tags: netgo,ledger
-go: go version go1.18 darwin/amd64
+go: go version go1.19 darwin/amd64
 build_deps:
 ...
-cosmos_sdk_version: v0.45.5
+cosmos_sdk_version: v0.xx.x
 ```
 
 ### Build Tags

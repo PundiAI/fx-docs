@@ -10,29 +10,35 @@
 
 > `cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, cosmovisor can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
 
-## 1. Setup Cosmovisor
+{% hint style="info" %}
+**Go 1.19+** or later is required for the f(x)Core. Install `go` by following the [official docs](https://golang.org/doc/install).
+{% endhint %}
 
-Installing cosmovisor:
+## 1. Install Cosmovisor
 
 ```sh
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 ```
 
-Set up the Cosmovisor environment variables. We recommend setting these in your `.profile` so it is automatically set in every session.
+Set up the Cosmovisor environment variables. Creates the folder structure required for using cosmovisor.
+
+{% hint style="warning" %}
+if you have used cosmovisor before, you can skip this step. Or you can use `rm -rf $HOME/.fxcore/cosmovisor` to reset
+{% endhint %}
 
 ```sh
-echo "# Setup Cosmovisor" >> ~/.profile
-echo "export DAEMON_NAME=fxcored" >> ~/.profile
-echo "export DAEMON_HOME=$HOME/.fxcore" >> ~/.profile
-source ~/.profile
+git clone https://github.com/functionx/fx-core.git
+cd fx-core
+git checkout release/v3.1.x
+make build
 ```
 
-After this, you must make the necessary folders for `cosmosvisor` in your `DAEMON_HOME` directory (`~/.fxcore`) and copy over the current binary.
-
 ```sh
-mkdir -p ~/.fxcore/cosmovisor
-mkdir -p ~/.fxcore/cosmovisor/genesis/bin
-mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv4/bin
+export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
+cosmovisor init ./build/bin/fxcored
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
+cosmovisor version
 ```
 
 ## 2. Install the fxcore release
@@ -44,32 +50,29 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
-```
-
-```sh
-git checkout release/v3.1.x
-make build
-cp ./build/bin/fxcored ~/.fxcore/cosmovisor/genesis/bin/
-```
-
-```sh
 git checkout release/v4.0.x
 make build
-cp ./build/bin/fxcored ~/.fxcore/cosmovisor/upgrades/fxv4/bin/
+```
+
+```sh
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
 ```
 
 To check that you did this correctly, ensure your versions of `cosmovisor` are the same:
 
 ```sh
+export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
 cosmovisor version
 ```
 
 ```
-cosmovisor version: xxx
-app version: xxx
+cosmovisor version: v1.4.0
+app version: release/v3.1.x-xxx
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct.
+if you see the warning, please contact our technical support.
 
 ```sh
 ./build/bin/fxcored doctor
@@ -82,12 +85,12 @@ To keep the process always running. If you're on linux, you can do this by creat
 ```sh
 sudo tee /etc/systemd/system/fxcorevisor.service > /dev/null <<EOF
 [Unit]
-Description=Fxcore Daemon
+Description=fxCore Daemon
 After=network-online.target
 
 [Service]
 User=root
-ExecStart=/root/go/bin/cosmovisor run start --home=/root/.fxcore
+ExecStart=$(which cosmovisor) run start --home=/root/.fxcore
 Restart=always
 RestartSec=3
 LimitNOFILE=infinity
@@ -97,6 +100,7 @@ Environment="DAEMON_NAME=fxcored"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="UNSAFE_SKIP_BACKUP=true"
+Environment="DAEMON_POLL_INTERVAL=1s"
 
 [Install]
 WantedBy=multi-user.target
