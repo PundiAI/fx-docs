@@ -3,26 +3,12 @@
 ### f(x)Core Network Upgrades
 
 {% hint style="warning" %}
-<mark style="color:yellow;">**WARNING**</mark>
-
-There are 2 types of network upgrades with similar steps but it is IMPORTANT to differentiate and identify which type of upgrade is required and which to perform before the upgrade height is reached. Hard fork requires validators to upgrade their nodes before the upgrade height and software upgrade requires validators to do so after the upgrade height.
-
-
-
-#### **Hard fork upgrade:**
-
-The code after the upgrade is backward compatible, so the node _**can (and needs to) be updated before the upgrade height**_, and when the upgrade height is reached, the node will automatically switch to the new logic.
-
-
-
-**Software upgrade:**
-
-When the upgrade proposal is passed, _**we need to wait for the block height to reach the upgrade height set in the proposal. We cannot use the new program to update the node in advance**_, because the code after the upgrade is backward incompatible. When the block height reaches the upgrade height, the node will automatically stop producing blocks and print the log: "ERR UPGRADE" upgrade proposal plan name "NEEDED at height: upgrade proposal set height...", and then we can use the latest program to update the node
+❗️Please note that the current fxCore testnet v4 upgrade, the upgrade height is `8088000`
 {% endhint %}
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
 >
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-upgrade/index.html) which will countdown the time till the upgrade height.
+> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
 
 ### Upgrade steps
 
@@ -38,33 +24,19 @@ docker rm fxcore
 2\. Pull latest docker images
 
 ```
-docker pull functionx/fx-core:3.1.0
+docker pull ghcr.io/functionx/fx-core:4.0.0-rc1
 ```
 
-3\. Download genesis (copy and run each line, line by line)
+3\. Update config files
 
-{% tabs %}
-{% tab title="Mainnet" %}
+```shell
+docker run --rm -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.0.0-rc1 config update
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/mainnet/app.toml -O ~/.fxcore/config/app.toml
-```
-{% endtab %}
-
-{% tab title="Testnet" %}
-```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/config.toml -O ~/.fxcore/config/config.toml
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v3.1.x/public/testnet/app.toml -O ~/.fxcore/config/app.toml
-```
-{% endtab %}
-{% endtabs %}
 
 4\. Restart docker container to start the node:
 
 ```shell
-docker run --name fxcore -d --restart=always -p 26656:26656 -p 26657:26657 -p 1317:1317 -p 26660:26660 -p 8545:8545 -p 8546:8546 -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:3.1.0 start
+docker run --name fxcore -d --restart=always -p 0.0.0.0:26656:26656 -p 127.0.0.1:26657:26657 -p 127.0.0.1:1317:1317 -p 127.0.0.1:26660:26660 -p 127.0.0.1:8545:8545 -p 127.0.0.1:8546:8546 -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.0.0-rc1 start
 ```
 
 To check if fxcore is synced:

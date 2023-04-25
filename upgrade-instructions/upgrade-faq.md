@@ -108,7 +108,7 @@ Since f(x)Core only support Cosmos keys and uses the same HD path as Cosmos, the
 
 Where can i check the upgrade countdown timer?
 
-{% embed url="https://functionx.github.io/fx-upgrade/index.html" %}
+{% embed url="https://functionx.github.io/fx-core/tools/countdown.html" %}
 ![](<../.gitbook/assets/image (21).png>)
 {% endembed %}
 

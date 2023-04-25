@@ -1,13 +1,5 @@
 # Cosmovisor Integration - Binaries
 
-{% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4 upgrade, the upgrade height is `8088000`
-{% endhint %}
-
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
->
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
-
 > `cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, cosmovisor can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
 
 ## 1. Setup Cosmovisor
@@ -32,31 +24,36 @@ After this, you must make the necessary folders for `cosmosvisor` in your `DAEMO
 ```sh
 mkdir -p ~/.fxcore/cosmovisor
 mkdir -p ~/.fxcore/cosmovisor/genesis/bin
-mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv4/bin
+mkdir -p ~/.fxcore/cosmovisor/upgrades/fxv3/bin
 ```
 
-## 2. Install the fxcore release
+## 2. Download the fxcore release
 
 {% hint style="info" %}
 Releases can be found here [https://github.com/FunctionX/fx-core/releases](https://github.com/FunctionX/fx-core/releases)
 {% endhint %}
 
+Manually download the binary and extract it to folder:
+
+{% tabs %}
+{% tab title="Build from source" %}
 ```sh
 git clone https://github.com/functionx/fx-core.git
-cd fx-core
 ```
 
 ```sh
-git checkout release/v3.1.x
+git checkout release/v2.4.x
 make build
 cp ./build/bin/fxcored ~/.fxcore/cosmovisor/genesis/bin/
 ```
 
 ```sh
-git checkout release/v4.0.x
+git checkout release/v3.1.x
 make build
-cp ./build/bin/fxcored ~/.fxcore/cosmovisor/upgrades/fxv4/bin/
+cp ./build/bin/fxcored ~/.fxcore/cosmovisor/upgrades/fxv3/bin/
 ```
+{% endtab %}
+{% endtabs %}
 
 To check that you did this correctly, ensure your versions of `cosmovisor` are the same:
 
@@ -69,10 +66,24 @@ cosmovisor version: devel-4846b9b49cbaac9da2c5df74391b9d30bfc4242e
 app version: HEAD-cbba9a3bd29cfff6b9b1a7b8154922e8bc9027e8
 ```
 
-In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct.
+The directory structure after correctly configuring cosmovisor should be like this
 
 ```sh
-./build/bin/fxcored doctor
+tree ~/.fxcore/cosmovisor
+```
+```
+cosmovisor
+├── current -> /root/.fxcore/cosmovisor/genesis
+├── genesis
+│   ├── bin
+│   │   └── fxcored
+│   └── upgrade-info.json
+└── upgrades
+    └── fxv3
+        └── bin
+            └── fxcored
+
+6 directories, 3 files
 ```
 
 ## 3. Start your node
