@@ -38,7 +38,7 @@ Like most cross-chain bridges, the Gravity Bridge involves locking up a native t
 
 When a representation of the token is minted on the f(x)Core chain, it will form a unified token which is chain agnostic. Example: ETH-USDT, Polygon-USDT, Tron-USDT cross-chain through the Gravity Cross-Chain Bridge, then converted by the fx-ERC20 module, and unified into a FX-USDT ERC20 Token upon entering fx-evm. Below is a diagram to show how the bridge works.
 
-![](<../../.gitbook/assets/Unified V2.drawio.png>)
+![](<../../.gitbook/assets/Unified V2.drawio (1).png>)
 
 ### Deposits
 

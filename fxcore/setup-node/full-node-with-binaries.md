@@ -57,7 +57,7 @@ fxcored config config.toml p2p.seeds "e922b34e660976a64d6024bde495666752141992@d
 {% endtab %}
 {% endtabs %}
 
-you can optionally download the [address book](https://raw.githubusercontent.com/FunctionX/fx-core/main/public/testnet/addrbook.fxcore.json). Make sure to move this to `~/.fxcore/config/addrbook.json`.
+you can optionally download the [address book](https://chain-share.s3.amazonaws.com/json/addrbook.fxcore.json). Make sure to move this to `~/.fxcore/config/addrbook.json`.
 
 {% hint style="info" %}
 \*\* IMPORTANT At this stage \*\*BEFORE \*\*starting the node, please download the latest snapshot, refer to this [link](use-snapshot.md).

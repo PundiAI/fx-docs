@@ -1,5 +1,15 @@
 # FunctionX Technical Document
 
+{% hint style="info" %}
+::: warning
+
+#### **Testnet v4 Upgrade**
+
+fxCore upgraded at height: 8088000
+
+To upgrade from v4 check the [**upgrade guide**](upgrade-instructions/cosmovisor/)
+{% endhint %}
+
 FunctionX Technical Document will cover the areas of f(x)Core command line interface, information on validators and delegators; technical set up, consensus, governance, security management etc. Also there are additional resources for users and general best practices within the document.
 
 Additionally, there are developer commands and documents for querying the f(x)Core blockchain.
@@ -54,7 +64,7 @@ Additionally, there are developer commands and documents for querying the f(x)Co
 1. Install the necessary dependencies and [install Go](fxcore/installation.md#install-go)
 2. [Install the binaries](fxcore/installation.md#install-go)
 
-[**Setup Node**](fxcore/setup-node) **(you can choose to set it up using** [**Binaries**](fxcore/setup-node/full-node-with-binaries.md) **or** [**Docker**](fxcore/setup-node/full-node-with-docker.md)**)**
+[**Setup Node**](fxcore/setup-node/) **(you can choose to set it up using** [**Binaries**](fxcore/setup-node/full-node-with-binaries.md) **or** [**Docker**](fxcore/setup-node/full-node-with-docker.md)**)**
 
 1. Initialize fxcore
 2. Make sure you [backup your consensus key](validators/validator-recovery.md)❗

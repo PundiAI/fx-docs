@@ -22,5 +22,5 @@ description: >-
 * More on the details of the upgrade and changes can be found in [CHANGELOG.MD](https://github.com/FunctionX/fx-core/blob/release/v2.1.x/CHANGELOG.md)
 
 {% hint style="info" %}
-For more information on the latest version of the upgrade and the upgrade process, refer to [**fxCore V2.1.1 Upgrade Instructions**](./)****
+For more information on the latest version of the upgrade and the upgrade process, refer to [**fxCore V2.1.1 Upgrade Instructions**](broken-reference)
 {% endhint %}

@@ -9,12 +9,12 @@ description: >-
 #### f(x)Core supports different clients in order to support Cosmos and Ethereum/Web3 transactions and queries
 
 | <p><br></p>                                                       | Description                                                                  | Default Port |
-|-------------------------------------------------------------------|------------------------------------------------------------------------------|--------------|
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------ |
 | **Cosmos gRPC**                                                   | Query or send f(x)Core transactions using gRPC                               | `9090`       |
 | **Cosmos restAPI**                                                | Query or send f(x)Core transactions using restAPI                            | `1317`       |
-| **Web3** [**JSON-RPC**](web3)                                     | Query Web3-formatted transactions and blocks or send Web3 txs using JSON-RPC | `8545`       |
-| <p><strong></strong></p><p><strong>Web3 Websocket</strong></p>    | Subscribe to Web3 logs and events emitted in smart contracts.                | `8546`       |
-| **Tendermint** [**RPC**](json-rpc-api)                            | Subscribe to f(x)Core logs and events emitted in smart contracts.            | `26657`      |
+| **Web3** [**JSON-RPC**](web3/)                                    | Query Web3-formatted transactions and blocks or send Web3 txs using JSON-RPC | `8545`       |
+| **Web3 Websocket**                                                | Subscribe to Web3 logs and events emitted in smart contracts.                | `8546`       |
+| **Tendermint** [**RPC**](json-rpc-api/)                           | Subscribe to f(x)Core logs and events emitted in smart contracts.            | `26657`      |
 | **Tendermint Websocket**                                          | Query transactions, blocks, consensus state, broadcast transactions, etc.    | `26657`      |
 | **Command Line Interface** ([**CLI**](../fxcore/installation.md)) | Query or send f(x)Core transactions using your Terminal or Console.          | N/A          |
 
@@ -22,19 +22,19 @@ description: >-
 
 {% tabs %}
 {% tab title="f(x)Core Mainnet" %}
-|                         |                                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------- |
-| ChainId                 | `fxcore`                                                                        |
-| Native Coin             | `FX`                                                                            |
-| Block Explorer          | [https://starscan.io](https://starscan.io)                                      |
-| Tm JSON RPC             | <p>https://fx-json.functionx.io:26657<br>or<br>https://fx-json.functionx.io</p> |
-| Tm JSON RPC Websocket   | wss://fx-json.functionx.io:26657/websocket                                      |
-| gRPC                    | https://fx-grpc.functionx.io:9090                                               |
-| REST API                | https://fx-rest.functionx.io:1317                                               |
-| EVM ChainID             | 530                                                                             |
-| EVM Block Explorer      | [https://starscan.io/evm](https://starscan.io/evm)                              |
-| Web3 JSON RPC           | https://fx-json-web3.functionx.io:8545                                          |
-| Web3 JSON RPC Websocket | wss://fx-json-web3.functionx.io:8546                                            |
+|                         |                                                                                                           |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
+| ChainId                 | `fxcore`                                                                                                  |
+| Native Coin             | `FX`                                                                                                      |
+| Block Explorer          | [https://starscan.io](https://starscan.io)                                                                |
+| Tm JSON RPC             | <p><code>https://fx-json.functionx.io:26657</code><br>or<br><code>https://fx-json.functionx.io</code></p> |
+| Tm JSON RPC Websocket   | `wss://fx-json.functionx.io:26657/websocket`                                                              |
+| gRPC                    | `https://fx-grpc.functionx.io:9090`                                                                       |
+| REST API                | `https://fx-rest.functionx.io:1317`                                                                       |
+| EVM ChainID             | 530                                                                                                       |
+| EVM Block Explorer      | [https://starscan.io/evm](https://starscan.io/evm)                                                        |
+| Web3 JSON RPC           | https://fx-json-web3.functionx.io:8545                                                                    |
+| Web3 JSON RPC Websocket | wss://fx-json-web3.functionx.io:8546                                                                      |
 {% endtab %}
 
 {% tab title="f(x)Core Testnet" %}

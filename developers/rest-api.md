@@ -90,7 +90,7 @@ curl https://fx-rest.functionx.io/cosmos/bank/v1beta1/supply
 
 #### Requesting the balance of the address
 
-#### Request Path: ** `/cosmos/bank/v1beta1/balances/{address}`**
+#### Request Path: **`/cosmos/bank/v1beta1/balances/{address}`**
 
 **Method `GET`**
 
@@ -124,7 +124,7 @@ curl https://fx-rest.functionx.io/cosmos/bank/v1beta1/supply
   * Non-delegated asset $FX = Ethereum cross chain locked fund + Unclaimed reward of validator (including commission and transaction fee) + Unclaimed reward of delegator + Wallet balance + Pool of ecosystem and community + Locked fund of Governance
   * Ethereum cross chain locked fund = Total $FX (ERC20) on Ethereum
 
-#### Request Path: ** `/cosmos/bank/v1beta1/supply`**
+#### Request Path: **`/cosmos/bank/v1beta1/supply`**
 
 **Method `GET`**
 
