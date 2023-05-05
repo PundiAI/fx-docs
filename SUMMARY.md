@@ -83,6 +83,7 @@
   * [JSON RPC Methods](developers/web3/endpoints.md)
   * [Events](developers/web3/events.md)
 * [Support Keplr](developers/support-keplr.md)
+* [Contract Deployments](developers/contract-deployments.md)
 
 ## Governance
 
