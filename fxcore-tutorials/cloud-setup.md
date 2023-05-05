@@ -2,7 +2,7 @@
 
 ### Simple SSH
 
-* Choose a cloud instance based on the requirements specified in \[Hardware Requirements]\(../fxcore/installation.md#Hardware Requirements)
+* Choose a cloud instance based on the requirements specified in [here](https://functionx.gitbook.io/home/fxcore/installation#hardware-requirements)
 * The estimated cost is about 80-100 USD per month
 * f(x)Core is system agnostic but Ubuntu is preferred
 
