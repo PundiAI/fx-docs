@@ -4,7 +4,7 @@
 ❗️Please note that the current fxCore testnet v4 upgrade, the upgrade height is `8088000`
 {% endhint %}
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
 > You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
 
@@ -57,6 +57,7 @@ make build
 ```sh
 mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin
 cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
+cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
 To check that you did this correctly, ensure your versions of `cosmovisor` are the same:
@@ -71,12 +72,17 @@ cosmovisor version: v1.4.0
 app version: release/v3.1.x-xxx
 ```
 
-In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct.
-if you see the warning, please contact our technical support.
+In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.
 
 ```sh
 ./build/bin/fxcored doctor
+OR
+fxcored doctor
 ```
+
+{% hint style="info" %}
+If the node has not been started, the output of the doctor command will shown "Blockchain Data" section is unavailable.
+{% endhint %}
 
 ## 3. Start your node
 
@@ -122,6 +128,14 @@ Reload, enable and restart the node with daemon service file
 sudo -S systemctl daemon-reload
 sudo -S systemctl enable fxcorevisor
 sudo -S systemctl restart fxcorevisor
+```
+
+## Troubleshooting
+
+Checking working environment
+
+```
+fxcored doctor
 ```
 
 Accessing logs
