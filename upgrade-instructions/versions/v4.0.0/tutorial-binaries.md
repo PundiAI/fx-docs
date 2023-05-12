@@ -1,10 +1,10 @@
 # Cosmovisor Integration - Binaries
 
 {% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4.1 upgrade, the upgrade height is `8376000`
+❗️Please note that the current fxCore testnet v4 upgrade, the upgrade height is `8088000`
 {% endhint %}
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../README.md).
 >
 > You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
 
@@ -29,15 +29,15 @@ if you have used cosmovisor before, you can skip this step. Or you can use `rm -
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
-git checkout release/v4.0.x
+git checkout release/v3.1.x
 make build
 ```
 
 ```sh
 export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
 cosmovisor init ./build/bin/fxcored
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
 cosmovisor version
 ```
 
@@ -50,13 +50,13 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
-git checkout release/v4.1.x
+git checkout release/v4.0.x
 make build
 ```
 
 ```sh
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v4.1.x/bin
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v4.1.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
 cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
@@ -69,7 +69,7 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.4.0
-app version: release/v4.0.x-xxx
+app version: release/v3.1.x-xxx
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.
