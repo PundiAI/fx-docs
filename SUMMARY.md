@@ -84,6 +84,13 @@
   * [Events](developers/web3/events.md)
 * [Support Keplr](developers/support-keplr.md)
 * [Contract Deployments](developers/contract-deployments.md)
+* [f(x)Core Cross Chain](developers/cross-chain/README.md)
+  * [External Cross Chain](developers/cross-chain/external.md)
+  * [f(x)Evm Cross Chain](developers/cross-chain/fx-evm.md)
+  * [Target](developers/cross-chain/target.md)
+* [Precompiled Contracts](developers/precompiles/README.md)
+  * [CrossChain Precompiled](developers/precompiles/cross-chain.md)
+  * [Staking Precompiled](developers/precompiles/staking.md)
 
 ## Governance
 
