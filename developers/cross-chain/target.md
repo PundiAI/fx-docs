@@ -66,3 +66,10 @@ if user call f(x)Evm CrossChain contract `crossChain` method, the target is `eth
 |:-------:|:--------:|:---:|:-------:|:----:|:---------:|:--------------:|:--------:|:---------------------------------:|:--------:|:-------:|
 |    -    |   eth    | bsc | polygon | tron | avalanche | {module-name}  | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |    ❌    |
 
+
+{% hint style="info" %}
+if cross chain to other cosmos-chain, need to specify channel-id and address-prefix in target, for example: cross chain
+to cosmos-hub, need to find the channel-id of cosmos-hub on f(x)Core, and the address-prefix of cosmos-hub, then fill in
+the target in the format of `ibc/{channel-id}/{address-prefix}`, if the channel-id of cosmos-hub on f(x)Core is `channel-8`,
+and the address-prefix is `cosmos`, then the target is `ibc/8/cosmos`
+{% endhint %}
