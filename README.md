@@ -2,11 +2,11 @@
 
 {% hint style="warning" %}
 
-#### **Testnet v4.1 Upgrade**
+#### **Testnet v4.2 Upgrade**
 
-fxCore upgraded at height: 8376000
+fxCore upgraded at height: 8481000
 
-To upgrade from v4.1 check the [**upgrade guide**](upgrade-instructions/cosmovisor/)
+To upgrade from v4.2 check the [**upgrade guide**](upgrade-instructions/cosmovisor/README.md)
 {% endhint %}
 
 FunctionX Technical Document will cover the areas of f(x)Core command line interface, information on validators and delegators; technical set up, consensus, governance, security management etc. Also there are additional resources for users and general best practices within the document.

@@ -3,7 +3,7 @@
 ### f(x)Core Network Upgrades
 
 {% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4.1 upgrade, the upgrade height is `8376000`
+❗️Please note that the current fxCore testnet v4.2 upgrade, the upgrade height is `8481000`
 {% endhint %}
 
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
@@ -46,11 +46,11 @@ git checkout <upgradeable version branch>
 for example:
 
 ```
-git checkout release/v4.1.x
+git checkout release/v4.2.x
 
 or
 
-git checkout tags/v4.1.0-rc0
+git checkout tags/v4.2.0-rc0
 ```
 
 Update fxcored (ensure that you are in the fx-core folder):
