@@ -1,13 +1,13 @@
-# f(x)Evm Cross Chain
+# f(x)Core Cross Chain
 
 use cross chain precompiled contract, to realize the cross chain of token
 
-f(x)Evm cross chain needs to use cross chain precompiled contract, please check
+f(x)Core cross chain needs to use cross chain precompiled contract, please check
 the [Cross Chain](../precompiles/cross-chain.md#crossChain) document first
 
-## Support Token
+## Tokens
 
-f(x)Evm cross chain supports the following tokens:
+f(x)Core cross chain supports the following tokens:
 
 {% tabs %}
 {% tab title="Mainnet" %}
@@ -59,7 +59,7 @@ f(x)Evm cross chain supports the following tokens:
 
 ## crossChain
 
-f(x)Evm token send to other chain, should use [crossChain](../precompiles/cross-chain.md#crosschain) method
+f(x)Core token send to other chain, should use [crossChain](../precompiles/cross-chain.md#crosschain) method
 
 ### 1. Approve token
 
@@ -75,8 +75,7 @@ if token if original token, not need approve
 call `crossChain` method in CrossChain contract, pass the corresponding parameters
 
 {% hint style="info" %}
-if token if original token, crossChain _token is zero address, `0x0000000000000000000000000000000000000000`, corssChain
-msg.value must equal amount + fee, `msg.value = amount + fee`
+if token if original token, crossChain _token is zero address , crossChain msg.value must equal `amount + fee`
 {% endhint %}
 
 

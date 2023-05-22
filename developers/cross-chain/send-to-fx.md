@@ -1,6 +1,6 @@
-# External Cross Chain
+# sendToFx
 
-external cross chain means that the contract deployed on other chains communicates with f(x)Core through cross chain
+sendToFx cross chain means that the contract deployed on other chains communicates with f(x)Core through cross chain
 bridge to realize cross chain with f(x)Core.
 
 supported external chains:
@@ -13,7 +13,7 @@ supported external chains:
 * Optimism
 * Arbitrum
 
-## Cross Chain Bridge
+## Bridge Contract
 
 {% tabs %}
 {% tab title="Mainnet" %}

@@ -32,7 +32,7 @@ function crossChain(
 ) external payable returns (result bool);
 ```
 
-* `_token`: the token address on the f(x)Evm([Support Token](../cross-chain/fx-evm.md))
+* `_token`: the token address on the f(x)Core([Tokens](../cross-chain/fx-core.md))
     * if token is origin token, _token address is `0x0000000000000000000000000000000000000000`
 * `_receipt`: the receipt address on the target chain
 * `_amount`: the amount of the token to be cross chain
@@ -136,7 +136,7 @@ function increaseBridgeFee(
 
 * `_chain`: the chain name of the cross chain, like ethereum, bsc, etc.
 * `_txid`: the txid of the cross chain transaction
-* `_token`: the address of cross chain fee token([Support Token](../cross-chain/fx-evm.md))
+* `_token`: the address of cross chain fee token([Tokens](../cross-chain/fx-core.md))
     * if token is origin token, _token address is `0x0000000000000000000000000000000000000000`
 * `_fee`: increase fee amount
 
