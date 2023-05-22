@@ -60,9 +60,9 @@ function sendToFx(address _tokenContract, bytes32 _destination, bytes32 _targetI
 * `_tokenContract`: the contract address of the token on the external chain
 * `_destination`: the destination address on the f(x)Core chain or other cosmos chain
 * `_targetIBC`: the target of the token on the f(x)Core chain(more details see [Target](./target.md))
-    * _targetIBC represents cross chain destination, such as `f(x)Core`, `f(x)Evm`, `Pundix`, `Marginx`
+    * _targetIBC represents cross chain destination, such as `f(x)Core`, `Pundix`, `Marginx`
     * destination f(x)Core: _targetIBC is empty
-    * destination f(x)Evm: _targetIBC is `erc20`
+    * destination erc20 token: _targetIBC is `erc20`
     * destination other cosmos chain(example Pundix): _targetIBC is `ibc/{id}/{prefix}`.
         * `id` is the channel id of the target chain on f(x)Core(examples: Pundix: 0)
         * `prefix` is the address prefix of the target chain(examples: Pundix: px)

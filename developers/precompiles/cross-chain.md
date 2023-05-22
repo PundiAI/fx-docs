@@ -15,7 +15,7 @@ cancelSendToExternal, etc.
 
 ### crossChain
 
-send token from f(x)Evm to other chain, like ethereum, pundix, etc.
+send token from f(x)Core to other chain, like ethereum, pundix, etc.
 
 {% hint style="info" %}
 if token is erc20, must be approved before calling this method
@@ -67,7 +67,7 @@ event CrossChain(
 ```
 
 * `sender`: the sender address
-* `token`: the token address on the f(x)Evm
+* `token`: the erc20 token address on the f(x)Core
 * `denom`: the cross chain token denom
 * `receipt`: the receipt address on the target chain
 * `amount`: the amount of the token to be cross chain
