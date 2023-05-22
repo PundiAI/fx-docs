@@ -4,6 +4,8 @@ Address: `0x0000000000000000000000000000000000001004`
 
 Interface: [ICrossChain](https://github.com/FunctionX/fx-core/blob/main/solidity/contracts/crosschain/ICrossChain.sol)
 
+ABI: [ICrossChain](https://github.com/FunctionX/fx-core/blob/bf74d4a73e3478b03122fe8ddc4c447cb7017634/contract/ICrossChain.go#LL34C11-L34C11)
+
 ## Introduction
 
 use crossChain precompiled contract to call some functions of the crossChain module, such as: crossChain,

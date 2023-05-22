@@ -4,6 +4,8 @@ Address: `0x0000000000000000000000000000000000001003`
 
 Interface: [IStaking](https://github.com/FunctionX/fx-core/blob/main/solidity/contracts/staking/IStaking.sol)
 
+ABI: [IStaking](https://github.com/FunctionX/fx-core/blob/bf74d4a73e3478b03122fe8ddc4c447cb7017634/contract/IStaking.go#LL34C11-L34C11)
+
 ## Introduction
 
 use staking precompiled contract to call some functions of the staking module, such as: delegate, undelegate, withdraw,
