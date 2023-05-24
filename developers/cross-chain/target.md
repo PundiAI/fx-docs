@@ -57,6 +57,8 @@ ethereum chain.
 |    Polygon     |  erc20   | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |  ❌  |       ❌        |
 |      Tron      |  erc20   | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |  ❌  |       ❌        |
 |   Avalanche    |  erc20   | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |  ❌  |       ❌        |
+|    Arbitrum    |  erc20   | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |  ❌  |       ❌        |
+|    Optimism    |  erc20   | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |  ❌  |       ❌        |
 |      ...       |  erc20   | ibc/0/px | ibc/{channel-id}/{address-prefix} |    ❌     |  ❌  |       ❌        |
 
 {% hint style="info" %}
@@ -66,9 +68,9 @@ need to convert to ERC20, so the target is `erc20`
 
 ### f(x)Core cross chain with Target
 
-| f(x)Core | Ethereum | BSC | Polygon | Tron | Avalanche | External-Chain |  Pundix  |           Cosmos-Chain            |
-|:--------:|:--------:|:---:|:-------:|:----:|:---------:|:--------------:|:--------:|:---------------------------------:|
-|    -     |   eth    | bsc | polygon | tron | avalanche | {module-name}  | ibc/0/px | ibc/{channel-id}/{address-prefix} |
+| f(x)Core | Ethereum | BSC | Polygon | Tron | Avalanche | Arbitrum | Optimism | External-Chain |  Pundix  |           Cosmos-Chain            |
+|:--------:|:--------:|:---:|:-------:|:----:|:---------:|:--------:|:--------:|:--------------:|:--------:|:---------------------------------:|
+|    -     |   eth    | bsc | polygon | tron | avalanche | arbitrum | optimism | {module-name}  | ibc/0/px | ibc/{channel-id}/{address-prefix} |
 
 {% hint style="info" %}
 if cross chain to other cosmos-chain, need to specify channel-id and address-prefix in target, for example: cross chain
