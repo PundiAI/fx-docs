@@ -7,7 +7,7 @@ description: >-
 # Manual Upgrade Guide
 
 {% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4.2 upgrade, the upgrade height is `8481000`, and the upgrade countdown is [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet).
+❗️Please note that the current fxCore Mainnet v4.2.x upgrade, the upgrade height is 10,477,500, and the upgrade countdown is [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet).
 {% endhint %}
 
 Here is the guide to manually upgrade `fxcored`, If you are running a validator node, we recommend integrating [cosmovisor](../cosmovisor/README.md) , Cosmovisor can help validators automatically complete node upgrades when they reach the upgrade height, improving the operating efficiency of nodes.

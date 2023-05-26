@@ -2,13 +2,9 @@
 
 ### f(x)Core Network Upgrades
 
-{% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4.2 upgrade, the upgrade height is `8481000`
-{% endhint %}
-
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
 >
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
+> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 
 ### Upgrade steps
 
@@ -50,7 +46,7 @@ git checkout release/v4.2.x
 
 or
 
-git checkout tags/v4.2.0-rc0
+git checkout tags/v4.2.0
 ```
 
 Update fxcored (ensure that you are in the fx-core folder):

@@ -1,12 +1,8 @@
 # Cosmovisor Integration - Binaries
 
-{% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4.2 upgrade, the upgrade height is `8481000`
-{% endhint %}
-
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
 >
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
+> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 
 > `cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, cosmovisor can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
 
@@ -29,15 +25,15 @@ if you have used cosmovisor before, you can skip this step. Or you can use `rm -
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
-git checkout release/v4.1.x
+git checkout release/v3.1.x
 make build
 ```
 
 ```sh
 export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
 cosmovisor init ./build/bin/fxcored
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v4.1.x/bin/
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v4.1.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
 cosmovisor version
 ```
 
@@ -50,7 +46,7 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
-git checkout release/v4.2.x
+git checkout release/v4.2.x && git pull
 make build
 ```
 
@@ -69,7 +65,7 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.4.0
-app version: release/v4.1.x-xxx
+app version: release/v3.1.x-xxx
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.

@@ -2,13 +2,9 @@
 
 ### f(x)Core Network Upgrades
 
-{% hint style="warning" %}
-❗️Please note that the current fxCore testnet v4.2 upgrade, the upgrade height is `8481000`
-{% endhint %}
-
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
 >
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet) which will countdown the time till the upgrade height.
+> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 
 ### Upgrade steps
 
@@ -24,19 +20,19 @@ docker rm fxcore
 2\. Pull latest docker images
 
 ```
-docker pull ghcr.io/functionx/fx-core:4.2.0-rc0
+docker pull ghcr.io/functionx/fx-core:4.2.0
 ```
 
 3\. Update config files
 
 ```shell
-docker run --rm -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.2.0-rc0 config update
+docker run --rm -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.2.0 config update
 ```
 
 4\. Restart docker container to start the node:
 
 ```shell
-docker run --name fxcore -d --restart=always -p 0.0.0.0:26656:26656 -p 127.0.0.1:26657:26657 -p 127.0.0.1:1317:1317 -p 127.0.0.1:26660:26660 -p 127.0.0.1:8545:8545 -p 127.0.0.1:8546:8546 -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.2.0-rc0 start
+docker run --name fxcore -d --restart=always -p 0.0.0.0:26656:26656 -p 127.0.0.1:26657:26657 -p 127.0.0.1:1317:1317 -p 127.0.0.1:26660:26660 -p 127.0.0.1:8545:8545 -p 127.0.0.1:8546:8546 -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.2.0 start
 ```
 
 To check if fxcore is synced:
