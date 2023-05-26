@@ -52,7 +52,7 @@ fxcored config config.toml p2p.seeds "c5877d9d243af1a504caf5b7f7a9c915b3ae94ae@f
 
 {% tab title="Testnet" %}
 ```bash
-fxcored config config.toml p2p.seeds "e922b34e660976a64d6024bde495666752141992@dhobyghaut-seed-node-1.functionx.io:26656,a817685c010402703820be2b5a90d9e07bc5c2d3@dhobyghaut-node-1.functionx.io:26656,d22e741b4e8e2586dbe38fd348d3de8dfbb889a0@dhobyghaut-node-2.functionx.io:26656,c1a985c7e4c0b5ce6d343d87e070a63b24a76594@dhobyghaut-node-3.functionx.io:26656,cc267dac09a38b67b3bda0033f62678cb54bf843@dhobyghaut-node-4.functionx.io:26656,0ea7e81071d4004a1fbbe304477d8ca3183a5282@dhobyghaut-node-5.functionx.io:26656"
+fxcored config config.toml p2p.seeds "e922b34e660976a64d6024bde495666752141992@dhobyghaut-seed-node-1.functionx.io:26656,a817685c010402703820be2b5a90d9e07bc5c2d3@dhobyghaut-node-1.functionx.io:26656"
 ```
 {% endtab %}
 {% endtabs %}
