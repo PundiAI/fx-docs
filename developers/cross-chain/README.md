@@ -6,6 +6,7 @@ cross chain include:
 
 * [sendToFx](./send-to-fx.md)
 * [f(x)Core](./fx-core.md)
+* [ibc](./ibc.md)
 
 ## Target
 
