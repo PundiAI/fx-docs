@@ -88,6 +88,7 @@
   * [sendToFx](developers/cross-chain/send-to-fx.md)
   * [f(x)Core](developers/cross-chain/fx-core.md)
   * [Target](developers/cross-chain/target.md)
+  * [ibc](developers/cross-chain/ibc.md)
 * [Precompiled Contracts](developers/precompiles/README.md)
   * [CrossChain Precompiled](developers/precompiles/cross-chain.md)
   * [Staking Precompiled](developers/precompiles/staking.md)
