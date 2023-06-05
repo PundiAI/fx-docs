@@ -1,6 +1,6 @@
 # Cosmovisor Integration - Binaries
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
 > You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 
@@ -43,12 +43,11 @@ cosmovisor version
 Releases can be found here [https://github.com/FunctionX/fx-core/releases](https://github.com/FunctionX/fx-core/releases)
 {% endhint %}
 
-```sh
-git clone https://github.com/functionx/fx-core.git
+<pre class="language-sh"><code class="lang-sh">git clone https://github.com/functionx/fx-core.git
 cd fx-core
-git checkout release/v4.2.x && git pull
-make build
-```
+<strong>git pull &#x26;&#x26; git checkout release/v4.2.x
+</strong>make build
+</code></pre>
 
 ```sh
 mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v4.2.x/bin
