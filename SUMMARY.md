@@ -19,6 +19,7 @@
 * [Validator Recovery](validators/validator-recovery.md)
 * [Validator FAQ](validators/validator-faq.md)
 * [Validator Security Notice](validators/validator-security-notice.md)
+* [Migration Best Practices](validators/migration-best-practices.md)
 
 ## Delegators
 

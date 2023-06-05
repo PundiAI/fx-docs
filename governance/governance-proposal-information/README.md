@@ -10,13 +10,7 @@ description: >-
 
 Currently there are the following governance proposal types:
 
-| Type                         | Description                                                                                              |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Ecosystem Genesis Fund (EGF) | Proposal for request of funds from the EGF, for the complete process please read [this](egf-info.md).    |
-| Add Cross Chain Parameters   | Proposal for adding cross-chain functionality of a new chain and configuring the parameters of Relayers. |
-| Upgrade Chain Oracles        | Proposal for updating the configuration of Relayers on the newly added chain.                            |
-| Parameter Change             | Proposal for configuring f(x)core chain parameters.                                                      |
-| Others                       | Any governance proposal that does not involved a modification of the source code.                        |
+<table><thead><tr><th width="300.11707831106673">Type</th><th>Description</th></tr></thead><tbody><tr><td>Ecosystem Genesis Fund (EGF)</td><td>Proposal for request of funds from the EGF, for the complete process please read <a href="egf-info.md">this</a>.</td></tr><tr><td>Add Cross Chain Parameters</td><td>Proposal for adding cross-chain functionality of a new chain and configuring the parameters of Relayers.</td></tr><tr><td>Upgrade Chain Oracles</td><td>Proposal for updating the configuration of Relayers on the newly added chain.</td></tr><tr><td>Parameter Change</td><td>Proposal for configuring f(x)core chain parameters.</td></tr><tr><td>Others</td><td>Any governance proposal that does not involved a modification of the source code.</td></tr></tbody></table>
 
 ### Process Flow of Governance Proposal
 
@@ -125,13 +119,7 @@ The validity of a proposal and its results is determined by the following condit
 
 `quorum` is 40%. `threshold` is 50%. `veto threshold` is 33.4%
 
-| Voting Results                                                                                                                                                                                                       | Proposal Status |  Deposit |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------: | :------: |
-| <ul><li>Failed to reach <code>quorum</code></li></ul>                                                                                                                                                                |     Rejected    |  Burned  |
-| <ul><li><code>quorum</code> reached</li><li>ratio of 'YES' votes to total votes exceed <code>threshold</code></li><li>ratio of 'NoWithVeto' votes to total votes less than <code>veto threshold</code></li></ul>     |      Passed     | Refunded |
-| <ul><li><code>quorum</code> reached</li><li>ratio of 'NO' votes to total votes exceed <code>threshold</code></li><li>ratio of 'NoWithVeto' votes to total votes less than <code>veto threshold</code></li></ul>      |     Rejected    | Refunded |
-| <ul><li><code>quorum</code> reached</li><li>ratio of 'Abstain' votes to total votes exceed <code>threshold</code></li><li>ratio of 'NoWithVeto' votes to total votes less than <code>veto threshold</code></li></ul> |     Rejected    | Refunded |
-| <ul><li><code>quorum</code> reached</li><li>ratio of 'NoWithVeto' votes to total votes more than <code>veto threshold</code></li><li>in this case, ratio of 'YES', 'NO', 'Abstain' votes does not matter </li></ul>  |     Rejected    |  Burned  |
+<table><thead><tr><th width="417.7868020304569">Voting Results</th><th width="212" align="center">Proposal Status</th><th align="center">Deposit</th></tr></thead><tbody><tr><td><ul><li>Failed to reach <code>quorum</code></li></ul></td><td align="center">Rejected</td><td align="center">Burned</td></tr><tr><td><ul><li><code>quorum</code> reached</li><li>ratio of 'YES' votes to total votes exceed <code>threshold</code></li><li>ratio of 'NoWithVeto' votes to total votes less than <code>veto threshold</code></li></ul></td><td align="center">Passed</td><td align="center">Refunded</td></tr><tr><td><ul><li><code>quorum</code> reached</li><li>ratio of 'NO' votes to total votes exceed <code>threshold</code></li><li>ratio of 'NoWithVeto' votes to total votes less than <code>veto threshold</code></li></ul></td><td align="center">Rejected</td><td align="center">Refunded</td></tr><tr><td><ul><li><code>quorum</code> reached</li><li>ratio of 'Abstain' votes to total votes exceed <code>threshold</code></li><li>ratio of 'NoWithVeto' votes to total votes less than <code>veto threshold</code></li></ul></td><td align="center">Rejected</td><td align="center">Refunded</td></tr><tr><td><ul><li><code>quorum</code> reached</li><li>ratio of 'NoWithVeto' votes to total votes more than <code>veto threshold</code></li><li>in this case, ratio of 'YES', 'NO', 'Abstain' votes does not matter </li></ul></td><td align="center">Rejected</td><td align="center">Burned</td></tr></tbody></table>
 
 #### Deposit Burns
 
