@@ -1,14 +1,5 @@
 # FunctionX Technical Document
 
-{% hint style="warning" %}
-
-#### **Mainnet v4.2.x Upgrade**
-
-fxCore upgraded at height: 10,477,500
-
-To upgrade from v4.2.x check the [**upgrade guide**](upgrade-instructions/cosmovisor/README.md)
-{% endhint %}
-
 FunctionX Technical Document will cover the areas of f(x)Core command line interface, information on validators and delegators; technical set up, consensus, governance, security management etc. Also there are additional resources for users and general best practices within the document.
 
 Additionally, there are developer commands and documents for querying the f(x)Core blockchain.
