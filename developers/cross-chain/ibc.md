@@ -15,33 +15,33 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 {% tabs %}
 {% tab title="Mainnet" %}
 
-| source chain-id | source channel | destination             | destination chain-id    | destination channel |
-|:----------------|:---------------|:------------------------|:------------------------|:--------------------|
-| fxcore          | channel-0      | Pundix                  | PUNDIX                  | channel-0           |
-| fxcore          | channel-0      | Marginx-APE             | Marginx-APE             | channel-3           |
-| fxcore          | channel-0      | Marginx-BTC             | Marginx-BTC             | channel-4           |
-| fxcore          | channel-0      | Marginx-ETH             | Marginx-ETH             | channel-5           |
-| fxcore          | channel-0      | Marginx-FX              | Marginx-FX              | channel-6           |
-| fxcore          | channel-0      | MarginX-MONGUSDT        | MarginX-MONGUSDT        | channel-7           |
-| fxcore          | channel-0      | MarginX-PIZAUSDT        | MarginX-PIZAUSDT        | channel-8           |
-| fxcore          | channel-0      | MarginX-1000000TLIPUSDT | MarginX-1000000TLIPUSDT | channel-9           |
+| source chain-id | destination             | destination chain-id    | source to destination channel | destination to source channel |
+|:----------------|:------------------------|:------------------------|:------------------------------|:------------------------------|
+| fxcore          | Pundix                  | PUNDIX                  | channel-0                     | channel-0                     |
+| fxcore          | Marginx-APE             | Marginx-APE             | channel-3                     | channel-0                     |
+| fxcore          | Marginx-BTC             | Marginx-BTC             | channel-4                     | channel-0                     |
+| fxcore          | Marginx-ETH             | Marginx-ETH             | channel-5                     | channel-0                     |
+| fxcore          | Marginx-FX              | Marginx-FX              | channel-6                     | channel-0                     |
+| fxcore          | MarginX-MONGUSDT        | MarginX-MONGUSDT        | channel-7                     | channel-0                     |
+| fxcore          | MarginX-PIZAUSDT        | MarginX-PIZAUSDT        | channel-8                     | channel-0                     |
+| fxcore          | MarginX-1000000TLIPUSDT | MarginX-1000000TLIPUSDT | channel-9                     | channel-0                     |
 
 {% endtab %}
 {% tab title="Testnet" %}
 
-| source chain-id | source channel | destination | destination chain-id | destination channel |
-|:----------------|:---------------|:------------|:---------------------|:--------------------|
-| dhobyghaut      | channel-0      | Pundix      | payalebar            | channel-0           |
-| dhobyghaut      | channel-0      | DEX-AAPL    | DEX-AAPL             | channel-82          |
-| dhobyghaut      | channel-0      | DEX-BTC     | DEX-BTC              | channel-83          |
-| dhobyghaut      | channel-0      | DEX-BTC     | DEX-BTC              | channel-84          |
-| dhobyghaut      | channel-0      | DEX-TSLA    | DEX-TSLA             | channel-85          |
-| dhobyghaut      | channel-0      | DEX-APT     | DEX-APT              | channel-86          |
-| dhobyghaut      | channel-0      | DEX-MONG    | DEX-MONG             | channel-87          |
-| dhobyghaut      | channel-71     | Osmosis     | osmo-test-5          | channel-88          |
-| dhobyghaut      | channel-0      | DEX-ORDS    | DEX-ORDS             | channel-89          |
-| dhobyghaut      | channel-2631   | Cosmos      | theta-testnet-001    | channel-90          |
-| dhobyghaut      | channel-0      | DEX-PIZA    | DEX-PIZA             | channel-91          |
+| source chain-id | destination | destination chain-id | source to destination channel | destination to source channel |
+|:----------------|:------------|:---------------------|:------------------------------|:------------------------------|
+| dhobyghaut      | Pundix      | payalebar            | channel-0                     | channel-0                     |
+| dhobyghaut      | DEX-AAPL    | DEX-AAPL             | channel-82                    | channel-0                     |
+| dhobyghaut      | DEX-BTC     | DEX-BTC              | channel-83                    | channel-0                     |
+| dhobyghaut      | DEX-FX      | DEX-FX               | channel-84                    | channel-0                     |
+| dhobyghaut      | DEX-TSLA    | DEX-TSLA             | channel-85                    | channel-0                     |
+| dhobyghaut      | DEX-APT     | DEX-APT              | channel-86                    | channel-0                     |
+| dhobyghaut      | DEX-MONG    | DEX-MONG             | channel-87                    | channel-0                     |
+| dhobyghaut      | Osmosis     | osmo-test-5          | channel-88                    | channel-71                    |
+| dhobyghaut      | DEX-ORDS    | DEX-ORDS             | channel-89                    | channel-0                     |
+| dhobyghaut      | Cosmos      | theta-testnet-001    | channel-90                    | channel-2631                  |
+| dhobyghaut      | DEX-PIZA    | DEX-PIZA             | channel-91                    | channel-0                     |
 
 {% endtab %}
 {% endtabs %}
