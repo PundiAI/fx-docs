@@ -25,6 +25,8 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 | fxcore          | MarginX-MONGUSDT        | MarginX-MONGUSDT        | channel-7                     | channel-0                     |
 | fxcore          | MarginX-PIZAUSDT        | MarginX-PIZAUSDT        | channel-8                     | channel-0                     |
 | fxcore          | MarginX-1000000TLIPUSDT | MarginX-1000000TLIPUSDT | channel-9                     | channel-0                     |
+| fxcore          | CosmosHub               | cosmoshub-4             | channel-10                    | channel-585                   |
+| CosmosHub       | Osmosis                 | osmosis-1               | channel-141                   | channel-0                     |
 
 {% endtab %}
 {% tab title="Testnet" %}
