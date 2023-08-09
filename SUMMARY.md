@@ -38,7 +38,7 @@
 
 ## Upgrade Instructions
 
-* [Cosmovisor Upgrade Guide V4.2.x](upgrade-instructions/cosmovisor/README.md)
+* [Cosmovisor Upgrade Guide V5.0.x](upgrade-instructions/cosmovisor/README.md)
   * [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor/tutorial-binaries.md)
   * [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor/tutorial-docker.md)
 * [Manual Upgrade Guide V4.2.x](upgrade-instructions/manual/README.md)
@@ -51,6 +51,10 @@
   * [f(x)Core v2.2.0 Upgrade Instructions](upgrade-instructions/versions/v2.2.0/upgrade-instructions.md)
   * [f(x)Core v3.1.0 Upgrade Instructions](upgrade-instructions/versions/v3.1.0/cosmovisor.md)
     * [f(x)Core v3.1.0 Manual Upgrade Instructions](upgrade-instructions/versions/v3.1.0/manual.md)
+  * [f(x)Core v4.0.0 Testnet Upgrade Instructions](upgrade-instructions/versions/v4.0.0/cosmovisor.md)
+  * [f(x)Core v4.1.0 Testnet Upgrade Instructions](upgrade-instructions/versions/v4.1.0/cosmovisor.md)
+  * [f(x)Core v4.2.0 Testnet Upgrade Instructions](upgrade-instructions/versions/v4.2.0/cosmovisor.md)
+  * [f(x)Core v4.2.1 Mainnet Upgrade Instructions](upgrade-instructions/versions/v4.2.1/cosmovisor.md)
 * [Upgrade FAQ](upgrade-instructions/upgrade-faq.md)
 
 ## Deploying on f(x)core EVM <a href="#deploying-on-fxcore-evm" id="deploying-on-fxcore-evm"></a>
