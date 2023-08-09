@@ -11,8 +11,9 @@
 {% endhint %}
 
 {% hint style="warning" %}
-This upgrade tutorial is for testnet v4.2.0-rc0 upgrade to v5.0.x, if it is another upgrade or network, please select the corresponding upgrade tutorial
+This upgrade tutorial is for mainnet v3.1.x upgrade to v4.2.1, if it is another upgrade or network, please select the corresponding upgrade tutorial
 {% endhint %}
+
 
 ## 1. Install Cosmovisor
 
@@ -29,15 +30,15 @@ if you have used cosmovisor before, you can skip this step. Or you can use `rm -
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
-git checkout v4.2.0-rc0
+git checkout release/v3.1.x
 make build
 ```
 
 ```sh
 export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
 cosmovisor init ./build/bin/fxcored
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv4/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/fxv3/bin/
 cosmovisor version
 ```
 
@@ -49,13 +50,13 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 
 <pre class="language-sh"><code class="lang-sh">git clone https://github.com/functionx/fx-core.git
 cd fx-core
-<strong>git pull &#x26;&#x26; git checkout release/v5.0.x
+<strong>git pull &#x26;&#x26; git checkout release/v4.2.x
 </strong>make build
 </code></pre>
 
 ```sh
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v5.0.x/bin
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v5.0.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v4.2.x/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v4.2.x/bin/
 cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
@@ -68,7 +69,7 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.4.0
-app version: release/v4.2.x-xxx
+app version: release/v3.1.x-xxx
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.

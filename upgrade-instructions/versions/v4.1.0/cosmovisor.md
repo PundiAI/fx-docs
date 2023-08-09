@@ -14,6 +14,10 @@
 **Go 1.19+** or later is required for the f(x)Core. Install `go` by following the [official docs](https://golang.org/doc/install).
 {% endhint %}
 
+{% hint style="warning" %}
+This upgrade tutorial is for testnet v4.0.x upgrade to v4.1.0, if it is another upgrade or network, please select the corresponding upgrade tutorial
+{% endhint %}
+
 ## 1. Install Cosmovisor
 
 ```sh
