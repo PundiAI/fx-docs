@@ -68,7 +68,8 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.4.0
-app version: release/v4.2.x-xxx
+5:27PM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v4.2.x/bin/fxcored
+release/v4.2.x-ba2dda364e7f5202ccd410c1d0aa65a001c8d28b
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.

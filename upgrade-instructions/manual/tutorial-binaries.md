@@ -2,7 +2,7 @@
 
 ### f(x)Core Network Upgrades
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
 > You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 
@@ -42,11 +42,11 @@ git checkout <upgradeable version branch>
 for example:
 
 ```
-git checkout release/v4.2.x
+git checkout release/v5.0.x
 
 or
 
-git checkout tags/v4.2.0
+git checkout tags/v5.0.0-rc0
 ```
 
 Update fxcored (ensure that you are in the fx-core folder):

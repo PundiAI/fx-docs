@@ -41,7 +41,7 @@
 * [Cosmovisor Upgrade Guide V5.0.x](upgrade-instructions/cosmovisor/README.md)
   * [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor/tutorial-binaries.md)
   * [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor/tutorial-docker.md)
-* [Manual Upgrade Guide V4.2.x](upgrade-instructions/manual/README.md)
+* [Manual Upgrade Guide V5.0.x](upgrade-instructions/manual/README.md)
   * [Binaries - Upgrading Your Node](upgrade-instructions/manual/tutorial-binaries.md)
   * [Docker - Upgrading Your Node](upgrade-instructions/manual/tutorial-docker.md)
 * [Upgrade Versions](upgrade-instructions/versions/README.md)

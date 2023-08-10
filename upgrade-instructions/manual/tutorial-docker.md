@@ -2,7 +2,7 @@
 
 ### f(x)Core Network Upgrades
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
 > You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 
@@ -15,24 +15,24 @@ docker stop fxcore
 docker rm fxcore
 ```
 
-&#x20;   \*fxcore is a container name, change the container name according to your setup
+\*fxcore is a container name, change the container name according to your setup
 
 2\. Pull latest docker images
 
 ```
-docker pull ghcr.io/functionx/fx-core:4.2.0
+docker pull ghcr.io/functionx/fx-core:5.0.0-rc0
 ```
 
 3\. Update config files
 
 ```shell
-docker run --rm -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.2.0 config update
+docker run --rm -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/ghcr.io/functionx/fx-core:5.0.0-rc0 config update
 ```
 
 4\. Restart docker container to start the node:
 
 ```shell
-docker run --name fxcore -d --restart=always -p 0.0.0.0:26656:26656 -p 127.0.0.1:26657:26657 -p 127.0.0.1:1317:1317 -p 127.0.0.1:26660:26660 -p 127.0.0.1:8545:8545 -p 127.0.0.1:8546:8546 -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/fx-core:4.2.0 start
+docker run --name fxcore -d --restart=always -p 0.0.0.0:26656:26656 -p 127.0.0.1:26657:26657 -p 127.0.0.1:1317:1317 -p 127.0.0.1:26660:26660 -p 127.0.0.1:8545:8545 -p 127.0.0.1:8546:8546 -v $HOME/.fxcore:/root/.fxcore ghcr.io/functionx/ghcr.io/functionx/fx-core:5.0.0-rc0 start
 ```
 
 To check if fxcore is synced:
@@ -89,7 +89,4 @@ Return:
 
 To ensure that the blocks are synced up with your node, under "sync\_info", "catching\_up value" should be false `"catching_up value": false`. This may take a few hours and your node has to be fully synced up before proceeding to the next step. You may cross reference the latest block you are synced to "sync\_info": "latest\_block\_height" and the latest block height of our Testnet blockchain on our [Testnet blockchain explorer](https://testnet-explorer.functionx.io/fxcore/blocks) or our [Mainnet](https://explorer.functionx.io/fxcore/proposals).
 
-
-
 > Make sure that every node has a unique `priv_validator.json`. Do not copy the `priv_validator.json` from an old node to multiple new nodes. Running two nodes with the same `priv_validator.json` will cause you to double sign.
-
