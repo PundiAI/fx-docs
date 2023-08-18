@@ -46,7 +46,7 @@ git checkout release/v5.0.x
 
 or
 
-git checkout tags/v5.0.0-rc0
+git checkout tags/v5.0.0
 ```
 
 Update fxcored (ensure that you are in the fx-core folder):

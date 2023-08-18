@@ -10,10 +10,6 @@
 **Go 1.19+** or later is required for the f(x)Core. Install `go` by following the [official docs](https://golang.org/doc/install).
 {% endhint %}
 
-{% hint style="warning" %}
-This upgrade tutorial is for testnet v4.2.0-rc0 upgrade to v5.0.x, if it is another upgrade or network, please select the corresponding upgrade tutorial
-{% endhint %}
-
 ## 1. Install Cosmovisor
 
 ```sh
@@ -29,7 +25,12 @@ if you have used cosmovisor before, you can skip this step. Or you can use `rm -
 ```sh
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
+
+# testnet
 git checkout v4.2.0-rc0
+# mainnet
+git checkout release/v4.2.x
+
 make build
 ```
 
