@@ -43,6 +43,14 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 | dhobyghaut      | DEX-ORDS    | DEX-ORDS             | channel-89                    | channel-0                     |
 | dhobyghaut      | Cosmos      | theta-testnet-001    | channel-90                    | channel-2631                  |
 | dhobyghaut      | DEX-PIZA    | DEX-PIZA             | channel-91                    | channel-0                     |
+| CosmosHub       | Osmosis     | osmo-test-5          | channel-2971                  | channel-1099                  |
 
 {% endtab %}
 {% endtabs %}
+
+## IBC Transfer
+
+When transferring from an external cosmos chain to f(x)Core using ibc, if the token is registered in f(x)Core's erc20
+module, the receiver address can be filled in with the ethereum address. In this case, the ibc module
+automatically converts the ibc token to the ERC20 token and transfers it to the ethereum address in the f(x)Core's evm
+ 
