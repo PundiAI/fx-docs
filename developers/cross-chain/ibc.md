@@ -43,6 +43,7 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 | dhobyghaut      | DEX-ORDS    | DEX-ORDS             | channel-89                    | channel-0                     |
 | dhobyghaut      | Cosmos      | theta-testnet-001    | channel-90                    | channel-2631                  |
 | dhobyghaut      | DEX-PIZA    | DEX-PIZA             | channel-91                    | channel-0                     |
+| dhobyghaut      | Osmosis     | osmo-test-5          | channel-97                    | channel-1528                  |
 | CosmosHub       | Osmosis     | osmo-test-5          | channel-2971                  | channel-1099                  |
 
 {% endtab %}
