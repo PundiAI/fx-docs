@@ -55,4 +55,9 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 When transferring from an external cosmos chain to f(x)Core using ibc, if the token is registered in f(x)Core's erc20
 module, the receiver address can be filled in with the ethereum address. In this case, the ibc module
 automatically converts the ibc token to the ERC20 token and transfers it to the ethereum address in the f(x)Core's evm
- 
+
+## Channel Selection
+
+If the token belongs to the osmosis chain, cross chain to f(x)Core, directly through f(x)Core and osmosis channel, such as OSMO, ATOM/OSMO; 
+if it is a token of other chains, it needs to transfer through cosmos-hub, and then cross chain to f(x)Core. 
+for example EVMOS, first crosses chain to cosmos-hub and then through cosmos-hub crosses chain to f(x)Core
