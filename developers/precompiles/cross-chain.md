@@ -134,7 +134,7 @@ function increaseBridgeFee(
 ) external payable returns (result bool);
 ```
 
-* `_chain`: the chain name of the cross chain, like ethereum, bsc, etc.
+* `_chain`: the chain name of the cross chain, like eth, bsc, [etc](../cross-chain/target.md#fxcore-cross-chain-with-target)(not contain cosmos chain).
 * `_txid`: the txid of the cross chain transaction
 * `_token`: the address of cross chain fee token([Tokens](../cross-chain/fx-core.md))
     * if token is origin token, _token address is `0x0000000000000000000000000000000000000000`
