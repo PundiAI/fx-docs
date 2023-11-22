@@ -10,9 +10,19 @@ This guide will explain how to install the `fxcored mainnet` or `fxcored testnet
 
 Initializing fxcore:
 
-```bash
-fxcored init <custom-moniker>
+{% tabs %}
+{% tab title="Mainnet" %}
 ```
+fxcored init <custom-moniker> --chain-id fxcore
+```
+{% endtab %}
+
+{% tab title="Testnet" %}
+```
+fxcored init <custom-moniker> --chain-id dhobyghaut
+```
+{% endtab %}
+{% endtabs %}
 
 > **Note**: Monikers can contain only ASCII characters. Using Unicode characters is not supported and renders the node unreachable.
 
