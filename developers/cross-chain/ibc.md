@@ -32,20 +32,21 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 {% endtab %}
 {% tab title="Testnet" %}
 
-| source chain-id | destination | destination chain-id | source to destination channel | destination to source channel |
-|:----------------|:------------|:---------------------|:------------------------------|:------------------------------|
-| dhobyghaut      | Pundix      | payalebar            | channel-0                     | channel-0                     |
-| dhobyghaut      | DEX-AAPL    | DEX-AAPL             | channel-82                    | channel-0                     |
-| dhobyghaut      | DEX-BTC     | DEX-BTC              | channel-83                    | channel-0                     |
-| dhobyghaut      | DEX-FX      | DEX-FX               | channel-84                    | channel-0                     |
-| dhobyghaut      | DEX-TSLA    | DEX-TSLA             | channel-85                    | channel-0                     |
-| dhobyghaut      | DEX-APT     | DEX-APT              | channel-86                    | channel-0                     |
-| dhobyghaut      | DEX-MONG    | DEX-MONG             | channel-87                    | channel-0                     |
-| dhobyghaut      | DEX-ORDS    | DEX-ORDS             | channel-89                    | channel-0                     |
-| dhobyghaut      | Cosmos      | theta-testnet-001    | channel-90                    | channel-2631                  |
-| dhobyghaut      | DEX-PIZA    | DEX-PIZA             | channel-91                    | channel-0                     |
-| dhobyghaut      | Osmosis     | osmo-test-5          | channel-97                    | channel-1528                  |
-| CosmosHub       | Osmosis     | osmo-test-5          | channel-2971                  | channel-1099                  |
+| source chain-id   | destination | destination chain-id    | source to destination channel | destination to source channel |
+|:------------------|:------------|:------------------------|:------------------------------|:------------------------------|
+| dhobyghaut        | Pundix      | payalebar               | channel-0                     | channel-0                     |
+| dhobyghaut        | DEX-AAPL    | DEX-AAPL                | channel-82                    | channel-0                     |
+| dhobyghaut        | DEX-BTC     | DEX-BTC                 | channel-83                    | channel-0                     |
+| dhobyghaut        | DEX-FX      | DEX-FX                  | channel-84                    | channel-0                     |
+| dhobyghaut        | DEX-TSLA    | DEX-TSLA                | channel-85                    | channel-0                     |
+| dhobyghaut        | DEX-APT     | DEX-APT                 | channel-86                    | channel-0                     |
+| dhobyghaut        | DEX-MONG    | DEX-MONG                | channel-87                    | channel-0                     |
+| dhobyghaut        | DEX-ORDS    | DEX-ORDS                | channel-89                    | channel-0                     |
+| dhobyghaut        | Cosmos      | theta-testnet-001       | channel-90                    | channel-2631                  |
+| dhobyghaut        | DEX-PIZA    | DEX-PIZA                | channel-91                    | channel-0                     |
+| dhobyghaut        | Osmosis     | osmo-test-5             | channel-97                    | channel-1528                  |
+| theta-testnet-001 | Osmosis     | osmo-test-5             | channel-2971                  | channel-1099                  |
+| dhobyghaut        | Axelar      | axelar-testnet-lisbon-3 | channel-118                   | channel-358                   |
 
 {% endtab %}
 {% endtabs %}
@@ -58,6 +59,7 @@ automatically converts the ibc token to the ERC20 token and transfers it to the 
 
 ## Channel Selection
 
-If the token belongs to the osmosis chain, cross chain to f(x)Core, directly through f(x)Core and osmosis channel, such as OSMO, ATOM/OSMO; 
-if it is a token of other chains, it needs to transfer through cosmos-hub, and then cross chain to f(x)Core. 
+If the token belongs to the osmosis chain, cross chain to f(x)Core, directly through f(x)Core and osmosis channel, such
+as OSMO, ATOM/OSMO;
+if it is a token of other chains, it needs to transfer through cosmos-hub, and then cross chain to f(x)Core.
 for example EVMOS, first crosses chain to cosmos-hub and then through cosmos-hub crosses chain to f(x)Core
