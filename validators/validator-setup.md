@@ -196,7 +196,7 @@ ps -ef | grep fxcored
 
 ## Edit Validator Description
 
-You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to empty (`--moniker` defaults to the machine name) if the field has never been set or remain the same if it has been set in the past.
+You can edit your validator's public description. This info is to identify your validator, and will be relied on by delegators to decide which validators to stake to. Make sure to provide input for every flag below. If a flag is not included in the command the field will default to '\[do-not-modify]'.
 
 The \<key\_name> specifies which validator you are editing. If you choose to not include certain flags, remember that the --from flag must be included to identify the validator to update.
 
@@ -218,7 +218,7 @@ There are only a few parameters that can be edited they are listed below:
 
 ```bash
 fxcored tx staking edit-validator \
-  --moniker="choose a moniker" \
+  --new-moniker="choose a moniker" \
   --website="https://functionx.io" \
   --identity=6A0D65E29A4CBC8E \
   --details="To infinity and beyond!" \
@@ -303,7 +303,7 @@ You will have to add `--fees` to your command, to find out how much fees to inpu
 Example of input:
 
 ```bash
-fxcored tx staking edit-validator --from <_name> --fees 1200000000000000000FX --moniker "test test"
+fxcored tx staking edit-validator --from <_name> --fees 1200000000000000000FX --new-moniker "test test"
 ```
 
 ### Problem #3: My validator has `voting_power: 0`
