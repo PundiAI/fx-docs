@@ -4,7 +4,7 @@ Address: `0x0000000000000000000000000000000000001003`
 
 Interface: [IStaking](https://github.com/FunctionX/fx-core/blob/main/solidity/contracts/staking/IStaking.sol)
 
-ABI: [IStaking](https://github.com/FunctionX/fx-core/blob/bf74d4a73e3478b03122fe8ddc4c447cb7017634/contract/IStaking.go#LL34C11-L34C11)
+ABI: [IStaking](https://github.com/FunctionX/fx-core/blob/main/contract/IStaking.go#L32)
 
 ## Introduction
 
@@ -94,6 +94,45 @@ event Undelegate(
 * `shares`: the shares to undelegate
 * `amount`: the amount of the shares undelegated
 * `completionTime`: the completion time of undelegated
+
+### redelegate
+
+redelegate token from validator to other validator, get shares and reward
+
+```solidity
+function redelegate(
+    string memory _valSrc,
+    string memory _valDst,
+    uint256 _shares
+) external returns (uint256 _amount, uint256 _reward, uint256 _completionTime);
+```
+
+* `_valSrc`: the validator address to be redelegated
+* `_valDst`: the validator address to be redelegated to
+* `_shares`: the shares to redelegate
+* `_amount`: the amount of the shares redelegated
+* `_reward`: the reward of redelegated
+* `_completionTime`: the completion time of redelegated
+
+redelegate event
+
+```solidity
+event Redelegate(
+    address indexed sender,
+    string valSrc,
+    string valDst,
+    uint256 shares,
+    uint256 amount,
+    uint256 completionTime
+);
+```
+
+* `sender`: the sender address
+* `valSrc`: the validator address to be redelegated
+* `valDst`: the validator address to be redelegated to
+* `shares`: the shares to redelegate
+* `amount`: the amount of the shares redelegated
+* `completionTime`: the completion time of redelegated
 
 ### withdraw
 
