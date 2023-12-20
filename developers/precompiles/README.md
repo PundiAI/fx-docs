@@ -14,6 +14,7 @@ Address: `0x0000000000000000000000000000000000001003`
 
 * [delegate](./staking.md#delegate)
 * [undelegate](./staking.md#undelegate)
+* [redelegate](./staking.md#redelegate)
 * [withdraw](./staking.md#withdraw)
 * [approveShares](./staking.md#approveShares)
 * [transferShares](./staking.md#transferShares)
