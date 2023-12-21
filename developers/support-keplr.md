@@ -35,6 +35,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
     },
   ],
   feeCurrencies: [
@@ -43,6 +44,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
       gasPriceStep: {
         low: 4000000000000,
         average: 4000000000000,
@@ -55,6 +57,7 @@ await window.keplr.experimentalSuggestChain({
     coinMinimalDenom: "FX",
     coinDecimals: 18,
     coinGeckoId: "fx-coin",
+    coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
   },
   features: ["eth-address-gen", "eth-key-sign", "ibc-transfer"],
   beta: true,
@@ -88,6 +91,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
     },
   ],
   feeCurrencies: [
@@ -96,6 +100,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
       gasPriceStep: {
         low: 4000000000000,
         average: 4000000000000,
@@ -108,6 +113,7 @@ await window.keplr.experimentalSuggestChain({
     coinMinimalDenom: "FX",
     coinDecimals: 18,
     coinGeckoId: "fx-coin",
+    coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
   },
 });
 ```
@@ -139,6 +145,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
     },
   ],
   feeCurrencies: [
@@ -147,6 +154,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
       gasPriceStep: {
         low: 4000000000000,
         average: 4000000000000,
@@ -159,6 +167,7 @@ await window.keplr.experimentalSuggestChain({
     coinMinimalDenom: "FX",
     coinDecimals: 18,
     coinGeckoId: "fx-coin",
+    coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
   },
   features: ["eth-address-gen", "eth-key-sign", "ibc-transfer"],
   beta: true,
@@ -192,6 +201,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
     },
   ],
   feeCurrencies: [
@@ -200,6 +210,7 @@ await window.keplr.experimentalSuggestChain({
       coinMinimalDenom: "FX",
       coinDecimals: 18,
       coinGeckoId: "fx-coin",
+      coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
       gasPriceStep: {
         low: 4000000000000,
         average: 4000000000000,
@@ -212,6 +223,7 @@ await window.keplr.experimentalSuggestChain({
     coinMinimalDenom: "FX",
     coinDecimals: 18,
     coinGeckoId: "fx-coin",
+    coinImageUrl: "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/fxcore/fx.png",
   },
 })
 ```
