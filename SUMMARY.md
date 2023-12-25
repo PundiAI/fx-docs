@@ -90,6 +90,7 @@
   * [JSON RPC Methods](developers/web3/endpoints.md)
   * [Events](developers/web3/events.md)
 * [Support Keplr](developers/support-keplr.md)
+* [Support Leap](developers/support-leap.md)
 * [Contract Deployments](developers/contract-deployments.md)
 * [f(x)Core Cross Chain](developers/cross-chain/README.md)
   * [sendToFx](developers/cross-chain/send-to-fx.md)
