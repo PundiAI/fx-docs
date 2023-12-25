@@ -43,14 +43,14 @@ docker run --rm -v $HOME/.fxcore:/root/.fxcore functionx/fx-core:5.0.0 init fx-z
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v5.0.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v6.0.x/public/mainnet/genesis.json -O ~/.fxcore/config/genesis.json
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 {% code fullWidth="false" %}
 ```
-wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v5.0.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
+wget https://raw.githubusercontent.com/FunctionX/fx-core/release/v6.0.x/public/testnet/genesis.json -O ~/.fxcore/config/genesis.json
 ```
 {% endcode %}
 {% endtab %}

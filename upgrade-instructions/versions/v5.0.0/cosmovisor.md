@@ -27,9 +27,9 @@ git clone https://github.com/functionx/fx-core.git
 cd fx-core
 
 # testnet
-git checkout v5.0.0-rc0
+git checkout v4.2.0-rc0
 # mainnet
-git checkout release/v5.0.x
+git checkout release/v4.2.x
 
 make build
 ```
@@ -50,13 +50,13 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 
 <pre class="language-sh"><code class="lang-sh">git clone https://github.com/functionx/fx-core.git
 cd fx-core
-<strong>git pull &#x26;&#x26; git checkout release/v6.0.x
+<strong>git pull &#x26;&#x26; git checkout release/v5.0.x
 </strong>make build
 </code></pre>
 
 ```sh
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v6.0.x/bin
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v6.0.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v5.0.x/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v5.0.x/bin/
 cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
@@ -69,8 +69,8 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.4.0
-5:27PM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v5.0.x/bin/fxcored
-release/v5.0.x-v5.0.0
+5:27PM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v4.2.x/bin/fxcored
+release/v4.2.x-ba2dda364e7f5202ccd410c1d0aa65a001c8d28b
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.
