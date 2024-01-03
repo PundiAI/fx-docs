@@ -1,6 +1,6 @@
-# Cosmovisor Integration - Binaries
+# f(x)Core v5.0.0 Mainnet Upgrade Instructions
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../).
 >
 > You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
 

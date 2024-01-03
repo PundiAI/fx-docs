@@ -8,9 +8,9 @@ Things to note❗:
 
 a. This guide can be done on f(x)Core Mainnet & Testnet.
 
-b. Ensure the [new Evm upgrade](../upgrade-instructions/manual/README.md) is done.
+b. Ensure the [new Evm upgrade](../upgrade-instructions/manual/) is done.
 
-c. Ensure you have f(x)Core [command line interface](../fxcore/installation) installed.
+c. Ensure you have f(x)Core [command line interface](../fxcore/installation/) installed.
 
 d. Your address should not be bonded to any validator (Address should not have a prior successful `create-validator` command).
 
@@ -20,7 +20,7 @@ d. Your address should not be bonded to any validator (Address should not have a
 
 * The Bech32 format is the default format for Cosmos-SDK queries and transactions through CLI and REST clients.
 * Address (Bech32) with the prefix `fx` eg: `fx1xzyws0l8p8alt6v7tztvqlph8r22lhn4femgr7`
-* Address (EIP55 Hex) with the prefix `0x` eg: `0x3088e83FE709fBf5e99e5896C07c3738d4aFDE75`&#x20;
+* Address (EIP55 Hex) with the prefix `0x` eg: `0x3088e83FE709fBf5e99e5896C07c3738d4aFDE75`
 * The hex format on the other hand, is the Ethereum `common.Address` representation of a Cosmos `sdk.AccAddress`
 * Compressed **Public Key** (Bech32): (used to **encrypt** data) `fxpub17weu6qepqgca6ed53q7frh8ftcr6c0kucfhm0yuat4sxx4hc3u2y7pydcwwyc65xl7f`
 
@@ -73,7 +73,7 @@ You may skip the 1st step, if you already have a wallet/key that is derived usin
 
 * This account must not have sent an on-chain transaction
 
-Prepare a new wallet/key derived  using the `eth_secp256k1` curve after migration:
+Prepare a new wallet/key derived using the `eth_secp256k1` curve after migration:
 
 ```shell
 fxcored keys add <0x_key_name> --algo eth_secp256k1 --coin-type 60 --index <index_number>
@@ -172,11 +172,8 @@ Once you have added `DhobyGhaut Testnet` to the Metamask `Networks`, you can aut
 
 Close the `Settings`, go to `My Accounts` (top right circle) and select `Import Account`. You should see an image like the following one:
 
-![](<../.gitbook/assets/image (9).png>)
+![](<../.gitbook/assets/image (9) (1).png>)
 
 In Metamask and select the `Private Key` option. Then **paste the private** key(**hexadecimal**) exported from the command in step 6, to import your new EVM-compatible account in MetaMask.
 
 Your account balance will show up, as such. If it takes some time to load the balance of the account, change the network to `Main Ethereum Network` and then switch back to `DhobyGhaut Testnet`.Once you have imported your wallet in MetaMask, you can transfer your assets to the EVM-compatible wallet address and spend within Dapps in the f(x)Core ecosystem.
-
-
-

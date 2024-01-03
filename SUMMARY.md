@@ -1,6 +1,6 @@
 # Table of contents
 
-* [FunctionX Technical Document](README.md)
+* [Function X Technical Document](README.md)
 
 ## f(x)Core <a href="#fxcore" id="fxcore"></a>
 
@@ -61,7 +61,7 @@
 
 ## Deploying on f(x)core EVM <a href="#deploying-on-fxcore-evm" id="deploying-on-fxcore-evm"></a>
 
-* [Deployed DApps](deploying-on-fxcore-evm/deployed-dapps.md)
+* [Products](deploying-on-fxcore-evm/deployed-dapps.md)
 * [MetaMask](deploying-on-fxcore-evm/metamask/README.md)
   * [Download and Install MetaMask](deploying-on-fxcore-evm/metamask/download-and-install-metamask.md)
   * [Add f(x)Core Network](deploying-on-fxcore-evm/metamask/add-fxcore-network.md)
@@ -76,6 +76,11 @@
 * [Cross-Chain Bridges](deploying-on-fxcore-evm/cross-chain-bridges/README.md)
   * [Bridging Tokens from other networks](deploying-on-fxcore-evm/cross-chain-bridges/bridging-tokens-from-other-networks.md)
   * [f(x)Core Gravity Bridge](deploying-on-fxcore-evm/cross-chain-bridges/fxcore-gravity-bridge.md)
+
+## DAPPS & INFRASTRUCTURE
+
+* [FX Swap](dapps-and-infrastructure/fx-swap.md)
+* [FX Wallet](dapps-and-infrastructure/fx-wallet.md)
 
 ## Developers
 

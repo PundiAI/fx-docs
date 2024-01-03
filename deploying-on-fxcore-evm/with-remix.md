@@ -19,13 +19,13 @@ For more information on Remix and how to use it, you may find it in the [Remix D
 * Search for **'Solidity Compiler'** in the plugin tab in Remix (this should be activated by default)
 * And activate the plugins (if they are not already activated)
 
-![](<../.gitbook/assets/image (1) (1) (1).png>) ![](<../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
+![](<../.gitbook/assets/image (1) (1) (1) (1).png>) ![](<../.gitbook/assets/image (15) (1) (1) (1) (1) (1).png>)
 
 * The environment should be set to solidity by default
 
 {% tabs %}
 {% tab title="HelloWorld Tutorial" %}
-* ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it HelloWorld.sol
+* ![](<../.gitbook/assets/image (14) (1).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it HelloWorld.sol
 * **Copy/Paste** the Smart contract below into the newly created file `HelloWorld.sol`
 
 {% code title="HelloWorld.sol" %}
@@ -69,7 +69,7 @@ The `string public message` function is another public function that is similar 
 {% endtab %}
 
 {% tab title="ERC20 Tutorial" %}
-* ![](<../.gitbook/assets/image (14).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it erc20.sol
+* ![](<../.gitbook/assets/image (14) (1).png>)Go to File Explorers, ![](<../.gitbook/assets/image (29) (1) (1).png>)To create a new file , Name it erc20.sol
 * **Copy/Paste** the Smart contract below into the newly created file `erc20.sol`
 * **Edit** the ` string`` `` `<mark style="color:blue;">`public`</mark>` `` ``name ` & ` string`` `` `<mark style="color:blue;">`public`</mark>` `` ``symbol ` and replace it with your own name and symbol
 
@@ -160,7 +160,7 @@ For more information on the ERC20 standard and the various variables, you may re
 
 ### Compile Smart Contract
 
-* ![](<../.gitbook/assets/image (28).png>) Go to Solidity Compiler
+* ![](<../.gitbook/assets/image (28) (1).png>) Go to Solidity Compiler
 * Select Compiler Version to 0.8.0
 * Now, `Compile HelloWorld.sol` /`ERC20.sol`
 * After Successful Compilation, it will show ![](<../.gitbook/assets/image (24).png>)
@@ -199,7 +199,7 @@ FX
 https://testnet-explorer.functionx.io/evm
 ```
 
-![Metamask Network Configuration](<../.gitbook/assets/image (3).png>)
+![Metamask Network Configuration](<../.gitbook/assets/image (3) (1).png>)
 
 * Click Save
 * Copy your address from Metamask
@@ -211,7 +211,7 @@ https://testnet-explorer.functionx.io/evm
 * Select Injected Web3 in the Environment dropdown ensure you have selected the right contract too.
 * Accept the connection request by clicking **Next** in Metamask after choosing the account
 
-![Injected Web3](<../.gitbook/assets/image (1).png>)
+![Injected Web3](<../.gitbook/assets/image (1) (1).png>)
 
 * Once Metamask is connected to Remix, the ‘Deploy’ transaction would generate another metamask popup that requires transaction confirmation.
 * Click the <mark style="color:blue;">**EDIT**</mark> button (1st picture) and then the <mark style="color:orange;">**Edit suggested gas fee**</mark> (2nd picture) before editing the **Max priority fee** and **Max fee** to 4000 Gwei then click **SAVE**.
@@ -238,9 +238,9 @@ Taking a look at the side panel in particular these sets of button functions whe
 
 ![Remix Button Functions](<../.gitbook/assets/image (17).png>)
 
-Copy the ![](<../.gitbook/assets/image (18).png>)deployed contract address and input it in Metamask. And step through with adding the custom token.
+Copy the ![](<../.gitbook/assets/image (18) (1).png>)deployed contract address and input it in Metamask. And step through with adding the custom token.
 
-![](<../.gitbook/assets/image (30).png>) ![](<../.gitbook/assets/image (16).png>)
+![](<../.gitbook/assets/image (30).png>) ![](<../.gitbook/assets/image (16) (1).png>)
 
 Now with our custom token added, we are all ready to mint some tokens and interact with the ERC20 contract.
 
@@ -252,11 +252,11 @@ Clicking into the \_mint (example) dropdown, you will be shown a few fields:
 
 The fields are pretty self explanatory. Amount has to be of the type unit256 (unsigned integer), while Account has to be of the address (0x) type. Input your address and the amount you would like to mint. Do remember to add 18 0s behind. The amount value here is expressed in Wei. So if you want to mint 100 of your tokens, the field should be 100000000000000000000.
 
-![](<../.gitbook/assets/image (29) (1).png>) ![](../.gitbook/assets/remix-mint-image.png)
+![](<../.gitbook/assets/image (29) (1) (2).png>) ![](../.gitbook/assets/remix-mint-image.png)
 
 Hitting ![](<../.gitbook/assets/image (31).png>) will result in a Metamask pop-up. Remember to edit the gas fields to reflect 4000 GasPrice similar to what you did before and voila, you will have minted some of your own tokens.
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
 Now lets go through the rest of the buttons one by one:
 

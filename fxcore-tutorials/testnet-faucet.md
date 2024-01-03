@@ -6,7 +6,7 @@
 2. Input your address (be sure to choose the correct wallet type for the network you wish to receive funds in)
 3. Choose from the dropdown the appropriate network and coin/token type
 
-![Testnet Faucet](<../.gitbook/assets/image (29).png>)
+![Testnet Faucet](<../.gitbook/assets/image (29) (1).png>)
 
 ### Viewing your wallet balances
 
