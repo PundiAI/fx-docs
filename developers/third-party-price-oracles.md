@@ -1,6 +1,6 @@
 # Third Party Price Oracles
 
-Available on Testnet: [Supra Oracles](https://supraoracles.com/docs/price-feeds/pull-model/).
+Available on Mainnet: [Supra Oracles](https://supraoracles.com/docs/price-feeds/pull-model/).
 
 Data Feeds Catalog: [https://supraoracles.com/docs/price-feeds/data-feeds-catalog/](https://supraoracles.com/docs/price-feeds/data-feeds-catalog/)
 
