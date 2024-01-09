@@ -27,7 +27,7 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 | fxcore          | MarginX-1000000TLIPUSDT | MarginX-1000000TLIPUSDT | channel-9                     | channel-0                     |
 | fxcore          | CosmosHub               | cosmoshub-4             | channel-10                    | channel-585                   |
 | fxcore          | Osmosis                 | osmosis-1               | channel-19                    | channel-2716                  |
-| fxcore          | Axelar                  | axelar-dojo-1           | channel-20                    | channel-128                   |
+| fxcore          | Axelar                  | axelar-dojo-1           | channel-21                    | channel-136                   |
 
 {% endtab %}
 {% tab title="Testnet" %}
@@ -45,7 +45,7 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 | dhobyghaut        | Cosmos      | theta-testnet-001       | channel-90                    | channel-2631                  |
 | dhobyghaut        | DEX-PIZA    | DEX-PIZA                | channel-91                    | channel-0                     |
 | dhobyghaut        | Osmosis     | osmo-test-5             | channel-97                    | channel-1528                  |
-| dhobyghaut        | Axelar      | axelar-testnet-lisbon-3 | channel-118                   | channel-358                   |
+| dhobyghaut        | Axelar      | axelar-testnet-lisbon-3 | channel-127                   | channel-398                   |
 
 {% endtab %}
 {% endtabs %}
