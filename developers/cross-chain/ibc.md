@@ -32,20 +32,20 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 {% endtab %}
 {% tab title="Testnet" %}
 
-| source chain-id   | destination | destination chain-id    | source to destination channel | destination to source channel |
-|:------------------|:------------|:------------------------|:------------------------------|:------------------------------|
-| dhobyghaut        | Pundix      | payalebar               | channel-0                     | channel-0                     |
-| dhobyghaut        | DEX-AAPL    | DEX-AAPL                | channel-82                    | channel-0                     |
-| dhobyghaut        | DEX-BTC     | DEX-BTC                 | channel-83                    | channel-0                     |
-| dhobyghaut        | DEX-FX      | DEX-FX                  | channel-84                    | channel-0                     |
-| dhobyghaut        | DEX-TSLA    | DEX-TSLA                | channel-85                    | channel-0                     |
-| dhobyghaut        | DEX-APT     | DEX-APT                 | channel-86                    | channel-0                     |
-| dhobyghaut        | DEX-MONG    | DEX-MONG                | channel-87                    | channel-0                     |
-| dhobyghaut        | DEX-ORDS    | DEX-ORDS                | channel-89                    | channel-0                     |
-| dhobyghaut        | Cosmos      | theta-testnet-001       | channel-90                    | channel-2631                  |
-| dhobyghaut        | DEX-PIZA    | DEX-PIZA                | channel-91                    | channel-0                     |
-| dhobyghaut        | Osmosis     | osmo-test-5             | channel-97                    | channel-1528                  |
-| dhobyghaut        | Axelar      | axelar-testnet-lisbon-3 | channel-127                   | channel-398                   |
+| source chain-id | destination | destination chain-id    | source to destination channel | destination to source channel |
+|:----------------|:------------|:------------------------|:------------------------------|:------------------------------|
+| dhobyghaut      | Pundix      | payalebar               | channel-0                     | channel-0                     |
+| dhobyghaut      | DEX-AAPL    | DEX-AAPL                | channel-82                    | channel-0                     |
+| dhobyghaut      | DEX-BTC     | DEX-BTC                 | channel-83                    | channel-0                     |
+| dhobyghaut      | DEX-FX      | DEX-FX                  | channel-84                    | channel-0                     |
+| dhobyghaut      | DEX-TSLA    | DEX-TSLA                | channel-85                    | channel-0                     |
+| dhobyghaut      | DEX-APT     | DEX-APT                 | channel-86                    | channel-0                     |
+| dhobyghaut      | DEX-MONG    | DEX-MONG                | channel-87                    | channel-0                     |
+| dhobyghaut      | DEX-ORDS    | DEX-ORDS                | channel-89                    | channel-0                     |
+| dhobyghaut      | Cosmos      | theta-testnet-001       | channel-90                    | channel-2631                  |
+| dhobyghaut      | DEX-PIZA    | DEX-PIZA                | channel-91                    | channel-0                     |
+| dhobyghaut      | Osmosis     | osmo-test-5             | channel-119                   | channel-4402                  |
+| dhobyghaut      | Axelar      | axelar-testnet-lisbon-3 | channel-127                   | channel-398                   |
 
 {% endtab %}
 {% endtabs %}
