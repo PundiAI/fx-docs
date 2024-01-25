@@ -1,13 +1,20 @@
 # Cosmovisor Integration - Binaries
 
+{% hint style="warning" %}
+❗️Please note that the current fxCore Testnet v7.0.x upgrade, the upgrade height is 12,961,500, and the upgrade countdown is [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet).
+{% endhint %}
+
+Here is the guide to Cosmovisor upgrade `fxcored` preparation. This requires you to complete the upgrade preparation after the upgrade proposal is approved and before reaching the upgrade height.
+
+
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
+> You may refer to this [**Starscan Countdown Timer**](https://testnet.starscan.io/fxcore/block/countdown/12961500?chainId=fxcore) which will countdown the time till the upgrade height.
 
 > `cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, cosmovisor can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
 
 {% hint style="info" %}
-**Go 1.19+** or later is required for the f(x)Core. Install `go` by following the [official docs](https://golang.org/doc/install).
+**Go 1.21+** or later is required for the f(x)Core. Install `go` by following the [official docs](https://golang.org/doc/install).
 {% endhint %}
 
 ## 1. Install Cosmovisor
@@ -26,10 +33,7 @@ if you have used cosmovisor before, you can skip this step. Or you can use `rm -
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
 
-# testnet
-git checkout v5.0.0-rc0
-# mainnet
-git checkout release/v5.0.x
+git checkout release/v6.0.x
 
 make build
 ```
@@ -37,8 +41,8 @@ make build
 ```sh
 export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
 cosmovisor init ./build/bin/fxcored
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v5.0.x/bin/
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v5.0.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v6.0.x/bin/
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v6.0.x/bin/
 cosmovisor version
 ```
 
@@ -50,13 +54,13 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 
 <pre class="language-sh"><code class="lang-sh">git clone https://github.com/functionx/fx-core.git
 cd fx-core
-<strong>git pull &#x26;&#x26; git checkout release/v6.0.x
+<strong>git pull &#x26;&#x26; git checkout v7.0.1-rc0
 </strong>make build
 </code></pre>
 
 ```sh
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v6.0.x/bin
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v6.0.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.0.x/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.0.x/bin/
 cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
@@ -69,8 +73,8 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.4.0
-5:27PM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v5.0.x/bin/fxcored
-release/v5.0.x-v5.0.0
+5:27PM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v6.0.x/bin/fxcored
+release/v6.0.x-v6.0.0
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.

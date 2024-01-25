@@ -13,3 +13,5 @@ This directory houses f(x)Core history major upgrade migration instructions.
 * [**f(x)Core Testnet v4.1.0 Upgrade Instructions**](v4.1.0/cosmovisor.md)
 * [**f(x)Core Testnet v4.2.0 Upgrade Instructions**](v4.2.0/cosmovisor.md)
 * [**f(x)Core Mainnet v4.2.1 Upgrade Instructions**](v4.2.1/cosmovisor.md)
+* [**f(x)Core Mainnet v5.0.0 Upgrade Instructions**](v5.0.0/cosmovisor.md)
+* [**f(x)Core Mainnet v6.0.0 Upgrade Instructions**](v6.0.0/cosmovisor.md)
