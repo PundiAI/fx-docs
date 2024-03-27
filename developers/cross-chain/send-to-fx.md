@@ -32,13 +32,13 @@ supported external chains:
 
 | Chain               | Contract Address                                                                                                                      |
 |:--------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
-| Ethereum            | [0xB1B68DFC4eE0A3123B897107aFbF43CEFEE9b0A2](https://goerli.etherscan.io/address/0xB1B68DFC4eE0A3123B897107aFbF43CEFEE9b0A2)          |
+| Ethereum            | [0xd384a8e8822Ea845e83eb5AA2877239150615C18](https://sepolia.etherscan.io/address/0xd384a8e8822ea845e83eb5aa2877239150615c18)          |
 | Binance Smart Chain | [0x4C0974BC7e3911a0682a1E17F0faD59A2eF4A637](https://testnet.bscscan.com/address/0x4C0974BC7e3911a0682a1E17F0faD59A2eF4A637)          |
 | Polygon             | [0x57b1E4C85B0f141aDE38b5573907BA8eF9aC2298](https://mumbai.polygonscan.com/address/0x57b1E4C85B0f141aDE38b5573907BA8eF9aC2298)       |
 | Tron                | [TAXdkUAde6ztmJyQqANL4jwDYab8D9shQs](https://nile.tronscan.org/#/address/TAXdkUAde6ztmJyQqANL4jwDYab8D9shQs)                          |
 | Avalanche           | [0xe79893e4218a9d855Ef6beeA8366119b92007d64](https://testnet.snowtrace.io/address/0xe79893e4218a9d855Ef6beeA8366119b92007d64)         |
-| Optimism            | [0xEa99760Ecc3460154670B86E202233974883b153](https://goerli-optimism.etherscan.io/address/0xEa99760Ecc3460154670B86E202233974883b153) |
-| Arbitrum            | [0xF3aEC5C761df07f21058fcfeAAABe7c0e5270FE7](https://goerli.arbiscan.io/address/0xF3aEC5C761df07f21058fcfeAAABe7c0e5270FE7)           |
+| Optimism            | [0xCA1c58AF317C88Cdb41d4AB17B50592771356E69](https://sepolia-optimism.etherscan.io/address/0xca1c58af317c88cdb41d4ab17b50592771356e69) |
+| Arbitrum            | [0xCA1c58AF317C88Cdb41d4AB17B50592771356E69](https://sepolia.arbiscan.io/address/0xca1c58af317c88cdb41d4ab17b50592771356e69)           |
 
 {% endtab %}
 {% endtabs %}
