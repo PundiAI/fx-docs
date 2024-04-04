@@ -20,6 +20,10 @@ description: >-
 
 #### Various clients, tools and end points available
 
+{% hint style="info" %}
+<mark style="color:yellow;">For adding custom network to MetaMask/Defi Wallet, please use the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`Web3 JSON RPC`</mark>
+{% endhint %}
+
 {% tabs %}
 {% tab title="f(x)Core Mainnet" %}
 |                         |                                                                                                           |
