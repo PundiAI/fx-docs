@@ -25,6 +25,7 @@ supported external chains:
 | Polygon             | [0x4052eA614c5a96631C546d8B8d323a7C3D9ABb69](https://polygonscan.com/address/0x4052eA614c5a96631C546d8B8d323a7C3D9ABb69) |
 | Tron                | [TKLDunqAynYcXRktcYHqncp3R6nJeEXLd5](https://tronscan.org/#/address/TKLDunqAynYcXRktcYHqncp3R6nJeEXLd5)                  |
 | Avalanche           | [0xDc3706d164d2D88b85ed702079ab331e2476D475](https://snowtrace.io/address/0xDc3706d164d2D88b85ed702079ab331e2476D475)    |
+| Base                | [0x7a986bA67227acfab86385FF33436a80E2BB4CC5](https://basescan.org/address/0x7a986bA67227acfab86385FF33436a80E2BB4CC5)    |
 
 {% endtab %}
 
@@ -39,6 +40,7 @@ supported external chains:
 | Avalanche           | [0xe79893e4218a9d855Ef6beeA8366119b92007d64](https://testnet.snowtrace.io/address/0xe79893e4218a9d855Ef6beeA8366119b92007d64)         |
 | Optimism            | [0xCA1c58AF317C88Cdb41d4AB17B50592771356E69](https://sepolia-optimism.etherscan.io/address/0xca1c58af317c88cdb41d4ab17b50592771356e69) |
 | Arbitrum            | [0xCA1c58AF317C88Cdb41d4AB17B50592771356E69](https://sepolia.arbiscan.io/address/0xca1c58af317c88cdb41d4ab17b50592771356e69)           |
+| Base                | [0x9164D153b8Af6D94d41E7876E814DD3Db1AEC320](https://sepolia.basescan.org/address/0x9164d153b8af6d94d41e7876e814dd3db1aec320)          | 
 
 {% endtab %}
 {% endtabs %}
