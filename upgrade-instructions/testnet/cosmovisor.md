@@ -1,15 +1,14 @@
-# Cosmovisor Integration - Binaries
+# Cosmovisor Upgrade Guide V7.2.x
 
 {% hint style="warning" %}
-❗️Please note that the current fxCore Testnet v7.0.x upgrade, the upgrade height is 12,961,500, and the upgrade countdown is [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=testnet).
+❗️Please note that the current fxCore Testnet v7.2.x upgrade, the upgrade height is 14,369,500, and the upgrade countdown is [**Countdown Timer**](https://testnet.starscan.io/fxcore/block/14389000?chainId=fxcore).
 {% endhint %}
 
 Here is the guide to Cosmovisor upgrade `fxcored` preparation. This requires you to complete the upgrade preparation after the upgrade proposal is approved and before reaching the upgrade height.
 
-
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
-> You may refer to this [**Starscan Countdown Timer**](https://testnet.starscan.io/fxcore/block/countdown/12961500?chainId=fxcore) which will countdown the time till the upgrade height.
+> You may refer to this [**Starscan Countdown Timer**](https://testnet.starscan.io/fxcore/block/countdown/14389000?chainId=fxcore) which will countdown the time till the upgrade height.
 
 > `cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, cosmovisor can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
 
@@ -54,13 +53,13 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 
 <pre class="language-sh"><code class="lang-sh">git clone https://github.com/functionx/fx-core.git
 cd fx-core
-<strong>git pull &#x26;&#x26; git checkout v7.0.1-rc0
+<strong>git pull &#x26;&#x26; git checkout v7.2.0-rc2
 </strong>make build
 </code></pre>
 
 ```sh
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.0.x/bin
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.0.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.2.x/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.2.x/bin/
 cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
@@ -72,9 +71,9 @@ cosmovisor version
 ```
 
 ```
-cosmovisor version: v1.4.0
-5:27PM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v6.0.x/bin/fxcored
-release/v6.0.x-v6.0.0
+cosmovisor version: v1.5.0
+10:29AM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v7.1.x/bin/fxcored
+HEAD-v7.1.0-rc1
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.

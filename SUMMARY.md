@@ -39,7 +39,7 @@
 
 ## Upgrade Instructions
 
-* [Cosmovisor Upgrade Guide V7.0.x](upgrade-instructions/testnet/cosmovisor.md)
+* [Cosmovisor Upgrade Guide V7.2.x](upgrade-instructions/testnet/cosmovisor.md)
 * [Cosmovisor Upgrade Guide V6.0.x](upgrade-instructions/cosmovisor/README.md)
   * [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor/tutorial-binaries.md)
   * [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor/tutorial-docker.md)
