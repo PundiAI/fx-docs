@@ -35,7 +35,7 @@ supported external chains:
 |:--------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
 | Ethereum            | [0xd384a8e8822Ea845e83eb5AA2877239150615C18](https://sepolia.etherscan.io/address/0xd384a8e8822ea845e83eb5aa2877239150615c18)          |
 | Binance Smart Chain | [0x4C0974BC7e3911a0682a1E17F0faD59A2eF4A637](https://testnet.bscscan.com/address/0x4C0974BC7e3911a0682a1E17F0faD59A2eF4A637)          |
-| Polygon             | [0x57b1E4C85B0f141aDE38b5573907BA8eF9aC2298](https://mumbai.polygonscan.com/address/0x57b1E4C85B0f141aDE38b5573907BA8eF9aC2298)       |
+| Polygon             | [0xC975D6DE5dBE47C05FE42fea9565dd50dF345202](https://amoy.polygonscan.com/address/0xc975d6de5dbe47c05fe42fea9565dd50df345202)       |
 | Tron                | [TAXdkUAde6ztmJyQqANL4jwDYab8D9shQs](https://nile.tronscan.org/#/address/TAXdkUAde6ztmJyQqANL4jwDYab8D9shQs)                          |
 | Avalanche           | [0xe79893e4218a9d855Ef6beeA8366119b92007d64](https://testnet.snowtrace.io/address/0xe79893e4218a9d855Ef6beeA8366119b92007d64)         |
 | Optimism            | [0xCA1c58AF317C88Cdb41d4AB17B50592771356E69](https://sepolia-optimism.etherscan.io/address/0xca1c58af317c88cdb41d4ab17b50592771356e69) |
