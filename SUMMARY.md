@@ -110,6 +110,7 @@
 * [f(x)Core SDKs](developers/f-x-core-sdks/README.md)
   * [Python SDK](developers/f-x-core-sdks/python-sdk.md)
   * [JavaScript SDK](developers/f-x-core-sdks/javascript-sdk.md)
+* [Contract Monitoring](developers/contract-monitoring.md)
 
 ## Governance
 
