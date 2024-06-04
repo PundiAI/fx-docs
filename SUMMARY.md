@@ -107,6 +107,9 @@
 * [Precompiled Contracts](developers/precompiles/README.md)
   * [CrossChain Precompiled](developers/precompiles/cross-chain.md)
   * [Staking Precompiled](developers/precompiles/staking.md)
+* [f(x)Core SDKs](developers/f-x-core-sdks/README.md)
+  * [Python SDK](developers/f-x-core-sdks/python-sdk.md)
+  * [JavaScript SDK](developers/f-x-core-sdks/javascript-sdk.md)
 
 ## Governance
 
