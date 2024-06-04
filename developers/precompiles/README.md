@@ -51,7 +51,5 @@ The EVM module is a [fork](https://github.com/functionx/ethermint) of the etherm
 
 After the implementation of the cross-chain precompiled contract, corresponding functions based on the precompiled contract only need to be added to ensure state synchronization. No matter how the call to the precompiled contract is made, atomicity can be guaranteed; and the precompiled contract can be directly called by other contracts or addresses, used in the same way as an ordinary contract.
 
-## f(x)Core Specific Precompiles:
-
 * [CrossChain Precompile](cross-chain.md)
 * [Staking Precompile](staking.md)\
