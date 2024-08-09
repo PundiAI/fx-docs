@@ -1,14 +1,14 @@
-# Cosmovisor Upgrade Guide V7.4.x
+# Cosmovisor Upgrade Guide V7.5.x
 
 {% hint style="warning" %}
-❗️Please note that the current fxCore Testnet v7.4.x upgrade, the upgrade height is 15614000, and the upgrade countdown is [**Countdown Timer**](https://testnet.starscan.io/fxcore/block/15614000?chainId=fxcore).
+❗️Please note that the current fxCore Testnet v7.5.x upgrade, the upgrade height is 15657000, and the upgrade countdown is [**Countdown Timer**](https://testnet.starscan.io/fxcore/block/15657000?chainId=fxcore).
 {% endhint %}
 
 Here is the guide to Cosmovisor upgrade `fxcored` preparation. This requires you to complete the upgrade preparation after the upgrade proposal is approved and before reaching the upgrade height.
 
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
 >
-> You may refer to this [**Starscan Countdown Timer**](https://testnet.starscan.io/fxcore/block/countdown/15614000?chainId=fxcore) which will countdown the time till the upgrade height.
+> You may refer to this [**Starscan Countdown Timer**](https://testnet.starscan.io/fxcore/block/countdown/15657000?chainId=fxcore) which will countdown the time till the upgrade height.
 
 > `cosmovisor` is a small process manager for Cosmos SDK application binaries that monitors the governance module for incoming chain upgrade proposals. If it sees a proposal that gets approved, cosmovisor can automatically download the new binary, stop the current binary, switch from the old binary to the new one, and finally restart the node with the new binary.
 
@@ -32,7 +32,7 @@ if you have used cosmovisor before, you can skip this step. Or you can use `rm -
 git clone https://github.com/functionx/fx-core.git
 cd fx-core
 
-git checkout release/v7.3.x
+git checkout release/v7.4.x
 
 make build
 ```
@@ -40,8 +40,8 @@ make build
 ```sh
 export DAEMON_NAME=fxcored DAEMON_HOME=$HOME/.fxcore DAEMON_POLL_INTERVAL=1s UNSAFE_SKIP_BACKUP=true
 cosmovisor init ./build/bin/fxcored
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.3.x/bin/
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.3.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.4.x/bin/
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.4.x/bin/
 cosmovisor version
 ```
 
@@ -53,13 +53,13 @@ Releases can be found here [https://github.com/FunctionX/fx-core/releases](https
 
 <pre class="language-sh"><code class="lang-sh">git clone https://github.com/functionx/fx-core.git
 cd fx-core
-<strong>git pull &#x26;&#x26; git checkout v7.4.0-rc4
+<strong>git pull &#x26;&#x26; git checkout v7.5.0-rc1
 </strong>make build
 </code></pre>
 
 ```sh
-mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.4.x/bin
-cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.4.x/bin/
+mkdir -p $HOME/.fxcore/cosmovisor/upgrades/v7.5.x/bin
+cp ./build/bin/fxcored $HOME/.fxcore/cosmovisor/upgrades/v7.5.x/bin/
 cp ./build/bin/fxcored $(go env GOPATH)/bin/
 ```
 
@@ -72,8 +72,8 @@ cosmovisor version
 
 ```
 cosmovisor version: v1.5.0
-10:29AM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v7.3.x/bin/fxcored
-HEAD-v7.3.0-rc3
+10:29AM INF running app args=["version"] module=cosmovisor path=/root/.fxcore/cosmovisor/upgrades/v7.4.x/bin/fxcored
+HEAD-v7.4.0-rc6
 ```
 
 In addition, we have added the feature of the `doctor` command in the v4 version, which is used to check whether the environment you are currently running is correct. if you see the warning, please contact our technical support.
