@@ -1228,8 +1228,6 @@ curl -X POST https://localhost:26657 -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\
 
 Query the application for some information.
 
-> [About ABCI Query More](json-rcp-abci-query.md)
-
 #### Parameters
 
 * `path (string)`: Path to the data. This is defined by the application.

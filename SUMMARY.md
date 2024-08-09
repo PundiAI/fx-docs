@@ -39,7 +39,6 @@
 
 ## Upgrade Instructions
 
-* [Cosmovisor Upgrade Guide V7.2.x](upgrade-instructions/testnet/cosmovisor.md)
 * [Cosmovisor Upgrade Guide V6.0.x](upgrade-instructions/cosmovisor/README.md)
   * [Cosmovisor Integration - Binaries](upgrade-instructions/cosmovisor/tutorial-binaries.md)
   * [Cosmovisor Integration - Docker](upgrade-instructions/cosmovisor/tutorial-docker.md)
@@ -47,17 +46,10 @@
   * [Binaries - Upgrading Your Node](upgrade-instructions/manual/tutorial-binaries.md)
   * [Docker - Upgrading Your Node](upgrade-instructions/manual/tutorial-docker.md)
 * [Upgrade Versions](upgrade-instructions/versions/README.md)
-  * [f(x)Core v2.1.1 Upgrade Instructions](upgrade-instructions/versions/v2.1.0/README.md)
-    * [Testnet Upgrade Practice](upgrade-instructions/versions/v2.1.0/testnet-upgrade-practice.md)
-    * [fxCore V2.1.0 (since been deprecated)](upgrade-instructions/versions/v2.1.0/since-been-deprecated.md)
-  * [f(x)Core v2.2.0 Upgrade Instructions](upgrade-instructions/versions/v2.2.0/upgrade-instructions.md)
-  * [f(x)Core v3.1.0 Upgrade Instructions](upgrade-instructions/versions/v3.1.0/cosmovisor.md)
-    * [f(x)Core v3.1.0 Manual Upgrade Instructions](upgrade-instructions/versions/v3.1.0/manual.md)
-  * [f(x)Core v4.0.0 Testnet Upgrade Instructions](upgrade-instructions/versions/v4.0.0/cosmovisor.md)
-  * [f(x)Core v4.1.0 Testnet Upgrade Instructions](upgrade-instructions/versions/v4.1.0/cosmovisor.md)
-  * [f(x)Core v4.2.0 Testnet Upgrade Instructions](upgrade-instructions/versions/v4.2.0/cosmovisor.md)
-  * [f(x)Core v4.2.1 Mainnet Upgrade Instructions](upgrade-instructions/versions/v4.2.1/cosmovisor.md)
-  * [f(x)Core v5.0.0 Mainnet Upgrade Instructions](upgrade-instructions/versions/v5.0.0/cosmovisor.md)
+  * [v2.2.0 Upgrade Instructions](upgrade-instructions/versions/v2.2.0.md)
+  * [v3.1.0 Upgrade Instructions](upgrade-instructions/versions/v3.1.0.md)
+  * [v4.2.1 Upgrade Instructions](upgrade-instructions/versions/v4.2.1.md)
+  * [v5.0.0 Upgrade Instructions](upgrade-instructions/versions/v5.0.0.md)
 * [Upgrade FAQ](upgrade-instructions/upgrade-faq.md)
 
 ## Deploying on f(x)core EVM <a href="#deploying-on-fxcore-evm" id="deploying-on-fxcore-evm"></a>
@@ -87,8 +79,7 @@
 
 * [f(x)Core Network](developers/network.md)
 * [f(x)Core Modules](developers/modules.md)
-* [f(x)Core JSON RPC](developers/json-rpc-api/README.md)
-  * [ABCI Query](developers/json-rpc-api/json-rcp-abci-query.md)
+* [f(x)Core JSON RPC](developers/jsonrpc-api.md)
 * [f(x)Core REST API](developers/rest-api.md)
 * [Web3 JSON RPC](developers/web3/README.md)
   * [JSON RPC Server](developers/web3/server.md)
