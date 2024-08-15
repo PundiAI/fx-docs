@@ -28,7 +28,7 @@ Additional information on how IBC works can be found [here](https://ibc.cosmos.n
 | fxcore          | CosmosHub               | cosmoshub-4             | channel-10                    | channel-585                   |
 | fxcore          | Osmosis                 | osmosis-1               | channel-19                    | channel-2716                  |
 | fxcore          | Axelar                  | axelar-dojo-1           | channel-21                    | channel-136                   |
-| fxcore          | Chihuahua               | chihuahua               | channel-22                    | channel-87                    |
+| fxcore          | Chihuahua               | chihuahua-1             | channel-22                    | channel-87                    |
 
 {% endtab %}
 {% tab title="Testnet" %}
