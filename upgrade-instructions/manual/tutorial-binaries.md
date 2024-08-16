@@ -2,9 +2,9 @@
 
 ### f(x)Core Network Upgrades
 
-> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/).
+> For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
 >
-> You may refer to this [**Countdown Timer**](https://functionx.github.io/fx-core/tools/countdown.html?network=mainnet) which will countdown the time till the upgrade height.
+> You may refer to this [**Countdown Timer**](https://starscan.io/fxcore/block/countdown/16838000?chainId=fxcore) which will countdown the time till the upgrade height.
 
 ### Upgrade steps
 
@@ -42,11 +42,11 @@ git checkout <upgradeable version branch>
 for example:
 
 ```
-git checkout release/v6.0.x
+git checkout release/v7.5.x
 
 or
 
-git checkout tags/v6.0.0
+git checkout tags/v7.5.0
 ```
 
 Update fxcored (ensure that you are in the fx-core folder):
