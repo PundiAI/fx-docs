@@ -9,9 +9,9 @@ We have two nodes: Node A (validator) and Node B (fully-synced non-validator). B
 #### Best Practice
 
 1. **Double Check**: Double check that we have the correct backup for `priv_validator_key.json`.
-2. **Stop Node A**: Stop `cosmovisor` service on Node A. Double check the service status to make sure it is off. On [starscan](https://starscan.io/validators) explorer, you should see the validator missing blocks.
-3. **Restart Node A As Non-Validator**: Delete `priv_validator_key.json` from Node A and restart `cosmovisor` service. Check 3 places to ensure no double-signing. First, the newly generated `priv_validator_key.json` should be different from the one on the backup. Second, on [starscan](https://starscan.io/validators) explorer, you should see the validator missing blocks. Third, run a `BINARY status` command and make sure to see `VotingPower` as 0.
-4. **Change Validator Role to Node B**: Stop Node B's `cosmovisor` service. Replace Node B's `priv_validator_key.json` with the backup copy from A. Restart B's `cosmovisor` service. Make sure it is making blocks on [starscan](https://starscan.io/validators) explorer.
+2. **Stop Node A**: Stop `cosmovisor` service on Node A. Double check the service status to make sure it is off. On [pundiscan](https://pundiscan.io/validators) explorer, you should see the validator missing blocks.
+3. **Restart Node A As Non-Validator**: Delete `priv_validator_key.json` from Node A and restart `cosmovisor` service. Check 3 places to ensure no double-signing. First, the newly generated `priv_validator_key.json` should be different from the one on the backup. Second, on [pundiscan](https://pundiscan.io/validators) explorer, you should see the validator missing blocks. Third, run a `BINARY status` command and make sure to see `VotingPower` as 0.
+4. **Change Validator Role to Node B**: Stop Node B's `cosmovisor` service. Replace Node B's `priv_validator_key.json` with the backup copy from A. Restart B's `cosmovisor` service. Make sure it is making blocks on [pundiscan](https://pundiscan.io/validators) explorer.
 5. **House Clean**: The specifics only apply to how we set up the cluster. You should adapt according to your setup.
    * Swap the server name with "sudo hostname xxx" on each server (for example, between "fxcore\_mainnet" and "fxcore\_mainnet\_backup")
    * Swap the server shortcut in \~/.ssh/config file for each ssh login

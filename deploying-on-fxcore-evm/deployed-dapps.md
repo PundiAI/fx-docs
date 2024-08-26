@@ -20,7 +20,7 @@ description: A list of deployed Dapps
 
 {% tabs %}
 {% tab title="Apps" %}
-<table><thead><tr><th width="153">Name</th><th>Description</th></tr></thead><tbody><tr><td>Starscan</td><td>Official blockchain explorer. Track addresses, transactions, validators, and more for f(x)Core / Pundi X Chain / Margin X</td></tr><tr><td><a href="../dapps-and-infrastructure/fx-swap.md">FX Swap</a></td><td>FX Swap. Execute swaps, offer liquidity, engage in yield farming, and visualize charts.</td></tr><tr><td><a href="https://trade.marginx.io/">Margin X</a></td><td>DEX</td></tr><tr><td><a href="https://portfolio-x.xyz/">Portfolio X</a></td><td>Portfolio showcasing like delegations, positions, and holdings, NFTs in the Function X ecosystem through a single point of contact.</td></tr><tr><td><a href="https://marketplace.foxchange.io/">FoxChange</a></td><td>NFTs marketplace</td></tr></tbody></table>
+<table><thead><tr><th width="153">Name</th><th>Description</th></tr></thead><tbody><tr><td>Pundiscan</td><td>Official blockchain explorer. Track addresses, transactions, validators, and more for f(x)Core / Pundi X Chain / Margin X</td></tr><tr><td><a href="../dapps-and-infrastructure/fx-swap.md">FX Swap</a></td><td>FX Swap. Execute swaps, offer liquidity, engage in yield farming, and visualize charts.</td></tr><tr><td><a href="https://trade.marginx.io/">Margin X</a></td><td>DEX</td></tr><tr><td><a href="https://portfolio-x.xyz/">Portfolio X</a></td><td>Portfolio showcasing like delegations, positions, and holdings, NFTs in the Function X ecosystem through a single point of contact.</td></tr><tr><td><a href="https://marketplace.foxchange.io/">FoxChange</a></td><td>NFTs marketplace</td></tr></tbody></table>
 {% endtab %}
 
 {% tab title="Infra" %}

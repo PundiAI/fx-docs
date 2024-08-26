@@ -6,7 +6,7 @@ description: A guide on how to launch an EGF proposal on-chain
 
 Before launching an EGF proposal on-chain, it is important that the proposer adheres to the guidelines found on this [documentation](egf-grants-program.md) or the official [Function X EGF repository](https://github.com/FunctionX/FunctionX-EGF).&#x20;
 
-To launch an EGF proposal, go to [StarScan](https://starscan.io/) and click on the `Proposals` tab and click on `Make Proposal`. Following which, there will be a prompt to connect to a wallet; and after connecting to a wallet, the proposer can proceed to make the proposal.
+To launch an EGF proposal, go to [pundiscan](https://pundiscan.io/) and click on the `Proposals` tab and click on `Make Proposal`. Following which, there will be a prompt to connect to a wallet; and after connecting to a wallet, the proposer can proceed to make the proposal.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
