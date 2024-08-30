@@ -30,8 +30,7 @@ Seek legal advice if you intend to run a Validator.
 
 Discuss more details on being a validator on our social media platforms:
 
-* [Validator Forum](https://forum.functionx.io/t/f-x-core-validator-node-setup-on-f-x-core-testnet/1785/189)
-* [Telegram](https://t.me/functionx)
-* [Twitter](https://twitter.com/functionx\_io)
-* [Discord](https://discord.com/invite/J6k8arnyEQ)
-* [Gitbook](https://github.com/functionx)
+* [Validator Forum](https://forum.pundiscan.io/c/developers/function-x-validators/27)
+* [Telegram](https://t.me/PundiAIFX)
+* [Twitter](https://twitter.com/PundiAIFX)
+* [Gitbook](https://functionx.gitbook.io/)
