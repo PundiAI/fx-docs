@@ -16,8 +16,8 @@ await window.keplr.experimentalSuggestChain({
   chainName: "f(x)Core",
   rpc: "https://fx-json.functionx.io:26657",
   rest: "https://fx-rest.functionx.io",
-  walletUrl: "https://starscan.io/fxcore/validators",
-  walletUrlForStaking: "https://starscan.io/fxcore/validators",
+  walletUrl: "https://pundiscan.io/fxcore/validators",
+  walletUrlForStaking: "https://pundiscan.io/fxcore/validators",
   bip44: {
     coinType: 60,
   },
@@ -72,8 +72,8 @@ await window.keplr.experimentalSuggestChain({
   chainName: "f(x)Core Classic",
   rpc: "https://fx-json.functionx.io:26657",
   rest: "https://fx-rest.functionx.io",
-  walletUrl: "https://starscan.io/fxcore/validators",
-  walletUrlForStaking: "https://starscan.io/fxcore/validators",
+  walletUrl: "https://pundiscan.io/fxcore/validators",
+  walletUrlForStaking: "https://pundiscan.io/fxcore/validators",
   bip44: {
     coinType: 118,
   },
@@ -126,8 +126,8 @@ await window.keplr.experimentalSuggestChain({
   chainName: "f(x)Core Testnet",
   rpc: "https://testnet-fx-json.functionx.io:26657",
   rest: "https://testnet-fx-rest.functionx.io",
-  walletUrl: "https://testnet.starscan.io/fxcore/validators",
-  walletUrlForStaking: "https://testnet.starscan.io/fxcore/validators",
+  walletUrl: "https://testnet.pundiscan.io/fxcore/validators",
+  walletUrlForStaking: "https://testnet.pundiscan.io/fxcore/validators",
   bip44: {
     coinType: 60,
   },
@@ -182,8 +182,8 @@ await window.keplr.experimentalSuggestChain({
   chainName: "f(x)Core Testnet Classic",
   rpc: "https://testnet-fx-json.functionx.io:26657",
   rest: "https://testnet-fx-rest.functionx.io",
-  walletUrl: "https://testnet.starscan.io/fxcore/validators",
-  walletUrlForStaking: "https://testnet.starscan.io/fxcore/validators",
+  walletUrl: "https://testnet.pundiscan.io/fxcore/validators",
+  walletUrlForStaking: "https://testnet.pundiscan.io/fxcore/validators",
   bip44: {
     coinType: 118,
   },

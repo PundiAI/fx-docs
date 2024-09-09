@@ -30,13 +30,13 @@ description: >-
 | ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | ChainId                 | `fxcore`                                                                                                  |
 | Native Coin             | `FX`                                                                                                      |
-| Block Explorer          | [https://starscan.io](https://starscan.io)                                                                |
+| Block Explorer          | [https://pundiscan.io](https://pundiscan.io)                                                                |
 | Tm JSON RPC             | <p><code>https://fx-json.functionx.io:26657</code><br>or<br><code>https://fx-json.functionx.io</code></p> |
 | Tm JSON RPC Websocket   | `wss://fx-json.functionx.io:26657/websocket`                                                              |
 | gRPC                    | `https://fx-grpc.functionx.io:9090`                                                                       |
 | REST API                | `https://fx-rest.functionx.io:1317`                                                                       |
 | EVM ChainID             | 530                                                                                                       |
-| EVM Block Explorer      | [https://starscan.io/evm](https://starscan.io/evm)                                                        |
+| EVM Block Explorer      | [https://pundiscan.io/evm](https://pundiscan.io/evm)                                                        |
 | Web3 JSON RPC           | https://fx-json-web3.functionx.io:8545                                                                    |
 | Web3 JSON RPC Websocket | wss://fx-json-web3.functionx.io:8546                                                                      |
 {% endtab %}
@@ -46,13 +46,13 @@ description: >-
 | ----------------------- | ---------------------------------------------------------------------------- |
 | ChainId                 | `dhobyghaut`                                                                 |
 | Native Coin             | `FX`                                                                         |
-| Block Explorer          | [https://testnet.starscan.io](https://testnet.starscan.io)                   |
+| Block Explorer          | [https://testnet.pundiscan.io](https://testnet.pundiscan.io)                   |
 | Tm JSON RPC             | https://testnet-fx-json.functionx.io:26657                                   |
 | Tm JSON RPC Websocket   | wss://testnet-fx-json.functionx.io:26657/websocket                           |
 | gRPC                    | https://testnet-fx-grpc.functionx.io:9090                                    |
 | Rest                    | https://testnet-fx-rest.functionx.io:1317                                    |
 | EVM ChainID             | 90001                                                                        |
-| EVM Block Explorer      | [https://testnet.starscan.io/evm](https://testnet.starscan.io/evm)           |
+| EVM Block Explorer      | [https://testnet.pundiscan.io/evm](https://testnet.pundiscan.io/evm)           |
 | Web3 JSON RPC           | https://testnet-fx-json-web3.functionx.io:8545                               |
 | Web3 JSON RPC Websocket | wss://testnet-fx-json-web3.functionx.io:8546                                 |
 | Testnet Faucet          | [https://testnet-faucet.functionx.io/](https://testnet-faucet.functionx.io/) |

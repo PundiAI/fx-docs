@@ -2,7 +2,7 @@
 
 > For more information on past upgrades and instructions, refer to [**Upgrade Versions**](../versions/README.md).
 >
-> You may refer to this [**Countdown Timer**](https://starscan.io/fxcore/block/countdown/16838000?chainId=fxcore) which will countdown the time till the upgrade height.
+> You may refer to this [**Countdown Timer**](https://pundiscan.io/fxcore/block/countdown/16838000?chainId=fxcore) which will countdown the time till the upgrade height.
 
 Docker image already has cosmovisor, just pull the image and run it
 

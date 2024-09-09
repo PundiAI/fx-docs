@@ -29,7 +29,7 @@ For the EGF proposal, please fork the repository [here](https://github.com/Funct
 #### Deposit
 
 {% hint style="info" %}
-As of proposal [#19](https://starscan.io/fxcore/proposals/19), the `min deposit (deposit threshold)` has been changed to `3000 FX` and the `voting period` has been changed to `7 days.`
+As of proposal [#19](https://pundiscan.io/fxcore/proposals/19), the `min deposit (deposit threshold)` has been changed to `3000 FX` and the `voting period` has been changed to `7 days.`
 {% endhint %}
 
 A deposit is required by the proposer to initiate a proposal. It is designed to prevent spam.
@@ -76,7 +76,7 @@ If a proposal fails to reach quorum, the proposal will be marked as 'Rejected' r
 If a proposal reached quorum, the proposal will be marked as 'Passed' and the results of the vote will be accepted.
 
 {% hint style="info" %}
-As of proposal [#17](https://starscan.io/fxcore/proposals/17), the quorum for coin-related bridging proposal is lowered to 25%
+As of proposal [#17](https://pundiscan.io/fxcore/proposals/17), the quorum for coin-related bridging proposal is lowered to 25%
 {% endhint %}
 
 #### Examples
