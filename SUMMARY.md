@@ -72,8 +72,13 @@
 
 ## DAPPS & INFRASTRUCTURE
 
-* [FX Swap](dapps-and-infrastructure/fx-swap.md)
+* [Margin X Swap](dapps-and-infrastructure/fx-swap.md)
 * [FX Wallet](dapps-and-infrastructure/fx-wallet.md)
+* [PundiScan](dapps-and-infrastructure/pundiscan.md)
+* [Baklava Space](dapps-and-infrastructure/baklava-space.md)
+* [Safe Multisig](dapps-and-infrastructure/safe-multisig.md)
+* [PortfolioX](dapps-and-infrastructure/portfoliox.md)
+* [Token Factory](dapps-and-infrastructure/token-factory.md)
 
 ## Developers
 

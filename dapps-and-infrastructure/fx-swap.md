@@ -1,4 +1,5 @@
-# FX Swap
+# Margin X Swap
 
-## [<mark style="color:yellow;">https://fx-swap.io/</mark>](https://fx-swap.io/)
+{% embed url="https://swap.marginx.io/" %}
 
+[https://marginxlabs.gitbook.io/product-docs/marginx-spot/swap](https://marginxlabs.gitbook.io/product-docs/marginx-spot/swap)
