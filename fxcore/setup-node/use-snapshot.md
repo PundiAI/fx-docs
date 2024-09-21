@@ -29,26 +29,26 @@
 * Pruned-shapshot (light node)
   * Snapshot frequency: once a day (10am GMT +8)
   * Snapshot record keeping: 3 most recent
-  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-20.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-20.tar.gz)
-  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-20.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-20.tar.gz.md5)
+  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-21.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-21.tar.gz)
+  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-21.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-pruned-snapshot-mainnet-2024-09-21.tar.gz.md5)
 * Full-node snapshot (full node)
   * Snapshot frequency: every Monday (12am GMT +8)
   * Snapshot record keeping: 1 most recent
-  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-20.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-20.tar.gz)
-  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-20.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-20.tar.gz.md5)
+  * Shapshot link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-21.tar.gz](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-21.tar.gz)
+  * Md5 link: [https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-21.tar.gz.md5](https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-21.tar.gz.md5)
 {% endtab %}
 
 {% tab title="Testnet" %}
 * Pruned-shapshot (light node)
   * Snapshot frequency: once a day (10am GMT +8)
   * Snapshot record keeping: 3 most recent
-  * Shapshot link: [https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-20.tar.gz](https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-20.tar.gz)
-  * Md5 link: [https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-20.tar.gz.md5](https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-20.tar.gz.md5)
+  * Shapshot link: [https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-21.tar.gz](https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-21.tar.gz)
+  * Md5 link: [https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-21.tar.gz.md5](https://testnet-fx.s3.amazonaws.com/fxcore-pruned-snapshot-testnet-2024-09-21.tar.gz.md5)
 * Full-node snapshot (full node)
   * Snapshot frequency: every Monday (10pm GMT +8)
   * Snapshot record keeping: 1 most recent
-  * Shapshot link: [https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-20.tar.gz](https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-20.tar.gz)
-  * Md5 link: [https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-20.tar.gz.md5](https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-20.tar.gz.md5)
+  * Shapshot link: [https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-21.tar.gz](https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-21.tar.gz)
+  * Md5 link: [https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-21.tar.gz.md5](https://testnet-fx.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-21.tar.gz.md5)
 {% endtab %}
 {% endtabs %}
 
@@ -59,13 +59,13 @@ Download the snapshot to your VM. To download the snapshot tar file to your VM y
 {% tabs %}
 {% tab title="Mainnet" %}
 ```
-wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-20.tar.gz
+wget -c https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-21.tar.gz
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
-wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-20.tar.gz
+wget -c https://fx-testnet.s3.amazonaws.com/fxcore-snapshot-testnet-2024-09-21.tar.gz
 ```
 {% endtab %}
 {% endtabs %}
@@ -77,11 +77,11 @@ This will download the snapshot of fxcore full-node data. Since it's full-node, 
 Checksums are often used to verify data integrity but are not relied upon to verify data authenticity, below are example of the `md5sum` command to check whether the file is downloaded correctly using
 
 ```bash
-$ md5sum fxcore-snapshot-mainnet-2024-09-20.tar.gz
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  fxcore-snapshot-mainnet-2024-09-20.tar.gz
+$ md5sum fxcore-snapshot-mainnet-2024-09-21.tar.gz
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  fxcore-snapshot-mainnet-2024-09-21.tar.gz
 ```
 
-> compare the md5 hash against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-20.tar.gz.md5
+> compare the md5 hash against https://fx-mainnet.s3.amazonaws.com/fxcore-snapshot-mainnet-2024-09-21.tar.gz.md5
 
 ## Extracting the Snapshots
 
@@ -91,14 +91,14 @@ Now, to unpack the `tar` file in the fxcore Data directory run the following com
 {% tab title="Mainnet" %}
 ```
 rm -rf ~/.fxcore/data
-tar -xzvf fxcore-snapshot-mainnet-2024-09-20.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-mainnet-2024-09-21.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 
 {% tab title="Testnet" %}
 ```
 rm -rf ~/.fxcore/data
-tar -xzvf fxcore-snapshot-testnet-2024-09-20.tar.gz -C ~/.fxcore/
+tar -xzvf fxcore-snapshot-testnet-2024-09-21.tar.gz -C ~/.fxcore/
 ```
 {% endtab %}
 {% endtabs %}
